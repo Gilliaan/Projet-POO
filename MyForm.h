@@ -18,6 +18,7 @@ namespace ProjetPOO {
 	public:
 		MyForm(void)
 		{
+			
 			InitializeComponent();
 			//
 			//TODO: ajoutez ici le code du constructeur
@@ -50,6 +51,9 @@ namespace ProjetPOO {
 
 	private: NS_Comp_Svc::CLservices^ oSvc;
 	private: System::Data::DataSet^ oDs;
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Label^ label3;
 	protected:
 
 	private:
@@ -73,6 +77,9 @@ namespace ProjetPOO {
 			this->txt_id = (gcnew System::Windows::Forms::TextBox());
 			this->txt_nom = (gcnew System::Windows::Forms::TextBox());
 			this->txt_prenom = (gcnew System::Windows::Forms::TextBox());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_enr))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -83,7 +90,7 @@ namespace ProjetPOO {
 			this->dgv_enr->Margin = System::Windows::Forms::Padding(4);
 			this->dgv_enr->Name = L"dgv_enr";
 			this->dgv_enr->RowHeadersWidth = 51;
-			this->dgv_enr->Size = System::Drawing::Size(629, 185);
+			this->dgv_enr->Size = System::Drawing::Size(849, 185);
 			this->dgv_enr->TabIndex = 0;
 			this->dgv_enr->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dgv_enr_CellContentClick);
 			// 
@@ -129,36 +136,67 @@ namespace ProjetPOO {
 			this->btn_update->TabIndex = 4;
 			this->btn_update->Text = L"UPD";
 			this->btn_update->UseVisualStyleBackColor = true;
+			this->btn_update->Click += gcnew System::EventHandler(this, &MyForm::btn_update_Click);
 			// 
 			// txt_id
 			// 
-			this->txt_id->Location = System::Drawing::Point(236, 225);
+			this->txt_id->Location = System::Drawing::Point(298, 225);
 			this->txt_id->Margin = System::Windows::Forms::Padding(4);
 			this->txt_id->Name = L"txt_id";
-			this->txt_id->Size = System::Drawing::Size(408, 22);
+			this->txt_id->Size = System::Drawing::Size(346, 22);
 			this->txt_id->TabIndex = 5;
 			// 
 			// txt_nom
 			// 
-			this->txt_nom->Location = System::Drawing::Point(236, 257);
+			this->txt_nom->Location = System::Drawing::Point(298, 257);
 			this->txt_nom->Margin = System::Windows::Forms::Padding(4);
 			this->txt_nom->Name = L"txt_nom";
-			this->txt_nom->Size = System::Drawing::Size(408, 22);
+			this->txt_nom->Size = System::Drawing::Size(346, 22);
 			this->txt_nom->TabIndex = 6;
 			// 
 			// txt_prenom
 			// 
-			this->txt_prenom->Location = System::Drawing::Point(236, 293);
+			this->txt_prenom->Location = System::Drawing::Point(298, 293);
 			this->txt_prenom->Margin = System::Windows::Forms::Padding(4);
 			this->txt_prenom->Name = L"txt_prenom";
-			this->txt_prenom->Size = System::Drawing::Size(408, 22);
+			this->txt_prenom->Size = System::Drawing::Size(346, 22);
 			this->txt_prenom->TabIndex = 7;
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(235, 228);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(19, 17);
+			this->label1->TabIndex = 8;
+			this->label1->Text = L"Id";
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(234, 260);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(57, 17);
+			this->label2->TabIndex = 9;
+			this->label2->Text = L"Prenom";
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Location = System::Drawing::Point(235, 296);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(37, 17);
+			this->label3->TabIndex = 10;
+			this->label3->Text = L"Nom";
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(675, 409);
+			this->ClientSize = System::Drawing::Size(937, 512);
+			this->Controls->Add(this->label3);
+			this->Controls->Add(this->label2);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->txt_prenom);
 			this->Controls->Add(this->txt_nom);
 			this->Controls->Add(this->txt_id);
@@ -187,10 +225,18 @@ namespace ProjetPOO {
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e)
 	{
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
+		this->dgv_enr->Refresh();
+		this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
+		this->dgv_enr->DataSource = this->oDs;
+		this->dgv_enr->DataMember = "TB_PEOPLE";
 	}
 	private: System::Void btn_insert_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		this->oSvc->ajouterUnePersonne(this->txt_nom->Text, this->txt_prenom->Text);
+		this->dgv_enr->Refresh();
+		this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
+		this->dgv_enr->DataSource = this->oDs;
+		this->dgv_enr->DataMember = "TB_PEOPLE";
 	}
 	private: System::Void dgv_enr_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 	}
@@ -203,7 +249,19 @@ namespace ProjetPOO {
 		this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
 		this->dgv_enr->DataSource = this->oDs;
 		this->dgv_enr->DataMember = "TB_PEOPLE";
+
 		//this->listbox1->Items->add("supprimer personne id :" + this->txt_id->Text ", Nom" + this.t)
+
+	}
+	private: System::Void btn_update_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		String^ textVal = this->txt_id->Text;
+		int id_people = System::Convert::ToInt32(textVal);
+		this->oSvc->modifierUnePersonne(this->txt_nom->Text, this->txt_prenom->Text, id_people);
+		this->dgv_enr->Refresh();
+		this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
+		this->dgv_enr->DataSource = this->oDs;
+		this->dgv_enr->DataMember = "TB_PEOPLE";
 	}
 
 };

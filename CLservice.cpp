@@ -30,4 +30,17 @@ void NS_Comp_Svc::CLservices::suprimerUnePersonne(int id)
 	this->oMappTB->setId(id);
 	sql = this->oMappTB->Delete();
 
+	this->oCad->actionRows(sql);
+
+}
+void NS_Comp_Svc::CLservices::modifierUnePersonne(System::String^ nom, System::String^ prenom, int id)
+{
+	System::String^ sql;
+
+	this->oMappTB->setNom(nom);
+	this->oMappTB->setNom(prenom);
+	this->oMappTB->setId(id);
+	sql = this->oMappTB->Update();
+
+	this->oCad->actionRows(sql);
 }

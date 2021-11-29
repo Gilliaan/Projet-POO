@@ -17,9 +17,6 @@ namespace NS_Comp_Svc
 		System::Data::DataSet^ selectionnerToutesLesPersonnes(System::String^);
 		void ajouterUnePersonne(System::String^, System::String^);
 		void suprimerUnePersonne(int);
-
+		void modifierUnePersonne(System::String^, System::String^ , int);
 	};
 }
-//COUCOU
-
-//COUCOU V2
