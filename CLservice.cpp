@@ -38,7 +38,7 @@ void NS_Comp_Svc::CLservices::modifierUnePersonne(System::String^ nom, System::S
 	System::String^ sql;
 
 	this->oMappTB->setNom(nom);
-	this->oMappTB->setNom(prenom);
+	this->oMappTB->setPrenom(prenom);
 	this->oMappTB->setId(id);
 	sql = this->oMappTB->Update();
 

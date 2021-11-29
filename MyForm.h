@@ -39,7 +39,7 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::DataGridView^ dgv_enr;
 	protected:
 
-	private: System::Windows::Forms::Button^ btn_load;
+
 	private: System::Windows::Forms::Button^ btn_insert;
 	private: System::Windows::Forms::Button^ btn_delete;
 	private: System::Windows::Forms::Button^ btn_update;
@@ -57,6 +57,8 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::TabControl^ tabControl1;
 	private: System::Windows::Forms::TabPage^ tabPage1;
 	private: System::Windows::Forms::TabPage^ tabPage2;
+	private: System::Windows::Forms::TabPage^ tabPage3;
+	private: System::Windows::Forms::ListBox^ listBox1;
 	protected:
 
 	private:
@@ -73,7 +75,6 @@ namespace ProjetPOO {
 		void InitializeComponent(void)
 		{
 			this->dgv_enr = (gcnew System::Windows::Forms::DataGridView());
-			this->btn_load = (gcnew System::Windows::Forms::Button());
 			this->btn_insert = (gcnew System::Windows::Forms::Button());
 			this->btn_delete = (gcnew System::Windows::Forms::Button());
 			this->btn_update = (gcnew System::Windows::Forms::Button());
@@ -85,7 +86,9 @@ namespace ProjetPOO {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
+			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
+			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_enr))->BeginInit();
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
@@ -102,20 +105,9 @@ namespace ProjetPOO {
 			this->dgv_enr->TabIndex = 0;
 			this->dgv_enr->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dgv_enr_CellContentClick);
 			// 
-			// btn_load
-			// 
-			this->btn_load->Location = System::Drawing::Point(16, 214);
-			this->btn_load->Margin = System::Windows::Forms::Padding(4);
-			this->btn_load->Name = L"btn_load";
-			this->btn_load->Size = System::Drawing::Size(100, 159);
-			this->btn_load->TabIndex = 1;
-			this->btn_load->Text = L"Load DB";
-			this->btn_load->UseVisualStyleBackColor = true;
-			this->btn_load->Click += gcnew System::EventHandler(this, &MyForm::btn_load_Click);
-			// 
 			// btn_insert
 			// 
-			this->btn_insert->Location = System::Drawing::Point(124, 215);
+			this->btn_insert->Location = System::Drawing::Point(16, 214);
 			this->btn_insert->Margin = System::Windows::Forms::Padding(4);
 			this->btn_insert->Name = L"btn_insert";
 			this->btn_insert->Size = System::Drawing::Size(100, 46);
@@ -126,7 +118,7 @@ namespace ProjetPOO {
 			// 
 			// btn_delete
 			// 
-			this->btn_delete->Location = System::Drawing::Point(124, 327);
+			this->btn_delete->Location = System::Drawing::Point(16, 322);
 			this->btn_delete->Margin = System::Windows::Forms::Padding(4);
 			this->btn_delete->Name = L"btn_delete";
 			this->btn_delete->Size = System::Drawing::Size(100, 46);
@@ -137,7 +129,7 @@ namespace ProjetPOO {
 			// 
 			// btn_update
 			// 
-			this->btn_update->Location = System::Drawing::Point(124, 269);
+			this->btn_update->Location = System::Drawing::Point(16, 268);
 			this->btn_update->Margin = System::Windows::Forms::Padding(4);
 			this->btn_update->Name = L"btn_update";
 			this->btn_update->Size = System::Drawing::Size(100, 46);
@@ -182,7 +174,7 @@ namespace ProjetPOO {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(420, 244);
+			this->label2->Location = System::Drawing::Point(420, 274);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(57, 17);
 			this->label2->TabIndex = 9;
@@ -191,7 +183,7 @@ namespace ProjetPOO {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(440, 274);
+			this->label3->Location = System::Drawing::Point(440, 244);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(37, 17);
 			this->label3->TabIndex = 10;
@@ -201,7 +193,8 @@ namespace ProjetPOO {
 			// 
 			this->tabControl1->Controls->Add(this->tabPage1);
 			this->tabControl1->Controls->Add(this->tabPage2);
-			this->tabControl1->Location = System::Drawing::Point(28, 12);
+			this->tabControl1->Controls->Add(this->tabPage3);
+			this->tabControl1->Location = System::Drawing::Point(33, 26);
 			this->tabControl1->Name = L"tabControl1";
 			this->tabControl1->SelectedIndex = 0;
 			this->tabControl1->Size = System::Drawing::Size(845, 461);
@@ -209,8 +202,8 @@ namespace ProjetPOO {
 			// 
 			// tabPage1
 			// 
+			this->tabPage1->Controls->Add(this->listBox1);
 			this->tabPage1->Controls->Add(this->dgv_enr);
-			this->tabPage1->Controls->Add(this->btn_load);
 			this->tabPage1->Controls->Add(this->btn_delete);
 			this->tabPage1->Controls->Add(this->btn_update);
 			this->tabPage1->Controls->Add(this->label3);
@@ -225,8 +218,17 @@ namespace ProjetPOO {
 			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage1->Size = System::Drawing::Size(837, 432);
 			this->tabPage1->TabIndex = 0;
-			this->tabPage1->Text = L"tabPage1";
+			this->tabPage1->Text = L"Client";
 			this->tabPage1->UseVisualStyleBackColor = true;
+			// 
+			// listBox1
+			// 
+			this->listBox1->FormattingEnabled = true;
+			this->listBox1->ItemHeight = 16;
+			this->listBox1->Location = System::Drawing::Point(16, 375);
+			this->listBox1->Name = L"listBox1";
+			this->listBox1->Size = System::Drawing::Size(814, 36);
+			this->listBox1->TabIndex = 11;
 			// 
 			// tabPage2
 			// 
@@ -237,6 +239,16 @@ namespace ProjetPOO {
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"tabPage2";
 			this->tabPage2->UseVisualStyleBackColor = true;
+			// 
+			// tabPage3
+			// 
+			this->tabPage3->Location = System::Drawing::Point(4, 25);
+			this->tabPage3->Name = L"tabPage3";
+			this->tabPage3->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage3->Size = System::Drawing::Size(837, 432);
+			this->tabPage3->TabIndex = 2;
+			this->tabPage3->Text = L"tabPage3";
+			this->tabPage3->UseVisualStyleBackColor = true;
 			// 
 			// MyForm
 			// 
@@ -266,6 +278,8 @@ namespace ProjetPOO {
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e)
 	{
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
+
+		//Load data
 		this->dgv_enr->Refresh();
 		this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
 		this->dgv_enr->DataSource = this->oDs;
@@ -274,6 +288,8 @@ namespace ProjetPOO {
 	private: System::Void btn_insert_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		this->oSvc->ajouterUnePersonne(this->txt_nom->Text, this->txt_prenom->Text);
+
+		//Load data
 		this->dgv_enr->Refresh();
 		this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
 		this->dgv_enr->DataSource = this->oDs;
@@ -286,24 +302,31 @@ namespace ProjetPOO {
 		String^ textVal = this->txt_id->Text;
 		int id_people = System::Convert::ToInt32(textVal);
 		this->oSvc->suprimerUnePersonne(id_people);
+
+		//Load data
 		this->dgv_enr->Refresh();
 		this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
 		this->dgv_enr->DataSource = this->oDs;
 		this->dgv_enr->DataMember = "TB_PEOPLE";
 
-		//this->listbox1->Items->add("supprimer personne id :" + this->txt_id->Text ", Nom" + this.t)
-
+		//Affichage de la personne supprimer
+		this->listBox1->Items->Add("supprimer personne Id :" + this->txt_id->Text + ", Nom ="+ this->txt_nom->Text +" OK");
 	}
 	private: System::Void btn_update_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		String^ textVal = this->txt_id->Text;
 		int id_people = System::Convert::ToInt32(textVal);
 		this->oSvc->modifierUnePersonne(this->txt_nom->Text, this->txt_prenom->Text, id_people);
+
+		//Load data
 		this->dgv_enr->Refresh();
 		this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
 		this->dgv_enr->DataSource = this->oDs;
 		this->dgv_enr->DataMember = "TB_PEOPLE";
-	}
 
+		//Affichage de la personne modifier
+		this->listBox1->Items->Add("update personne Id :" + this->txt_id->Text + ", Nom ="+ this->txt_nom->Text +" OK");
+	}
+	
 };
 }
