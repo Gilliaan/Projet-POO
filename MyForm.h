@@ -58,6 +58,8 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::TabPage^ tabPage1;
 	private: System::Windows::Forms::TabPage^ tabPage2;
 	private: System::Windows::Forms::TabPage^ tabPage3;
+	private: System::Windows::Forms::TabPage^ tabPage4;
+	private: System::Windows::Forms::TabPage^ tabPage5;
 	private: System::Windows::Forms::ListBox^ listBox1;
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
@@ -119,6 +121,8 @@ namespace ProjetPOO {
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
+			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
+			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_enr))->BeginInit();
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
@@ -226,6 +230,8 @@ namespace ProjetPOO {
 			this->tabControl1->Controls->Add(this->tabPage1);
 			this->tabControl1->Controls->Add(this->tabPage2);
 			this->tabControl1->Controls->Add(this->tabPage3);
+			this->tabControl1->Controls->Add(this->tabPage4);
+			this->tabControl1->Controls->Add(this->tabPage5);
 			this->tabControl1->Location = System::Drawing::Point(106, 12);
 			this->tabControl1->Name = L"tabControl1";
 			this->tabControl1->SelectedIndex = 0;
@@ -263,10 +269,10 @@ namespace ProjetPOO {
 			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage1->Size = System::Drawing::Size(851, 553);
 			this->tabPage1->TabIndex = 0;
-			this->tabPage1->Text = L"Client";
+			this->tabPage1->Text = L"Clients";
 			this->tabPage1->UseVisualStyleBackColor = true;
 			// 
-			// label10
+			// lbl_console
 			// 
 			this->label10->AutoSize = true;
 			this->label10->Location = System::Drawing::Point(13, 457);
@@ -275,7 +281,7 @@ namespace ProjetPOO {
 			this->label10->TabIndex = 24;
 			this->label10->Text = L"Console";
 			// 
-			// label9
+			// lbl_date_premier_achat
 			// 
 			this->label9->AutoSize = true;
 			this->label9->Location = System::Drawing::Point(163, 406);
@@ -292,7 +298,7 @@ namespace ProjetPOO {
 			this->textBox6->Size = System::Drawing::Size(204, 22);
 			this->textBox6->TabIndex = 22;
 			// 
-			// label8
+			// lbl_date_naissance
 			// 
 			this->label8->AutoSize = true;
 			this->label8->Location = System::Drawing::Point(163, 378);
@@ -309,7 +315,7 @@ namespace ProjetPOO {
 			this->textBox5->Size = System::Drawing::Size(204, 22);
 			this->textBox5->TabIndex = 20;
 			// 
-			// label7
+			// lbl_adresse_facturation
 			// 
 			this->label7->AutoSize = true;
 			this->label7->Location = System::Drawing::Point(163, 310);
@@ -318,7 +324,7 @@ namespace ProjetPOO {
 			this->label7->TabIndex = 19;
 			this->label7->Text = L"Adresse de facturation";
 			// 
-			// label6
+			// lbl_adresse_livraison
 			// 
 			this->label6->AutoSize = true;
 			this->label6->Location = System::Drawing::Point(163, 284);
@@ -343,7 +349,7 @@ namespace ProjetPOO {
 			this->textBox3->Size = System::Drawing::Size(204, 22);
 			this->textBox3->TabIndex = 16;
 			// 
-			// label5
+			// lbl_genre
 			// 
 			this->label5->AutoSize = true;
 			this->label5->Location = System::Drawing::Point(597, 218);
@@ -360,7 +366,7 @@ namespace ProjetPOO {
 			this->textBox2->Size = System::Drawing::Size(126, 22);
 			this->textBox2->TabIndex = 14;
 			// 
-			// label4
+			// lbl_type
 			// 
 			this->label4->AutoSize = true;
 			this->label4->Location = System::Drawing::Point(6, 392);
@@ -427,8 +433,28 @@ namespace ProjetPOO {
 			this->tabPage3->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage3->Size = System::Drawing::Size(851, 553);
 			this->tabPage3->TabIndex = 2;
-			this->tabPage3->Text = L"tabPage3";
+			this->tabPage3->Text = L"Commandes";
 			this->tabPage3->UseVisualStyleBackColor = true;
+			// 
+			// tabPage4
+			// 
+			this->tabPage4->Location = System::Drawing::Point(4, 25);
+			this->tabPage4->Name = L"tabPage3";
+			this->tabPage4->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage4->Size = System::Drawing::Size(851, 553);
+			this->tabPage4->TabIndex = 3;
+			this->tabPage4->Text = L"Stock";
+			this->tabPage4->UseVisualStyleBackColor = true;
+			// 
+			// tabPage5
+			// 
+			this->tabPage5->Location = System::Drawing::Point(4, 25);
+			this->tabPage5->Name = L"tabPage3";
+			this->tabPage5->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage5->Size = System::Drawing::Size(851, 553);
+			this->tabPage5->TabIndex = 4;
+			this->tabPage5->Text = L"Statistiques";
+			this->tabPage5->UseVisualStyleBackColor = true;
 			// 
 			// MyForm
 			// 
