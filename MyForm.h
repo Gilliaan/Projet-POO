@@ -493,6 +493,9 @@ namespace ProjetPOO {
 		this->dgv_enr->DataSource = this->oDs;
 		this->dgv_enr->DataMember = "TB_PEOPLE";
 	}
+
+	private: System::Void dgv_enr_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+	}
 	private: System::Void btn_insert_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		this->oSvc->ajouterUnePersonne(this->txt_nom->Text, this->txt_prenom->Text);
@@ -502,8 +505,9 @@ namespace ProjetPOO {
 		this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
 		this->dgv_enr->DataSource = this->oDs;
 		this->dgv_enr->DataMember = "TB_PEOPLE";
-	}
-	private: System::Void dgv_enr_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+
+		//Affichage de la personne ajouter
+		this->listBox1->Items->Add("Personne ajouter, Id :" + this->txt_id->Text + ", Nom =" + this->txt_nom->Text + " OK");
 	}
 	private: System::Void btn_delete_Click(System::Object^ sender, System::EventArgs^ e)
 	{
@@ -518,7 +522,7 @@ namespace ProjetPOO {
 		this->dgv_enr->DataMember = "TB_PEOPLE";
 
 		//Affichage de la personne supprimer
-		this->listBox1->Items->Add("supprimer personne Id :" + this->txt_id->Text + ", Nom ="+ this->txt_nom->Text +" OK");
+		this->listBox1->Items->Add("Personne suprimer, Id :" + this->txt_id->Text + ", Nom ="+ this->txt_nom->Text +" OK");
 	}
 	private: System::Void btn_update_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
@@ -533,11 +537,7 @@ namespace ProjetPOO {
 		this->dgv_enr->DataMember = "TB_PEOPLE";
 
 		//Affichage de la personne modifier
-		this->listBox1->Items->Add("update personne Id :" + this->txt_id->Text + ", Nom ="+ this->txt_nom->Text +" OK");
+		this->listBox1->Items->Add("Personne modifier, Id :" + this->txt_id->Text + ", Nom ="+ this->txt_nom->Text +" OK");
 	}
-	
-
-
-
 };
 }
