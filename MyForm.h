@@ -197,14 +197,14 @@ namespace ProjetPOO {
 	private: System::Void btn_delete_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		String^ textVal = this->txt_id->Text;
-		int id = System::Convert::ToInt32(textVal);
-		this->oSvc->suprimerUnePersonne(id);
+		int id_people = System::Convert::ToInt32(textVal);
+		this->oSvc->suprimerUnePersonne(id_people);
 		this->dgv_enr->Refresh();
 		this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
 		this->dgv_enr->DataSource = this->oDs;
 		this->dgv_enr->DataMember = "TB_PEOPLE";
-
 		//this->listbox1->Items->add("supprimer personne id :" + this->txt_id->Text ", Nom" + this.t)
 	}
+
 };
 }

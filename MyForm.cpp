@@ -1,12 +1,9 @@
 #include "MyForm.h"
-#include <iostream>
-using namespace std;
 using namespace System;
 using namespace System::Windows::Forms;
 
-
 [STAThreadAttribute]
-int __clrcall WinMain(array<String^>^ args)
+int __clrcall WinMain(void)
 {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);

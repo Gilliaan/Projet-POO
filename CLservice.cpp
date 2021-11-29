@@ -30,5 +30,4 @@ void NS_Comp_Svc::CLservices::suprimerUnePersonne(int id)
 	this->oMappTB->setId(id);
 	sql = this->oMappTB->Delete();
 
-	this->oCad->actionRows(sql);
 }
