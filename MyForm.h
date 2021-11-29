@@ -194,8 +194,17 @@ namespace ProjetPOO {
 	}
 	private: System::Void dgv_enr_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 	}
-	private: System::Void btn_delete_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void btn_delete_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+		String^ textVal = this->txt_id->Text;
+		int id = System::Convert::ToInt32(textVal);
+		this->oSvc->suprimerUnePersonne(id);
+		this->dgv_enr->Refresh();
+		this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
+		this->dgv_enr->DataSource = this->oDs;
+		this->dgv_enr->DataMember = "TB_PEOPLE";
 
+		//this->listbox1->Items->add("supprimer personne id :" + this->txt_id->Text ", Nom" + this.t)
 	}
 };
 }

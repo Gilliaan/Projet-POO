@@ -6,8 +6,8 @@ namespace NS_Comp_Mappage
 	private:
 		System::String^ sSql;
 		int id_people;
-		System::String^ nom;
-		System::String^ prenom;
+		System::String^ ppl_nom;
+		System::String^ ppl_prenom;
 	public:
 		System::String^ Select(void);
 		System::String^ Insert(void);
