@@ -790,7 +790,7 @@ private: System::Windows::Forms::TextBox^ textBox_id_comm;
 	}
 	private: System::Void btn_insert_Click_Comm(System::Object^ sender, System::EventArgs^ e)
 	{
-		this->oSvc->ajouterUnePersonne(this->txt_nom->Text, this->txt_prenom->Text);
+		this->oSvc->selectionnerToutesLesCommandes(this->txt_ref->Text, this->txt_prenom->Text);
 
 		//Load data
 		this->dgv_enr->Refresh();
@@ -835,7 +835,7 @@ private: System::Void tabPage3_Click(System::Object^ sender, System::EventArgs^ 
 }
 private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void label14_Click(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void label14_Click(System::Object^ sender, System::EventArgs^ e) { 
 }
 };
 }
