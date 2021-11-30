@@ -1,4 +1,5 @@
-#include "CLmapcommandesTB.h"
+#include "CLmapcommTB.h"
+
 System::String^ NS_Comp_Mappage::CLmapcommTB::Select(void)
 {
 	return "SELECT [id_com], [com_ref], [com_date_prevue], [com_date_emission] FROM [DB_PROJET_POO].[dbo].[TB_COMMANDE]";
