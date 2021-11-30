@@ -774,10 +774,6 @@ namespace ProjetPOO {
 
 		//Load data
 
-		this->dgv_enr->Refresh();
-		this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
-		this->dgv_enr->DataSource = this->oDs;
-		this->dgv_enr->DataMember = "TB_PEOPLE";
 
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
 		this->dgv_PER->Refresh();
@@ -837,6 +833,7 @@ namespace ProjetPOO {
 		this->oSvc->modifierUnPersonnel(this->nom_personnel->Text, this->prenom_personnel->Text, id_people);
 
 		//Load data
+		this->oSvc = gcnew NS_Comp_Svc::CLservices();
 		this->dgv_PER->Refresh();
 		this->oDs = this->oSvc->selectionnerToutLePersonnel(this->txt_type_pers->Text, "TB_PEOPLE");
 		this->dgv_PER->DataSource = this->oDs;
@@ -848,13 +845,14 @@ namespace ProjetPOO {
 	private: System::Void button_insert2_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->oSvc->ajouterUnPersonnel(this->nom_personnel->Text, this->prenom_personnel->Text);
 		//Load data
+		this->oSvc = gcnew NS_Comp_Svc::CLservices();
 		this->dgv_PER->Refresh();
 		this->oDs = this->oSvc->selectionnerToutLePersonnel(this->txt_type_pers->Text, "TB_PEOPLE");
 		this->dgv_PER->DataSource = this->oDs;
 		this->dgv_PER->DataMember = "TB_PEOPLE";
 
 		//Affichage de la personne ajouter
-		this->listBox1->Items->Add("Personne ajouter, Id :" + this->Id_personnel->Text + ", Nom =" + this->nom_personnel->Text + " OK");
+		this->listBox2->Items->Add("Personne ajouter, Id :" + this->Id_personnel->Text + ", Nom =" + this->nom_personnel->Text + " OK");
 
 	}
 	private: System::Void button_delete2_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -863,6 +861,7 @@ namespace ProjetPOO {
 		this->oSvc->suprimerUnPersonnel(id_people);
 
 		//Load data
+		this->oSvc = gcnew NS_Comp_Svc::CLservices();
 		this->dgv_PER->Refresh();
 		this->oDs = this->oSvc->selectionnerToutLePersonnel(this->txt_type_pers->Text, "TB_PEOPLE");
 		this->dgv_PER->DataSource = this->oDs;
