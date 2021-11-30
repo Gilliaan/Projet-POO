@@ -776,6 +776,11 @@ namespace ProjetPOO {
 		this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
 		this->dgv_enr->DataSource = this->oDs;
 		this->dgv_enr->DataMember = "TB_PEOPLE";
+
+		this->dgv_PER->Refresh();
+		this->oDs = this->oSvc->selectionnerToutLePersonnel("TB_PEOPLE");
+		this->dgv_PER->DataSource = this->oDs;
+		this->dgv_PER->DataMember = "TB_PEOPLE";
 	}
 
 	private: System::Void dgv_enr_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {

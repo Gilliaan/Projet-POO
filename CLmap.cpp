@@ -7,7 +7,7 @@ System::String^ NS_Comp_Mappage::CLmapTB::Select(void)
 }
 System::String^ NS_Comp_Mappage::CLmapTB::Insert(void)
 {
-	return "INSERT INTO TB_PEOPLE (ppl_nom, ppl_prenom) VALUES('" + this->ppl_nom + "', '" + this->ppl_prenom + "') WHERE ppl_type = '" + this->id_ppl + "'";
+	return "INSERT INTO TB_PEOPLE (ppl_nom, ppl_prenom) VALUES('" + this->ppl_nom + "', '" + this->ppl_prenom + "')";
 }
 System::String^ NS_Comp_Mappage::CLmapTB::Delete(void)
 {

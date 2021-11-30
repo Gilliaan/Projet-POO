@@ -2,11 +2,11 @@
 
 System::String^ NS_Comp_Mappage::CLmapPERS::Select_PERS(void)
 {
-	return "SELECT [id_ppl], [ppl_nom], [ppl_prenom], [ppl_gender], [ppl_type] WHERE ppl_type = '" + this->id_ppl + "' FROM [DB_PROJET_POO].[dbo].[TB_PEOPLE]";
+	return "SELECT [id_ppl], [ppl_nom], [ppl_prenom], [ppl_gender], [ppl_type]  FROM [DB_PROJET_POO].[dbo].[TB_PEOPLE] WHERE ppl_type = '" + this->ppl_type + "'";
 }
 System::String^ NS_Comp_Mappage::CLmapPERS::Insert_PERS(void)
 {
-	return "INSERT INTO TB_PEOPLE (ppl_nom, ppl_prenom) VALUES('" + this->ppl_nom + "', '" + this->ppl_prenom + "') WHERE ppl_type = '" + this->id_ppl + "'";
+	return "INSERT INTO TB_PEOPLE (ppl_nom, ppl_prenom) VALUES('" + this->ppl_nom + "', '" + this->ppl_prenom + "') ";
 }
 System::String^ NS_Comp_Mappage::CLmapPERS::Delete_PERS(void)
 {

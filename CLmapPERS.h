@@ -8,6 +8,8 @@ namespace NS_Comp_Mappage
 		int id_ppl;
 		System::String^ ppl_nom;
 		System::String^ ppl_prenom;
+		System::String^ ppl_type;
+		System::String^ ppl_gender;
 	public:
 		System::String^ Select_PERS(void);
 		System::String^ Insert_PERS(void);
@@ -19,6 +21,7 @@ namespace NS_Comp_Mappage
 		int getId_PERS(void);
 		System::String^ getNom_PERS(void);
 		System::String^ getPrenom_PERS(void);
+		
 	};
 
 }
