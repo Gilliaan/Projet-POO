@@ -101,6 +101,8 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::TextBox^ txt_seuil_reap_stck;
 	private: System::Windows::Forms::Label^ lbl_console_stck;
 	private: System::Windows::Forms::ListBox^ list_console_stck;
+	private: System::Windows::Forms::DataGridView^ dgv_aff_adr_cl;
+	private: System::Windows::Forms::Button^ aff_adr_cl;
 
 
 	protected:
@@ -129,6 +131,8 @@ namespace ProjetPOO {
 			this->lbl_nom_cl = (gcnew System::Windows::Forms::Label());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tab_cl = (gcnew System::Windows::Forms::TabPage());
+			this->aff_adr_cl = (gcnew System::Windows::Forms::Button());
+			this->dgv_aff_adr_cl = (gcnew System::Windows::Forms::DataGridView());
 			this->lbl_console_cl = (gcnew System::Windows::Forms::Label());
 			this->lbl_date_premier_achat_cl = (gcnew System::Windows::Forms::Label());
 			this->txt_date_premier_achat_cl = (gcnew System::Windows::Forms::TextBox());
@@ -146,6 +150,8 @@ namespace ProjetPOO {
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
+			this->lbl_console_stck = (gcnew System::Windows::Forms::Label());
+			this->list_console_stck = (gcnew System::Windows::Forms::ListBox());
 			this->txt_quantite_produit_stck = (gcnew System::Windows::Forms::TextBox());
 			this->txt_id_stck = (gcnew System::Windows::Forms::TextBox());
 			this->txt_id_article_stck = (gcnew System::Windows::Forms::TextBox());
@@ -159,11 +165,10 @@ namespace ProjetPOO {
 			this->btn_inserer_stck = (gcnew System::Windows::Forms::Button());
 			this->dgv_stck = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
-			this->list_console_stck = (gcnew System::Windows::Forms::ListBox());
-			this->lbl_console_stck = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_cl))->BeginInit();
 			this->tabControl1->SuspendLayout();
 			this->tab_cl->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_aff_adr_cl))->BeginInit();
 			this->tabPage4->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_stck))->BeginInit();
 			this->SuspendLayout();
@@ -280,6 +285,8 @@ namespace ProjetPOO {
 			// 
 			this->tab_cl->BackColor = System::Drawing::Color::White;
 			this->tab_cl->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
+			this->tab_cl->Controls->Add(this->aff_adr_cl);
+			this->tab_cl->Controls->Add(this->dgv_aff_adr_cl);
 			this->tab_cl->Controls->Add(this->lbl_console_cl);
 			this->tab_cl->Controls->Add(this->lbl_date_premier_achat_cl);
 			this->tab_cl->Controls->Add(this->txt_date_premier_achat_cl);
@@ -311,6 +318,29 @@ namespace ProjetPOO {
 			this->tab_cl->Size = System::Drawing::Size(1182, 553);
 			this->tab_cl->TabIndex = 0;
 			this->tab_cl->Text = L"Clients";
+			this->tab_cl->Click += gcnew System::EventHandler(this, &MyForm::tab_cl_Click);
+			// 
+			// aff_adr_cl
+			// 
+			this->aff_adr_cl->BackColor = System::Drawing::Color::Transparent;
+			this->aff_adr_cl->Location = System::Drawing::Point(775, 215);
+			this->aff_adr_cl->Margin = System::Windows::Forms::Padding(4);
+			this->aff_adr_cl->Name = L"aff_adr_cl";
+			this->aff_adr_cl->Size = System::Drawing::Size(386, 46);
+			this->aff_adr_cl->TabIndex = 26;
+			this->aff_adr_cl->Text = L"AFFICHER ADRESSE";
+			this->aff_adr_cl->UseVisualStyleBackColor = false;
+			this->aff_adr_cl->Click += gcnew System::EventHandler(this, &MyForm::aff_adr_cl_Click);
+			// 
+			// dgv_aff_adr_cl
+			// 
+			this->dgv_aff_adr_cl->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dgv_aff_adr_cl->Location = System::Drawing::Point(595, 279);
+			this->dgv_aff_adr_cl->Margin = System::Windows::Forms::Padding(4);
+			this->dgv_aff_adr_cl->Name = L"dgv_aff_adr_cl";
+			this->dgv_aff_adr_cl->RowHeadersWidth = 51;
+			this->dgv_aff_adr_cl->Size = System::Drawing::Size(566, 113);
+			this->dgv_aff_adr_cl->TabIndex = 25;
 			// 
 			// lbl_console_cl
 			// 
@@ -358,7 +388,7 @@ namespace ProjetPOO {
 			// lbl_adr_facturation_cl
 			// 
 			this->lbl_adr_facturation_cl->AutoSize = true;
-			this->lbl_adr_facturation_cl->Location = System::Drawing::Point(163, 310);
+			this->lbl_adr_facturation_cl->Location = System::Drawing::Point(594, 432);
 			this->lbl_adr_facturation_cl->Name = L"lbl_adr_facturation_cl";
 			this->lbl_adr_facturation_cl->Size = System::Drawing::Size(151, 17);
 			this->lbl_adr_facturation_cl->TabIndex = 19;
@@ -367,7 +397,7 @@ namespace ProjetPOO {
 			// lbl_adr_livraison_cl
 			// 
 			this->lbl_adr_livraison_cl->AutoSize = true;
-			this->lbl_adr_livraison_cl->Location = System::Drawing::Point(163, 284);
+			this->lbl_adr_livraison_cl->Location = System::Drawing::Point(594, 406);
 			this->lbl_adr_livraison_cl->Name = L"lbl_adr_livraison_cl";
 			this->lbl_adr_livraison_cl->Size = System::Drawing::Size(136, 17);
 			this->lbl_adr_livraison_cl->TabIndex = 18;
@@ -375,7 +405,7 @@ namespace ProjetPOO {
 			// 
 			// txt_adr_facturation_cl
 			// 
-			this->txt_adr_facturation_cl->Location = System::Drawing::Point(323, 305);
+			this->txt_adr_facturation_cl->Location = System::Drawing::Point(754, 427);
 			this->txt_adr_facturation_cl->Margin = System::Windows::Forms::Padding(4);
 			this->txt_adr_facturation_cl->Name = L"txt_adr_facturation_cl";
 			this->txt_adr_facturation_cl->Size = System::Drawing::Size(204, 22);
@@ -383,7 +413,7 @@ namespace ProjetPOO {
 			// 
 			// txt_adr_livraison_cl
 			// 
-			this->txt_adr_livraison_cl->Location = System::Drawing::Point(323, 279);
+			this->txt_adr_livraison_cl->Location = System::Drawing::Point(754, 401);
 			this->txt_adr_livraison_cl->Margin = System::Windows::Forms::Padding(4);
 			this->txt_adr_livraison_cl->Name = L"txt_adr_livraison_cl";
 			this->txt_adr_livraison_cl->Size = System::Drawing::Size(204, 22);
@@ -477,6 +507,24 @@ namespace ProjetPOO {
 			this->tabPage4->TabIndex = 3;
 			this->tabPage4->Text = L"Stock";
 			this->tabPage4->UseVisualStyleBackColor = true;
+			// 
+			// lbl_console_stck
+			// 
+			this->lbl_console_stck->AutoSize = true;
+			this->lbl_console_stck->Location = System::Drawing::Point(32, 463);
+			this->lbl_console_stck->Name = L"lbl_console_stck";
+			this->lbl_console_stck->Size = System::Drawing::Size(46, 17);
+			this->lbl_console_stck->TabIndex = 13;
+			this->lbl_console_stck->Text = L"label1";
+			// 
+			// list_console_stck
+			// 
+			this->list_console_stck->FormattingEnabled = true;
+			this->list_console_stck->ItemHeight = 16;
+			this->list_console_stck->Location = System::Drawing::Point(16, 477);
+			this->list_console_stck->Name = L"list_console_stck";
+			this->list_console_stck->Size = System::Drawing::Size(1147, 52);
+			this->list_console_stck->TabIndex = 12;
 			// 
 			// txt_quantite_produit_stck
 			// 
@@ -590,30 +638,12 @@ namespace ProjetPOO {
 			this->tabPage5->Text = L"Statistiques";
 			this->tabPage5->UseVisualStyleBackColor = true;
 			// 
-			// list_console_stck
-			// 
-			this->list_console_stck->FormattingEnabled = true;
-			this->list_console_stck->ItemHeight = 16;
-			this->list_console_stck->Location = System::Drawing::Point(16, 477);
-			this->list_console_stck->Name = L"list_console_stck";
-			this->list_console_stck->Size = System::Drawing::Size(1147, 52);
-			this->list_console_stck->TabIndex = 12;
-			// 
-			// lbl_console_stck
-			// 
-			this->lbl_console_stck->AutoSize = true;
-			this->lbl_console_stck->Location = System::Drawing::Point(32, 463);
-			this->lbl_console_stck->Name = L"lbl_console_stck";
-			this->lbl_console_stck->Size = System::Drawing::Size(46, 17);
-			this->lbl_console_stck->TabIndex = 13;
-			this->lbl_console_stck->Text = L"label1";
-			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::HotTrack;
-			this->ClientSize = System::Drawing::Size(1262, 610);
+			this->ClientSize = System::Drawing::Size(1262, 626);
 			this->Controls->Add(this->tabControl1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Margin = System::Windows::Forms::Padding(4);
@@ -625,6 +655,7 @@ namespace ProjetPOO {
 			this->tabControl1->ResumeLayout(false);
 			this->tab_cl->ResumeLayout(false);
 			this->tab_cl->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_aff_adr_cl))->EndInit();
 			this->tabPage4->ResumeLayout(false);
 			this->tabPage4->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_stck))->EndInit();
@@ -721,6 +752,18 @@ namespace ProjetPOO {
 
 		//Affichage de la personne ajouter
 		this->list_console_stck->Items->Add("Stock ajouter, Id :" + this->txt_id_cl->Text + ", Nom =" + this->txt_nom_cl->Text + " OK");
+	}
+	private: System::Void aff_adr_cl_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		String^ val = this->txt_id_cl->Text;
+		int id = System::Convert::ToInt32(val);
+
+		//Load data Client
+		this->oSvc = gcnew NS_Comp_Svc::CLservices();
+		this->dgv_aff_adr_cl->Refresh();
+		this->oDs = this->oSvc->afficherAdresseClient(id, "TB_ADRESSE");
+		this->dgv_aff_adr_cl->DataSource = this->oDs;
+		this->dgv_aff_adr_cl->DataMember = "TB_ADRESSE";
 	}
 };
 }

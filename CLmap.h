@@ -19,6 +19,7 @@ namespace NS_Comp_Mappage
 		System::String^ InsertClient(void);
 		System::String^ DeleteClient(void);
 		System::String^ UpdateClient(void);
+		System::String^ AffichageAdrCl(void);
 		void setId(int);
 		void setNom(System::String^);
 		void setPrenom(System::String^);

@@ -24,6 +24,15 @@ System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerTousLeStock(System::
 	sql = this->oMappStock->SelectStock();
 	return this->oCad->getRows(sql, dataTableName);
 }
+//Sélectionner et afficher les adresses clients
+System::Data::DataSet^ NS_Comp_Svc::CLservices::afficherAdresseClient(int id, System::String^ dataTableName)
+{
+	System::String^ sql;
+
+	this->oMappClient->setId(id);
+	sql = this->oMappClient->AffichageAdrCl();
+	return this->oCad->getRows(sql, dataTableName);
+}
 //Méthodes Gestion d'un client
 void NS_Comp_Svc::CLservices::ajouterUnClient(System::String^ adrLivraison , System::String^ adrFacturation,System::String^ dateNaissance, System::String^ datePremierAchat, System::String^ genre, System::String^ nom, System::String^ prenom) {
 	System::String^ sql;

@@ -3,11 +3,16 @@
 
 System::String^ NS_Comp_Mappage::CLmapClient::SelectClient(void)
 {
-	return "SELECT id_ppl, ppl_nom, ppl_prenom, ppl_gender, cl_date_naissance, CL_date_premier_achat, cl_adresse_livraison, cl_adresse_facturation FROM [DB_PROJET_POO].[dbo].[TB_PEOPLE] WHERE ppl_type = '" + this->ppl_type + "';";
+	return "SELECT id_ppl, ppl_nom, ppl_prenom, ppl_gender, cl_date_naissance, CL_date_premier_achat FROM [DB_PROJET_POO].[dbo].[TB_PEOPLE] WHERE ppl_type = '" + this->ppl_type + "';";
 }
+System::String^ NS_Comp_Mappage::CLmapClient::AffichageAdrCl(void)
+{
+	return "SELECT id_ppl, adr_livraison, adr_facturation FROM TB_ADRESSE INNER JOIN TB_PEOPLE ON TB_ADRESSE.ppl_id = TB_PEOPLE.id_ppl WHERE id_ppl = '"+ this->id_ppl +"';";
+}
+//FAire une nouvelle méthode Afficher adresse : INNER JOIN avec clé étrangère et afficher dans une autre dgv
 System::String^ NS_Comp_Mappage::CLmapClient::InsertClient(void)
 {
-	return "INSERT INTO TB_PEOPLE (ppl_nom, ppl_prenom, ppl_type, ppl_gender, cl_date_naissance, CL_date_premier_achat, cl_adresse_livraison, cl_adresse_facturation) VALUES('" + this->ppl_nom + "', '" + this->ppl_prenom + "', '" + this->ppl_type + "', '" + this->ppl_gender + "', '" + this->cl_date_naissance + "','" + this->CL_date_premier_achat + "','" + this->cl_adresse_livraison + "','"+ this->cl_adresse_facturation +"'); ";
+	return "INSERT INTO TB_PEOPLE (ppl_nom, ppl_prenom, ppl_type, ppl_gender, cl_date_naissance, CL_date_premier_achat) VALUES('" + this->ppl_nom + "', '" + this->ppl_prenom + "', '" + this->ppl_type + "', '" + this->ppl_gender + "', '" + this->cl_date_naissance + "','" + this->CL_date_premier_achat + "'); ";
 }
 System::String^ NS_Comp_Mappage::CLmapClient::DeleteClient(void)
 {
@@ -15,14 +20,12 @@ System::String^ NS_Comp_Mappage::CLmapClient::DeleteClient(void)
 }
 System::String^ NS_Comp_Mappage::CLmapClient::UpdateClient(void)
 {
-	return "UPDATE TB_PEOPLE SET ppl_nom = '" 
-		+ this->ppl_nom + "', ppl_prenom = '" 
+	return "UPDATE TB_PEOPLE SET ppl_nom = '"
+		+ this->ppl_nom + "', ppl_prenom = '"
 		+ this->ppl_prenom + "', ppl_gender = '"
 		+ this->ppl_gender + "', cl_date_naissance = '"
 		+ this->cl_date_naissance + "', CL_date_premier_achat = '"
-		+ this->CL_date_premier_achat + "', cl_adresse_livraison = '"
-		+ this->cl_adresse_livraison + "', cl_adresse_facturation = '"
-		+ this->cl_adresse_facturation + "' WHERE id_ppl = " + "'" + this->id_ppl + "'; ";
+		+ this->CL_date_premier_achat + "'; ";
 }
 void NS_Comp_Mappage::CLmapClient::setId(int Id)
 {

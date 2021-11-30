@@ -16,6 +16,7 @@ namespace NS_Comp_Svc
 		CLservices(void);
 		System::Data::DataSet^ selectionnerTousLesClients(System::String^, System::String^);
 		System::Data::DataSet^ selectionnerTousLeStock(System::String^);
+		System::Data::DataSet^ afficherAdresseClient(int ,System::String^);
 		//Méthodes gestion Clients
 		void ajouterUnClient(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^);
 		void supprimerUnClient(int);
