@@ -11,7 +11,7 @@ namespace NS_Comp_Svc
 		NS_Comp_Data::CLcad^ oCad;
 		NS_Comp_Mappage::CLmapClient^ oMappClient;
 		NS_Comp_Mappage::CLmapStock^ oMappStock;
-		System::String^ typec;
+		//System::String^ typec;
 	public:
 		CLservices(void);
 		System::Data::DataSet^ selectionnerTousLesClients(System::String^, System::String^);

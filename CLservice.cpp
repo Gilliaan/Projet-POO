@@ -5,6 +5,7 @@ NS_Comp_Svc::CLservices::CLservices(void)
 {
 	this->oCad = gcnew NS_Comp_Data::CLcad();
 	this->oMappClient = gcnew NS_Comp_Mappage::CLmapClient();
+	this->oMappStock = gcnew NS_Comp_Mappage::CLmapStock();
 }
 //Sélectionner et afficher tous les clients de la table PEOPLE
 System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerTousLesClients(System::String^ type, System::String^ dataTableName)

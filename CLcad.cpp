@@ -1,7 +1,6 @@
 //#include "pch.h"
 #include "CLcad.h"
 
-
 NS_Comp_Data::CLcad::CLcad(void)
 {
 	this->sCnx = "Data Source=LAPTOP-6U8JILAM\\MSSQLSERVER01;Initial Catalog=DB_PROJET_POO;Persist Security Info=True;User ID=CNX_PROJET_POO;Password=azerty";

@@ -36,118 +36,73 @@ namespace ProjetPOO {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::DataGridView^ dgv_Clients;
-	private: System::Windows::Forms::Button^ btn_inserer_clients;
-	private: System::Windows::Forms::Button^ btn_supprimer_clients;
+	private: System::Windows::Forms::DataGridView^ dgv_cl;
 	protected:
 
+	private: System::Windows::Forms::Button^ btn_inserer_cl;
+	private: System::Windows::Forms::Button^ btn_supprimer_cl;
 
 
-	private: System::Windows::Forms::Button^ btn_modifier_clients;
+	private: System::Windows::Forms::Button^ btn_modifier_cl;
+	protected:
+
 	private: System::Windows::Forms::TextBox^ txt_id_cl;
 	private: System::Windows::Forms::TextBox^ txt_nom_cl;
 	private: System::Windows::Forms::TextBox^ txt_prenom_cl;
 	protected:
-
-
-
-
-
-
-
-
-
-
-
-
 	private: NS_Comp_Svc::CLservices^ oSvc;
 	private: System::Data::DataSet^ oDs;
 	private: System::Windows::Forms::Label^ lbl_id_cl;
 	private: System::Windows::Forms::Label^ lbl_prenom_cl;
 	private: System::Windows::Forms::Label^ lbl_nom_cl;
 	private: System::Windows::Forms::TabControl^ tabControl1;
-	private: System::Windows::Forms::TabPage^ tab_client;
+	private: System::Windows::Forms::TabPage^ tab_cl;
 
 	private: System::Windows::Forms::TabPage^ tabPage2;
 	private: System::Windows::Forms::TabPage^ tabPage3;
 	private: System::Windows::Forms::TabPage^ tabPage4;
 	private: System::Windows::Forms::TabPage^ tabPage5;
 	private: System::Windows::Forms::ListBox^ list_console_cl;
-
 	private: System::Windows::Forms::TextBox^ txt_type_cl;
-
-
-
-
 	private: System::Windows::Forms::Label^ lbl_date_naissance_cl;
 	private: System::Windows::Forms::TextBox^ txt_date_naissance_cl;
-
-
-
 	private: System::Windows::Forms::Label^ lbl_adr_facturation_cl;
-
 	private: System::Windows::Forms::Label^ lbl_adr_livraison_cl;
 	private: System::Windows::Forms::TextBox^ txt_adr_facturation_cl;
-
-
-
-
-
 	private: System::Windows::Forms::TextBox^ txt_adr_livraison_cl;
-
-
 	private: System::Windows::Forms::Label^ lbl_genre_cl;
 	private: System::Windows::Forms::TextBox^ txt_genre_cl;
 	private: System::Windows::Forms::Label^ lbl_type_personne_cl;
-
-
-
-
-
 	private: System::Windows::Forms::Label^ lbl_date_premier_achat_cl;
 	private: System::Windows::Forms::TextBox^ txt_date_premier_achat_cl;
 	private: System::Windows::Forms::Label^ lbl_console_cl;
+	private: System::Windows::Forms::DataGridView^ dgv_stck;
+	private: System::Windows::Forms::Button^ btn_modifier_stck;
 
 
 
+	private: System::Windows::Forms::Button^ btn_supprimer_stck;
+
+	private: System::Windows::Forms::Button^ btn_inserer_stck;
+	private: System::Windows::Forms::TextBox^ txt_quantite_produit_stck;
 
 
+	private: System::Windows::Forms::TextBox^ txt_id_stck;
+	private: System::Windows::Forms::TextBox^ txt_id_article_stck;
 
 
-	private: System::Windows::Forms::DataGridView^ dgv_Stock;
-	private: System::Windows::Forms::Button^ btn_modifier_stock;
+	private: System::Windows::Forms::Label^ lbl_id_stck;
 
-	private: System::Windows::Forms::Button^ btn_supprimer_stock;
-
-
-
-
-	private: System::Windows::Forms::Button^ btn_insérer_stock;
-
-	private: System::Windows::Forms::TextBox^ txt_quantite_produit;
-	private: System::Windows::Forms::TextBox^ txt_stock_id;
-
-
-	private: System::Windows::Forms::TextBox^ txt_id_article;
-
-	private: System::Windows::Forms::Label^ lbl_Stock_Id;
 	private: System::Windows::Forms::Label^ lbl_Art_Id;
-	private: System::Windows::Forms::Label^ lbl_Stock_reap;
-	private: System::Windows::Forms::Label^ lbl_Stock_Quantite;
-	private: System::Windows::Forms::TextBox^ txt_seuil_reap;
+	private: System::Windows::Forms::Label^ lbl_seuil_reap_stck;
 
 
-
-
-
-
-
-
+	private: System::Windows::Forms::Label^ lbl_stock_quantite_stck;
+	private: System::Windows::Forms::TextBox^ txt_seuil_reap_stck;
 
 
 	protected:
-
-	private:
+		private:
 		/// <summary>
 		/// Variable nécessaire au concepteur.
 		/// </summary>
@@ -160,10 +115,10 @@ namespace ProjetPOO {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->dgv_Clients = (gcnew System::Windows::Forms::DataGridView());
-			this->btn_inserer_clients = (gcnew System::Windows::Forms::Button());
-			this->btn_supprimer_clients = (gcnew System::Windows::Forms::Button());
-			this->btn_modifier_clients = (gcnew System::Windows::Forms::Button());
+			this->dgv_cl = (gcnew System::Windows::Forms::DataGridView());
+			this->btn_inserer_cl = (gcnew System::Windows::Forms::Button());
+			this->btn_supprimer_cl = (gcnew System::Windows::Forms::Button());
+			this->btn_modifier_cl = (gcnew System::Windows::Forms::Button());
 			this->txt_id_cl = (gcnew System::Windows::Forms::TextBox());
 			this->txt_nom_cl = (gcnew System::Windows::Forms::TextBox());
 			this->txt_prenom_cl = (gcnew System::Windows::Forms::TextBox());
@@ -171,7 +126,7 @@ namespace ProjetPOO {
 			this->lbl_prenom_cl = (gcnew System::Windows::Forms::Label());
 			this->lbl_nom_cl = (gcnew System::Windows::Forms::Label());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
-			this->tab_client = (gcnew System::Windows::Forms::TabPage());
+			this->tab_cl = (gcnew System::Windows::Forms::TabPage());
 			this->lbl_console_cl = (gcnew System::Windows::Forms::Label());
 			this->lbl_date_premier_achat_cl = (gcnew System::Windows::Forms::Label());
 			this->txt_date_premier_achat_cl = (gcnew System::Windows::Forms::TextBox());
@@ -189,69 +144,69 @@ namespace ProjetPOO {
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
-			this->txt_quantite_produit = (gcnew System::Windows::Forms::TextBox());
-			this->txt_stock_id = (gcnew System::Windows::Forms::TextBox());
-			this->txt_id_article = (gcnew System::Windows::Forms::TextBox());
-			this->lbl_Stock_Id = (gcnew System::Windows::Forms::Label());
+			this->txt_quantite_produit_stck = (gcnew System::Windows::Forms::TextBox());
+			this->txt_id_stck = (gcnew System::Windows::Forms::TextBox());
+			this->txt_id_article_stck = (gcnew System::Windows::Forms::TextBox());
+			this->lbl_id_stck = (gcnew System::Windows::Forms::Label());
 			this->lbl_Art_Id = (gcnew System::Windows::Forms::Label());
-			this->lbl_Stock_reap = (gcnew System::Windows::Forms::Label());
-			this->lbl_Stock_Quantite = (gcnew System::Windows::Forms::Label());
-			this->txt_seuil_reap = (gcnew System::Windows::Forms::TextBox());
-			this->btn_modifier_stock = (gcnew System::Windows::Forms::Button());
-			this->btn_supprimer_stock = (gcnew System::Windows::Forms::Button());
-			this->btn_insérer_stock = (gcnew System::Windows::Forms::Button());
-			this->dgv_Stock = (gcnew System::Windows::Forms::DataGridView());
+			this->lbl_seuil_reap_stck = (gcnew System::Windows::Forms::Label());
+			this->lbl_stock_quantite_stck = (gcnew System::Windows::Forms::Label());
+			this->txt_seuil_reap_stck = (gcnew System::Windows::Forms::TextBox());
+			this->btn_modifier_stck = (gcnew System::Windows::Forms::Button());
+			this->btn_supprimer_stck = (gcnew System::Windows::Forms::Button());
+			this->btn_inserer_stck = (gcnew System::Windows::Forms::Button());
+			this->dgv_stck = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_Clients))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_cl))->BeginInit();
 			this->tabControl1->SuspendLayout();
-			this->tab_client->SuspendLayout();
+			this->tab_cl->SuspendLayout();
 			this->tabPage4->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_Stock))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_stck))->BeginInit();
 			this->SuspendLayout();
 			// 
-			// dgv_Clients
+			// dgv_cl
 			// 
-			this->dgv_Clients->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dgv_Clients->Location = System::Drawing::Point(16, 18);
-			this->dgv_Clients->Margin = System::Windows::Forms::Padding(4);
-			this->dgv_Clients->Name = L"dgv_Clients";
-			this->dgv_Clients->RowHeadersWidth = 51;
-			this->dgv_Clients->Size = System::Drawing::Size(1145, 183);
-			this->dgv_Clients->TabIndex = 0;
+			this->dgv_cl->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dgv_cl->Location = System::Drawing::Point(16, 18);
+			this->dgv_cl->Margin = System::Windows::Forms::Padding(4);
+			this->dgv_cl->Name = L"dgv_cl";
+			this->dgv_cl->RowHeadersWidth = 51;
+			this->dgv_cl->Size = System::Drawing::Size(1145, 183);
+			this->dgv_cl->TabIndex = 0;
 			// 
-			// btn_inserer_clients
+			// btn_inserer_cl
 			// 
-			this->btn_inserer_clients->BackColor = System::Drawing::Color::Transparent;
-			this->btn_inserer_clients->Location = System::Drawing::Point(16, 215);
-			this->btn_inserer_clients->Margin = System::Windows::Forms::Padding(4);
-			this->btn_inserer_clients->Name = L"btn_inserer_clients";
-			this->btn_inserer_clients->Size = System::Drawing::Size(121, 46);
-			this->btn_inserer_clients->TabIndex = 2;
-			this->btn_inserer_clients->Text = L"INSÉRER";
-			this->btn_inserer_clients->UseVisualStyleBackColor = false;
-			this->btn_inserer_clients->Click += gcnew System::EventHandler(this, &MyForm::btn_insert_Clients_Click);
+			this->btn_inserer_cl->BackColor = System::Drawing::Color::Transparent;
+			this->btn_inserer_cl->Location = System::Drawing::Point(16, 215);
+			this->btn_inserer_cl->Margin = System::Windows::Forms::Padding(4);
+			this->btn_inserer_cl->Name = L"btn_inserer_cl";
+			this->btn_inserer_cl->Size = System::Drawing::Size(121, 46);
+			this->btn_inserer_cl->TabIndex = 2;
+			this->btn_inserer_cl->Text = L"INSÉRER";
+			this->btn_inserer_cl->UseVisualStyleBackColor = false;
+			this->btn_inserer_cl->Click += gcnew System::EventHandler(this, &MyForm::btn_insert_click_cl);
 			// 
-			// btn_supprimer_clients
+			// btn_supprimer_cl
 			// 
-			this->btn_supprimer_clients->Location = System::Drawing::Point(16, 322);
-			this->btn_supprimer_clients->Margin = System::Windows::Forms::Padding(4);
-			this->btn_supprimer_clients->Name = L"btn_supprimer_clients";
-			this->btn_supprimer_clients->Size = System::Drawing::Size(121, 46);
-			this->btn_supprimer_clients->TabIndex = 3;
-			this->btn_supprimer_clients->Text = L"SUPPRIMER";
-			this->btn_supprimer_clients->UseVisualStyleBackColor = true;
-			this->btn_supprimer_clients->Click += gcnew System::EventHandler(this, &MyForm::btn_delete_Clients_Click);
+			this->btn_supprimer_cl->Location = System::Drawing::Point(16, 322);
+			this->btn_supprimer_cl->Margin = System::Windows::Forms::Padding(4);
+			this->btn_supprimer_cl->Name = L"btn_supprimer_cl";
+			this->btn_supprimer_cl->Size = System::Drawing::Size(121, 46);
+			this->btn_supprimer_cl->TabIndex = 3;
+			this->btn_supprimer_cl->Text = L"SUPPRIMER";
+			this->btn_supprimer_cl->UseVisualStyleBackColor = true;
+			this->btn_supprimer_cl->Click += gcnew System::EventHandler(this, &MyForm::btn_delete_click_cl);
 			// 
-			// btn_modifier_clients
+			// btn_modifier_cl
 			// 
-			this->btn_modifier_clients->Location = System::Drawing::Point(16, 268);
-			this->btn_modifier_clients->Margin = System::Windows::Forms::Padding(4);
-			this->btn_modifier_clients->Name = L"btn_modifier_clients";
-			this->btn_modifier_clients->Size = System::Drawing::Size(121, 46);
-			this->btn_modifier_clients->TabIndex = 4;
-			this->btn_modifier_clients->Text = L"MODIFIER";
-			this->btn_modifier_clients->UseVisualStyleBackColor = true;
-			this->btn_modifier_clients->Click += gcnew System::EventHandler(this, &MyForm::btn_update_Clients_Click);
+			this->btn_modifier_cl->Location = System::Drawing::Point(16, 268);
+			this->btn_modifier_cl->Margin = System::Windows::Forms::Padding(4);
+			this->btn_modifier_cl->Name = L"btn_modifier_cl";
+			this->btn_modifier_cl->Size = System::Drawing::Size(121, 46);
+			this->btn_modifier_cl->TabIndex = 4;
+			this->btn_modifier_cl->Text = L"MODIFIER";
+			this->btn_modifier_cl->UseVisualStyleBackColor = true;
+			this->btn_modifier_cl->Click += gcnew System::EventHandler(this, &MyForm::btn_update_click_cl);
 			// 
 			// txt_id_cl
 			// 
@@ -306,7 +261,7 @@ namespace ProjetPOO {
 			// 
 			// tabControl1
 			// 
-			this->tabControl1->Controls->Add(this->tab_client);
+			this->tabControl1->Controls->Add(this->tab_cl);
 			this->tabControl1->Controls->Add(this->tabPage2);
 			this->tabControl1->Controls->Add(this->tabPage3);
 			this->tabControl1->Controls->Add(this->tabPage4);
@@ -317,41 +272,41 @@ namespace ProjetPOO {
 			this->tabControl1->Size = System::Drawing::Size(1190, 582);
 			this->tabControl1->TabIndex = 11;
 			// 
-			// tab_client
+			// tab_cl
 			// 
-			this->tab_client->BackColor = System::Drawing::Color::White;
-			this->tab_client->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
-			this->tab_client->Controls->Add(this->lbl_console_cl);
-			this->tab_client->Controls->Add(this->lbl_date_premier_achat_cl);
-			this->tab_client->Controls->Add(this->txt_date_premier_achat_cl);
-			this->tab_client->Controls->Add(this->lbl_date_naissance_cl);
-			this->tab_client->Controls->Add(this->txt_date_naissance_cl);
-			this->tab_client->Controls->Add(this->lbl_adr_facturation_cl);
-			this->tab_client->Controls->Add(this->lbl_adr_livraison_cl);
-			this->tab_client->Controls->Add(this->txt_adr_facturation_cl);
-			this->tab_client->Controls->Add(this->txt_adr_livraison_cl);
-			this->tab_client->Controls->Add(this->lbl_genre_cl);
-			this->tab_client->Controls->Add(this->txt_genre_cl);
-			this->tab_client->Controls->Add(this->lbl_type_personne_cl);
-			this->tab_client->Controls->Add(this->txt_type_cl);
-			this->tab_client->Controls->Add(this->list_console_cl);
-			this->tab_client->Controls->Add(this->dgv_Clients);
-			this->tab_client->Controls->Add(this->btn_supprimer_clients);
-			this->tab_client->Controls->Add(this->btn_modifier_clients);
-			this->tab_client->Controls->Add(this->lbl_nom_cl);
-			this->tab_client->Controls->Add(this->txt_id_cl);
-			this->tab_client->Controls->Add(this->btn_inserer_clients);
-			this->tab_client->Controls->Add(this->lbl_prenom_cl);
-			this->tab_client->Controls->Add(this->txt_nom_cl);
-			this->tab_client->Controls->Add(this->lbl_id_cl);
-			this->tab_client->Controls->Add(this->txt_prenom_cl);
-			this->tab_client->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->tab_client->Location = System::Drawing::Point(4, 25);
-			this->tab_client->Name = L"tab_client";
-			this->tab_client->Padding = System::Windows::Forms::Padding(3);
-			this->tab_client->Size = System::Drawing::Size(1182, 553);
-			this->tab_client->TabIndex = 0;
-			this->tab_client->Text = L"Clients";
+			this->tab_cl->BackColor = System::Drawing::Color::White;
+			this->tab_cl->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
+			this->tab_cl->Controls->Add(this->lbl_console_cl);
+			this->tab_cl->Controls->Add(this->lbl_date_premier_achat_cl);
+			this->tab_cl->Controls->Add(this->txt_date_premier_achat_cl);
+			this->tab_cl->Controls->Add(this->lbl_date_naissance_cl);
+			this->tab_cl->Controls->Add(this->txt_date_naissance_cl);
+			this->tab_cl->Controls->Add(this->lbl_adr_facturation_cl);
+			this->tab_cl->Controls->Add(this->lbl_adr_livraison_cl);
+			this->tab_cl->Controls->Add(this->txt_adr_facturation_cl);
+			this->tab_cl->Controls->Add(this->txt_adr_livraison_cl);
+			this->tab_cl->Controls->Add(this->lbl_genre_cl);
+			this->tab_cl->Controls->Add(this->txt_genre_cl);
+			this->tab_cl->Controls->Add(this->lbl_type_personne_cl);
+			this->tab_cl->Controls->Add(this->txt_type_cl);
+			this->tab_cl->Controls->Add(this->list_console_cl);
+			this->tab_cl->Controls->Add(this->dgv_cl);
+			this->tab_cl->Controls->Add(this->btn_supprimer_cl);
+			this->tab_cl->Controls->Add(this->btn_modifier_cl);
+			this->tab_cl->Controls->Add(this->lbl_nom_cl);
+			this->tab_cl->Controls->Add(this->txt_id_cl);
+			this->tab_cl->Controls->Add(this->btn_inserer_cl);
+			this->tab_cl->Controls->Add(this->lbl_prenom_cl);
+			this->tab_cl->Controls->Add(this->txt_nom_cl);
+			this->tab_cl->Controls->Add(this->lbl_id_cl);
+			this->tab_cl->Controls->Add(this->txt_prenom_cl);
+			this->tab_cl->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->tab_cl->Location = System::Drawing::Point(4, 25);
+			this->tab_cl->Name = L"tab_cl";
+			this->tab_cl->Padding = System::Windows::Forms::Padding(3);
+			this->tab_cl->Size = System::Drawing::Size(1182, 553);
+			this->tab_cl->TabIndex = 0;
+			this->tab_cl->Text = L"Clients";
 			// 
 			// lbl_console_cl
 			// 
@@ -497,18 +452,18 @@ namespace ProjetPOO {
 			// 
 			// tabPage4
 			// 
-			this->tabPage4->Controls->Add(this->txt_quantite_produit);
-			this->tabPage4->Controls->Add(this->txt_stock_id);
-			this->tabPage4->Controls->Add(this->txt_id_article);
-			this->tabPage4->Controls->Add(this->lbl_Stock_Id);
+			this->tabPage4->Controls->Add(this->txt_quantite_produit_stck);
+			this->tabPage4->Controls->Add(this->txt_id_stck);
+			this->tabPage4->Controls->Add(this->txt_id_article_stck);
+			this->tabPage4->Controls->Add(this->lbl_id_stck);
 			this->tabPage4->Controls->Add(this->lbl_Art_Id);
-			this->tabPage4->Controls->Add(this->lbl_Stock_reap);
-			this->tabPage4->Controls->Add(this->lbl_Stock_Quantite);
-			this->tabPage4->Controls->Add(this->txt_seuil_reap);
-			this->tabPage4->Controls->Add(this->btn_modifier_stock);
-			this->tabPage4->Controls->Add(this->btn_supprimer_stock);
-			this->tabPage4->Controls->Add(this->btn_insérer_stock);
-			this->tabPage4->Controls->Add(this->dgv_Stock);
+			this->tabPage4->Controls->Add(this->lbl_seuil_reap_stck);
+			this->tabPage4->Controls->Add(this->lbl_stock_quantite_stck);
+			this->tabPage4->Controls->Add(this->txt_seuil_reap_stck);
+			this->tabPage4->Controls->Add(this->btn_modifier_stck);
+			this->tabPage4->Controls->Add(this->btn_supprimer_stck);
+			this->tabPage4->Controls->Add(this->btn_inserer_stck);
+			this->tabPage4->Controls->Add(this->dgv_stck);
 			this->tabPage4->Location = System::Drawing::Point(4, 25);
 			this->tabPage4->Name = L"tabPage4";
 			this->tabPage4->Padding = System::Windows::Forms::Padding(3);
@@ -517,35 +472,35 @@ namespace ProjetPOO {
 			this->tabPage4->Text = L"Stock";
 			this->tabPage4->UseVisualStyleBackColor = true;
 			// 
-			// txt_quantite_produit
+			// txt_quantite_produit_stck
 			// 
-			this->txt_quantite_produit->Location = System::Drawing::Point(177, 307);
-			this->txt_quantite_produit->Name = L"txt_quantite_produit";
-			this->txt_quantite_produit->Size = System::Drawing::Size(302, 22);
-			this->txt_quantite_produit->TabIndex = 11;
+			this->txt_quantite_produit_stck->Location = System::Drawing::Point(177, 307);
+			this->txt_quantite_produit_stck->Name = L"txt_quantite_produit_stck";
+			this->txt_quantite_produit_stck->Size = System::Drawing::Size(302, 22);
+			this->txt_quantite_produit_stck->TabIndex = 11;
 			// 
-			// txt_stock_id
+			// txt_id_stck
 			// 
-			this->txt_stock_id->Location = System::Drawing::Point(177, 262);
-			this->txt_stock_id->Name = L"txt_stock_id";
-			this->txt_stock_id->Size = System::Drawing::Size(302, 22);
-			this->txt_stock_id->TabIndex = 10;
+			this->txt_id_stck->Location = System::Drawing::Point(177, 262);
+			this->txt_id_stck->Name = L"txt_id_stck";
+			this->txt_id_stck->Size = System::Drawing::Size(302, 22);
+			this->txt_id_stck->TabIndex = 10;
 			// 
-			// txt_id_article
+			// txt_id_article_stck
 			// 
-			this->txt_id_article->Location = System::Drawing::Point(177, 399);
-			this->txt_id_article->Name = L"txt_id_article";
-			this->txt_id_article->Size = System::Drawing::Size(302, 22);
-			this->txt_id_article->TabIndex = 9;
+			this->txt_id_article_stck->Location = System::Drawing::Point(177, 399);
+			this->txt_id_article_stck->Name = L"txt_id_article_stck";
+			this->txt_id_article_stck->Size = System::Drawing::Size(302, 22);
+			this->txt_id_article_stck->TabIndex = 9;
 			// 
-			// lbl_Stock_Id
+			// lbl_id_stck
 			// 
-			this->lbl_Stock_Id->AutoSize = true;
-			this->lbl_Stock_Id->Location = System::Drawing::Point(174, 241);
-			this->lbl_Stock_Id->Name = L"lbl_Stock_Id";
-			this->lbl_Stock_Id->Size = System::Drawing::Size(58, 17);
-			this->lbl_Stock_Id->TabIndex = 8;
-			this->lbl_Stock_Id->Text = L"Stock Id";
+			this->lbl_id_stck->AutoSize = true;
+			this->lbl_id_stck->Location = System::Drawing::Point(174, 241);
+			this->lbl_id_stck->Name = L"lbl_id_stck";
+			this->lbl_id_stck->Size = System::Drawing::Size(58, 17);
+			this->lbl_id_stck->TabIndex = 8;
+			this->lbl_id_stck->Text = L"Stock Id";
 			// 
 			// lbl_Art_Id
 			// 
@@ -556,67 +511,67 @@ namespace ProjetPOO {
 			this->lbl_Art_Id->TabIndex = 7;
 			this->lbl_Art_Id->Text = L"Article Id";
 			// 
-			// lbl_Stock_reap
+			// lbl_seuil_reap_stck
 			// 
-			this->lbl_Stock_reap->AutoSize = true;
-			this->lbl_Stock_reap->Location = System::Drawing::Point(174, 332);
-			this->lbl_Stock_reap->Name = L"lbl_Stock_reap";
-			this->lbl_Stock_reap->Size = System::Drawing::Size(168, 17);
-			this->lbl_Stock_reap->TabIndex = 6;
-			this->lbl_Stock_reap->Text = L"Seuil réaprovisionnement";
+			this->lbl_seuil_reap_stck->AutoSize = true;
+			this->lbl_seuil_reap_stck->Location = System::Drawing::Point(174, 332);
+			this->lbl_seuil_reap_stck->Name = L"lbl_seuil_reap_stck";
+			this->lbl_seuil_reap_stck->Size = System::Drawing::Size(168, 17);
+			this->lbl_seuil_reap_stck->TabIndex = 6;
+			this->lbl_seuil_reap_stck->Text = L"Seuil réaprovisionnement";
 			// 
-			// lbl_Stock_Quantite
+			// lbl_stock_quantite_stck
 			// 
-			this->lbl_Stock_Quantite->AutoSize = true;
-			this->lbl_Stock_Quantite->Location = System::Drawing::Point(174, 287);
-			this->lbl_Stock_Quantite->Name = L"lbl_Stock_Quantite";
-			this->lbl_Stock_Quantite->Size = System::Drawing::Size(111, 17);
-			this->lbl_Stock_Quantite->TabIndex = 5;
-			this->lbl_Stock_Quantite->Text = L"Quantite Produit";
+			this->lbl_stock_quantite_stck->AutoSize = true;
+			this->lbl_stock_quantite_stck->Location = System::Drawing::Point(174, 287);
+			this->lbl_stock_quantite_stck->Name = L"lbl_stock_quantite_stck";
+			this->lbl_stock_quantite_stck->Size = System::Drawing::Size(111, 17);
+			this->lbl_stock_quantite_stck->TabIndex = 5;
+			this->lbl_stock_quantite_stck->Text = L"Quantite Produit";
 			// 
-			// txt_seuil_reap
+			// txt_seuil_reap_stck
 			// 
-			this->txt_seuil_reap->Location = System::Drawing::Point(177, 352);
-			this->txt_seuil_reap->Name = L"txt_seuil_reap";
-			this->txt_seuil_reap->Size = System::Drawing::Size(302, 22);
-			this->txt_seuil_reap->TabIndex = 4;
+			this->txt_seuil_reap_stck->Location = System::Drawing::Point(177, 352);
+			this->txt_seuil_reap_stck->Name = L"txt_seuil_reap_stck";
+			this->txt_seuil_reap_stck->Size = System::Drawing::Size(302, 22);
+			this->txt_seuil_reap_stck->TabIndex = 4;
 			// 
-			// btn_modifier_stock
+			// btn_modifier_stck
 			// 
-			this->btn_modifier_stock->Location = System::Drawing::Point(16, 338);
-			this->btn_modifier_stock->Name = L"btn_modifier_stock";
-			this->btn_modifier_stock->Size = System::Drawing::Size(110, 50);
-			this->btn_modifier_stock->TabIndex = 3;
-			this->btn_modifier_stock->Text = L"MODIFIER";
-			this->btn_modifier_stock->UseVisualStyleBackColor = true;
+			this->btn_modifier_stck->Location = System::Drawing::Point(16, 338);
+			this->btn_modifier_stck->Name = L"btn_modifier_stck";
+			this->btn_modifier_stck->Size = System::Drawing::Size(110, 50);
+			this->btn_modifier_stck->TabIndex = 3;
+			this->btn_modifier_stck->Text = L"MODIFIER";
+			this->btn_modifier_stck->UseVisualStyleBackColor = true;
 			// 
-			// btn_supprimer_stock
+			// btn_supprimer_stck
 			// 
-			this->btn_supprimer_stock->Location = System::Drawing::Point(16, 280);
-			this->btn_supprimer_stock->Name = L"btn_supprimer_stock";
-			this->btn_supprimer_stock->Size = System::Drawing::Size(110, 50);
-			this->btn_supprimer_stock->TabIndex = 2;
-			this->btn_supprimer_stock->Text = L"SUPPRIMER";
-			this->btn_supprimer_stock->UseVisualStyleBackColor = true;
+			this->btn_supprimer_stck->Location = System::Drawing::Point(16, 280);
+			this->btn_supprimer_stck->Name = L"btn_supprimer_stck";
+			this->btn_supprimer_stck->Size = System::Drawing::Size(110, 50);
+			this->btn_supprimer_stck->TabIndex = 2;
+			this->btn_supprimer_stck->Text = L"SUPPRIMER";
+			this->btn_supprimer_stck->UseVisualStyleBackColor = true;
 			// 
-			// btn_insérer_stock
+			// btn_inserer_stck
 			// 
-			this->btn_insérer_stock->Location = System::Drawing::Point(16, 224);
-			this->btn_insérer_stock->Name = L"btn_insérer_stock";
-			this->btn_insérer_stock->Size = System::Drawing::Size(110, 50);
-			this->btn_insérer_stock->TabIndex = 1;
-			this->btn_insérer_stock->Text = L"INSÉRER";
-			this->btn_insérer_stock->UseVisualStyleBackColor = true;
+			this->btn_inserer_stck->Location = System::Drawing::Point(16, 224);
+			this->btn_inserer_stck->Name = L"btn_inserer_stck";
+			this->btn_inserer_stck->Size = System::Drawing::Size(110, 50);
+			this->btn_inserer_stck->TabIndex = 1;
+			this->btn_inserer_stck->Text = L"INSÉRER";
+			this->btn_inserer_stck->UseVisualStyleBackColor = true;
 			// 
-			// dgv_Stock
+			// dgv_stck
 			// 
-			this->dgv_Stock->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dgv_Stock->Location = System::Drawing::Point(16, 20);
-			this->dgv_Stock->Name = L"dgv_Stock";
-			this->dgv_Stock->RowHeadersWidth = 51;
-			this->dgv_Stock->RowTemplate->Height = 24;
-			this->dgv_Stock->Size = System::Drawing::Size(1147, 184);
-			this->dgv_Stock->TabIndex = 0;
+			this->dgv_stck->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dgv_stck->Location = System::Drawing::Point(16, 20);
+			this->dgv_stck->Name = L"dgv_stck";
+			this->dgv_stck->RowHeadersWidth = 51;
+			this->dgv_stck->RowTemplate->Height = 24;
+			this->dgv_stck->Size = System::Drawing::Size(1147, 184);
+			this->dgv_stck->TabIndex = 0;
 			// 
 			// tabPage5
 			// 
@@ -641,13 +596,13 @@ namespace ProjetPOO {
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"MyForm";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_Clients))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_cl))->EndInit();
 			this->tabControl1->ResumeLayout(false);
-			this->tab_client->ResumeLayout(false);
-			this->tab_client->PerformLayout();
+			this->tab_cl->ResumeLayout(false);
+			this->tab_cl->PerformLayout();
 			this->tabPage4->ResumeLayout(false);
 			this->tabPage4->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_Stock))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_stck))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -657,63 +612,69 @@ namespace ProjetPOO {
 	{
 		//Load data Client
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
-		this->dgv_Clients->Refresh();
+		this->dgv_cl->Refresh();
 		this->oDs = this->oSvc->selectionnerTousLesClients(this->txt_type_cl->Text, "TB_PEOPLE");
-		this->dgv_Clients->DataSource = this->oDs;
-		this->dgv_Clients->DataMember = "TB_PEOPLE";
+		this->dgv_cl->DataSource = this->oDs;
+		this->dgv_cl->DataMember = "TB_PEOPLE";
 
 		//Load data Stock
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();	
-		this->dgv_Stock->Refresh();
+		this->dgv_stck->Refresh();
 		this->oDs = this->oSvc->selectionnerTousLeStock("TB_STOCK");
-		this->dgv_Stock->DataSource = this->oDs;
-		this->dgv_Stock->DataMember = "TB_STOCK";
+		this->dgv_stck->DataSource = this->oDs;
+		this->dgv_stck->DataMember = "TB_STOCK";
 	}
+
 	//Click sur le boutton Insérer de l'onglet Clients
-	private: System::Void btn_insert_Clients_Click(System::Object^ sender, System::EventArgs^ e)
+	private: System::Void btn_insert_click_cl(System::Object^ sender, System::EventArgs^ e)
 	{
 		this->oSvc->ajouterUnePersonne(this->txt_adr_livraison_cl->Text, this->txt_adr_facturation_cl->Text, this->txt_date_naissance_cl->Text, this->txt_date_premier_achat_cl->Text, this->txt_genre_cl->Text, this->txt_nom_cl->Text, this->txt_prenom_cl->Text);
 		
 		//Load data Client
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
-		this->dgv_Clients->Refresh();
+		this->dgv_cl->Refresh();
 		this->oDs = this->oSvc->selectionnerTousLesClients(this->txt_type_cl->Text, "TB_PEOPLE");
-		this->dgv_Clients->DataSource = this->oDs;
-		this->dgv_Clients->DataMember = "TB_PEOPLE";
+		this->dgv_cl->DataSource = this->oDs;
+		this->dgv_cl->DataMember = "TB_PEOPLE";
 
 		//Affichage de la personne ajouter
 		this->list_console_cl->Items->Add("Personne ajouter, Id :" + this->txt_id_cl->Text + ", Nom =" + this->txt_nom_cl->Text + " OK");
 	}
+
 	//Click sur le boutton Supprimer de l'onglet Clients
-	private: System::Void btn_delete_Clients_Click(System::Object^ sender, System::EventArgs^ e)
+	private: System::Void btn_delete_click_cl(System::Object^ sender, System::EventArgs^ e)
 	{
 		String^ textVal = this->txt_id_cl->Text;
 		int id_people = System::Convert::ToInt32(textVal);
+		//String^ textVal = this->txt_id_cl->Text;
+		//float id_people = System::Convert::ToDouble(textVal);
 		this->oSvc->suprimerUnePersonne(id_people);
 
 		//Load data Client
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
-		this->dgv_Clients->Refresh();
+		this->dgv_cl->Refresh();
 		this->oDs = this->oSvc->selectionnerTousLesClients(this->txt_type_cl->Text, "TB_PEOPLE");
-		this->dgv_Clients->DataSource = this->oDs;
-		this->dgv_Clients->DataMember = "TB_PEOPLE";
+		this->dgv_cl->DataSource = this->oDs;
+		this->dgv_cl->DataMember = "TB_PEOPLE";
 
 		//Affichage de la personne supprimer
 		this->list_console_cl->Items->Add("Personne suprimer, Id :" + this->txt_id_cl->Text + ", Nom ="+ this->txt_nom_cl->Text +" OK");
 	}
+
 	//Click sur le boutton Modifier de l'onglet Clients
-	private: System::Void btn_update_Clients_Click(System::Object^ sender, System::EventArgs^ e) 
+	private: System::Void btn_update_click_cl(System::Object^ sender, System::EventArgs^ e) 
 	{
 		String^ textVal = this->txt_id_cl->Text;
 		int id_people = System::Convert::ToInt32(textVal);
 		this->oSvc->modifierUnePersonne(this->txt_nom_cl->Text, this->txt_prenom_cl->Text, id_people);
+	
 
 		//Load data Client
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
-		this->dgv_Clients->Refresh();
+		this->dgv_cl->Refresh();
 		this->oDs = this->oSvc->selectionnerTousLesClients(this->txt_type_cl->Text, "TB_PEOPLE");
-		this->dgv_Clients->DataSource = this->oDs;
-		this->dgv_Clients->DataMember = "TB_PEOPLE";
+		this->dgv_cl->DataSource = this->oDs;
+		this->dgv_cl->DataMember = "TB_PEOPLE";
 
 		//Affichage de la personne modifier
 		this->list_console_cl->Items->Add("Personne modifier, Id :" + this->txt_id_cl->Text + ", Nom ="+ this->txt_nom_cl->Text +" OK");
