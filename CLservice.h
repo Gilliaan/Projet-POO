@@ -16,8 +16,14 @@ namespace NS_Comp_Svc
 		CLservices(void);
 		System::Data::DataSet^ selectionnerTousLesClients(System::String^, System::String^);
 		System::Data::DataSet^ selectionnerTousLeStock(System::String^);
-		void ajouterUnePersonne(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^);
-		void suprimerUnePersonne(int);
-		void modifierUnePersonne(System::String^, System::String^, int);
+		//Méthodes gestion Clients
+		void ajouterUnClient(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^);
+		void supprimerUnClient(int);
+		void modifierUnClient(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, int);
+		//Méthodes gestion Stock
+		void ajouterUnStock(int, int);
+		void supprimerUnStock(int);
+		void modifierUnStock(int, int, int);
+
 	};
 }

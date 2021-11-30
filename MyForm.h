@@ -99,6 +99,8 @@ namespace ProjetPOO {
 
 	private: System::Windows::Forms::Label^ lbl_stock_quantite_stck;
 	private: System::Windows::Forms::TextBox^ txt_seuil_reap_stck;
+	private: System::Windows::Forms::Label^ lbl_console_stck;
+	private: System::Windows::Forms::ListBox^ list_console_stck;
 
 
 	protected:
@@ -157,6 +159,8 @@ namespace ProjetPOO {
 			this->btn_inserer_stck = (gcnew System::Windows::Forms::Button());
 			this->dgv_stck = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
+			this->list_console_stck = (gcnew System::Windows::Forms::ListBox());
+			this->lbl_console_stck = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_cl))->BeginInit();
 			this->tabControl1->SuspendLayout();
 			this->tab_cl->SuspendLayout();
@@ -452,6 +456,8 @@ namespace ProjetPOO {
 			// 
 			// tabPage4
 			// 
+			this->tabPage4->Controls->Add(this->lbl_console_stck);
+			this->tabPage4->Controls->Add(this->list_console_stck);
 			this->tabPage4->Controls->Add(this->txt_quantite_produit_stck);
 			this->tabPage4->Controls->Add(this->txt_id_stck);
 			this->tabPage4->Controls->Add(this->txt_id_article_stck);
@@ -562,6 +568,7 @@ namespace ProjetPOO {
 			this->btn_inserer_stck->TabIndex = 1;
 			this->btn_inserer_stck->Text = L"INSÉRER";
 			this->btn_inserer_stck->UseVisualStyleBackColor = true;
+			this->btn_inserer_stck->Click += gcnew System::EventHandler(this, &MyForm::btn_inserer_click_stck);
 			// 
 			// dgv_stck
 			// 
@@ -582,6 +589,24 @@ namespace ProjetPOO {
 			this->tabPage5->TabIndex = 4;
 			this->tabPage5->Text = L"Statistiques";
 			this->tabPage5->UseVisualStyleBackColor = true;
+			// 
+			// list_console_stck
+			// 
+			this->list_console_stck->FormattingEnabled = true;
+			this->list_console_stck->ItemHeight = 16;
+			this->list_console_stck->Location = System::Drawing::Point(16, 477);
+			this->list_console_stck->Name = L"list_console_stck";
+			this->list_console_stck->Size = System::Drawing::Size(1147, 52);
+			this->list_console_stck->TabIndex = 12;
+			// 
+			// lbl_console_stck
+			// 
+			this->lbl_console_stck->AutoSize = true;
+			this->lbl_console_stck->Location = System::Drawing::Point(32, 463);
+			this->lbl_console_stck->Name = L"lbl_console_stck";
+			this->lbl_console_stck->Size = System::Drawing::Size(46, 17);
+			this->lbl_console_stck->TabIndex = 13;
+			this->lbl_console_stck->Text = L"label1";
 			// 
 			// MyForm
 			// 
@@ -628,7 +653,7 @@ namespace ProjetPOO {
 	//Click sur le boutton Insérer de l'onglet Clients
 	private: System::Void btn_insert_click_cl(System::Object^ sender, System::EventArgs^ e)
 	{
-		this->oSvc->ajouterUnePersonne(this->txt_adr_livraison_cl->Text, this->txt_adr_facturation_cl->Text, this->txt_date_naissance_cl->Text, this->txt_date_premier_achat_cl->Text, this->txt_genre_cl->Text, this->txt_nom_cl->Text, this->txt_prenom_cl->Text);
+		this->oSvc->ajouterUnClient(this->txt_adr_livraison_cl->Text, this->txt_adr_facturation_cl->Text, this->txt_date_naissance_cl->Text, this->txt_date_premier_achat_cl->Text, this->txt_genre_cl->Text, this->txt_nom_cl->Text, this->txt_prenom_cl->Text);
 		
 		//Load data Client
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
@@ -648,7 +673,7 @@ namespace ProjetPOO {
 		int id_people = System::Convert::ToInt32(textVal);
 		//String^ textVal = this->txt_id_cl->Text;
 		//float id_people = System::Convert::ToDouble(textVal);
-		this->oSvc->suprimerUnePersonne(id_people);
+		this->oSvc->supprimerUnClient(id_people);
 
 		//Load data Client
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
@@ -666,7 +691,7 @@ namespace ProjetPOO {
 	{
 		String^ textVal = this->txt_id_cl->Text;
 		int id_people = System::Convert::ToInt32(textVal);
-		this->oSvc->modifierUnePersonne(this->txt_nom_cl->Text, this->txt_prenom_cl->Text, id_people);
+		this->oSvc->modifierUnClient(this->txt_adr_livraison_cl->Text, this->txt_adr_facturation_cl->Text, this->txt_date_naissance_cl->Text, this->txt_date_premier_achat_cl->Text, this->txt_genre_cl->Text, this->txt_nom_cl->Text, this->txt_prenom_cl->Text, id_people);
 	
 
 		//Load data Client
@@ -678,6 +703,24 @@ namespace ProjetPOO {
 
 		//Affichage de la personne modifier
 		this->list_console_cl->Items->Add("Personne modifier, Id :" + this->txt_id_cl->Text + ", Nom ="+ this->txt_nom_cl->Text +" OK");
+	}
+	private: System::Void btn_inserer_click_stck(System::Object^ sender, System::EventArgs^ e) 
+	{
+		String^ textquantite = this->txt_quantite_produit_stck->Text;
+		int quantiteProduit = System::Convert::ToInt32(textquantite);
+		String^ textseuil = this->txt_seuil_reap_stck->Text;
+		int seuilReap = System::Convert::ToInt32(textseuil);
+		this->oSvc->ajouterUnStock(quantiteProduit,seuilReap);
+
+		//Load data Stock
+		this->oSvc = gcnew NS_Comp_Svc::CLservices();
+		this->dgv_stck->Refresh();
+		this->oDs = this->oSvc->selectionnerTousLeStock("TB_STOCK");
+		this->dgv_stck->DataSource = this->oDs;
+		this->dgv_stck->DataMember = "TB_STOCK";
+
+		//Affichage de la personne ajouter
+		this->list_console_stck->Items->Add("Stock ajouter, Id :" + this->txt_id_cl->Text + ", Nom =" + this->txt_nom_cl->Text + " OK");
 	}
 };
 }

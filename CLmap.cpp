@@ -15,7 +15,14 @@ System::String^ NS_Comp_Mappage::CLmapClient::DeleteClient(void)
 }
 System::String^ NS_Comp_Mappage::CLmapClient::UpdateClient(void)
 {
-	return "UPDATE TB_PEOPLE SET ppl_nom = '" + this->ppl_nom + "', ppl_prenom = '" + this->ppl_prenom + "' WHERE id_ppl = " + "'" + this->id_ppl + "'; ";
+	return "UPDATE TB_PEOPLE SET ppl_nom = '" 
+		+ this->ppl_nom + "', ppl_prenom = '" 
+		+ this->ppl_prenom + "', ppl_gender = '"
+		+ this->ppl_gender + "', cl_date_naissance = '"
+		+ this->cl_date_naissance + "', CL_date_premier_achat = '"
+		+ this->CL_date_premier_achat + "', cl_adresse_livraison = '"
+		+ this->cl_adresse_livraison + "', cl_adresse_facturation = '"
+		+ this->cl_adresse_facturation + "' WHERE id_ppl = " + "'" + this->id_ppl + "'; ";
 }
 void NS_Comp_Mappage::CLmapClient::setId(int Id)
 {

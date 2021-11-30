@@ -24,8 +24,8 @@ System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerTousLeStock(System::
 	sql = this->oMappStock->SelectStock();
 	return this->oCad->getRows(sql, dataTableName);
 }
-void NS_Comp_Svc::CLservices::ajouterUnePersonne(System::String^ adrLivraison , System::String^ adrFacturation,System::String^ dateNaissance, System::String^ datePremierAchat, System::String^ genre, System::String^ nom, System::String^ prenom)
-{
+//Méthodes Gestion d'un client
+void NS_Comp_Svc::CLservices::ajouterUnClient(System::String^ adrLivraison , System::String^ adrFacturation,System::String^ dateNaissance, System::String^ datePremierAchat, System::String^ genre, System::String^ nom, System::String^ prenom) {
 	System::String^ sql;
 
 	this->oMappClient->setAdresseFacturation(adrFacturation);
@@ -39,8 +39,7 @@ void NS_Comp_Svc::CLservices::ajouterUnePersonne(System::String^ adrLivraison , 
 
 	this->oCad->actionRows(sql);
 }
-void NS_Comp_Svc::CLservices::suprimerUnePersonne(int id)
-{
+void NS_Comp_Svc::CLservices::supprimerUnClient(int id) {
 	System::String^ sql;
 
 	this->oMappClient->setId(id);
@@ -49,13 +48,50 @@ void NS_Comp_Svc::CLservices::suprimerUnePersonne(int id)
 	this->oCad->actionRows(sql);
 
 }
-void NS_Comp_Svc::CLservices::modifierUnePersonne(System::String^ nom, System::String^ prenom, int id)
+void NS_Comp_Svc::CLservices::modifierUnClient(System::String^ adrLivraison, System::String^ adrFacturation, System::String^ dateNaissance, System::String^ datePremierAchat, System::String^ genre, System::String^ nom, System::String^ prenom, int id)
 {
 	System::String^ sql;
 
+	this->oMappClient->setAdresseFacturation(adrFacturation);
+	this->oMappClient->setAdresseLivraison(adrLivraison);
+	this->oMappClient->setDateNaissance(dateNaissance);
+	this->oMappClient->setDatePremierAchat(datePremierAchat);
+	this->oMappClient->setGender(genre);
 	this->oMappClient->setNom(nom);
 	this->oMappClient->setPrenom(prenom);
 	this->oMappClient->setId(id);
+	sql = this->oMappClient->UpdateClient();
+
+	this->oCad->actionRows(sql);
+}
+
+//Méthodes gestion du stock
+void NS_Comp_Svc::CLservices::ajouterUnStock(int prodQuantite, int seuil) {
+	System::String^ sql;
+
+
+	this->oMappStock->setStockQuantite(prodQuantite);
+	this->oMappStock->setSeuilReap(seuil);
+	sql = this->oMappStock->InsertStock();
+
+	this->oCad->actionRows(sql);
+}
+void NS_Comp_Svc::CLservices::supprimerUnStock(int id)
+{
+	System::String^ sql;
+
+	this->oMappStock->setIdArticle(id);
+	sql = this->oMappStock->DeleteStock();
+
+	this->oCad->actionRows(sql);
+}
+void NS_Comp_Svc::CLservices::modifierUnStock(int prodQuantite, int seuil, int id)
+{
+	System::String^ sql;
+
+	this->oMappStock->setStockQuantite(prodQuantite);
+	this->oMappStock->setSeuilReap(seuil);
+	this->oMappStock->setIdArticle(id);
 	sql = this->oMappClient->UpdateClient();
 
 	this->oCad->actionRows(sql);
