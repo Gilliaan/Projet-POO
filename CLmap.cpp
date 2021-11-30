@@ -34,4 +34,4 @@ System::String^ NS_Comp_Mappage::CLmapTB::getNom(void) { return this->ppl_nom; }
 System::String^ NS_Comp_Mappage::CLmapTB::getPrenom(void) { return this->ppl_prenom; }
 
 
-//Version 1.1
+//Version 1.1 :)
