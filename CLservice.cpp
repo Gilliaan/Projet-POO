@@ -4,7 +4,7 @@
 NS_Comp_Svc::CLservices::CLservices(void)
 {
 	this->oCad = gcnew NS_Comp_Data::CLcad();
-	this->oMappTB = gcnew NS_Comp_Mappage::CLmapTB();
+	this->oMappPERS = gcnew NS_Comp_Mappage::CLmapPERS();
 }
 System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerToutesLesPersonnes(System::String^ dataTableName)
 {
@@ -13,11 +13,12 @@ System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerToutesLesPersonnes(S
 	sql = this->oMappTB->Select();
 	return this->oCad->getRows(sql, dataTableName);
 }
-System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerToutLePersonnel(System::String^ typeDePersonne,System::String^ dataTableName)
+System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerToutLePersonnel(System::String^ Type,System::String^ dataTableName)
 {
 	System::String^ sql;
 
-	sql = this->oMappTB->Select();
+	this->oMappPERS->setType(Type);
+	sql = this->oMappPERS->Select_PERS();
 	return this->oCad->getRows(sql, dataTableName);
 }
 void NS_Comp_Svc::CLservices::ajouterUnePersonne(System::String^ nom, System::String^ prenom)

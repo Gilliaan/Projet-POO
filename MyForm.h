@@ -92,8 +92,9 @@ namespace ProjetPOO {
 
 	private: System::Windows::Forms::Label^ label11;
 	private: System::Windows::Forms::TextBox^ Id_personnel;
+	private: System::Windows::Forms::TextBox^ txt_type_pers;
 
-	private: System::Windows::Forms::TextBox^ textBox15;
+
 	private: System::Windows::Forms::Label^ label19;
 	private: System::Windows::Forms::TextBox^ date_embauche_supérieur;
 
@@ -153,7 +154,7 @@ namespace ProjetPOO {
 			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->label20 = (gcnew System::Windows::Forms::Label());
-			this->textBox15 = (gcnew System::Windows::Forms::TextBox());
+			this->txt_type_pers = (gcnew System::Windows::Forms::TextBox());
 			this->label19 = (gcnew System::Windows::Forms::Label());
 			this->date_embauche_supérieur = (gcnew System::Windows::Forms::TextBox());
 			this->nom_supérieur = (gcnew System::Windows::Forms::TextBox());
@@ -456,7 +457,7 @@ namespace ProjetPOO {
 			// tabPage2
 			// 
 			this->tabPage2->Controls->Add(this->label20);
-			this->tabPage2->Controls->Add(this->textBox15);
+			this->tabPage2->Controls->Add(this->txt_type_pers);
 			this->tabPage2->Controls->Add(this->label19);
 			this->tabPage2->Controls->Add(this->date_embauche_supérieur);
 			this->tabPage2->Controls->Add(this->nom_supérieur);
@@ -497,15 +498,15 @@ namespace ProjetPOO {
 			this->label20->TabIndex = 29;
 			this->label20->Text = L"Console";
 			// 
-			// textBox15
+			// txt_type_pers
 			// 
-			this->textBox15->Location = System::Drawing::Point(18, 519);
-			this->textBox15->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->textBox15->Name = L"textBox15";
-			this->textBox15->Size = System::Drawing::Size(141, 26);
-			this->textBox15->TabIndex = 28;
-			this->textBox15->Text = L"Personnel";
-			this->textBox15->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			this->txt_type_pers->Location = System::Drawing::Point(18, 519);
+			this->txt_type_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->txt_type_pers->Name = L"txt_type_pers";
+			this->txt_type_pers->Size = System::Drawing::Size(141, 26);
+			this->txt_type_pers->TabIndex = 28;
+			this->txt_type_pers->Text = L"Personnel";
+			this->txt_type_pers->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// label19
 			// 
@@ -769,19 +770,21 @@ namespace ProjetPOO {
 	}
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e)
 	{
-		this->oSvc = gcnew NS_Comp_Svc::CLservices();
+	this->oSvc = gcnew NS_Comp_Svc::CLservices();
 
 		//Load data
+		
 		this->dgv_enr->Refresh();
 		this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
 		this->dgv_enr->DataSource = this->oDs;
 		this->dgv_enr->DataMember = "TB_PEOPLE";
-
+		
+		this->oSvc = gcnew NS_Comp_Svc::CLservices();
 		this->dgv_PER->Refresh();
-		this->oDs = this->oSvc->selectionnerToutLePersonnel("TB_PEOPLE");
+		this->oDs = this->oSvc->selectionnerToutLePersonnel(this->txt_type_pers->Text,"TB_PEOPLE");
 		this->dgv_PER->DataSource = this->oDs;
 		this->dgv_PER->DataMember = "TB_PEOPLE";
-	}
+	} 
 
 	private: System::Void dgv_enr_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 	}
@@ -835,7 +838,7 @@ private: System::Void button_update2_Click(System::Object^ sender, System::Event
 
 	//Load data
 	this->dgv_PER->Refresh();
-	this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
+	this->oDs = this->oSvc->selectionnerToutLePersonnel(this->txt_type_pers->Text, "TB_PEOPLE");
 	this->dgv_PER->DataSource = this->oDs;
 	this->dgv_PER->DataMember = "TB_PEOPLE";
 
@@ -847,7 +850,7 @@ private: System::Void button_insert2_Click(System::Object^ sender, System::Event
 
 	//Load data
 	this->dgv_PER->Refresh();
-	this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
+	this->oDs = this->oSvc->selectionnerToutLePersonnel(this->txt_type_pers->Text, "TB_PEOPLE");
 	this->dgv_PER->DataSource = this->oDs;
 	this->dgv_PER->DataMember = "TB_PEOPLE";
 
@@ -862,7 +865,7 @@ private: System::Void button_delete2_Click(System::Object^ sender, System::Event
 
 	//Load data
 	this->dgv_PER->Refresh();
-	this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
+	this->oDs = this->oSvc->selectionnerToutLePersonnel(this->txt_type_pers->Text, "TB_PEOPLE");
 	this->dgv_PER->DataSource = this->oDs;
 	this->dgv_PER->DataMember = "TB_PEOPLE";
 

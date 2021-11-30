@@ -21,7 +21,9 @@ namespace NS_Comp_Mappage
 		int getId_PERS(void);
 		System::String^ getNom_PERS(void);
 		System::String^ getPrenom_PERS(void);
-		
+		System::String^ getType(void);
+		void setType(System::String^);
 	};
+
 
 }
