@@ -786,7 +786,7 @@ namespace ProjetPOO {
 	}
 	private: System::Void btn_insert_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		this->oSvc->ajouterUnPersonnel(this->txt_nom->Text, this->txt_prenom->Text);
+		
 
 		//Load data
 		this->dgv_enr->Refresh();
@@ -840,10 +840,10 @@ namespace ProjetPOO {
 		this->dgv_PER->DataMember = "TB_PEOPLE";
 
 		//Affichage de la personne modifier
-		this->listBox1->Items->Add("Personne modifier, Id :" + this->Id_personnel->Text + ", Nom =" + this->nom_personnel->Text + " OK");
+		this->listBox1->Items->Add("Personne modifiée, Id :" + this->Id_personnel->Text + ", Nom =" + this->nom_personnel->Text + " OK");
 	}
 	private: System::Void button_insert2_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->oSvc->ajouterUnPersonnel(this->nom_personnel->Text, this->prenom_personnel->Text);
+		this->oSvc->ajouterUnPersonnel(this->nom_personnel->Text, this->prenom_personnel->Text, this->genre_personnel->Text, this->date_embauche_personnel->Text, this->date_embauche_supérieur->Text, this->adresse_personnel->Text, this->nom_supérieur->Text);
 		//Load data
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
 		this->dgv_PER->Refresh();
@@ -852,7 +852,7 @@ namespace ProjetPOO {
 		this->dgv_PER->DataMember = "TB_PEOPLE";
 
 		//Affichage de la personne ajouter
-		this->listBox2->Items->Add("Personne ajouter, Id :" + this->Id_personnel->Text + ", Nom =" + this->nom_personnel->Text + " OK");
+		this->listBox2->Items->Add("Personne ajoutée, Id :" + this->Id_personnel->Text + ", Nom =" + this->nom_personnel->Text + " OK");
 
 	}
 	private: System::Void button_delete2_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -868,7 +868,7 @@ namespace ProjetPOO {
 		this->dgv_PER->DataMember = "TB_PEOPLE";
 
 		//Affichage de la personne supprimer
-		this->listBox2->Items->Add("Personne suprimer, Id :" + this->Id_personnel->Text + ", Nom =" + this->nom_personnel->Text + " OK");
+		this->listBox2->Items->Add("Personne suprimée, Id :" + this->Id_personnel->Text + ", Nom =" + this->nom_personnel->Text + " OK");
 	}
 
 	};

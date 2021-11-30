@@ -21,12 +21,17 @@ System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerToutLePersonnel(Syst
 	sql = this->oMappPERS->Select_PERS();
 	return this->oCad->getRows(sql, dataTableName);
 }
-void NS_Comp_Svc::CLservices::ajouterUnPersonnel(System::String^ nom, System::String^ prenom)
+void NS_Comp_Svc::CLservices::ajouterUnPersonnel(System::String^ nom, System::String^ prenom, System::String^ genre, System::String^ emb_date, System::String^ sup_emb_date, System::String^ adresse, System::String^ sup_name)
 {
 	System::String^ sql;
 
 	this->oMappPERS->setNom_PERS(nom);
 	this->oMappPERS->setPrenom_PERS(prenom);
+	this->oMappPERS->setGender(genre);
+	this->oMappPERS->setEmbDate(emb_date);
+	this->oMappPERS->setSupEmbDate(sup_emb_date);
+	this->oMappPERS->setAdresse(adresse);
+	this->oMappPERS->setSupName(sup_name);
 	sql = this->oMappPERS->Insert_PERS();
 
 	this->oCad->actionRows(sql);
