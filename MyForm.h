@@ -51,9 +51,9 @@ namespace ProjetPOO {
 
 	private: NS_Comp_Svc::CLservices^ oSvc;
 	private: System::Data::DataSet^ oDs;
-	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::Label^ lbl_id_cl;
+	private: System::Windows::Forms::Label^ lbl_prenom_cl;
+	private: System::Windows::Forms::Label^ lbl_nom_cl;
 	private: System::Windows::Forms::TabControl^ tabControl1;
 	private: System::Windows::Forms::TabPage^ tabPage1;
 	private: System::Windows::Forms::TabPage^ tabPage2;
@@ -98,9 +98,9 @@ namespace ProjetPOO {
 			this->txt_id = (gcnew System::Windows::Forms::TextBox());
 			this->txt_nom = (gcnew System::Windows::Forms::TextBox());
 			this->txt_prenom = (gcnew System::Windows::Forms::TextBox());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->lbl_id_cl = (gcnew System::Windows::Forms::Label());
+			this->lbl_prenom_cl = (gcnew System::Windows::Forms::Label());
+			this->lbl_nom_cl = (gcnew System::Windows::Forms::Label());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 			this->label10 = (gcnew System::Windows::Forms::Label());
@@ -137,7 +137,7 @@ namespace ProjetPOO {
 			this->dgv_enr->Margin = System::Windows::Forms::Padding(4);
 			this->dgv_enr->Name = L"dgv_enr";
 			this->dgv_enr->RowHeadersWidth = 51;
-			this->dgv_enr->Size = System::Drawing::Size(814, 183);
+			this->dgv_enr->Size = System::Drawing::Size(1145, 183);
 			this->dgv_enr->TabIndex = 0;
 			this->dgv_enr->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dgv_enr_CellContentClick);
 			// 
@@ -159,7 +159,7 @@ namespace ProjetPOO {
 			this->btn_delete->Name = L"btn_delete";
 			this->btn_delete->Size = System::Drawing::Size(100, 46);
 			this->btn_delete->TabIndex = 3;
-			this->btn_delete->Text = L"DEL";
+			this->btn_delete->Text = L"SUPPRIMER";
 			this->btn_delete->UseVisualStyleBackColor = true;
 			this->btn_delete->Click += gcnew System::EventHandler(this, &MyForm::btn_delete_Click);
 			// 
@@ -198,32 +198,32 @@ namespace ProjetPOO {
 			this->txt_prenom->Size = System::Drawing::Size(126, 22);
 			this->txt_prenom->TabIndex = 7;
 			// 
-			// label1
+			// lbl_id_cl
 			// 
-			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(163, 215);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(19, 17);
-			this->label1->TabIndex = 8;
-			this->label1->Text = L"Id";
+			this->lbl_id_cl->AutoSize = true;
+			this->lbl_id_cl->Location = System::Drawing::Point(163, 215);
+			this->lbl_id_cl->Name = L"label1";
+			this->lbl_id_cl->Size = System::Drawing::Size(19, 17);
+			this->lbl_id_cl->TabIndex = 8;
+			this->lbl_id_cl->Text = L"Id";
 			// 
-			// label2
+			// lbl_prenom_cl
 			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(446, 218);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(57, 17);
-			this->label2->TabIndex = 9;
-			this->label2->Text = L"Prenom";
+			this->lbl_prenom_cl->AutoSize = true;
+			this->lbl_prenom_cl->Location = System::Drawing::Point(446, 218);
+			this->lbl_prenom_cl->Name = L"lbl_prenom_cl";
+			this->lbl_prenom_cl->Size = System::Drawing::Size(57, 17);
+			this->lbl_prenom_cl->TabIndex = 9;
+			this->lbl_prenom_cl->Text = L"Prenom";
 			// 
-			// label3
+			// lbl_nom_cl
 			// 
-			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(291, 218);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(37, 17);
-			this->label3->TabIndex = 10;
-			this->label3->Text = L"Nom";
+			this->lbl_nom_cl->AutoSize = true;
+			this->lbl_nom_cl->Location = System::Drawing::Point(291, 218);
+			this->lbl_nom_cl->Name = L"lbl_nom_cl";
+			this->lbl_nom_cl->Size = System::Drawing::Size(37, 17);
+			this->lbl_nom_cl->TabIndex = 10;
+			this->lbl_nom_cl->Text = L"Nom";
 			// 
 			// tabControl1
 			// 
@@ -232,10 +232,10 @@ namespace ProjetPOO {
 			this->tabControl1->Controls->Add(this->tabPage3);
 			this->tabControl1->Controls->Add(this->tabPage4);
 			this->tabControl1->Controls->Add(this->tabPage5);
-			this->tabControl1->Location = System::Drawing::Point(106, 12);
+			this->tabControl1->Location = System::Drawing::Point(12, 12);
 			this->tabControl1->Name = L"tabControl1";
 			this->tabControl1->SelectedIndex = 0;
-			this->tabControl1->Size = System::Drawing::Size(859, 582);
+			this->tabControl1->Size = System::Drawing::Size(1190, 582);
 			this->tabControl1->TabIndex = 11;
 			// 
 			// tabPage1
@@ -257,22 +257,22 @@ namespace ProjetPOO {
 			this->tabPage1->Controls->Add(this->dgv_enr);
 			this->tabPage1->Controls->Add(this->btn_delete);
 			this->tabPage1->Controls->Add(this->btn_update);
-			this->tabPage1->Controls->Add(this->label3);
+			this->tabPage1->Controls->Add(this->lbl_nom_cl);
 			this->tabPage1->Controls->Add(this->txt_id);
 			this->tabPage1->Controls->Add(this->btn_insert);
-			this->tabPage1->Controls->Add(this->label2);
+			this->tabPage1->Controls->Add(this->lbl_prenom_cl);
 			this->tabPage1->Controls->Add(this->txt_nom);
-			this->tabPage1->Controls->Add(this->label1);
+			this->tabPage1->Controls->Add(this->lbl_id_cl);
 			this->tabPage1->Controls->Add(this->txt_prenom);
 			this->tabPage1->Location = System::Drawing::Point(4, 25);
 			this->tabPage1->Name = L"tabPage1";
 			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage1->Size = System::Drawing::Size(851, 553);
+			this->tabPage1->Size = System::Drawing::Size(1182, 553);
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"Clients";
 			this->tabPage1->UseVisualStyleBackColor = true;
 			// 
-			// lbl_console
+			// label10
 			// 
 			this->label10->AutoSize = true;
 			this->label10->Location = System::Drawing::Point(13, 457);
@@ -281,7 +281,7 @@ namespace ProjetPOO {
 			this->label10->TabIndex = 24;
 			this->label10->Text = L"Console";
 			// 
-			// lbl_date_premier_achat
+			// label9
 			// 
 			this->label9->AutoSize = true;
 			this->label9->Location = System::Drawing::Point(163, 406);
@@ -298,7 +298,7 @@ namespace ProjetPOO {
 			this->textBox6->Size = System::Drawing::Size(204, 22);
 			this->textBox6->TabIndex = 22;
 			// 
-			// lbl_date_naissance
+			// label8
 			// 
 			this->label8->AutoSize = true;
 			this->label8->Location = System::Drawing::Point(163, 378);
@@ -315,7 +315,7 @@ namespace ProjetPOO {
 			this->textBox5->Size = System::Drawing::Size(204, 22);
 			this->textBox5->TabIndex = 20;
 			// 
-			// lbl_adresse_facturation
+			// label7
 			// 
 			this->label7->AutoSize = true;
 			this->label7->Location = System::Drawing::Point(163, 310);
@@ -324,7 +324,7 @@ namespace ProjetPOO {
 			this->label7->TabIndex = 19;
 			this->label7->Text = L"Adresse de facturation";
 			// 
-			// lbl_adresse_livraison
+			// label6
 			// 
 			this->label6->AutoSize = true;
 			this->label6->Location = System::Drawing::Point(163, 284);
@@ -349,7 +349,7 @@ namespace ProjetPOO {
 			this->textBox3->Size = System::Drawing::Size(204, 22);
 			this->textBox3->TabIndex = 16;
 			// 
-			// lbl_genre
+			// label5
 			// 
 			this->label5->AutoSize = true;
 			this->label5->Location = System::Drawing::Point(597, 218);
@@ -366,7 +366,7 @@ namespace ProjetPOO {
 			this->textBox2->Size = System::Drawing::Size(126, 22);
 			this->textBox2->TabIndex = 14;
 			// 
-			// lbl_type
+			// label4
 			// 
 			this->label4->AutoSize = true;
 			this->label4->Location = System::Drawing::Point(6, 392);
@@ -391,7 +391,7 @@ namespace ProjetPOO {
 			this->listBox1->ItemHeight = 16;
 			this->listBox1->Location = System::Drawing::Point(16, 477);
 			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(814, 52);
+			this->listBox1->Size = System::Drawing::Size(1145, 52);
 			this->listBox1->TabIndex = 11;
 			// 
 			// tabPage2
@@ -439,7 +439,7 @@ namespace ProjetPOO {
 			// tabPage4
 			// 
 			this->tabPage4->Location = System::Drawing::Point(4, 25);
-			this->tabPage4->Name = L"tabPage3";
+			this->tabPage4->Name = L"tabPage4";
 			this->tabPage4->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage4->Size = System::Drawing::Size(851, 553);
 			this->tabPage4->TabIndex = 3;
@@ -449,7 +449,7 @@ namespace ProjetPOO {
 			// tabPage5
 			// 
 			this->tabPage5->Location = System::Drawing::Point(4, 25);
-			this->tabPage5->Name = L"tabPage3";
+			this->tabPage5->Name = L"tabPage5";
 			this->tabPage5->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage5->Size = System::Drawing::Size(851, 553);
 			this->tabPage5->TabIndex = 4;
@@ -460,10 +460,12 @@ namespace ProjetPOO {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1266, 641);
+			this->ClientSize = System::Drawing::Size(1262, 610);
 			this->Controls->Add(this->tabControl1);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"MyForm";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"MyForm";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_enr))->EndInit();
@@ -476,24 +478,16 @@ namespace ProjetPOO {
 
 		}
 #pragma endregion
-	private: System::Void btn_load_Click(System::Object^ sender, System::EventArgs^ e)
-	{
-		this->dgv_enr->Refresh();
-		this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
-		this->dgv_enr->DataSource = this->oDs;
-		this->dgv_enr->DataMember = "TB_PEOPLE";
-	}
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e)
 	{
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
 
 		//Load data
 		this->dgv_enr->Refresh();
-		this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
+		this->oDs = this->oSvc->selectionnerTousLesClients("Clients", "TB_PEOPLE");
 		this->dgv_enr->DataSource = this->oDs;
 		this->dgv_enr->DataMember = "TB_PEOPLE";
 	}
-
 	private: System::Void dgv_enr_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 	}
 	private: System::Void btn_insert_Click(System::Object^ sender, System::EventArgs^ e)
@@ -502,7 +496,7 @@ namespace ProjetPOO {
 
 		//Load data
 		this->dgv_enr->Refresh();
-		this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
+		this->oDs = this->oSvc->selectionnerTousLesClients("Clients", "TB_PEOPLE");
 		this->dgv_enr->DataSource = this->oDs;
 		this->dgv_enr->DataMember = "TB_PEOPLE";
 
@@ -517,7 +511,7 @@ namespace ProjetPOO {
 
 		//Load data
 		this->dgv_enr->Refresh();
-		this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
+		this->oDs = this->oSvc->selectionnerTousLesClients("Clients","TB_PEOPLE");
 		this->dgv_enr->DataSource = this->oDs;
 		this->dgv_enr->DataMember = "TB_PEOPLE";
 
@@ -532,7 +526,7 @@ namespace ProjetPOO {
 
 		//Load data
 		this->dgv_enr->Refresh();
-		this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
+		this->oDs = this->oSvc->selectionnerTousLesClients("Clients", "TB_PEOPLE");
 		this->dgv_enr->DataSource = this->oDs;
 		this->dgv_enr->DataMember = "TB_PEOPLE";
 

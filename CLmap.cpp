@@ -3,11 +3,11 @@
 
 System::String^ NS_Comp_Mappage::CLmapTB::Select(void)
 {
-	return "SELECT [id_ppl], [ppl_nom], [ppl_prenom] FROM [DB_PROJET_POO].[dbo].[TB_PEOPLE]";
+	return "SELECT id_ppl, ppl_nom, ppl_prenom, ppl_gender, cl_date_naissance, CL_date_premier_achat, cl_adresse_livraison, cl_adresse_facturation FROM [DB_PROJET_POO].[dbo].[TB_PEOPLE] WHERE ppl_type = '" + this->ppl_type + "';";
 }
 System::String^ NS_Comp_Mappage::CLmapTB::Insert(void)
 {
-	return "INSERT INTO TB_PEOPLE (ppl_nom, ppl_prenom) VALUES('" + this->ppl_nom + "','" + this->ppl_prenom + "');";
+	return "INSERT INTO TB_PEOPLE (ppl_nom, ppl_prenom, ppl_type) VALUES('" + this->ppl_nom + "','" + this->ppl_prenom + "', '" + this->ppl_type + "');";
 }
 System::String^ NS_Comp_Mappage::CLmapTB::Delete(void)
 {
@@ -29,6 +29,11 @@ void NS_Comp_Mappage::CLmapTB::setPrenom(System::String^ prenom)
 {
 	this->ppl_prenom = prenom;
 }
+void NS_Comp_Mappage::CLmapTB::setType(System::String^ type)
+{
+	this->ppl_type = type;
+}
 int NS_Comp_Mappage::CLmapTB::getId(void) { return this->id_ppl; }
 System::String^ NS_Comp_Mappage::CLmapTB::getNom(void) { return this->ppl_nom; }
 System::String^ NS_Comp_Mappage::CLmapTB::getPrenom(void) { return this->ppl_prenom; }
+System::String^ NS_Comp_Mappage::CLmapTB::getType(void) { return this->ppl_type; }

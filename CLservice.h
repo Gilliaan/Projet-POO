@@ -12,9 +12,10 @@ namespace NS_Comp_Svc
 	private:
 		NS_Comp_Data::CLcad^ oCad;
 		NS_Comp_Mappage::CLmapTB^ oMappTB;
+		System::String^ typec;
 	public:
 		CLservices(void);
-		System::Data::DataSet^ selectionnerToutesLesPersonnes(System::String^);
+		System::Data::DataSet^ selectionnerTousLesClients(System::String^, System::String^);
 		void ajouterUnePersonne(System::String^, System::String^);
 		void suprimerUnePersonne(int);
 		void modifierUnePersonne(System::String^, System::String^ , int);

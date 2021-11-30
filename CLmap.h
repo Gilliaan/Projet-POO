@@ -8,6 +8,7 @@ namespace NS_Comp_Mappage
 		int id_ppl;
 		System::String^ ppl_nom;
 		System::String^ ppl_prenom;
+		System::String^ ppl_type;
 	public:
 		System::String^ Select(void);
 		System::String^ Insert(void);
@@ -16,8 +17,10 @@ namespace NS_Comp_Mappage
 		void setId(int);
 		void setNom(System::String^);
 		void setPrenom(System::String^);
+		void setType(System::String^);
 		int getId(void);
 		System::String^ getNom(void);
 		System::String^ getPrenom(void);
+		System::String^ getType(void);
 	};
 }
