@@ -1,18 +1,18 @@
 #include "CLmapcommTB.h"
 
-System::String^ NS_Comp_Mappage::CLmapcommTB::Select(void)
+System::String^ NS_Comp_Mappage::CLmapcommTB::SelectComm(void)
 {
-	return "SELECT [id_com], [com_ref], [com_date_prevue], [com_date_emission], [com_tot_ar] FROM [DB_PROJET_POO].[dbo].[TB_COMMANDE]";
+	return "SELECT * FROM [DB_PROJET_POO].[dbo].[TB_COMMANDE]";
 }
-System::String^ NS_Comp_Mappage::CLmapcommTB::Insert(void)
+System::String^ NS_Comp_Mappage::CLmapcommTB::InsertComm(void)
 {
 	return "INSERT INTO TB_COMMANDE (com_ref, com_date_prevue, com_date_emission, com_tot_ar) VALUES('" + this->com_ref + "','" + this->com_date_prevue + "','" + this->com_date_emission + "');";
 }
-System::String^ NS_Comp_Mappage::CLmapcommTB::Delete(void)
+System::String^ NS_Comp_Mappage::CLmapcommTB::DeleteComm(void)
 {
 	return "DELETE FROM TB_COMMANDE WHERE id_com = '" + this->id_com + "'; ";
 }
-System::String^ NS_Comp_Mappage::CLmapcommTB::Update(void)
+System::String^ NS_Comp_Mappage::CLmapcommTB::UpdateComm(void)
 {
 	return "UPDATE TB_COMMANDE SET com_ref = '" + this->com_ref + "', com_date_prevue = '" + this->com_date_prevue + "', com_date_emission = '" + this->com_date_emission + "', com_tot_ar = '" + this->com_tot_ar + "', WHERE id_com = " + "'" + this->id_com + "'; ";
 }

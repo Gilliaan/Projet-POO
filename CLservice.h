@@ -11,12 +11,12 @@ namespace NS_Comp_Svc
 	{
 	private:
 		NS_Comp_Data::CLcad^ oCad;
-		NS_Comp_Mappage::CLmapcommTB^ oMappTB;
+		NS_Comp_Mappage::CLmapcommTB^ oMappComm;
 	public:
 		CLservices(void);
 		System::Data::DataSet^ selectionnerToutesLesCommandes(System::String^);
-		void ajouterUneCommande(System::String^, System::String^, System::String^);
+		void ajouterUneCommande(System::String^, System::String^, System::String^, int);
 		void suprimerUneCommande(int);
-		void modifierUneCommande(System::String^, System::String^, System::String^, int);
+		void modifierUneCommande(System::String^, System::String^, System::String^, int, int);
 	};
 }

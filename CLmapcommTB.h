@@ -11,10 +11,10 @@ namespace NS_Comp_Mappage
 		System::String^ com_date_emission;
 		int com_tot_ar;
 	public:
-		System::String^ Select(void);
-		System::String^ Insert(void);
-		System::String^ Delete(void);
-		System::String^ Update(void);
+		System::String^ SelectComm(void);
+		System::String^ InsertComm(void);
+		System::String^ DeleteComm(void);
+		System::String^ UpdateComm(void);
 		void setIdComm(int);
 		void setRef(System::String^);
 		void setDate_Prevue(System::String^);
