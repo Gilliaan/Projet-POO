@@ -1,7 +1,7 @@
 #pragma once
 namespace NS_Comp_Mappage
 {
-	ref class CLmapTB
+	ref class CLmapClient
 	{
 	private:
 		System::String^ sSql;
@@ -15,10 +15,10 @@ namespace NS_Comp_Mappage
 		System::String^ cl_adresse_livraison;
 		System::String^ cl_adresse_facturation;
 	public:
-		System::String^ Select(void);
-		System::String^ Insert(void);
-		System::String^ Delete(void);
-		System::String^ Update(void);
+		System::String^ SelectClient(void);
+		System::String^ InsertClient(void);
+		System::String^ DeleteClient(void);
+		System::String^ UpdateClient(void);
 		void setId(int);
 		void setNom(System::String^);
 		void setPrenom(System::String^);

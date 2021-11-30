@@ -1,9 +1,7 @@
 #pragma once
 #include "CLmap.h"
 #include "CLcad.h"
-#include <iostream>
-
-using namespace std;
+#include "CLmapStock.h"
 
 namespace NS_Comp_Svc
 {
@@ -11,13 +9,15 @@ namespace NS_Comp_Svc
 	{
 	private:
 		NS_Comp_Data::CLcad^ oCad;
-		NS_Comp_Mappage::CLmapTB^ oMappTB;
+		NS_Comp_Mappage::CLmapClient^ oMappClient;
+		NS_Comp_Mappage::CLmapStock^ oMappStock;
 		System::String^ typec;
 	public:
 		CLservices(void);
 		System::Data::DataSet^ selectionnerTousLesClients(System::String^, System::String^);
-		void ajouterUnePersonne(System::String^ , System::String^ ,System::String^, System::String^, System::String^, System::String^, System::String^);
+		System::Data::DataSet^ selectionnerTousLeStock(System::String^);
+		void ajouterUnePersonne(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^);
 		void suprimerUnePersonne(int);
-		void modifierUnePersonne(System::String^, System::String^ , int);
+		void modifierUnePersonne(System::String^, System::String^, int);
 	};
 }
