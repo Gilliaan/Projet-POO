@@ -15,8 +15,8 @@ namespace NS_Comp_Svc
 	public:
 		CLservices(void);
 		System::Data::DataSet^ selectionnerToutesLesCommandes(System::String^);
-		void ajouterUneCommande(System::String^, System::String^, System::String^, int);
+		void ajouterUneCommande(System::String^, System::String^, System::String^, int, double, double, double, int);
 		void suprimerUneCommande(int);
-		void modifierUneCommande(System::String^, System::String^, System::String^, int, int);
+		void modifierUneCommande(System::String^, System::String^, System::String^, int, double, double, double, int, int);
 	};
 }

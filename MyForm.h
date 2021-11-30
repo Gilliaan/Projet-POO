@@ -80,6 +80,7 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::DataGridView^ dataGridView_comm;
 	private: System::Windows::Forms::TextBox^ textBox_ht_comm;
+	private: System::Windows::Forms::TextBox^ textBox_ref_comm;
 
 
 
@@ -90,7 +91,7 @@ namespace ProjetPOO {
 
 
 
-	private: System::Windows::Forms::TextBox^ textBox9;
+
 	private: System::Windows::Forms::TextBox^ textBox_date_em_comm;
 
 	private: System::Windows::Forms::TextBox^ textBox_date_prevu_comm;
@@ -178,6 +179,8 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage3_comm = (gcnew System::Windows::Forms::TabPage());
+			this->label_console_comm = (gcnew System::Windows::Forms::Label());
+			this->listBox_console_comm = (gcnew System::Windows::Forms::ListBox());
 			this->label_date_prevu_comm = (gcnew System::Windows::Forms::Label());
 			this->label_id_comm = (gcnew System::Windows::Forms::Label());
 			this->label_id_paiement_comm = (gcnew System::Windows::Forms::Label());
@@ -193,7 +196,7 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 			this->textBox_article_comm = (gcnew System::Windows::Forms::TextBox());
 			this->textBox_ht_comm = (gcnew System::Windows::Forms::TextBox());
 			this->textBox_tva_comm = (gcnew System::Windows::Forms::TextBox());
-			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_ref_comm = (gcnew System::Windows::Forms::TextBox());
 			this->textBox_date_em_comm = (gcnew System::Windows::Forms::TextBox());
 			this->textBox_id_comm = (gcnew System::Windows::Forms::TextBox());
 			this->textBox_id_paiement_comm = (gcnew System::Windows::Forms::TextBox());
@@ -202,8 +205,6 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 			this->dataGridView_comm = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
-			this->listBox_console_comm = (gcnew System::Windows::Forms::ListBox());
-			this->label_console_comm = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_enr))->BeginInit();
 			this->btn_->SuspendLayout();
 			this->tabPage1->SuspendLayout();
@@ -529,7 +530,7 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 			this->tabPage3_comm->Controls->Add(this->textBox_article_comm);
 			this->tabPage3_comm->Controls->Add(this->textBox_ht_comm);
 			this->tabPage3_comm->Controls->Add(this->textBox_tva_comm);
-			this->tabPage3_comm->Controls->Add(this->textBox9);
+			this->tabPage3_comm->Controls->Add(this->textBox_ref_comm);
 			this->tabPage3_comm->Controls->Add(this->textBox_date_em_comm);
 			this->tabPage3_comm->Controls->Add(this->textBox_id_comm);
 			this->tabPage3_comm->Controls->Add(this->textBox_id_paiement_comm);
@@ -545,6 +546,23 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 			this->tabPage3_comm->Text = L"Commandes";
 			this->tabPage3_comm->UseVisualStyleBackColor = true;
 			this->tabPage3_comm->Click += gcnew System::EventHandler(this, &MyForm::tabPage3_Click);
+			// 
+			// label_console_comm
+			// 
+			this->label_console_comm->AutoSize = true;
+			this->label_console_comm->Location = System::Drawing::Point(23, 358);
+			this->label_console_comm->Name = L"label_console_comm";
+			this->label_console_comm->Size = System::Drawing::Size(45, 13);
+			this->label_console_comm->TabIndex = 6;
+			this->label_console_comm->Text = L"Console";
+			// 
+			// listBox_console_comm
+			// 
+			this->listBox_console_comm->FormattingEnabled = true;
+			this->listBox_console_comm->Location = System::Drawing::Point(23, 377);
+			this->listBox_console_comm->Name = L"listBox_console_comm";
+			this->listBox_console_comm->Size = System::Drawing::Size(592, 56);
+			this->listBox_console_comm->TabIndex = 5;
 			// 
 			// label_date_prevu_comm
 			// 
@@ -677,12 +695,12 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 			this->textBox_tva_comm->Size = System::Drawing::Size(183, 20);
 			this->textBox_tva_comm->TabIndex = 2;
 			// 
-			// textBox9
+			// textBox_ref_comm
 			// 
-			this->textBox9->Location = System::Drawing::Point(187, 180);
-			this->textBox9->Name = L"textBox9";
-			this->textBox9->Size = System::Drawing::Size(183, 20);
-			this->textBox9->TabIndex = 2;
+			this->textBox_ref_comm->Location = System::Drawing::Point(187, 180);
+			this->textBox_ref_comm->Name = L"textBox_ref_comm";
+			this->textBox_ref_comm->Size = System::Drawing::Size(183, 20);
+			this->textBox_ref_comm->TabIndex = 2;
 			// 
 			// textBox_date_em_comm
 			// 
@@ -690,6 +708,7 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 			this->textBox_date_em_comm->Name = L"textBox_date_em_comm";
 			this->textBox_date_em_comm->Size = System::Drawing::Size(183, 20);
 			this->textBox_date_em_comm->TabIndex = 2;
+			this->textBox_date_em_comm->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox_date_em_comm_TextChanged);
 			// 
 			// textBox_id_comm
 			// 
@@ -753,23 +772,6 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 			this->tabPage5->Text = L"Statistiques";
 			this->tabPage5->UseVisualStyleBackColor = true;
 			// 
-			// listBox_console_comm
-			// 
-			this->listBox_console_comm->FormattingEnabled = true;
-			this->listBox_console_comm->Location = System::Drawing::Point(23, 377);
-			this->listBox_console_comm->Name = L"listBox_console_comm";
-			this->listBox_console_comm->Size = System::Drawing::Size(592, 56);
-			this->listBox_console_comm->TabIndex = 5;
-			// 
-			// label_console_comm
-			// 
-			this->label_console_comm->AutoSize = true;
-			this->label_console_comm->Location = System::Drawing::Point(23, 358);
-			this->label_console_comm->Name = L"label_console_comm";
-			this->label_console_comm->Size = System::Drawing::Size(45, 13);
-			this->label_console_comm->TabIndex = 6;
-			this->label_console_comm->Text = L"Console";
-			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -814,7 +816,7 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 	}
 	private: System::Void btn_insert_Click_Comm(System::Object^ sender, System::EventArgs^ e)
 	{
-		this->oSvc->selectionnerToutesLesCommandes(this->txt_ref->Text, this->txt_prenom->Text)// chek git a gab puis modifier 
+		this->oSvc->selectionnerToutesLesCommandes(this->textBox_ref_comm->Text, this->textBox_date_prevu_comm->Text, this->textBox_date_em_comm->Text, this->textBox_article_comm->Text, this->textBox_ht_comm->Text, this->textBox_tva_comm->Text, this->textBox_ttc_comm->Text, this->textBox_id_paiement_comm->Text, this->textBox_id_comm->Text);// chek git a gab puis modifier 
 
 		//Load data
 		this->dgv_enr->Refresh();
@@ -822,15 +824,16 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 		this->dgv_enr->DataSource = this->oDs;
 		this->dgv_enr->DataMember = "TB_COMMANDE";
 
-		//Affichage de la personne ajouter
-		this->listBox1->Items->Add("Commande ajouter, Id :" + this->txt_id->Text + ", Nom =" + this->txt_nom->Text + " OK"); // a modifier
+		//Affichage de la commande ajouter
+		this->listBox1->Items->Add("Commande ajouter, Id :" + this->textBox_id_comm->Text + ", Reference =" + this->textBox_ref_comm->Text + " OK"); // a modifier
 	}
 	private: System::Void btn_delete_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		String^ textVal = this->txt_id->Text;
+		String^ textVal = this->textBox_id_comm->Text;
 		int id_com = System::Convert::ToInt32(textVal);
 		this->oSvc->suprimerUneCommande(id_com);
 
+		
 		//Load data
 		this->dgv_enr->Refresh();
 		this->oDs = this->oSvc->selectionnerToutesLesCommandes("TB_COMMANDE");
@@ -838,13 +841,13 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 		this->dgv_enr->DataMember = "TB_COMMANDE";
 
 		//Affichage de la commande supprimer
-		this->listBox1->Items->Add("Commande suprimer, Id :" + this->txt_id->Text + ", Nom ="+ this->txt_nom->Text +" OK");// modif<---------------
+		this->listBox1->Items->Add("Commande suprimer, Id :" + this->textBox_id_comm->Text + ", reference ="+ this->textBox_ref_comm->Text +" OK");// modif<---------------
 	}
 	private: System::Void btn_update_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
-		String^ textVal = this->txt_id->Text;
+		String^ textVal = this->textBox_id_comm->Text;
 		int id_com = System::Convert::ToInt32(textVal);
-		this->oSvc->modifierUneCommande(this->txt_nom->Text, this->txt_prenom->Text, id_com);
+		this->oSvc->modifierUneCommande(this->textBox_ref_comm->Text, this->textBox_date_prevu_comm->Text, this->textBox_date_em_comm->Text, this->textBox_article_comm->Text, this->textBox_ht_comm->Text, this->textBox_tva_comm->Text, this->textBox_ttc_comm->Text, this->textBox_id_paiement_comm->Text, this->textBox_id_comm->Text);
 
 		//Load data
 		this->dgv_enr->Refresh();
@@ -853,13 +856,8 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 		this->dgv_enr->DataMember = "TB_COMMANDE";
 
 		//Affichage de la commande modifier
-		this->listBox1->Items->Add("Commande modifier, Id :" + this->txt_id->Text + ", Nom ="+ this->txt_nom->Text +" OK");
+		this->listBox1->Items->Add("Commande modifier, Id :" + this->textBox_id_comm->Text + ", Reference ="+ this->textBox_ref_comm->Text +" OK");
 	}
-private: System::Void tabPage3_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox7_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void label14_Click(System::Object^ sender, System::EventArgs^ e) { 
-}
+
 };
 }
