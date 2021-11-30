@@ -6,13 +6,7 @@ NS_Comp_Svc::CLservices::CLservices(void)
 	this->oCad = gcnew NS_Comp_Data::CLcad();
 	this->oMappPERS = gcnew NS_Comp_Mappage::CLmapPERS();
 }
-System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerToutesLesPersonnes(System::String^ dataTableName)
-{
-	System::String^ sql;
 
-	sql = this->oMappTB->Select();
-	return this->oCad->getRows(sql, dataTableName);
-}
 System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerToutLePersonnel(System::String^ PERS, System::String^ dataTableName)
 {
 	System::String^ sql;
@@ -51,9 +45,9 @@ void NS_Comp_Svc::CLservices::modifierUnPersonnel(System::String^ nom, System::S
 	System::String^ sql;
 
 	this->oMappPERS->setNom_PERS(nom);
-	this->oMappTB->setPrenom(prenom);
-	this->oMappTB->setId(id);
-	sql = this->oMappTB->Update();
+	this->oMappPERS->setPrenom_PERS(prenom);
+	this->oMappPERS->setId_PERS(id);
+	sql = this->oMappPERS->Update_PERS();
 
 	this->oCad->actionRows(sql);
 }
