@@ -790,7 +790,7 @@ namespace ProjetPOO {
 	}
 	private: System::Void btn_insert_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		this->oSvc->ajouterUnePersonne(this->txt_nom->Text, this->txt_prenom->Text);
+		this->oSvc->ajouterUnPersonnel(this->txt_nom->Text, this->txt_prenom->Text);
 
 		//Load data
 		this->dgv_enr->Refresh();
@@ -805,7 +805,7 @@ namespace ProjetPOO {
 	{
 		String^ textVal = this->txt_id->Text;
 		int id_people = System::Convert::ToInt32(textVal);
-		this->oSvc->suprimerUnePersonne(id_people);
+		this->oSvc->suprimerUnPersonnel(id_people);
 
 		//Load data
 		this->dgv_enr->Refresh();
@@ -820,7 +820,7 @@ namespace ProjetPOO {
 	{
 		String^ textVal = this->txt_id->Text;
 		int id_people = System::Convert::ToInt32(textVal);
-		this->oSvc->modifierUnePersonne(this->txt_nom->Text, this->txt_prenom->Text, id_people);
+		this->oSvc->modifierUnPersonnel(this->txt_nom->Text, this->txt_prenom->Text, id_people);
 
 		//Load data
 		this->dgv_enr->Refresh();
@@ -832,9 +832,9 @@ namespace ProjetPOO {
 		this->listBox1->Items->Add("Personne modifier, Id :" + this->txt_id->Text + ", Nom ="+ this->txt_nom->Text +" OK");
 	}
 private: System::Void button_update2_Click(System::Object^ sender, System::EventArgs^ e) {
-	String^ textVal = this->txt_id->Text;
+	String^ textVal = this->Id_personnel->Text;
 	int id_people = System::Convert::ToInt32(textVal);
-	this->oSvc->modifierUnePersonne(this->txt_nom->Text, this->txt_prenom->Text, id_people);
+	this->oSvc->modifierUnPersonnel(this->nom_personnel->Text, this->prenom_personnel->Text, id_people);
 
 	//Load data
 	this->dgv_PER->Refresh();
@@ -843,10 +843,10 @@ private: System::Void button_update2_Click(System::Object^ sender, System::Event
 	this->dgv_PER->DataMember = "TB_PEOPLE";
 
 	//Affichage de la personne modifier
-	this->listBox1->Items->Add("Personne modifier, Id :" + this->txt_id->Text + ", Nom =" + this->txt_nom->Text + " OK");
+	this->listBox1->Items->Add("Personne modifier, Id :" + this->Id_personnel->Text + ", Nom =" + this->nom_personnel->Text + " OK");
 }
 private: System::Void button_insert2_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->oSvc->ajouterUnePersonne(this->txt_nom->Text, this->txt_prenom->Text);
+	this->oSvc->ajouterUnPersonnel(this->nom_personnel->Text, this->prenom_personnel->Text);
 
 	//Load data
 	this->dgv_PER->Refresh();
@@ -855,13 +855,13 @@ private: System::Void button_insert2_Click(System::Object^ sender, System::Event
 	this->dgv_PER->DataMember = "TB_PEOPLE";
 
 	//Affichage de la personne ajouter
-	this->listBox1->Items->Add("Personne ajouter, Id :" + this->txt_id->Text + ", Nom =" + this->txt_nom->Text + " OK");
+	this->listBox1->Items->Add("Personne ajouter, Id :" + this->Id_personnel->Text + ", Nom =" + this->nom_personnel->Text + " OK");
 
 }
 private: System::Void button_delete2_Click(System::Object^ sender, System::EventArgs^ e) {
-	String^ textVal = this->txt_id->Text;
+	String^ textVal = this->Id_personnel->Text;
 	int id_people = System::Convert::ToInt32(textVal);
-	this->oSvc->suprimerUnePersonne(id_people);
+	this->oSvc->suprimerUnPersonnel(id_people);
 
 	//Load data
 	this->dgv_PER->Refresh();
@@ -870,7 +870,7 @@ private: System::Void button_delete2_Click(System::Object^ sender, System::Event
 	this->dgv_PER->DataMember = "TB_PEOPLE";
 
 	//Affichage de la personne supprimer
-	this->listBox2->Items->Add("Personne suprimer, Id :" + this->txt_id->Text + ", Nom =" + this->txt_nom->Text + " OK");
+	this->listBox2->Items->Add("Personne suprimer, Id :" + this->Id_personnel->Text + ", Nom =" + this->nom_personnel->Text + " OK");
 }
 
 };

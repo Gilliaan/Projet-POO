@@ -21,31 +21,31 @@ System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerToutLePersonnel(Syst
 	sql = this->oMappPERS->Select_PERS();
 	return this->oCad->getRows(sql, dataTableName);
 }
-void NS_Comp_Svc::CLservices::ajouterUnePersonne(System::String^ nom, System::String^ prenom)
+void NS_Comp_Svc::CLservices::ajouterUnPersonnel(System::String^ nom, System::String^ prenom)
 {
 	System::String^ sql;
 
-	this->oMappTB->setNom(nom);
-	this->oMappTB->setPrenom(prenom);
-	sql = this->oMappTB->Insert();
+	this->oMappPERS->setNom_PERS(nom);
+	this->oMappPERS->setPrenom_PERS(prenom);
+	sql = this->oMappPERS->Insert_PERS();
 
 	this->oCad->actionRows(sql);
 }
-void NS_Comp_Svc::CLservices::suprimerUnePersonne(int id)
+void NS_Comp_Svc::CLservices::suprimerUnPersonnel(int id)
 {
 	System::String^ sql;
 
-	this->oMappTB->setId(id);
-	sql = this->oMappTB->Delete();
+	this->oMappPERS->setId_PERS(id);
+	sql = this->oMappPERS->Delete_PERS();
 
 	this->oCad->actionRows(sql);
 
 }
-void NS_Comp_Svc::CLservices::modifierUnePersonne(System::String^ nom, System::String^ prenom, int id)
+void NS_Comp_Svc::CLservices::modifierUnPersonnel(System::String^ nom, System::String^ prenom, int id)
 {
 	System::String^ sql;
 
-	this->oMappTB->setNom(nom);
+	this->oMappPERS->setNom_PERS(nom);
 	this->oMappTB->setPrenom(prenom);
 	this->oMappTB->setId(id);
 	sql = this->oMappTB->Update();
