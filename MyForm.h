@@ -816,7 +816,25 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 	}
 	private: System::Void btn_insert_Click_Comm(System::Object^ sender, System::EventArgs^ e)
 	{
-		this->oSvc->selectionnerToutesLesCommandes(this->textBox_ref_comm->Text, this->textBox_date_prevu_comm->Text, this->textBox_date_em_comm->Text, this->textBox_article_comm->Text, this->textBox_ht_comm->Text, this->textBox_tva_comm->Text, this->textBox_ttc_comm->Text, this->textBox_id_paiement_comm->Text, this->textBox_id_comm->Text);// chek git a gab puis modifier 
+		String^ textVal = this->textBox_id_comm->Text;
+		int id_com = System::Convert::ToInt32(textVal);
+
+		String^ textVal = this->textBox_article_comm->Text;
+		int com_tot_ar = System::Convert::ToInt32(textVal);
+
+		String^ textVal = this->textBox_ht_comm->Text;
+		int com_tot_ht = System::Convert::ToDouble(textVal);
+
+		String^ textVal = this->textBox_tva_comm->Text;
+		int com_tot_tva = System::Convert::ToDouble(textVal);
+
+		String^ textVal = this->textBox_ttc_comm->Text;
+		int com_tot_ttc = System::Convert::ToDouble(textVal);
+
+		String^ textVal = this->textBox_id_paiement_comm->Text;
+		int id_paiement = System::Convert::ToInt32(textVal);
+
+		this->oSvc->selectionnerToutesLesCommandes(this->textBox_ref_comm->Text, this->textBox_date_prevu_comm->Text, this->textBox_date_em_comm->Text, com_tot_ar, com_tot_ht, com_tot_tva, com_tot_ttc, id_paiement, id_com);
 
 		//Load data
 		this->dgv_enr->Refresh();
@@ -847,7 +865,23 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 	{
 		String^ textVal = this->textBox_id_comm->Text;
 		int id_com = System::Convert::ToInt32(textVal);
-		this->oSvc->modifierUneCommande(this->textBox_ref_comm->Text, this->textBox_date_prevu_comm->Text, this->textBox_date_em_comm->Text, this->textBox_article_comm->Text, this->textBox_ht_comm->Text, this->textBox_tva_comm->Text, this->textBox_ttc_comm->Text, this->textBox_id_paiement_comm->Text, this->textBox_id_comm->Text);
+
+		String^ textVal = this->textBox_article_comm->Text;
+		int com_tot_ar = System::Convert::ToInt32(textVal);
+
+		String^ textVal = this->textBox_ht_comm->Text;
+		int com_tot_ht = System::Convert::ToDouble(textVal);
+
+		String^ textVal = this->textBox_tva_comm->Text;
+		int com_tot_tva = System::Convert::ToDouble(textVal);
+
+		String^ textVal = this->textBox_ttc_comm->Text;
+		int com_tot_ttc = System::Convert::ToDouble(textVal);
+
+		String^ textVal = this->textBox_id_paiement_comm->Text;
+		int id_paiement = System::Convert::ToInt32(textVal);
+
+		this->oSvc->modifierUneCommande(this->textBox_ref_comm->Text, this->textBox_date_prevu_comm->Text, this->textBox_date_em_comm->Text, com_tot_ar, com_tot_ht, com_tot_tva, com_tot_ttc, id_paiement, id_com);
 
 		//Load data
 		this->dgv_enr->Refresh();
