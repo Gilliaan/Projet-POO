@@ -262,6 +262,8 @@ namespace ProjetPOO {
 			// 
 			// tab_client
 			// 
+			this->tab_client->BackColor = System::Drawing::Color::Transparent;
+			this->tab_client->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->tab_client->Controls->Add(this->lbl_console);
 			this->tab_client->Controls->Add(this->lbl_date_premier_achat);
 			this->tab_client->Controls->Add(this->txt_date_premier_achat);
@@ -286,13 +288,13 @@ namespace ProjetPOO {
 			this->tab_client->Controls->Add(this->txt_nom);
 			this->tab_client->Controls->Add(this->lbl_id_cl);
 			this->tab_client->Controls->Add(this->txt_prenom);
+			this->tab_client->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->tab_client->Location = System::Drawing::Point(4, 25);
 			this->tab_client->Name = L"tab_client";
 			this->tab_client->Padding = System::Windows::Forms::Padding(3);
 			this->tab_client->Size = System::Drawing::Size(1182, 553);
 			this->tab_client->TabIndex = 0;
 			this->tab_client->Text = L"Clients";
-			this->tab_client->UseVisualStyleBackColor = true;
 			// 
 			// lbl_console
 			// 
@@ -477,6 +479,7 @@ namespace ProjetPOO {
 			this->tabPage5->TabIndex = 4;
 			this->tabPage5->Text = L"Statistiques";
 			this->tabPage5->UseVisualStyleBackColor = true;
+			this->tabPage5->Click += gcnew System::EventHandler(this, &MyForm::tabPage5_Click);
 			// 
 			// MyForm
 			// 
