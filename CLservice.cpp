@@ -13,10 +13,12 @@ System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerTousLesClients(Syste
 	sql = this->oMappTB->Select();
 	return this->oCad->getRows(sql, dataTableName);
 }
-void NS_Comp_Svc::CLservices::ajouterUnePersonne(System::String^ dateNaissance, System::String^ datePremierAchat, System::String^ genre, System::String^ nom, System::String^ prenom)
+void NS_Comp_Svc::CLservices::ajouterUnePersonne(System::String^ adrLivraison , System::String^ adrFacturation,System::String^ dateNaissance, System::String^ datePremierAchat, System::String^ genre, System::String^ nom, System::String^ prenom)
 {
 	System::String^ sql;
 
+	this->oMappTB->setAdresseFacturation(adrFacturation);
+	this->oMappTB->setAdresseLivraison(adrLivraison);
 	this->oMappTB->setDateNaissance(dateNaissance);
 	this->oMappTB->setDatePremierAchat(datePremierAchat);
 	this->oMappTB->setGender(genre);

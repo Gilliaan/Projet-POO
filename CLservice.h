@@ -16,7 +16,7 @@ namespace NS_Comp_Svc
 	public:
 		CLservices(void);
 		System::Data::DataSet^ selectionnerTousLesClients(System::String^, System::String^);
-		void ajouterUnePersonne(System::String^, System::String^, System::String^, System::String^, System::String^);
+		void ajouterUnePersonne(System::String^ , System::String^ ,System::String^, System::String^, System::String^, System::String^, System::String^);
 		void suprimerUnePersonne(int);
 		void modifierUnePersonne(System::String^, System::String^ , int);
 	};

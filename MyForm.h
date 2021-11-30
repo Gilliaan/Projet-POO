@@ -514,7 +514,7 @@ namespace ProjetPOO {
 	}
 	private: System::Void btn_insert_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		this->oSvc->ajouterUnePersonne(this->txt_date_naissance->Text, this->txt_date_premier_achat->Text, this->txt_genre->Text, this->txt_nom->Text, this->txt_prenom->Text);
+		this->oSvc->ajouterUnePersonne(this->txt_adr_livraison->Text, this->txt_adr_facturation->Text, this->txt_date_naissance->Text, this->txt_date_premier_achat->Text, this->txt_genre->Text, this->txt_nom->Text, this->txt_prenom->Text);
 		
 		//Load data
 		this->dgv_enr->Refresh();

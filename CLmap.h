@@ -12,7 +12,8 @@ namespace NS_Comp_Mappage
 		System::String^ ppl_gender;
 		System::String^ cl_date_naissance;
 		System::String^ CL_date_premier_achat;
-
+		System::String^ cl_adresse_livraison;
+		System::String^ cl_adresse_facturation;
 	public:
 		System::String^ Select(void);
 		System::String^ Insert(void);
@@ -25,6 +26,8 @@ namespace NS_Comp_Mappage
 		void setGender(System::String^);
 		void setDateNaissance(System::String^);
 		void setDatePremierAchat(System::String^);
+		void setAdresseLivraison(System::String^);
+		void setAdresseFacturation(System::String^);
 		int getId(void);
 		System::String^ getNom(void);
 		System::String^ getPrenom(void);
@@ -32,5 +35,7 @@ namespace NS_Comp_Mappage
 		System::String^ getGender(void);
 		System::String^ getDateNaissance(void);
 		System::String^ getDatePremierAchat(void);
+		System::String^ getAdresseLivraison(void);
+		System::String^ getAdresseFacturation(void);
 	};
 }
