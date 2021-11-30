@@ -13,11 +13,11 @@ System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerToutesLesPersonnes(S
 	sql = this->oMappTB->Select();
 	return this->oCad->getRows(sql, dataTableName);
 }
-System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerToutLePersonnel(System::String^ Type,System::String^ dataTableName)
+System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerToutLePersonnel(System::String^ PERS, System::String^ dataTableName)
 {
 	System::String^ sql;
 
-	this->oMappPERS->setType(Type);
+	this->oMappPERS->setType(PERS);
 	sql = this->oMappPERS->Select_PERS();
 	return this->oCad->getRows(sql, dataTableName);
 }

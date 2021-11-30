@@ -2,11 +2,11 @@
 
 System::String^ NS_Comp_Mappage::CLmapPERS::Select_PERS(void)
 {
-	return "SELECT [id_ppl], [ppl_nom], [ppl_prenom], [ppl_gender], [ppl_type]  FROM [DB_PROJET_POO].[dbo].[TB_PEOPLE] WHERE ppl_type = 'Personnel'";
+	return "SELECT [id_ppl], [ppl_nom], [ppl_prenom], [ppl_gender], [ppl_type]  FROM [DB_PROJET_POO].[dbo].[TB_PEOPLE] WHERE ppl_type = " + "'" + this->ppl_type + "';";
 }
 System::String^ NS_Comp_Mappage::CLmapPERS::Insert_PERS(void)
 {
-	return "INSERT INTO TB_PEOPLE (ppl_nom, ppl_prenom) VALUES('" + this->ppl_nom + "', '" + this->ppl_prenom + "') ";
+	return "INSERT INTO TB_PEOPLE (ppl_nom, ppl_prenom, ppl_type) VALUES('" + this->ppl_nom + "', '" + this->ppl_prenom + "', '" + this->ppl_type; "'"; "";
 }
 System::String^ NS_Comp_Mappage::CLmapPERS::Delete_PERS(void)
 {
@@ -28,9 +28,9 @@ void NS_Comp_Mappage::CLmapPERS::setPrenom_PERS(System::String^ prenom)
 {
 	this->ppl_prenom = prenom;
 }
-void NS_Comp_Mappage::CLmapPERS::setType(System::String^ Type)
+void NS_Comp_Mappage::CLmapPERS::setType(System::String^ PERS)
 {
-	this->ppl_type = Type;
+	this->ppl_type = PERS;
 }
 int NS_Comp_Mappage::CLmapPERS::getId_PERS(void) { return this->id_ppl; }
 System::String^ NS_Comp_Mappage::CLmapPERS::getNom_PERS(void) { return this->ppl_nom; }
