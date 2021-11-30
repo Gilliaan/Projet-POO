@@ -3,11 +3,11 @@
 
 System::String^ NS_Comp_Mappage::CLmapTB::Select(void)
 {
-	return "SELECT [id_ppl], [ppl_nom], [ppl_prenom] FROM [DB_PROJET_POO].[dbo].[TB_PEOPLE]";
+	return "SELECT [id_ppl], [ppl_nom], [ppl_prenom], [ppl_gender], [ppl_type] FROM [DB_PROJET_POO].[dbo].[TB_PEOPLE]";
 }
 System::String^ NS_Comp_Mappage::CLmapTB::Insert(void)
 {
-	return "INSERT INTO TB_PEOPLE (ppl_nom, ppl_prenom) VALUES('" + this->ppl_nom + "','" + this->ppl_prenom + "');";
+	return "INSERT INTO TB_PEOPLE (ppl_nom, ppl_prenom) VALUES('" + this->ppl_nom + "', '" + this->ppl_prenom + "') WHERE ppl_type = '" + this->id_ppl + "'";
 }
 System::String^ NS_Comp_Mappage::CLmapTB::Delete(void)
 {
@@ -34,4 +34,5 @@ System::String^ NS_Comp_Mappage::CLmapTB::getNom(void) { return this->ppl_nom; }
 System::String^ NS_Comp_Mappage::CLmapTB::getPrenom(void) { return this->ppl_prenom; }
 
 
-//Version 1.1 :)
+//CLmapPER
+

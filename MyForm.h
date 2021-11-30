@@ -62,7 +62,8 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::TabPage^ tabPage5;
 	private: System::Windows::Forms::ListBox^ listBox1;
 	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::DataGridView^ dataGridView1;
+	private: System::Windows::Forms::DataGridView^ dgv_PER;
+
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::TextBox^ textBox5;
@@ -151,6 +152,16 @@ namespace ProjetPOO {
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
+			this->label20 = (gcnew System::Windows::Forms::Label());
+			this->textBox15 = (gcnew System::Windows::Forms::TextBox());
+			this->label19 = (gcnew System::Windows::Forms::Label());
+			this->date_embauche_supérieur = (gcnew System::Windows::Forms::TextBox());
+			this->nom_supérieur = (gcnew System::Windows::Forms::TextBox());
+			this->date_embauche_personnel = (gcnew System::Windows::Forms::TextBox());
+			this->adresse_personnel = (gcnew System::Windows::Forms::TextBox());
+			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->label17 = (gcnew System::Windows::Forms::Label());
+			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->genre_personnel = (gcnew System::Windows::Forms::TextBox());
 			this->label14 = (gcnew System::Windows::Forms::Label());
@@ -164,25 +175,15 @@ namespace ProjetPOO {
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->dgv_PER = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
-			this->label16 = (gcnew System::Windows::Forms::Label());
-			this->label17 = (gcnew System::Windows::Forms::Label());
-			this->label18 = (gcnew System::Windows::Forms::Label());
-			this->adresse_personnel = (gcnew System::Windows::Forms::TextBox());
-			this->date_embauche_personnel = (gcnew System::Windows::Forms::TextBox());
-			this->nom_supérieur = (gcnew System::Windows::Forms::TextBox());
-			this->date_embauche_supérieur = (gcnew System::Windows::Forms::TextBox());
-			this->label19 = (gcnew System::Windows::Forms::Label());
-			this->textBox15 = (gcnew System::Windows::Forms::TextBox());
-			this->label20 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_enr))->BeginInit();
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			this->tabPage2->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_PER))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// dgv_enr
@@ -477,7 +478,7 @@ namespace ProjetPOO {
 			this->tabPage2->Controls->Add(this->button3);
 			this->tabPage2->Controls->Add(this->button1);
 			this->tabPage2->Controls->Add(this->button2);
-			this->tabPage2->Controls->Add(this->dataGridView1);
+			this->tabPage2->Controls->Add(this->dgv_PER);
 			this->tabPage2->Location = System::Drawing::Point(4, 29);
 			this->tabPage2->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->tabPage2->Name = L"tabPage2";
@@ -486,6 +487,93 @@ namespace ProjetPOO {
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"Personnel";
 			this->tabPage2->UseVisualStyleBackColor = true;
+			// 
+			// label20
+			// 
+			this->label20->AutoSize = true;
+			this->label20->Location = System::Drawing::Point(14, 589);
+			this->label20->Name = L"label20";
+			this->label20->Size = System::Drawing::Size(67, 20);
+			this->label20->TabIndex = 29;
+			this->label20->Text = L"Console";
+			// 
+			// textBox15
+			// 
+			this->textBox15->Location = System::Drawing::Point(18, 519);
+			this->textBox15->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->textBox15->Name = L"textBox15";
+			this->textBox15->Size = System::Drawing::Size(141, 26);
+			this->textBox15->TabIndex = 28;
+			this->textBox15->Text = L"Personnel";
+			this->textBox15->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			// 
+			// label19
+			// 
+			this->label19->AutoSize = true;
+			this->label19->Location = System::Drawing::Point(14, 494);
+			this->label19->Name = L"label19";
+			this->label19->Size = System::Drawing::Size(136, 20);
+			this->label19->TabIndex = 27;
+			this->label19->Text = L"Type de personne";
+			// 
+			// date_embauche_supérieur
+			// 
+			this->date_embauche_supérieur->Location = System::Drawing::Point(464, 448);
+			this->date_embauche_supérieur->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->date_embauche_supérieur->Name = L"date_embauche_supérieur";
+			this->date_embauche_supérieur->Size = System::Drawing::Size(141, 26);
+			this->date_embauche_supérieur->TabIndex = 26;
+			// 
+			// nom_supérieur
+			// 
+			this->nom_supérieur->Location = System::Drawing::Point(464, 380);
+			this->nom_supérieur->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->nom_supérieur->Name = L"nom_supérieur";
+			this->nom_supérieur->Size = System::Drawing::Size(141, 26);
+			this->nom_supérieur->TabIndex = 25;
+			// 
+			// date_embauche_personnel
+			// 
+			this->date_embauche_personnel->Location = System::Drawing::Point(189, 448);
+			this->date_embauche_personnel->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->date_embauche_personnel->Name = L"date_embauche_personnel";
+			this->date_embauche_personnel->Size = System::Drawing::Size(141, 26);
+			this->date_embauche_personnel->TabIndex = 24;
+			// 
+			// adresse_personnel
+			// 
+			this->adresse_personnel->Location = System::Drawing::Point(189, 380);
+			this->adresse_personnel->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->adresse_personnel->Name = L"adresse_personnel";
+			this->adresse_personnel->Size = System::Drawing::Size(141, 26);
+			this->adresse_personnel->TabIndex = 23;
+			// 
+			// label18
+			// 
+			this->label18->AutoSize = true;
+			this->label18->Location = System::Drawing::Point(460, 423);
+			this->label18->Name = L"label18";
+			this->label18->Size = System::Drawing::Size(205, 20);
+			this->label18->TabIndex = 22;
+			this->label18->Text = L"Date d\'embauche supérieur";
+			// 
+			// label17
+			// 
+			this->label17->AutoSize = true;
+			this->label17->Location = System::Drawing::Point(460, 355);
+			this->label17->Name = L"label17";
+			this->label17->Size = System::Drawing::Size(134, 20);
+			this->label17->TabIndex = 21;
+			this->label17->Text = L"Nom du supérieur";
+			// 
+			// label16
+			// 
+			this->label16->AutoSize = true;
+			this->label16->Location = System::Drawing::Point(185, 423);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(135, 20);
+			this->label16->TabIndex = 20;
+			this->label16->Text = L"Date d\'embauche";
 			// 
 			// label15
 			// 
@@ -607,16 +695,16 @@ namespace ProjetPOO {
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button_insert2_Click);
 			// 
-			// dataGridView1
+			// dgv_PER
 			// 
-			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(18, 22);
-			this->dataGridView1->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
-			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->RowHeadersWidth = 51;
-			this->dataGridView1->RowTemplate->Height = 24;
-			this->dataGridView1->Size = System::Drawing::Size(915, 222);
-			this->dataGridView1->TabIndex = 0;
+			this->dgv_PER->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dgv_PER->Location = System::Drawing::Point(18, 22);
+			this->dgv_PER->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
+			this->dgv_PER->Name = L"dgv_PER";
+			this->dgv_PER->RowHeadersWidth = 51;
+			this->dgv_PER->RowTemplate->Height = 24;
+			this->dgv_PER->Size = System::Drawing::Size(915, 222);
+			this->dgv_PER->TabIndex = 0;
 			// 
 			// tabPage3
 			// 
@@ -651,93 +739,6 @@ namespace ProjetPOO {
 			this->tabPage5->Text = L"Statistiques";
 			this->tabPage5->UseVisualStyleBackColor = true;
 			// 
-			// label16
-			// 
-			this->label16->AutoSize = true;
-			this->label16->Location = System::Drawing::Point(185, 423);
-			this->label16->Name = L"label16";
-			this->label16->Size = System::Drawing::Size(135, 20);
-			this->label16->TabIndex = 20;
-			this->label16->Text = L"Date d\'embauche";
-			// 
-			// label17
-			// 
-			this->label17->AutoSize = true;
-			this->label17->Location = System::Drawing::Point(460, 355);
-			this->label17->Name = L"label17";
-			this->label17->Size = System::Drawing::Size(134, 20);
-			this->label17->TabIndex = 21;
-			this->label17->Text = L"Nom du supérieur";
-			// 
-			// label18
-			// 
-			this->label18->AutoSize = true;
-			this->label18->Location = System::Drawing::Point(460, 423);
-			this->label18->Name = L"label18";
-			this->label18->Size = System::Drawing::Size(205, 20);
-			this->label18->TabIndex = 22;
-			this->label18->Text = L"Date d\'embauche supérieur";
-			// 
-			// adresse_personnel
-			// 
-			this->adresse_personnel->Location = System::Drawing::Point(189, 380);
-			this->adresse_personnel->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->adresse_personnel->Name = L"adresse_personnel";
-			this->adresse_personnel->Size = System::Drawing::Size(141, 26);
-			this->adresse_personnel->TabIndex = 23;
-			// 
-			// date_embauche_personnel
-			// 
-			this->date_embauche_personnel->Location = System::Drawing::Point(189, 448);
-			this->date_embauche_personnel->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->date_embauche_personnel->Name = L"date_embauche_personnel";
-			this->date_embauche_personnel->Size = System::Drawing::Size(141, 26);
-			this->date_embauche_personnel->TabIndex = 24;
-			// 
-			// nom_supérieur
-			// 
-			this->nom_supérieur->Location = System::Drawing::Point(464, 380);
-			this->nom_supérieur->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->nom_supérieur->Name = L"nom_supérieur";
-			this->nom_supérieur->Size = System::Drawing::Size(141, 26);
-			this->nom_supérieur->TabIndex = 25;
-			// 
-			// date_embauche_supérieur
-			// 
-			this->date_embauche_supérieur->Location = System::Drawing::Point(464, 448);
-			this->date_embauche_supérieur->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->date_embauche_supérieur->Name = L"date_embauche_supérieur";
-			this->date_embauche_supérieur->Size = System::Drawing::Size(141, 26);
-			this->date_embauche_supérieur->TabIndex = 26;
-			// 
-			// label19
-			// 
-			this->label19->AutoSize = true;
-			this->label19->Location = System::Drawing::Point(14, 494);
-			this->label19->Name = L"label19";
-			this->label19->Size = System::Drawing::Size(136, 20);
-			this->label19->TabIndex = 27;
-			this->label19->Text = L"Type de personne";
-			// 
-			// textBox15
-			// 
-			this->textBox15->Location = System::Drawing::Point(18, 519);
-			this->textBox15->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->textBox15->Name = L"textBox15";
-			this->textBox15->Size = System::Drawing::Size(141, 26);
-			this->textBox15->TabIndex = 28;
-			this->textBox15->Text = L"Personnel";
-			this->textBox15->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
-			// 
-			// label20
-			// 
-			this->label20->AutoSize = true;
-			this->label20->Location = System::Drawing::Point(14, 589);
-			this->label20->Name = L"label20";
-			this->label20->Size = System::Drawing::Size(67, 20);
-			this->label20->TabIndex = 29;
-			this->label20->Text = L"Console";
-			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
@@ -754,7 +755,7 @@ namespace ProjetPOO {
 			this->tabPage1->PerformLayout();
 			this->tabPage2->ResumeLayout(false);
 			this->tabPage2->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_PER))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -828,10 +829,10 @@ private: System::Void button_update2_Click(System::Object^ sender, System::Event
 	this->oSvc->modifierUnePersonne(this->txt_nom->Text, this->txt_prenom->Text, id_people);
 
 	//Load data
-	this->dgv_enr->Refresh();
+	this->dgv_PER->Refresh();
 	this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
-	this->dgv_enr->DataSource = this->oDs;
-	this->dgv_enr->DataMember = "TB_PEOPLE";
+	this->dgv_PER->DataSource = this->oDs;
+	this->dgv_PER->DataMember = "TB_PEOPLE";
 
 	//Affichage de la personne modifier
 	this->listBox1->Items->Add("Personne modifier, Id :" + this->txt_id->Text + ", Nom =" + this->txt_nom->Text + " OK");
@@ -840,10 +841,10 @@ private: System::Void button_insert2_Click(System::Object^ sender, System::Event
 	this->oSvc->ajouterUnePersonne(this->txt_nom->Text, this->txt_prenom->Text);
 
 	//Load data
-	this->dgv_enr->Refresh();
+	this->dgv_PER->Refresh();
 	this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
-	this->dgv_enr->DataSource = this->oDs;
-	this->dgv_enr->DataMember = "TB_PEOPLE";
+	this->dgv_PER->DataSource = this->oDs;
+	this->dgv_PER->DataMember = "TB_PEOPLE";
 
 	//Affichage de la personne ajouter
 	this->listBox1->Items->Add("Personne ajouter, Id :" + this->txt_id->Text + ", Nom =" + this->txt_nom->Text + " OK");
@@ -855,10 +856,10 @@ private: System::Void button_delete2_Click(System::Object^ sender, System::Event
 	this->oSvc->suprimerUnePersonne(id_people);
 
 	//Load data
-	this->dgv_enr->Refresh();
+	this->dgv_PER->Refresh();
 	this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
-	this->dgv_enr->DataSource = this->oDs;
-	this->dgv_enr->DataMember = "TB_PEOPLE";
+	this->dgv_PER->DataSource = this->oDs;
+	this->dgv_PER->DataMember = "TB_PEOPLE";
 
 	//Affichage de la personne supprimer
 	this->listBox2->Items->Add("Personne suprimer, Id :" + this->txt_id->Text + ", Nom =" + this->txt_nom->Text + " OK");
