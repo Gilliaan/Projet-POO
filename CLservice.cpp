@@ -4,19 +4,20 @@ NS_Comp_Svc::CLservices::CLservices(void)
 {
 	this->oCad = gcnew NS_Comp_Data::CLcad();
 	this->oMappTB = gcnew NS_Comp_Mappage::CLmapTB();
-	this->oMappTB->setType("Client");
 }
 System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerTousLesClients(System::String^ type, System::String^ dataTableName)
 {
 	System::String^ sql;
 
+	this->oMappTB->setType(type);
 	sql = this->oMappTB->Select();
 	return this->oCad->getRows(sql, dataTableName);
 }
-void NS_Comp_Svc::CLservices::ajouterUnePersonne(System::String^ nom, System::String^ prenom)
+void NS_Comp_Svc::CLservices::ajouterUnePersonne(System::String^ genre, System::String^ nom, System::String^ prenom)
 {
 	System::String^ sql;
 
+	this->oMappTB->setGender(genre);
 	this->oMappTB->setNom(nom);
 	this->oMappTB->setPrenom(prenom);
 	sql = this->oMappTB->Insert();

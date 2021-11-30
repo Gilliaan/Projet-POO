@@ -37,12 +37,15 @@ namespace ProjetPOO {
 			}
 		}
 	private: System::Windows::Forms::DataGridView^ dgv_enr;
+	private: System::Windows::Forms::Button^ btn_inserer;
+	private: System::Windows::Forms::Button^ btn_supprimer;
 	protected:
 
 
-	private: System::Windows::Forms::Button^ btn_insert;
-	private: System::Windows::Forms::Button^ btn_delete;
-	private: System::Windows::Forms::Button^ btn_update;
+
+
+	private: System::Windows::Forms::Button^ btn_modifier;
+
 	private: System::Windows::Forms::TextBox^ txt_id;
 	private: System::Windows::Forms::TextBox^ txt_nom;
 	private: System::Windows::Forms::TextBox^ txt_prenom;
@@ -60,22 +63,36 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::TabPage^ tabPage3;
 	private: System::Windows::Forms::TabPage^ tabPage4;
 	private: System::Windows::Forms::TabPage^ tabPage5;
-	private: System::Windows::Forms::ListBox^ listBox1;
+	private: System::Windows::Forms::ListBox^ list_console;
+
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
-	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::Label^ label8;
-	private: System::Windows::Forms::TextBox^ textBox5;
-	private: System::Windows::Forms::Label^ label7;
-	private: System::Windows::Forms::Label^ label6;
-	private: System::Windows::Forms::TextBox^ textBox4;
-	private: System::Windows::Forms::TextBox^ textBox3;
-	private: System::Windows::Forms::Label^ label5;
-	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::Label^ label9;
-	private: System::Windows::Forms::TextBox^ textBox6;
-	private: System::Windows::Forms::Label^ label10;
+	private: System::Windows::Forms::TextBox^ txt_type_ppl;
+	private: System::Windows::Forms::Label^ lbl_date_naissance;
+
+	private: System::Windows::Forms::TextBox^ txt_date_naissance;
+	private: System::Windows::Forms::Label^ lbl_adr_facturation;
+
+
+	private: System::Windows::Forms::Label^ lbl_adr_livraison;
+
+	private: System::Windows::Forms::TextBox^ txt_adr_facturation;
+
+	private: System::Windows::Forms::TextBox^ txt_adr_livraison;
+	private: System::Windows::Forms::Label^ lbl_genre;
+
+
+	private: System::Windows::Forms::TextBox^ txt_genre;
+	private: System::Windows::Forms::Label^ lbl_type_personne;
+
+
+	private: System::Windows::Forms::Label^ lbl_date_premier_achat;
+
+
+	private: System::Windows::Forms::TextBox^ txt_date_premier_achat;
+	private: System::Windows::Forms::Label^ lbl_console;
+
+
 	protected:
 
 	private:
@@ -92,9 +109,9 @@ namespace ProjetPOO {
 		void InitializeComponent(void)
 		{
 			this->dgv_enr = (gcnew System::Windows::Forms::DataGridView());
-			this->btn_insert = (gcnew System::Windows::Forms::Button());
-			this->btn_delete = (gcnew System::Windows::Forms::Button());
-			this->btn_update = (gcnew System::Windows::Forms::Button());
+			this->btn_inserer = (gcnew System::Windows::Forms::Button());
+			this->btn_supprimer = (gcnew System::Windows::Forms::Button());
+			this->btn_modifier = (gcnew System::Windows::Forms::Button());
 			this->txt_id = (gcnew System::Windows::Forms::TextBox());
 			this->txt_nom = (gcnew System::Windows::Forms::TextBox());
 			this->txt_prenom = (gcnew System::Windows::Forms::TextBox());
@@ -103,20 +120,20 @@ namespace ProjetPOO {
 			this->lbl_nom_cl = (gcnew System::Windows::Forms::Label());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
-			this->label10 = (gcnew System::Windows::Forms::Label());
-			this->label9 = (gcnew System::Windows::Forms::Label());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
-			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
+			this->lbl_console = (gcnew System::Windows::Forms::Label());
+			this->lbl_date_premier_achat = (gcnew System::Windows::Forms::Label());
+			this->txt_date_premier_achat = (gcnew System::Windows::Forms::TextBox());
+			this->lbl_date_naissance = (gcnew System::Windows::Forms::Label());
+			this->txt_date_naissance = (gcnew System::Windows::Forms::TextBox());
+			this->lbl_adr_facturation = (gcnew System::Windows::Forms::Label());
+			this->lbl_adr_livraison = (gcnew System::Windows::Forms::Label());
+			this->txt_adr_facturation = (gcnew System::Windows::Forms::TextBox());
+			this->txt_adr_livraison = (gcnew System::Windows::Forms::TextBox());
+			this->lbl_genre = (gcnew System::Windows::Forms::Label());
+			this->txt_genre = (gcnew System::Windows::Forms::TextBox());
+			this->lbl_type_personne = (gcnew System::Windows::Forms::Label());
+			this->txt_type_ppl = (gcnew System::Windows::Forms::TextBox());
+			this->list_console = (gcnew System::Windows::Forms::ListBox());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
@@ -141,38 +158,38 @@ namespace ProjetPOO {
 			this->dgv_enr->TabIndex = 0;
 			this->dgv_enr->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dgv_enr_CellContentClick);
 			// 
-			// btn_insert
+			// btn_inserer
 			// 
-			this->btn_insert->Location = System::Drawing::Point(16, 215);
-			this->btn_insert->Margin = System::Windows::Forms::Padding(4);
-			this->btn_insert->Name = L"btn_insert";
-			this->btn_insert->Size = System::Drawing::Size(100, 46);
-			this->btn_insert->TabIndex = 2;
-			this->btn_insert->Text = L"INSÉRER";
-			this->btn_insert->UseVisualStyleBackColor = true;
-			this->btn_insert->Click += gcnew System::EventHandler(this, &MyForm::btn_insert_Click);
+			this->btn_inserer->Location = System::Drawing::Point(16, 215);
+			this->btn_inserer->Margin = System::Windows::Forms::Padding(4);
+			this->btn_inserer->Name = L"btn_inserer";
+			this->btn_inserer->Size = System::Drawing::Size(100, 46);
+			this->btn_inserer->TabIndex = 2;
+			this->btn_inserer->Text = L"INSÉRER";
+			this->btn_inserer->UseVisualStyleBackColor = true;
+			this->btn_inserer->Click += gcnew System::EventHandler(this, &MyForm::btn_insert_Click);
 			// 
-			// btn_delete
+			// btn_supprimer
 			// 
-			this->btn_delete->Location = System::Drawing::Point(16, 322);
-			this->btn_delete->Margin = System::Windows::Forms::Padding(4);
-			this->btn_delete->Name = L"btn_delete";
-			this->btn_delete->Size = System::Drawing::Size(100, 46);
-			this->btn_delete->TabIndex = 3;
-			this->btn_delete->Text = L"SUPPRIMER";
-			this->btn_delete->UseVisualStyleBackColor = true;
-			this->btn_delete->Click += gcnew System::EventHandler(this, &MyForm::btn_delete_Click);
+			this->btn_supprimer->Location = System::Drawing::Point(16, 322);
+			this->btn_supprimer->Margin = System::Windows::Forms::Padding(4);
+			this->btn_supprimer->Name = L"btn_supprimer";
+			this->btn_supprimer->Size = System::Drawing::Size(100, 46);
+			this->btn_supprimer->TabIndex = 3;
+			this->btn_supprimer->Text = L"SUPPRIMER";
+			this->btn_supprimer->UseVisualStyleBackColor = true;
+			this->btn_supprimer->Click += gcnew System::EventHandler(this, &MyForm::btn_delete_Click);
 			// 
-			// btn_update
+			// btn_modifier
 			// 
-			this->btn_update->Location = System::Drawing::Point(16, 268);
-			this->btn_update->Margin = System::Windows::Forms::Padding(4);
-			this->btn_update->Name = L"btn_update";
-			this->btn_update->Size = System::Drawing::Size(100, 46);
-			this->btn_update->TabIndex = 4;
-			this->btn_update->Text = L"MODIFIER";
-			this->btn_update->UseVisualStyleBackColor = true;
-			this->btn_update->Click += gcnew System::EventHandler(this, &MyForm::btn_update_Click);
+			this->btn_modifier->Location = System::Drawing::Point(16, 268);
+			this->btn_modifier->Margin = System::Windows::Forms::Padding(4);
+			this->btn_modifier->Name = L"btn_modifier";
+			this->btn_modifier->Size = System::Drawing::Size(100, 46);
+			this->btn_modifier->TabIndex = 4;
+			this->btn_modifier->Text = L"MODIFIER";
+			this->btn_modifier->UseVisualStyleBackColor = true;
+			this->btn_modifier->Click += gcnew System::EventHandler(this, &MyForm::btn_update_Click);
 			// 
 			// txt_id
 			// 
@@ -202,7 +219,7 @@ namespace ProjetPOO {
 			// 
 			this->lbl_id_cl->AutoSize = true;
 			this->lbl_id_cl->Location = System::Drawing::Point(163, 215);
-			this->lbl_id_cl->Name = L"label1";
+			this->lbl_id_cl->Name = L"lbl_id_cl";
 			this->lbl_id_cl->Size = System::Drawing::Size(19, 17);
 			this->lbl_id_cl->TabIndex = 8;
 			this->lbl_id_cl->Text = L"Id";
@@ -240,26 +257,26 @@ namespace ProjetPOO {
 			// 
 			// tabPage1
 			// 
-			this->tabPage1->Controls->Add(this->label10);
-			this->tabPage1->Controls->Add(this->label9);
-			this->tabPage1->Controls->Add(this->textBox6);
-			this->tabPage1->Controls->Add(this->label8);
-			this->tabPage1->Controls->Add(this->textBox5);
-			this->tabPage1->Controls->Add(this->label7);
-			this->tabPage1->Controls->Add(this->label6);
-			this->tabPage1->Controls->Add(this->textBox4);
-			this->tabPage1->Controls->Add(this->textBox3);
-			this->tabPage1->Controls->Add(this->label5);
-			this->tabPage1->Controls->Add(this->textBox2);
-			this->tabPage1->Controls->Add(this->label4);
-			this->tabPage1->Controls->Add(this->textBox1);
-			this->tabPage1->Controls->Add(this->listBox1);
+			this->tabPage1->Controls->Add(this->lbl_console);
+			this->tabPage1->Controls->Add(this->lbl_date_premier_achat);
+			this->tabPage1->Controls->Add(this->txt_date_premier_achat);
+			this->tabPage1->Controls->Add(this->lbl_date_naissance);
+			this->tabPage1->Controls->Add(this->txt_date_naissance);
+			this->tabPage1->Controls->Add(this->lbl_adr_facturation);
+			this->tabPage1->Controls->Add(this->lbl_adr_livraison);
+			this->tabPage1->Controls->Add(this->txt_adr_facturation);
+			this->tabPage1->Controls->Add(this->txt_adr_livraison);
+			this->tabPage1->Controls->Add(this->lbl_genre);
+			this->tabPage1->Controls->Add(this->txt_genre);
+			this->tabPage1->Controls->Add(this->lbl_type_personne);
+			this->tabPage1->Controls->Add(this->txt_type_ppl);
+			this->tabPage1->Controls->Add(this->list_console);
 			this->tabPage1->Controls->Add(this->dgv_enr);
-			this->tabPage1->Controls->Add(this->btn_delete);
-			this->tabPage1->Controls->Add(this->btn_update);
+			this->tabPage1->Controls->Add(this->btn_supprimer);
+			this->tabPage1->Controls->Add(this->btn_modifier);
 			this->tabPage1->Controls->Add(this->lbl_nom_cl);
 			this->tabPage1->Controls->Add(this->txt_id);
-			this->tabPage1->Controls->Add(this->btn_insert);
+			this->tabPage1->Controls->Add(this->btn_inserer);
 			this->tabPage1->Controls->Add(this->lbl_prenom_cl);
 			this->tabPage1->Controls->Add(this->txt_nom);
 			this->tabPage1->Controls->Add(this->lbl_id_cl);
@@ -272,127 +289,127 @@ namespace ProjetPOO {
 			this->tabPage1->Text = L"Clients";
 			this->tabPage1->UseVisualStyleBackColor = true;
 			// 
-			// label10
+			// lbl_console
 			// 
-			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(13, 457);
-			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(59, 17);
-			this->label10->TabIndex = 24;
-			this->label10->Text = L"Console";
+			this->lbl_console->AutoSize = true;
+			this->lbl_console->Location = System::Drawing::Point(13, 457);
+			this->lbl_console->Name = L"lbl_console";
+			this->lbl_console->Size = System::Drawing::Size(59, 17);
+			this->lbl_console->TabIndex = 24;
+			this->lbl_console->Text = L"Console";
 			// 
-			// label9
+			// lbl_date_premier_achat
 			// 
-			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(163, 406);
-			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(129, 17);
-			this->label9->TabIndex = 23;
-			this->label9->Text = L"Date premier achat";
+			this->lbl_date_premier_achat->AutoSize = true;
+			this->lbl_date_premier_achat->Location = System::Drawing::Point(163, 406);
+			this->lbl_date_premier_achat->Name = L"lbl_date_premier_achat";
+			this->lbl_date_premier_achat->Size = System::Drawing::Size(129, 17);
+			this->lbl_date_premier_achat->TabIndex = 23;
+			this->lbl_date_premier_achat->Text = L"Date premier achat";
 			// 
-			// textBox6
+			// txt_date_premier_achat
 			// 
-			this->textBox6->Location = System::Drawing::Point(323, 401);
-			this->textBox6->Margin = System::Windows::Forms::Padding(4);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(204, 22);
-			this->textBox6->TabIndex = 22;
+			this->txt_date_premier_achat->Location = System::Drawing::Point(323, 401);
+			this->txt_date_premier_achat->Margin = System::Windows::Forms::Padding(4);
+			this->txt_date_premier_achat->Name = L"txt_date_premier_achat";
+			this->txt_date_premier_achat->Size = System::Drawing::Size(204, 22);
+			this->txt_date_premier_achat->TabIndex = 22;
 			// 
-			// label8
+			// lbl_date_naissance
 			// 
-			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(163, 378);
-			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(106, 17);
-			this->label8->TabIndex = 21;
-			this->label8->Text = L"Date naissance";
+			this->lbl_date_naissance->AutoSize = true;
+			this->lbl_date_naissance->Location = System::Drawing::Point(163, 378);
+			this->lbl_date_naissance->Name = L"lbl_date_naissance";
+			this->lbl_date_naissance->Size = System::Drawing::Size(106, 17);
+			this->lbl_date_naissance->TabIndex = 21;
+			this->lbl_date_naissance->Text = L"Date naissance";
 			// 
-			// textBox5
+			// txt_date_naissance
 			// 
-			this->textBox5->Location = System::Drawing::Point(323, 373);
-			this->textBox5->Margin = System::Windows::Forms::Padding(4);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(204, 22);
-			this->textBox5->TabIndex = 20;
+			this->txt_date_naissance->Location = System::Drawing::Point(323, 373);
+			this->txt_date_naissance->Margin = System::Windows::Forms::Padding(4);
+			this->txt_date_naissance->Name = L"txt_date_naissance";
+			this->txt_date_naissance->Size = System::Drawing::Size(204, 22);
+			this->txt_date_naissance->TabIndex = 20;
 			// 
-			// label7
+			// lbl_adr_facturation
 			// 
-			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(163, 310);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(151, 17);
-			this->label7->TabIndex = 19;
-			this->label7->Text = L"Adresse de facturation";
+			this->lbl_adr_facturation->AutoSize = true;
+			this->lbl_adr_facturation->Location = System::Drawing::Point(163, 310);
+			this->lbl_adr_facturation->Name = L"lbl_adr_facturation";
+			this->lbl_adr_facturation->Size = System::Drawing::Size(151, 17);
+			this->lbl_adr_facturation->TabIndex = 19;
+			this->lbl_adr_facturation->Text = L"Adresse de facturation";
 			// 
-			// label6
+			// lbl_adr_livraison
 			// 
-			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(163, 284);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(136, 17);
-			this->label6->TabIndex = 18;
-			this->label6->Text = L"Adresse de livraison";
+			this->lbl_adr_livraison->AutoSize = true;
+			this->lbl_adr_livraison->Location = System::Drawing::Point(163, 284);
+			this->lbl_adr_livraison->Name = L"lbl_adr_livraison";
+			this->lbl_adr_livraison->Size = System::Drawing::Size(136, 17);
+			this->lbl_adr_livraison->TabIndex = 18;
+			this->lbl_adr_livraison->Text = L"Adresse de livraison";
 			// 
-			// textBox4
+			// txt_adr_facturation
 			// 
-			this->textBox4->Location = System::Drawing::Point(323, 305);
-			this->textBox4->Margin = System::Windows::Forms::Padding(4);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(204, 22);
-			this->textBox4->TabIndex = 17;
+			this->txt_adr_facturation->Location = System::Drawing::Point(323, 305);
+			this->txt_adr_facturation->Margin = System::Windows::Forms::Padding(4);
+			this->txt_adr_facturation->Name = L"txt_adr_facturation";
+			this->txt_adr_facturation->Size = System::Drawing::Size(204, 22);
+			this->txt_adr_facturation->TabIndex = 17;
 			// 
-			// textBox3
+			// txt_adr_livraison
 			// 
-			this->textBox3->Location = System::Drawing::Point(323, 279);
-			this->textBox3->Margin = System::Windows::Forms::Padding(4);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(204, 22);
-			this->textBox3->TabIndex = 16;
+			this->txt_adr_livraison->Location = System::Drawing::Point(323, 279);
+			this->txt_adr_livraison->Margin = System::Windows::Forms::Padding(4);
+			this->txt_adr_livraison->Name = L"txt_adr_livraison";
+			this->txt_adr_livraison->Size = System::Drawing::Size(204, 22);
+			this->txt_adr_livraison->TabIndex = 16;
 			// 
-			// label5
+			// lbl_genre
 			// 
-			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(597, 218);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(48, 17);
-			this->label5->TabIndex = 15;
-			this->label5->Text = L"Genre";
+			this->lbl_genre->AutoSize = true;
+			this->lbl_genre->Location = System::Drawing::Point(597, 218);
+			this->lbl_genre->Name = L"lbl_genre";
+			this->lbl_genre->Size = System::Drawing::Size(48, 17);
+			this->lbl_genre->TabIndex = 15;
+			this->lbl_genre->Text = L"Genre";
 			// 
-			// textBox2
+			// txt_genre
 			// 
-			this->textBox2->Location = System::Drawing::Point(600, 239);
-			this->textBox2->Margin = System::Windows::Forms::Padding(4);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(126, 22);
-			this->textBox2->TabIndex = 14;
+			this->txt_genre->Location = System::Drawing::Point(600, 239);
+			this->txt_genre->Margin = System::Windows::Forms::Padding(4);
+			this->txt_genre->Name = L"txt_genre";
+			this->txt_genre->Size = System::Drawing::Size(126, 22);
+			this->txt_genre->TabIndex = 14;
 			// 
-			// label4
+			// lbl_type_personne
 			// 
-			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(6, 392);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(124, 17);
-			this->label4->TabIndex = 13;
-			this->label4->Text = L"Type de personne";
+			this->lbl_type_personne->AutoSize = true;
+			this->lbl_type_personne->Location = System::Drawing::Point(6, 392);
+			this->lbl_type_personne->Name = L"lbl_type_personne";
+			this->lbl_type_personne->Size = System::Drawing::Size(124, 17);
+			this->lbl_type_personne->TabIndex = 13;
+			this->lbl_type_personne->Text = L"Type de personne";
 			// 
-			// textBox1
+			// txt_type_ppl
 			// 
-			this->textBox1->Location = System::Drawing::Point(9, 413);
-			this->textBox1->Margin = System::Windows::Forms::Padding(4);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(121, 22);
-			this->textBox1->TabIndex = 12;
-			this->textBox1->Text = L"Client";
-			this->textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			this->txt_type_ppl->Location = System::Drawing::Point(9, 413);
+			this->txt_type_ppl->Margin = System::Windows::Forms::Padding(4);
+			this->txt_type_ppl->Name = L"txt_type_ppl";
+			this->txt_type_ppl->Size = System::Drawing::Size(121, 22);
+			this->txt_type_ppl->TabIndex = 12;
+			this->txt_type_ppl->Text = L"Client";
+			this->txt_type_ppl->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
-			// listBox1
+			// list_console
 			// 
-			this->listBox1->FormattingEnabled = true;
-			this->listBox1->ItemHeight = 16;
-			this->listBox1->Location = System::Drawing::Point(16, 477);
-			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(1145, 52);
-			this->listBox1->TabIndex = 11;
+			this->list_console->FormattingEnabled = true;
+			this->list_console->ItemHeight = 16;
+			this->list_console->Location = System::Drawing::Point(16, 477);
+			this->list_console->Name = L"list_console";
+			this->list_console->Size = System::Drawing::Size(1145, 52);
+			this->list_console->TabIndex = 11;
 			// 
 			// tabPage2
 			// 
@@ -401,7 +418,7 @@ namespace ProjetPOO {
 			this->tabPage2->Location = System::Drawing::Point(4, 25);
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage2->Size = System::Drawing::Size(851, 553);
+			this->tabPage2->Size = System::Drawing::Size(1182, 553);
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"Personnel";
 			this->tabPage2->UseVisualStyleBackColor = true;
@@ -431,7 +448,7 @@ namespace ProjetPOO {
 			this->tabPage3->Location = System::Drawing::Point(4, 25);
 			this->tabPage3->Name = L"tabPage3";
 			this->tabPage3->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage3->Size = System::Drawing::Size(851, 553);
+			this->tabPage3->Size = System::Drawing::Size(1182, 553);
 			this->tabPage3->TabIndex = 2;
 			this->tabPage3->Text = L"Commandes";
 			this->tabPage3->UseVisualStyleBackColor = true;
@@ -441,7 +458,7 @@ namespace ProjetPOO {
 			this->tabPage4->Location = System::Drawing::Point(4, 25);
 			this->tabPage4->Name = L"tabPage4";
 			this->tabPage4->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage4->Size = System::Drawing::Size(851, 553);
+			this->tabPage4->Size = System::Drawing::Size(1182, 553);
 			this->tabPage4->TabIndex = 3;
 			this->tabPage4->Text = L"Stock";
 			this->tabPage4->UseVisualStyleBackColor = true;
@@ -451,7 +468,7 @@ namespace ProjetPOO {
 			this->tabPage5->Location = System::Drawing::Point(4, 25);
 			this->tabPage5->Name = L"tabPage5";
 			this->tabPage5->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage5->Size = System::Drawing::Size(851, 553);
+			this->tabPage5->Size = System::Drawing::Size(1182, 553);
 			this->tabPage5->TabIndex = 4;
 			this->tabPage5->Text = L"Statistiques";
 			this->tabPage5->UseVisualStyleBackColor = true;
@@ -484,7 +501,7 @@ namespace ProjetPOO {
 
 		//Load data
 		this->dgv_enr->Refresh();
-		this->oDs = this->oSvc->selectionnerTousLesClients("Clients", "TB_PEOPLE");
+		this->oDs = this->oSvc->selectionnerTousLesClients(this->txt_type_ppl->Text, "TB_PEOPLE");
 		this->dgv_enr->DataSource = this->oDs;
 		this->dgv_enr->DataMember = "TB_PEOPLE";
 	}
@@ -492,11 +509,11 @@ namespace ProjetPOO {
 	}
 	private: System::Void btn_insert_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		this->oSvc->ajouterUnePersonne(this->txt_nom->Text, this->txt_prenom->Text);
+		this->oSvc->ajouterUnePersonne(this->txt_genre->Text, this->txt_nom->Text, this->txt_prenom->Text);
 
 		//Load data
 		this->dgv_enr->Refresh();
-		this->oDs = this->oSvc->selectionnerTousLesClients("Clients", "TB_PEOPLE");
+		this->oDs = this->oSvc->selectionnerTousLesClients(this->txt_type_ppl->Text, "TB_PEOPLE");
 		this->dgv_enr->DataSource = this->oDs;
 		this->dgv_enr->DataMember = "TB_PEOPLE";
 
@@ -511,7 +528,7 @@ namespace ProjetPOO {
 
 		//Load data
 		this->dgv_enr->Refresh();
-		this->oDs = this->oSvc->selectionnerTousLesClients("Clients","TB_PEOPLE");
+		this->oDs = this->oSvc->selectionnerTousLesClients(this->txt_type_ppl->Text,"TB_PEOPLE");
 		this->dgv_enr->DataSource = this->oDs;
 		this->dgv_enr->DataMember = "TB_PEOPLE";
 
@@ -526,7 +543,7 @@ namespace ProjetPOO {
 
 		//Load data
 		this->dgv_enr->Refresh();
-		this->oDs = this->oSvc->selectionnerTousLesClients("Clients", "TB_PEOPLE");
+		this->oDs = this->oSvc->selectionnerTousLesClients(this->txt_type_ppl->Text, "TB_PEOPLE");
 		this->dgv_enr->DataSource = this->oDs;
 		this->dgv_enr->DataMember = "TB_PEOPLE";
 
