@@ -58,7 +58,8 @@ namespace ProjetPOO {
 
 	private: System::Windows::Forms::TabPage^ tabPage1;
 	private: System::Windows::Forms::TabPage^ tabPage2;
-	private: System::Windows::Forms::TabPage^ tabPage3;
+	private: System::Windows::Forms::TabPage^ tabPage3_comm;
+
 	private: System::Windows::Forms::TabPage^ tabPage4;
 	private: System::Windows::Forms::TabPage^ tabPage5;
 	private: System::Windows::Forms::ListBox^ listBox1;
@@ -124,6 +125,8 @@ private: System::Windows::Forms::TextBox^ textBox_id_paiement_comm;
 private: System::Windows::Forms::TextBox^ textBox_ttc_comm;
 private: System::Windows::Forms::Label^ label_id_comm;
 private: System::Windows::Forms::TextBox^ textBox_id_comm;
+private: System::Windows::Forms::Label^ label_console_comm;
+private: System::Windows::Forms::ListBox^ listBox_console_comm;
 
 
 
@@ -174,37 +177,39 @@ private: System::Windows::Forms::TextBox^ textBox_id_comm;
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
-			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
+			this->tabPage3_comm = (gcnew System::Windows::Forms::TabPage());
+			this->label_date_prevu_comm = (gcnew System::Windows::Forms::Label());
+			this->label_id_comm = (gcnew System::Windows::Forms::Label());
+			this->label_id_paiement_comm = (gcnew System::Windows::Forms::Label());
+			this->label_ttc_comm = (gcnew System::Windows::Forms::Label());
+			this->label_tva_comm = (gcnew System::Windows::Forms::Label());
+			this->label_ref_comm = (gcnew System::Windows::Forms::Label());
+			this->label_ht_comm = (gcnew System::Windows::Forms::Label());
+			this->label_article_comm = (gcnew System::Windows::Forms::Label());
+			this->label_date_em_comm = (gcnew System::Windows::Forms::Label());
 			this->btn_del_comm = (gcnew System::Windows::Forms::Button());
 			this->btn_modif_comm = (gcnew System::Windows::Forms::Button());
 			this->btn_inser_comm = (gcnew System::Windows::Forms::Button());
+			this->textBox_article_comm = (gcnew System::Windows::Forms::TextBox());
 			this->textBox_ht_comm = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_tva_comm = (gcnew System::Windows::Forms::TextBox());
 			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox_date_em_comm = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_id_comm = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_id_paiement_comm = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_ttc_comm = (gcnew System::Windows::Forms::TextBox());
 			this->textBox_date_prevu_comm = (gcnew System::Windows::Forms::TextBox());
 			this->dataGridView_comm = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
-			this->label_date_em_comm = (gcnew System::Windows::Forms::Label());
-			this->label_date_prevu_comm = (gcnew System::Windows::Forms::Label());
-			this->label_ref_comm = (gcnew System::Windows::Forms::Label());
-			this->label_article_comm = (gcnew System::Windows::Forms::Label());
-			this->textBox_article_comm = (gcnew System::Windows::Forms::TextBox());
-			this->label_ht_comm = (gcnew System::Windows::Forms::Label());
-			this->textBox_tva_comm = (gcnew System::Windows::Forms::TextBox());
-			this->textBox_ttc_comm = (gcnew System::Windows::Forms::TextBox());
-			this->label_tva_comm = (gcnew System::Windows::Forms::Label());
-			this->label_ttc_comm = (gcnew System::Windows::Forms::Label());
-			this->textBox_id_paiement_comm = (gcnew System::Windows::Forms::TextBox());
-			this->label_id_paiement_comm = (gcnew System::Windows::Forms::Label());
-			this->textBox_id_comm = (gcnew System::Windows::Forms::TextBox());
-			this->label_id_comm = (gcnew System::Windows::Forms::Label());
+			this->listBox_console_comm = (gcnew System::Windows::Forms::ListBox());
+			this->label_console_comm = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_enr))->BeginInit();
 			this->btn_->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			this->tabPage2->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
-			this->tabPage3->SuspendLayout();
+			this->tabPage3_comm->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView_comm))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -226,7 +231,7 @@ private: System::Windows::Forms::TextBox^ textBox_id_comm;
 			this->btn_insert->TabIndex = 2;
 			this->btn_insert->Text = L"INSÉRER";
 			this->btn_insert->UseVisualStyleBackColor = true;
-			this->btn_insert->Click += gcnew System::EventHandler(this, &MyForm::btn_insert_comm);
+			this->btn_insert->Click += gcnew System::EventHandler(this, &MyForm::btn_insert);
 			// 
 			// btn_delete
 			// 
@@ -303,7 +308,7 @@ private: System::Windows::Forms::TextBox^ textBox_id_comm;
 			// 
 			this->btn_->Controls->Add(this->tabPage1);
 			this->btn_->Controls->Add(this->tabPage2);
-			this->btn_->Controls->Add(this->tabPage3);
+			this->btn_->Controls->Add(this->tabPage3_comm);
 			this->btn_->Controls->Add(this->tabPage4);
 			this->btn_->Controls->Add(this->tabPage5);
 			this->btn_->Location = System::Drawing::Point(80, 10);
@@ -505,39 +510,123 @@ private: System::Windows::Forms::TextBox^ textBox_id_comm;
 			this->dataGridView1->Size = System::Drawing::Size(610, 114);
 			this->dataGridView1->TabIndex = 0;
 			// 
-			// tabPage3
+			// tabPage3_comm
 			// 
-			this->tabPage3->Controls->Add(this->label_date_prevu_comm);
-			this->tabPage3->Controls->Add(this->label_id_comm);
-			this->tabPage3->Controls->Add(this->label_id_paiement_comm);
-			this->tabPage3->Controls->Add(this->label_ttc_comm);
-			this->tabPage3->Controls->Add(this->label_tva_comm);
-			this->tabPage3->Controls->Add(this->label_ref_comm);
-			this->tabPage3->Controls->Add(this->label_ht_comm);
-			this->tabPage3->Controls->Add(this->label_article_comm);
-			this->tabPage3->Controls->Add(this->label_date_em_comm);
-			this->tabPage3->Controls->Add(this->btn_del_comm);
-			this->tabPage3->Controls->Add(this->btn_modif_comm);
-			this->tabPage3->Controls->Add(this->btn_inser_comm);
-			this->tabPage3->Controls->Add(this->textBox_article_comm);
-			this->tabPage3->Controls->Add(this->textBox_ht_comm);
-			this->tabPage3->Controls->Add(this->textBox_tva_comm);
-			this->tabPage3->Controls->Add(this->textBox9);
-			this->tabPage3->Controls->Add(this->textBox_date_em_comm);
-			this->tabPage3->Controls->Add(this->textBox_id_comm);
-			this->tabPage3->Controls->Add(this->textBox_id_paiement_comm);
-			this->tabPage3->Controls->Add(this->textBox_ttc_comm);
-			this->tabPage3->Controls->Add(this->textBox_date_prevu_comm);
-			this->tabPage3->Controls->Add(this->dataGridView_comm);
-			this->tabPage3->Location = System::Drawing::Point(4, 22);
-			this->tabPage3->Margin = System::Windows::Forms::Padding(2);
-			this->tabPage3->Name = L"tabPage3";
-			this->tabPage3->Padding = System::Windows::Forms::Padding(2);
-			this->tabPage3->Size = System::Drawing::Size(636, 447);
-			this->tabPage3->TabIndex = 2;
-			this->tabPage3->Text = L"Commandes";
-			this->tabPage3->UseVisualStyleBackColor = true;
-			this->tabPage3->Click += gcnew System::EventHandler(this, &MyForm::tabPage3_Click);
+			this->tabPage3_comm->Controls->Add(this->label_console_comm);
+			this->tabPage3_comm->Controls->Add(this->listBox_console_comm);
+			this->tabPage3_comm->Controls->Add(this->label_date_prevu_comm);
+			this->tabPage3_comm->Controls->Add(this->label_id_comm);
+			this->tabPage3_comm->Controls->Add(this->label_id_paiement_comm);
+			this->tabPage3_comm->Controls->Add(this->label_ttc_comm);
+			this->tabPage3_comm->Controls->Add(this->label_tva_comm);
+			this->tabPage3_comm->Controls->Add(this->label_ref_comm);
+			this->tabPage3_comm->Controls->Add(this->label_ht_comm);
+			this->tabPage3_comm->Controls->Add(this->label_article_comm);
+			this->tabPage3_comm->Controls->Add(this->label_date_em_comm);
+			this->tabPage3_comm->Controls->Add(this->btn_del_comm);
+			this->tabPage3_comm->Controls->Add(this->btn_modif_comm);
+			this->tabPage3_comm->Controls->Add(this->btn_inser_comm);
+			this->tabPage3_comm->Controls->Add(this->textBox_article_comm);
+			this->tabPage3_comm->Controls->Add(this->textBox_ht_comm);
+			this->tabPage3_comm->Controls->Add(this->textBox_tva_comm);
+			this->tabPage3_comm->Controls->Add(this->textBox9);
+			this->tabPage3_comm->Controls->Add(this->textBox_date_em_comm);
+			this->tabPage3_comm->Controls->Add(this->textBox_id_comm);
+			this->tabPage3_comm->Controls->Add(this->textBox_id_paiement_comm);
+			this->tabPage3_comm->Controls->Add(this->textBox_ttc_comm);
+			this->tabPage3_comm->Controls->Add(this->textBox_date_prevu_comm);
+			this->tabPage3_comm->Controls->Add(this->dataGridView_comm);
+			this->tabPage3_comm->Location = System::Drawing::Point(4, 22);
+			this->tabPage3_comm->Margin = System::Windows::Forms::Padding(2);
+			this->tabPage3_comm->Name = L"tabPage3_comm";
+			this->tabPage3_comm->Padding = System::Windows::Forms::Padding(2);
+			this->tabPage3_comm->Size = System::Drawing::Size(636, 447);
+			this->tabPage3_comm->TabIndex = 2;
+			this->tabPage3_comm->Text = L"Commandes";
+			this->tabPage3_comm->UseVisualStyleBackColor = true;
+			this->tabPage3_comm->Click += gcnew System::EventHandler(this, &MyForm::tabPage3_Click);
+			// 
+			// label_date_prevu_comm
+			// 
+			this->label_date_prevu_comm->AutoSize = true;
+			this->label_date_prevu_comm->Location = System::Drawing::Point(117, 221);
+			this->label_date_prevu_comm->Name = L"label_date_prevu_comm";
+			this->label_date_prevu_comm->Size = System::Drawing::Size(64, 13);
+			this->label_date_prevu_comm->TabIndex = 4;
+			this->label_date_prevu_comm->Text = L"date prevue";
+			// 
+			// label_id_comm
+			// 
+			this->label_id_comm->AutoSize = true;
+			this->label_id_comm->Location = System::Drawing::Point(79, 341);
+			this->label_id_comm->Name = L"label_id_comm";
+			this->label_id_comm->Size = System::Drawing::Size(73, 13);
+			this->label_id_comm->TabIndex = 4;
+			this->label_id_comm->Text = L"ID commande";
+			// 
+			// label_id_paiement_comm
+			// 
+			this->label_id_paiement_comm->AutoSize = true;
+			this->label_id_paiement_comm->Location = System::Drawing::Point(354, 342);
+			this->label_id_paiement_comm->Name = L"label_id_paiement_comm";
+			this->label_id_paiement_comm->Size = System::Drawing::Size(64, 13);
+			this->label_id_paiement_comm->TabIndex = 4;
+			this->label_id_paiement_comm->Text = L"ID paiement";
+			// 
+			// label_ttc_comm
+			// 
+			this->label_ttc_comm->AutoSize = true;
+			this->label_ttc_comm->Location = System::Drawing::Point(376, 243);
+			this->label_ttc_comm->Name = L"label_ttc_comm";
+			this->label_ttc_comm->Size = System::Drawing::Size(51, 13);
+			this->label_ttc_comm->TabIndex = 4;
+			this->label_ttc_comm->Text = L"total TTC";
+			// 
+			// label_tva_comm
+			// 
+			this->label_tva_comm->AutoSize = true;
+			this->label_tva_comm->Location = System::Drawing::Point(376, 191);
+			this->label_tva_comm->Name = L"label_tva_comm";
+			this->label_tva_comm->Size = System::Drawing::Size(51, 13);
+			this->label_tva_comm->TabIndex = 4;
+			this->label_tva_comm->Text = L"total TVA";
+			// 
+			// label_ref_comm
+			// 
+			this->label_ref_comm->AutoSize = true;
+			this->label_ref_comm->Location = System::Drawing::Point(117, 183);
+			this->label_ref_comm->Name = L"label_ref_comm";
+			this->label_ref_comm->Size = System::Drawing::Size(52, 13);
+			this->label_ref_comm->TabIndex = 4;
+			this->label_ref_comm->Text = L"reference";
+			// 
+			// label_ht_comm
+			// 
+			this->label_ht_comm->AutoSize = true;
+			this->label_ht_comm->Location = System::Drawing::Point(123, 257);
+			this->label_ht_comm->Name = L"label_ht_comm";
+			this->label_ht_comm->Size = System::Drawing::Size(45, 13);
+			this->label_ht_comm->TabIndex = 4;
+			this->label_ht_comm->Text = L"total HT";
+			// 
+			// label_article_comm
+			// 
+			this->label_article_comm->AutoSize = true;
+			this->label_article_comm->Location = System::Drawing::Point(94, 305);
+			this->label_article_comm->Name = L"label_article_comm";
+			this->label_article_comm->Size = System::Drawing::Size(58, 13);
+			this->label_article_comm->TabIndex = 4;
+			this->label_article_comm->Text = L"total article";
+			this->label_article_comm->Click += gcnew System::EventHandler(this, &MyForm::label14_Click);
+			// 
+			// label_date_em_comm
+			// 
+			this->label_date_em_comm->AutoSize = true;
+			this->label_date_em_comm->Location = System::Drawing::Point(348, 308);
+			this->label_date_em_comm->Name = L"label_date_em_comm";
+			this->label_date_em_comm->Size = System::Drawing::Size(79, 13);
+			this->label_date_em_comm->TabIndex = 4;
+			this->label_date_em_comm->Text = L"date d\'emission";
 			// 
 			// btn_del_comm
 			// 
@@ -567,12 +656,26 @@ private: System::Windows::Forms::TextBox^ textBox_id_comm;
 			this->btn_inser_comm->UseVisualStyleBackColor = true;
 			this->btn_inser_comm->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
+			// textBox_article_comm
+			// 
+			this->textBox_article_comm->Location = System::Drawing::Point(158, 302);
+			this->textBox_article_comm->Name = L"textBox_article_comm";
+			this->textBox_article_comm->Size = System::Drawing::Size(183, 20);
+			this->textBox_article_comm->TabIndex = 2;
+			// 
 			// textBox_ht_comm
 			// 
 			this->textBox_ht_comm->Location = System::Drawing::Point(187, 254);
 			this->textBox_ht_comm->Name = L"textBox_ht_comm";
 			this->textBox_ht_comm->Size = System::Drawing::Size(183, 20);
 			this->textBox_ht_comm->TabIndex = 2;
+			// 
+			// textBox_tva_comm
+			// 
+			this->textBox_tva_comm->Location = System::Drawing::Point(432, 188);
+			this->textBox_tva_comm->Name = L"textBox_tva_comm";
+			this->textBox_tva_comm->Size = System::Drawing::Size(183, 20);
+			this->textBox_tva_comm->TabIndex = 2;
 			// 
 			// textBox9
 			// 
@@ -587,6 +690,30 @@ private: System::Windows::Forms::TextBox^ textBox_id_comm;
 			this->textBox_date_em_comm->Name = L"textBox_date_em_comm";
 			this->textBox_date_em_comm->Size = System::Drawing::Size(183, 20);
 			this->textBox_date_em_comm->TabIndex = 2;
+			// 
+			// textBox_id_comm
+			// 
+			this->textBox_id_comm->Location = System::Drawing::Point(158, 338);
+			this->textBox_id_comm->Name = L"textBox_id_comm";
+			this->textBox_id_comm->Size = System::Drawing::Size(183, 20);
+			this->textBox_id_comm->TabIndex = 2;
+			this->textBox_id_comm->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox7_TextChanged);
+			// 
+			// textBox_id_paiement_comm
+			// 
+			this->textBox_id_paiement_comm->Location = System::Drawing::Point(432, 342);
+			this->textBox_id_paiement_comm->Name = L"textBox_id_paiement_comm";
+			this->textBox_id_paiement_comm->Size = System::Drawing::Size(183, 20);
+			this->textBox_id_paiement_comm->TabIndex = 2;
+			this->textBox_id_paiement_comm->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox7_TextChanged);
+			// 
+			// textBox_ttc_comm
+			// 
+			this->textBox_ttc_comm->Location = System::Drawing::Point(432, 240);
+			this->textBox_ttc_comm->Name = L"textBox_ttc_comm";
+			this->textBox_ttc_comm->Size = System::Drawing::Size(183, 20);
+			this->textBox_ttc_comm->TabIndex = 2;
+			this->textBox_ttc_comm->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox7_TextChanged);
 			// 
 			// textBox_date_prevu_comm
 			// 
@@ -626,125 +753,22 @@ private: System::Windows::Forms::TextBox^ textBox_id_comm;
 			this->tabPage5->Text = L"Statistiques";
 			this->tabPage5->UseVisualStyleBackColor = true;
 			// 
-			// label_date_em_comm
+			// listBox_console_comm
 			// 
-			this->label_date_em_comm->AutoSize = true;
-			this->label_date_em_comm->Location = System::Drawing::Point(348, 308);
-			this->label_date_em_comm->Name = L"label_date_em_comm";
-			this->label_date_em_comm->Size = System::Drawing::Size(79, 13);
-			this->label_date_em_comm->TabIndex = 4;
-			this->label_date_em_comm->Text = L"date d\'emission";
+			this->listBox_console_comm->FormattingEnabled = true;
+			this->listBox_console_comm->Location = System::Drawing::Point(23, 377);
+			this->listBox_console_comm->Name = L"listBox_console_comm";
+			this->listBox_console_comm->Size = System::Drawing::Size(592, 56);
+			this->listBox_console_comm->TabIndex = 5;
 			// 
-			// label_date_prevu_comm
+			// label_console_comm
 			// 
-			this->label_date_prevu_comm->AutoSize = true;
-			this->label_date_prevu_comm->Location = System::Drawing::Point(117, 221);
-			this->label_date_prevu_comm->Name = L"label_date_prevu_comm";
-			this->label_date_prevu_comm->Size = System::Drawing::Size(64, 13);
-			this->label_date_prevu_comm->TabIndex = 4;
-			this->label_date_prevu_comm->Text = L"date prevue";
-			// 
-			// label_ref_comm
-			// 
-			this->label_ref_comm->AutoSize = true;
-			this->label_ref_comm->Location = System::Drawing::Point(117, 183);
-			this->label_ref_comm->Name = L"label_ref_comm";
-			this->label_ref_comm->Size = System::Drawing::Size(52, 13);
-			this->label_ref_comm->TabIndex = 4;
-			this->label_ref_comm->Text = L"reference";
-			// 
-			// label_article_comm
-			// 
-			this->label_article_comm->AutoSize = true;
-			this->label_article_comm->Location = System::Drawing::Point(94, 305);
-			this->label_article_comm->Name = L"label_article_comm";
-			this->label_article_comm->Size = System::Drawing::Size(58, 13);
-			this->label_article_comm->TabIndex = 4;
-			this->label_article_comm->Text = L"total article";
-			this->label_article_comm->Click += gcnew System::EventHandler(this, &MyForm::label14_Click);
-			// 
-			// textBox_article_comm
-			// 
-			this->textBox_article_comm->Location = System::Drawing::Point(158, 302);
-			this->textBox_article_comm->Name = L"textBox_article_comm";
-			this->textBox_article_comm->Size = System::Drawing::Size(183, 20);
-			this->textBox_article_comm->TabIndex = 2;
-			// 
-			// label_ht_comm
-			// 
-			this->label_ht_comm->AutoSize = true;
-			this->label_ht_comm->Location = System::Drawing::Point(123, 257);
-			this->label_ht_comm->Name = L"label_ht_comm";
-			this->label_ht_comm->Size = System::Drawing::Size(45, 13);
-			this->label_ht_comm->TabIndex = 4;
-			this->label_ht_comm->Text = L"total HT";
-			// 
-			// textBox_tva_comm
-			// 
-			this->textBox_tva_comm->Location = System::Drawing::Point(432, 188);
-			this->textBox_tva_comm->Name = L"textBox_tva_comm";
-			this->textBox_tva_comm->Size = System::Drawing::Size(183, 20);
-			this->textBox_tva_comm->TabIndex = 2;
-			// 
-			// textBox_ttc_comm
-			// 
-			this->textBox_ttc_comm->Location = System::Drawing::Point(432, 240);
-			this->textBox_ttc_comm->Name = L"textBox_ttc_comm";
-			this->textBox_ttc_comm->Size = System::Drawing::Size(183, 20);
-			this->textBox_ttc_comm->TabIndex = 2;
-			this->textBox_ttc_comm->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox7_TextChanged);
-			// 
-			// label_tva_comm
-			// 
-			this->label_tva_comm->AutoSize = true;
-			this->label_tva_comm->Location = System::Drawing::Point(376, 191);
-			this->label_tva_comm->Name = L"label_tva_comm";
-			this->label_tva_comm->Size = System::Drawing::Size(51, 13);
-			this->label_tva_comm->TabIndex = 4;
-			this->label_tva_comm->Text = L"total TVA";
-			// 
-			// label_ttc_comm
-			// 
-			this->label_ttc_comm->AutoSize = true;
-			this->label_ttc_comm->Location = System::Drawing::Point(376, 243);
-			this->label_ttc_comm->Name = L"label_ttc_comm";
-			this->label_ttc_comm->Size = System::Drawing::Size(51, 13);
-			this->label_ttc_comm->TabIndex = 4;
-			this->label_ttc_comm->Text = L"total TTC";
-			// 
-			// textBox_id_paiement_comm
-			// 
-			this->textBox_id_paiement_comm->Location = System::Drawing::Point(432, 342);
-			this->textBox_id_paiement_comm->Name = L"textBox_id_paiement_comm";
-			this->textBox_id_paiement_comm->Size = System::Drawing::Size(183, 20);
-			this->textBox_id_paiement_comm->TabIndex = 2;
-			this->textBox_id_paiement_comm->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox7_TextChanged);
-			// 
-			// label_id_paiement_comm
-			// 
-			this->label_id_paiement_comm->AutoSize = true;
-			this->label_id_paiement_comm->Location = System::Drawing::Point(354, 342);
-			this->label_id_paiement_comm->Name = L"label_id_paiement_comm";
-			this->label_id_paiement_comm->Size = System::Drawing::Size(64, 13);
-			this->label_id_paiement_comm->TabIndex = 4;
-			this->label_id_paiement_comm->Text = L"ID paiement";
-			// 
-			// textBox_id_comm
-			// 
-			this->textBox_id_comm->Location = System::Drawing::Point(158, 338);
-			this->textBox_id_comm->Name = L"textBox_id_comm";
-			this->textBox_id_comm->Size = System::Drawing::Size(183, 20);
-			this->textBox_id_comm->TabIndex = 2;
-			this->textBox_id_comm->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox7_TextChanged);
-			// 
-			// label_id_comm
-			// 
-			this->label_id_comm->AutoSize = true;
-			this->label_id_comm->Location = System::Drawing::Point(79, 341);
-			this->label_id_comm->Name = L"label_id_comm";
-			this->label_id_comm->Size = System::Drawing::Size(73, 13);
-			this->label_id_comm->TabIndex = 4;
-			this->label_id_comm->Text = L"ID commande";
+			this->label_console_comm->AutoSize = true;
+			this->label_console_comm->Location = System::Drawing::Point(23, 358);
+			this->label_console_comm->Name = L"label_console_comm";
+			this->label_console_comm->Size = System::Drawing::Size(45, 13);
+			this->label_console_comm->TabIndex = 6;
+			this->label_console_comm->Text = L"Console";
 			// 
 			// MyForm
 			// 
@@ -761,8 +785,8 @@ private: System::Windows::Forms::TextBox^ textBox_id_comm;
 			this->tabPage1->PerformLayout();
 			this->tabPage2->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
-			this->tabPage3->ResumeLayout(false);
-			this->tabPage3->PerformLayout();
+			this->tabPage3_comm->ResumeLayout(false);
+			this->tabPage3_comm->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView_comm))->EndInit();
 			this->ResumeLayout(false);
 
@@ -790,46 +814,46 @@ private: System::Windows::Forms::TextBox^ textBox_id_comm;
 	}
 	private: System::Void btn_insert_Click_Comm(System::Object^ sender, System::EventArgs^ e)
 	{
-		this->oSvc->selectionnerToutesLesCommandes(this->txt_ref->Text, this->txt_prenom->Text);
+		this->oSvc->selectionnerToutesLesCommandes(this->txt_ref->Text, this->txt_prenom->Text)// chek git a gab puis modifier 
 
 		//Load data
 		this->dgv_enr->Refresh();
-		this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
+		this->oDs = this->oSvc->selectionnerToutesLesCommandes("TB_COMMANDE");
 		this->dgv_enr->DataSource = this->oDs;
-		this->dgv_enr->DataMember = "TB_PEOPLE";
+		this->dgv_enr->DataMember = "TB_COMMANDE";
 
 		//Affichage de la personne ajouter
-		this->listBox1->Items->Add("Personne ajouter, Id :" + this->txt_id->Text + ", Nom =" + this->txt_nom->Text + " OK");
+		this->listBox1->Items->Add("Commande ajouter, Id :" + this->txt_id->Text + ", Nom =" + this->txt_nom->Text + " OK"); // a modifier
 	}
 	private: System::Void btn_delete_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		String^ textVal = this->txt_id->Text;
-		int id_people = System::Convert::ToInt32(textVal);
-		this->oSvc->suprimerUnePersonne(id_people);
+		int id_com = System::Convert::ToInt32(textVal);
+		this->oSvc->suprimerUneCommande(id_com);
 
 		//Load data
 		this->dgv_enr->Refresh();
-		this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
+		this->oDs = this->oSvc->selectionnerToutesLesCommandes("TB_COMMANDE");
 		this->dgv_enr->DataSource = this->oDs;
-		this->dgv_enr->DataMember = "TB_PEOPLE";
+		this->dgv_enr->DataMember = "TB_COMMANDE";
 
-		//Affichage de la personne supprimer
-		this->listBox1->Items->Add("Personne suprimer, Id :" + this->txt_id->Text + ", Nom ="+ this->txt_nom->Text +" OK");
+		//Affichage de la commande supprimer
+		this->listBox1->Items->Add("Commande suprimer, Id :" + this->txt_id->Text + ", Nom ="+ this->txt_nom->Text +" OK");// modif<---------------
 	}
 	private: System::Void btn_update_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		String^ textVal = this->txt_id->Text;
-		int id_people = System::Convert::ToInt32(textVal);
-		this->oSvc->modifierUnePersonne(this->txt_nom->Text, this->txt_prenom->Text, id_people);
+		int id_com = System::Convert::ToInt32(textVal);
+		this->oSvc->modifierUneCommande(this->txt_nom->Text, this->txt_prenom->Text, id_com);
 
 		//Load data
 		this->dgv_enr->Refresh();
-		this->oDs = this->oSvc->selectionnerToutesLesPersonnes("TB_PEOPLE");
+		this->oDs = this->oSvc->selectionnerToutesLesCommandes("TB_COMMANDE");
 		this->dgv_enr->DataSource = this->oDs;
-		this->dgv_enr->DataMember = "TB_PEOPLE";
+		this->dgv_enr->DataMember = "TB_COMMANDE";
 
-		//Affichage de la personne modifier
-		this->listBox1->Items->Add("Personne modifier, Id :" + this->txt_id->Text + ", Nom ="+ this->txt_nom->Text +" OK");
+		//Affichage de la commande modifier
+		this->listBox1->Items->Add("Commande modifier, Id :" + this->txt_id->Text + ", Nom ="+ this->txt_nom->Text +" OK");
 	}
 private: System::Void tabPage3_Click(System::Object^ sender, System::EventArgs^ e) {
 }
