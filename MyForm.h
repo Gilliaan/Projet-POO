@@ -654,6 +654,7 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 			this->btn_del_comm->TabIndex = 3;
 			this->btn_del_comm->Text = L"DEL";
 			this->btn_del_comm->UseVisualStyleBackColor = true;
+			this->btn_del_comm->Click += gcnew System::EventHandler(this, &MyForm::btn_del_comm_Click);
 			// 
 			// btn_modif_comm
 			// 
@@ -663,6 +664,7 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 			this->btn_modif_comm->TabIndex = 3;
 			this->btn_modif_comm->Text = L"MODIFIER";
 			this->btn_modif_comm->UseVisualStyleBackColor = true;
+			this->btn_modif_comm->Click += gcnew System::EventHandler(this, &MyForm::btn_modif_comm_Click);
 			// 
 			// btn_inser_comm
 			// 
@@ -892,6 +894,20 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 		//Affichage de la commande modifier
 		this->listBox1->Items->Add("Commande modifier, Id :" + this->textBox_id_comm->Text + ", Reference ="+ this->textBox_ref_comm->Text +" OK");
 	}
+		   //Click sur le boutton Supprimer de l'onglet Commandes
+private: System::Void btn_del_comm_Click(System::Object^ sender, System::EventArgs^ e) {
 
+
+	String^ textVal = this->textBox_id_comm->Text;
+	int id_com = System::Convert::ToInt32(textVal);
+	//String^ textVal = this->txt_id_cl->Text;
+	//float id_people = System::Convert::ToDouble(textVal);
+	this->oSvc->suprimerUneCommande(id_com);
+
+}
+private: System::Void btn_modif_comm_Click(System::Object^ sender, System::EventArgs^ e) {
+
+
+}
 };
 }
