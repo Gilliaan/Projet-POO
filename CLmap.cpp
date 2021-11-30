@@ -32,3 +32,6 @@ void NS_Comp_Mappage::CLmapTB::setPrenom(System::String^ prenom)
 int NS_Comp_Mappage::CLmapTB::getId(void) { return this->id_ppl; }
 System::String^ NS_Comp_Mappage::CLmapTB::getNom(void) { return this->ppl_nom; }
 System::String^ NS_Comp_Mappage::CLmapTB::getPrenom(void) { return this->ppl_prenom; }
+
+
+//Version 1.1
