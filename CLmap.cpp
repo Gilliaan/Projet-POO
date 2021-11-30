@@ -9,7 +9,10 @@ System::String^ NS_Comp_Mappage::CLmapClient::AffichageAdrCl(void)
 {
 	return "SELECT id_ppl, adr_livraison, adr_facturation FROM TB_ADRESSE INNER JOIN TB_PEOPLE ON TB_ADRESSE.ppl_id = TB_PEOPLE.id_ppl WHERE id_ppl = '"+ this->id_ppl +"';";
 }
-//FAire une nouvelle méthode Afficher adresse : INNER JOIN avec clé étrangère et afficher dans une autre dgv
+System::String^ NS_Comp_Mappage::CLmapClient::AjouterAdrCl(void) 
+{
+	return "INSERT INTO TB_ADRESSE (adr_livraison,adr_facturation,ppl_id) VALUES('" + this->cl_adresse_livraison + "', '" + this->cl_adresse_facturation + "', '" + this->id_ppl + "');";
+}
 System::String^ NS_Comp_Mappage::CLmapClient::InsertClient(void)
 {
 	return "INSERT INTO TB_PEOPLE (ppl_nom, ppl_prenom, ppl_type, ppl_gender, cl_date_naissance, CL_date_premier_achat) VALUES('" + this->ppl_nom + "', '" + this->ppl_prenom + "', '" + this->ppl_type + "', '" + this->ppl_gender + "', '" + this->cl_date_naissance + "','" + this->CL_date_premier_achat + "'); ";

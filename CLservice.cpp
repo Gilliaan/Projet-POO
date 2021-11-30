@@ -34,11 +34,10 @@ System::Data::DataSet^ NS_Comp_Svc::CLservices::afficherAdresseClient(int id, Sy
 	return this->oCad->getRows(sql, dataTableName);
 }
 //Méthodes Gestion d'un client
-void NS_Comp_Svc::CLservices::ajouterUnClient(System::String^ adrLivraison , System::String^ adrFacturation,System::String^ dateNaissance, System::String^ datePremierAchat, System::String^ genre, System::String^ nom, System::String^ prenom) {
+void NS_Comp_Svc::CLservices::ajouterUnClient(System::String^ type, System::String^ dateNaissance, System::String^ datePremierAchat, System::String^ genre, System::String^ nom, System::String^ prenom) {
 	System::String^ sql;
 
-	this->oMappClient->setAdresseFacturation(adrFacturation);
-	this->oMappClient->setAdresseLivraison(adrLivraison);
+	this->oMappClient->setType(type);
 	this->oMappClient->setDateNaissance(dateNaissance);
 	this->oMappClient->setDatePremierAchat(datePremierAchat);
 	this->oMappClient->setGender(genre);
@@ -57,12 +56,11 @@ void NS_Comp_Svc::CLservices::supprimerUnClient(int id) {
 	this->oCad->actionRows(sql);
 
 }
-void NS_Comp_Svc::CLservices::modifierUnClient(System::String^ adrLivraison, System::String^ adrFacturation, System::String^ dateNaissance, System::String^ datePremierAchat, System::String^ genre, System::String^ nom, System::String^ prenom, int id)
+void NS_Comp_Svc::CLservices::modifierUnClient(System::String^ dateNaissance, System::String^ datePremierAchat, System::String^ genre, System::String^ nom, System::String^ prenom, int id)
 {
 	System::String^ sql;
 
-	this->oMappClient->setAdresseFacturation(adrFacturation);
-	this->oMappClient->setAdresseLivraison(adrLivraison);
+
 	this->oMappClient->setDateNaissance(dateNaissance);
 	this->oMappClient->setDatePremierAchat(datePremierAchat);
 	this->oMappClient->setGender(genre);
@@ -73,7 +71,16 @@ void NS_Comp_Svc::CLservices::modifierUnClient(System::String^ adrLivraison, Sys
 
 	this->oCad->actionRows(sql);
 }
+void NS_Comp_Svc::CLservices::ajouterAdresseClient(System::String^ adrLivraison, System::String^ adrFacturation, int id)
+{
+	System::String^ sql;
+	this->oMappClient->setId(id);
+	this->oMappClient->setAdresseFacturation(adrFacturation);
+	this->oMappClient->setAdresseLivraison(adrLivraison);
+	sql = this->oMappClient->AjouterAdrCl();
 
+	this->oCad->actionRows(sql);
+}
 //Méthodes gestion du stock
 void NS_Comp_Svc::CLservices::ajouterUnStock(int prodQuantite, int seuil) {
 	System::String^ sql;

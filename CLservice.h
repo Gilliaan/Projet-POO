@@ -18,9 +18,10 @@ namespace NS_Comp_Svc
 		System::Data::DataSet^ selectionnerTousLeStock(System::String^);
 		System::Data::DataSet^ afficherAdresseClient(int ,System::String^);
 		//Méthodes gestion Clients
-		void ajouterUnClient(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^);
+		void ajouterUnClient(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^);
 		void supprimerUnClient(int);
-		void modifierUnClient(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, int);
+		void modifierUnClient(System::String^, System::String^, System::String^, System::String^, System::String^, int);
+		void ajouterAdresseClient(System::String^, System::String^, int);
 		//Méthodes gestion Stock
 		void ajouterUnStock(int, int);
 		void supprimerUnStock(int);

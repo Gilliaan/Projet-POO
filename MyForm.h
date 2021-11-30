@@ -103,6 +103,8 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::ListBox^ list_console_stck;
 	private: System::Windows::Forms::DataGridView^ dgv_aff_adr_cl;
 	private: System::Windows::Forms::Button^ aff_adr_cl;
+	private: System::Windows::Forms::Button^ ajt_adr_cl;
+	private: System::Windows::Forms::Label^ lbl_dgv_adresse_cl;
 
 
 	protected:
@@ -131,6 +133,7 @@ namespace ProjetPOO {
 			this->lbl_nom_cl = (gcnew System::Windows::Forms::Label());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tab_cl = (gcnew System::Windows::Forms::TabPage());
+			this->ajt_adr_cl = (gcnew System::Windows::Forms::Button());
 			this->aff_adr_cl = (gcnew System::Windows::Forms::Button());
 			this->dgv_aff_adr_cl = (gcnew System::Windows::Forms::DataGridView());
 			this->lbl_console_cl = (gcnew System::Windows::Forms::Label());
@@ -165,6 +168,7 @@ namespace ProjetPOO {
 			this->btn_inserer_stck = (gcnew System::Windows::Forms::Button());
 			this->dgv_stck = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
+			this->lbl_dgv_adresse_cl = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_cl))->BeginInit();
 			this->tabControl1->SuspendLayout();
 			this->tab_cl->SuspendLayout();
@@ -219,32 +223,32 @@ namespace ProjetPOO {
 			// 
 			// txt_id_cl
 			// 
-			this->txt_id_cl->Location = System::Drawing::Point(166, 239);
+			this->txt_id_cl->Location = System::Drawing::Point(166, 292);
 			this->txt_id_cl->Margin = System::Windows::Forms::Padding(4);
 			this->txt_id_cl->Name = L"txt_id_cl";
-			this->txt_id_cl->Size = System::Drawing::Size(42, 22);
+			this->txt_id_cl->Size = System::Drawing::Size(153, 22);
 			this->txt_id_cl->TabIndex = 5;
 			// 
 			// txt_nom_cl
 			// 
-			this->txt_nom_cl->Location = System::Drawing::Point(294, 239);
+			this->txt_nom_cl->Location = System::Drawing::Point(166, 239);
 			this->txt_nom_cl->Margin = System::Windows::Forms::Padding(4);
 			this->txt_nom_cl->Name = L"txt_nom_cl";
-			this->txt_nom_cl->Size = System::Drawing::Size(126, 22);
+			this->txt_nom_cl->Size = System::Drawing::Size(153, 22);
 			this->txt_nom_cl->TabIndex = 6;
 			// 
 			// txt_prenom_cl
 			// 
-			this->txt_prenom_cl->Location = System::Drawing::Point(449, 239);
+			this->txt_prenom_cl->Location = System::Drawing::Point(353, 239);
 			this->txt_prenom_cl->Margin = System::Windows::Forms::Padding(4);
 			this->txt_prenom_cl->Name = L"txt_prenom_cl";
-			this->txt_prenom_cl->Size = System::Drawing::Size(126, 22);
+			this->txt_prenom_cl->Size = System::Drawing::Size(153, 22);
 			this->txt_prenom_cl->TabIndex = 7;
 			// 
 			// lbl_id_cl
 			// 
 			this->lbl_id_cl->AutoSize = true;
-			this->lbl_id_cl->Location = System::Drawing::Point(163, 215);
+			this->lbl_id_cl->Location = System::Drawing::Point(163, 271);
 			this->lbl_id_cl->Name = L"lbl_id_cl";
 			this->lbl_id_cl->Size = System::Drawing::Size(19, 17);
 			this->lbl_id_cl->TabIndex = 8;
@@ -253,7 +257,7 @@ namespace ProjetPOO {
 			// lbl_prenom_cl
 			// 
 			this->lbl_prenom_cl->AutoSize = true;
-			this->lbl_prenom_cl->Location = System::Drawing::Point(446, 218);
+			this->lbl_prenom_cl->Location = System::Drawing::Point(350, 218);
 			this->lbl_prenom_cl->Name = L"lbl_prenom_cl";
 			this->lbl_prenom_cl->Size = System::Drawing::Size(57, 17);
 			this->lbl_prenom_cl->TabIndex = 9;
@@ -262,7 +266,7 @@ namespace ProjetPOO {
 			// lbl_nom_cl
 			// 
 			this->lbl_nom_cl->AutoSize = true;
-			this->lbl_nom_cl->Location = System::Drawing::Point(291, 218);
+			this->lbl_nom_cl->Location = System::Drawing::Point(163, 218);
 			this->lbl_nom_cl->Name = L"lbl_nom_cl";
 			this->lbl_nom_cl->Size = System::Drawing::Size(37, 17);
 			this->lbl_nom_cl->TabIndex = 10;
@@ -285,6 +289,8 @@ namespace ProjetPOO {
 			// 
 			this->tab_cl->BackColor = System::Drawing::Color::White;
 			this->tab_cl->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
+			this->tab_cl->Controls->Add(this->lbl_dgv_adresse_cl);
+			this->tab_cl->Controls->Add(this->ajt_adr_cl);
 			this->tab_cl->Controls->Add(this->aff_adr_cl);
 			this->tab_cl->Controls->Add(this->dgv_aff_adr_cl);
 			this->tab_cl->Controls->Add(this->lbl_console_cl);
@@ -318,15 +324,26 @@ namespace ProjetPOO {
 			this->tab_cl->Size = System::Drawing::Size(1182, 553);
 			this->tab_cl->TabIndex = 0;
 			this->tab_cl->Text = L"Clients";
-			this->tab_cl->Click += gcnew System::EventHandler(this, &MyForm::tab_cl_Click);
+			// 
+			// ajt_adr_cl
+			// 
+			this->ajt_adr_cl->BackColor = System::Drawing::Color::Transparent;
+			this->ajt_adr_cl->Location = System::Drawing::Point(951, 215);
+			this->ajt_adr_cl->Margin = System::Windows::Forms::Padding(4);
+			this->ajt_adr_cl->Name = L"ajt_adr_cl";
+			this->ajt_adr_cl->Size = System::Drawing::Size(210, 46);
+			this->ajt_adr_cl->TabIndex = 27;
+			this->ajt_adr_cl->Text = L"CRÉER ADRESSE";
+			this->ajt_adr_cl->UseVisualStyleBackColor = false;
+			this->ajt_adr_cl->Click += gcnew System::EventHandler(this, &MyForm::ajt_adr_cl_Click);
 			// 
 			// aff_adr_cl
 			// 
 			this->aff_adr_cl->BackColor = System::Drawing::Color::Transparent;
-			this->aff_adr_cl->Location = System::Drawing::Point(775, 215);
+			this->aff_adr_cl->Location = System::Drawing::Point(722, 215);
 			this->aff_adr_cl->Margin = System::Windows::Forms::Padding(4);
 			this->aff_adr_cl->Name = L"aff_adr_cl";
-			this->aff_adr_cl->Size = System::Drawing::Size(386, 46);
+			this->aff_adr_cl->Size = System::Drawing::Size(210, 46);
 			this->aff_adr_cl->TabIndex = 26;
 			this->aff_adr_cl->Text = L"AFFICHER ADRESSE";
 			this->aff_adr_cl->UseVisualStyleBackColor = false;
@@ -422,7 +439,7 @@ namespace ProjetPOO {
 			// lbl_genre_cl
 			// 
 			this->lbl_genre_cl->AutoSize = true;
-			this->lbl_genre_cl->Location = System::Drawing::Point(597, 218);
+			this->lbl_genre_cl->Location = System::Drawing::Point(350, 271);
 			this->lbl_genre_cl->Name = L"lbl_genre_cl";
 			this->lbl_genre_cl->Size = System::Drawing::Size(48, 17);
 			this->lbl_genre_cl->TabIndex = 15;
@@ -430,10 +447,10 @@ namespace ProjetPOO {
 			// 
 			// txt_genre_cl
 			// 
-			this->txt_genre_cl->Location = System::Drawing::Point(600, 239);
+			this->txt_genre_cl->Location = System::Drawing::Point(353, 292);
 			this->txt_genre_cl->Margin = System::Windows::Forms::Padding(4);
 			this->txt_genre_cl->Name = L"txt_genre_cl";
-			this->txt_genre_cl->Size = System::Drawing::Size(126, 22);
+			this->txt_genre_cl->Size = System::Drawing::Size(153, 22);
 			this->txt_genre_cl->TabIndex = 14;
 			// 
 			// lbl_type_personne_cl
@@ -638,6 +655,15 @@ namespace ProjetPOO {
 			this->tabPage5->Text = L"Statistiques";
 			this->tabPage5->UseVisualStyleBackColor = true;
 			// 
+			// lbl_dgv_adresse_cl
+			// 
+			this->lbl_dgv_adresse_cl->AutoSize = true;
+			this->lbl_dgv_adresse_cl->Location = System::Drawing::Point(594, 258);
+			this->lbl_dgv_adresse_cl->Name = L"lbl_dgv_adresse_cl";
+			this->lbl_dgv_adresse_cl->Size = System::Drawing::Size(112, 17);
+			this->lbl_dgv_adresse_cl->TabIndex = 28;
+			this->lbl_dgv_adresse_cl->Text = L"Adresses client :";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -684,7 +710,7 @@ namespace ProjetPOO {
 	//Click sur le boutton Insérer de l'onglet Clients
 	private: System::Void btn_insert_click_cl(System::Object^ sender, System::EventArgs^ e)
 	{
-		this->oSvc->ajouterUnClient(this->txt_adr_livraison_cl->Text, this->txt_adr_facturation_cl->Text, this->txt_date_naissance_cl->Text, this->txt_date_premier_achat_cl->Text, this->txt_genre_cl->Text, this->txt_nom_cl->Text, this->txt_prenom_cl->Text);
+		this->oSvc->ajouterUnClient(this->txt_type_cl->Text, this->txt_date_naissance_cl->Text, this->txt_date_premier_achat_cl->Text, this->txt_genre_cl->Text, this->txt_nom_cl->Text, this->txt_prenom_cl->Text);
 		
 		//Load data Client
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
@@ -722,7 +748,7 @@ namespace ProjetPOO {
 	{
 		String^ textVal = this->txt_id_cl->Text;
 		int id_people = System::Convert::ToInt32(textVal);
-		this->oSvc->modifierUnClient(this->txt_adr_livraison_cl->Text, this->txt_adr_facturation_cl->Text, this->txt_date_naissance_cl->Text, this->txt_date_premier_achat_cl->Text, this->txt_genre_cl->Text, this->txt_nom_cl->Text, this->txt_prenom_cl->Text, id_people);
+		this->oSvc->modifierUnClient(this->txt_date_naissance_cl->Text, this->txt_date_premier_achat_cl->Text, this->txt_genre_cl->Text, this->txt_nom_cl->Text, this->txt_prenom_cl->Text, id_people);
 	
 
 		//Load data Client
@@ -758,12 +784,28 @@ namespace ProjetPOO {
 		String^ val = this->txt_id_cl->Text;
 		int id = System::Convert::ToInt32(val);
 
-		//Load data Client
+		//Load data Adresse
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
 		this->dgv_aff_adr_cl->Refresh();
 		this->oDs = this->oSvc->afficherAdresseClient(id, "TB_ADRESSE");
 		this->dgv_aff_adr_cl->DataSource = this->oDs;
 		this->dgv_aff_adr_cl->DataMember = "TB_ADRESSE";
 	}
+	private: System::Void ajt_adr_cl_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+		String^ val = this->txt_id_cl->Text;
+		int id = System::Convert::ToInt32(val);
+
+		this->oSvc->ajouterAdresseClient(this->txt_adr_livraison_cl->Text, this->txt_adr_facturation_cl->Text, id);
+
+		
+		//Load data Adresse
+		this->oSvc = gcnew NS_Comp_Svc::CLservices();
+		this->dgv_aff_adr_cl->Refresh();
+		this->oDs = this->oSvc->afficherAdresseClient(id, "TB_ADRESSE");
+		this->dgv_aff_adr_cl->DataSource = this->oDs;
+		this->dgv_aff_adr_cl->DataMember = "TB_ADRESSE";
+	}
+
 };
 }
