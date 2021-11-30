@@ -58,7 +58,8 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::Label^ lbl_prenom_cl;
 	private: System::Windows::Forms::Label^ lbl_nom_cl;
 	private: System::Windows::Forms::TabControl^ tabControl1;
-	private: System::Windows::Forms::TabPage^ tabPage1;
+	private: System::Windows::Forms::TabPage^ tab_client;
+
 	private: System::Windows::Forms::TabPage^ tabPage2;
 	private: System::Windows::Forms::TabPage^ tabPage3;
 	private: System::Windows::Forms::TabPage^ tabPage4;
@@ -93,6 +94,10 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::Label^ lbl_console;
 
 
+
+
+
+
 	protected:
 
 	private:
@@ -119,7 +124,7 @@ namespace ProjetPOO {
 			this->lbl_prenom_cl = (gcnew System::Windows::Forms::Label());
 			this->lbl_nom_cl = (gcnew System::Windows::Forms::Label());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
-			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
+			this->tab_client = (gcnew System::Windows::Forms::TabPage());
 			this->lbl_console = (gcnew System::Windows::Forms::Label());
 			this->lbl_date_premier_achat = (gcnew System::Windows::Forms::Label());
 			this->txt_date_premier_achat = (gcnew System::Windows::Forms::TextBox());
@@ -142,7 +147,7 @@ namespace ProjetPOO {
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_enr))->BeginInit();
 			this->tabControl1->SuspendLayout();
-			this->tabPage1->SuspendLayout();
+			this->tab_client->SuspendLayout();
 			this->tabPage2->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
@@ -163,7 +168,7 @@ namespace ProjetPOO {
 			this->btn_inserer->Location = System::Drawing::Point(16, 215);
 			this->btn_inserer->Margin = System::Windows::Forms::Padding(4);
 			this->btn_inserer->Name = L"btn_inserer";
-			this->btn_inserer->Size = System::Drawing::Size(100, 46);
+			this->btn_inserer->Size = System::Drawing::Size(121, 46);
 			this->btn_inserer->TabIndex = 2;
 			this->btn_inserer->Text = L"INSÉRER";
 			this->btn_inserer->UseVisualStyleBackColor = true;
@@ -174,7 +179,7 @@ namespace ProjetPOO {
 			this->btn_supprimer->Location = System::Drawing::Point(16, 322);
 			this->btn_supprimer->Margin = System::Windows::Forms::Padding(4);
 			this->btn_supprimer->Name = L"btn_supprimer";
-			this->btn_supprimer->Size = System::Drawing::Size(100, 46);
+			this->btn_supprimer->Size = System::Drawing::Size(121, 46);
 			this->btn_supprimer->TabIndex = 3;
 			this->btn_supprimer->Text = L"SUPPRIMER";
 			this->btn_supprimer->UseVisualStyleBackColor = true;
@@ -185,7 +190,7 @@ namespace ProjetPOO {
 			this->btn_modifier->Location = System::Drawing::Point(16, 268);
 			this->btn_modifier->Margin = System::Windows::Forms::Padding(4);
 			this->btn_modifier->Name = L"btn_modifier";
-			this->btn_modifier->Size = System::Drawing::Size(100, 46);
+			this->btn_modifier->Size = System::Drawing::Size(121, 46);
 			this->btn_modifier->TabIndex = 4;
 			this->btn_modifier->Text = L"MODIFIER";
 			this->btn_modifier->UseVisualStyleBackColor = true;
@@ -244,7 +249,7 @@ namespace ProjetPOO {
 			// 
 			// tabControl1
 			// 
-			this->tabControl1->Controls->Add(this->tabPage1);
+			this->tabControl1->Controls->Add(this->tab_client);
 			this->tabControl1->Controls->Add(this->tabPage2);
 			this->tabControl1->Controls->Add(this->tabPage3);
 			this->tabControl1->Controls->Add(this->tabPage4);
@@ -255,39 +260,39 @@ namespace ProjetPOO {
 			this->tabControl1->Size = System::Drawing::Size(1190, 582);
 			this->tabControl1->TabIndex = 11;
 			// 
-			// tabPage1
+			// tab_client
 			// 
-			this->tabPage1->Controls->Add(this->lbl_console);
-			this->tabPage1->Controls->Add(this->lbl_date_premier_achat);
-			this->tabPage1->Controls->Add(this->txt_date_premier_achat);
-			this->tabPage1->Controls->Add(this->lbl_date_naissance);
-			this->tabPage1->Controls->Add(this->txt_date_naissance);
-			this->tabPage1->Controls->Add(this->lbl_adr_facturation);
-			this->tabPage1->Controls->Add(this->lbl_adr_livraison);
-			this->tabPage1->Controls->Add(this->txt_adr_facturation);
-			this->tabPage1->Controls->Add(this->txt_adr_livraison);
-			this->tabPage1->Controls->Add(this->lbl_genre);
-			this->tabPage1->Controls->Add(this->txt_genre);
-			this->tabPage1->Controls->Add(this->lbl_type_personne);
-			this->tabPage1->Controls->Add(this->txt_type_ppl);
-			this->tabPage1->Controls->Add(this->list_console);
-			this->tabPage1->Controls->Add(this->dgv_enr);
-			this->tabPage1->Controls->Add(this->btn_supprimer);
-			this->tabPage1->Controls->Add(this->btn_modifier);
-			this->tabPage1->Controls->Add(this->lbl_nom_cl);
-			this->tabPage1->Controls->Add(this->txt_id);
-			this->tabPage1->Controls->Add(this->btn_inserer);
-			this->tabPage1->Controls->Add(this->lbl_prenom_cl);
-			this->tabPage1->Controls->Add(this->txt_nom);
-			this->tabPage1->Controls->Add(this->lbl_id_cl);
-			this->tabPage1->Controls->Add(this->txt_prenom);
-			this->tabPage1->Location = System::Drawing::Point(4, 25);
-			this->tabPage1->Name = L"tabPage1";
-			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage1->Size = System::Drawing::Size(1182, 553);
-			this->tabPage1->TabIndex = 0;
-			this->tabPage1->Text = L"Clients";
-			this->tabPage1->UseVisualStyleBackColor = true;
+			this->tab_client->Controls->Add(this->lbl_console);
+			this->tab_client->Controls->Add(this->lbl_date_premier_achat);
+			this->tab_client->Controls->Add(this->txt_date_premier_achat);
+			this->tab_client->Controls->Add(this->lbl_date_naissance);
+			this->tab_client->Controls->Add(this->txt_date_naissance);
+			this->tab_client->Controls->Add(this->lbl_adr_facturation);
+			this->tab_client->Controls->Add(this->lbl_adr_livraison);
+			this->tab_client->Controls->Add(this->txt_adr_facturation);
+			this->tab_client->Controls->Add(this->txt_adr_livraison);
+			this->tab_client->Controls->Add(this->lbl_genre);
+			this->tab_client->Controls->Add(this->txt_genre);
+			this->tab_client->Controls->Add(this->lbl_type_personne);
+			this->tab_client->Controls->Add(this->txt_type_ppl);
+			this->tab_client->Controls->Add(this->list_console);
+			this->tab_client->Controls->Add(this->dgv_enr);
+			this->tab_client->Controls->Add(this->btn_supprimer);
+			this->tab_client->Controls->Add(this->btn_modifier);
+			this->tab_client->Controls->Add(this->lbl_nom_cl);
+			this->tab_client->Controls->Add(this->txt_id);
+			this->tab_client->Controls->Add(this->btn_inserer);
+			this->tab_client->Controls->Add(this->lbl_prenom_cl);
+			this->tab_client->Controls->Add(this->txt_nom);
+			this->tab_client->Controls->Add(this->lbl_id_cl);
+			this->tab_client->Controls->Add(this->txt_prenom);
+			this->tab_client->Location = System::Drawing::Point(4, 25);
+			this->tab_client->Name = L"tab_client";
+			this->tab_client->Padding = System::Windows::Forms::Padding(3);
+			this->tab_client->Size = System::Drawing::Size(1182, 553);
+			this->tab_client->TabIndex = 0;
+			this->tab_client->Text = L"Clients";
+			this->tab_client->UseVisualStyleBackColor = true;
 			// 
 			// lbl_console
 			// 
@@ -386,7 +391,7 @@ namespace ProjetPOO {
 			// lbl_type_personne
 			// 
 			this->lbl_type_personne->AutoSize = true;
-			this->lbl_type_personne->Location = System::Drawing::Point(6, 392);
+			this->lbl_type_personne->Location = System::Drawing::Point(13, 392);
 			this->lbl_type_personne->Name = L"lbl_type_personne";
 			this->lbl_type_personne->Size = System::Drawing::Size(124, 17);
 			this->lbl_type_personne->TabIndex = 13;
@@ -394,7 +399,7 @@ namespace ProjetPOO {
 			// 
 			// txt_type_ppl
 			// 
-			this->txt_type_ppl->Location = System::Drawing::Point(9, 413);
+			this->txt_type_ppl->Location = System::Drawing::Point(16, 413);
 			this->txt_type_ppl->Margin = System::Windows::Forms::Padding(4);
 			this->txt_type_ppl->Name = L"txt_type_ppl";
 			this->txt_type_ppl->Size = System::Drawing::Size(121, 22);
@@ -487,8 +492,8 @@ namespace ProjetPOO {
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_enr))->EndInit();
 			this->tabControl1->ResumeLayout(false);
-			this->tabPage1->ResumeLayout(false);
-			this->tabPage1->PerformLayout();
+			this->tab_client->ResumeLayout(false);
+			this->tab_client->PerformLayout();
 			this->tabPage2->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
@@ -509,8 +514,8 @@ namespace ProjetPOO {
 	}
 	private: System::Void btn_insert_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		this->oSvc->ajouterUnePersonne(this->txt_genre->Text, this->txt_nom->Text, this->txt_prenom->Text);
-
+		this->oSvc->ajouterUnePersonne(this->txt_date_naissance->Text, this->txt_date_premier_achat->Text, this->txt_genre->Text, this->txt_nom->Text, this->txt_prenom->Text);
+		
 		//Load data
 		this->dgv_enr->Refresh();
 		this->oDs = this->oSvc->selectionnerTousLesClients(this->txt_type_ppl->Text, "TB_PEOPLE");
@@ -518,7 +523,7 @@ namespace ProjetPOO {
 		this->dgv_enr->DataMember = "TB_PEOPLE";
 
 		//Affichage de la personne ajouter
-		this->listBox1->Items->Add("Personne ajouter, Id :" + this->txt_id->Text + ", Nom =" + this->txt_nom->Text + " OK");
+		this->list_console->Items->Add("Personne ajouter, Id :" + this->txt_id->Text + ", Nom =" + this->txt_nom->Text + " OK");
 	}
 	private: System::Void btn_delete_Click(System::Object^ sender, System::EventArgs^ e)
 	{
@@ -533,7 +538,7 @@ namespace ProjetPOO {
 		this->dgv_enr->DataMember = "TB_PEOPLE";
 
 		//Affichage de la personne supprimer
-		this->listBox1->Items->Add("Personne suprimer, Id :" + this->txt_id->Text + ", Nom ="+ this->txt_nom->Text +" OK");
+		this->list_console->Items->Add("Personne suprimer, Id :" + this->txt_id->Text + ", Nom ="+ this->txt_nom->Text +" OK");
 	}
 	private: System::Void btn_update_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
@@ -548,7 +553,7 @@ namespace ProjetPOO {
 		this->dgv_enr->DataMember = "TB_PEOPLE";
 
 		//Affichage de la personne modifier
-		this->listBox1->Items->Add("Personne modifier, Id :" + this->txt_id->Text + ", Nom ="+ this->txt_nom->Text +" OK");
+		this->list_console->Items->Add("Personne modifier, Id :" + this->txt_id->Text + ", Nom ="+ this->txt_nom->Text +" OK");
 	}
 };
 }

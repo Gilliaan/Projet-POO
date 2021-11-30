@@ -7,7 +7,7 @@ System::String^ NS_Comp_Mappage::CLmapTB::Select(void)
 }
 System::String^ NS_Comp_Mappage::CLmapTB::Insert(void)
 {
-	return "INSERT INTO TB_PEOPLE (ppl_nom, ppl_prenom, ppl_type, ppl_gender) VALUES('" + this->ppl_nom + "','" + this->ppl_prenom + "', '" + this->ppl_type + "','" + this->ppl_gender +"');";
+	return "INSERT INTO TB_PEOPLE (ppl_nom, ppl_prenom, ppl_type, ppl_gender, cl_date_naissance, CL_date_premier_achat) VALUES('" + this->ppl_nom + "', '" + this->ppl_prenom + "', '" + this->ppl_type + "', '" + this->ppl_gender +"', '" + this->cl_date_naissance +"','"+ this->CL_date_premier_achat +"'); ";
 }
 System::String^ NS_Comp_Mappage::CLmapTB::Delete(void)
 {
@@ -37,8 +37,18 @@ void NS_Comp_Mappage::CLmapTB::setGender(System::String^ gender)
 {
 	this->ppl_gender = gender;
 }
+void NS_Comp_Mappage::CLmapTB::setDateNaissance(System::String^ dateNaissance)
+{
+	this->cl_date_naissance = dateNaissance;
+}
+void NS_Comp_Mappage::CLmapTB::setDatePremierAchat(System::String^ datePremierAchat)
+{
+	this->CL_date_premier_achat = datePremierAchat;
+}
 int NS_Comp_Mappage::CLmapTB::getId(void) { return this->id_ppl; }
 System::String^ NS_Comp_Mappage::CLmapTB::getNom(void) { return this->ppl_nom; }
 System::String^ NS_Comp_Mappage::CLmapTB::getPrenom(void) { return this->ppl_prenom; }
 System::String^ NS_Comp_Mappage::CLmapTB::getType(void) { return this->ppl_type; }
 System::String^ NS_Comp_Mappage::CLmapTB::getGender(void) { return this->ppl_gender; }
+System::String^ NS_Comp_Mappage::CLmapTB::getDateNaissance(void) { return cl_date_naissance; }
+System::String^ NS_Comp_Mappage::CLmapTB::getDatePremierAchat(void) { return CL_date_premier_achat; }
