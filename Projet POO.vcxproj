@@ -121,13 +121,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CLcad.cpp" />
-    <ClCompile Include="CLmap.cpp" />
+    <ClCompile Include="CLmapcommTB.cpp" />
     <ClCompile Include="CLservice.cpp" />
     <ClCompile Include="MyForm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CLcad.h" />
-    <ClInclude Include="CLmap.h" />
+    <ClInclude Include="CLmapcommTB.h" />
     <ClInclude Include="CLservice.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
