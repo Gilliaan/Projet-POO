@@ -29,7 +29,6 @@ namespace NS_Comp_Mappage
         void setTot_ht(double);
         void setTot_tva(double);
         void setTot_ttc(double);
-        void setId_paiement(int);
         int getIdComm(void);
         System::String^ getRef(void);
         System::String^ getDate_Prevue(void);
@@ -38,6 +37,5 @@ namespace NS_Comp_Mappage
         double getTot_ht(void);
         double getTot_tva(void);
         double getTot_ttc(void);
-        int getId_paiement(void);
     };
 }

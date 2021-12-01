@@ -167,7 +167,7 @@ private: System::Windows::Forms::TextBox^ txt_date_prevu_comm;
 	private: System::Windows::Forms::Label^ label_date_em_comm;
 
 	private: System::Windows::Forms::Label^ label_date_prevu_comm;
-	private: System::Windows::Forms::Label^ label_id_paiement_comm;
+
 
 
 	private: System::Windows::Forms::Label^ label_ttc_comm;
@@ -180,7 +180,7 @@ private: System::Windows::Forms::TextBox^ txt_date_prevu_comm;
 private: System::Windows::Forms::TextBox^ txt_tot_article_comm;
 
 private: System::Windows::Forms::TextBox^ txt_tva_comm;
-private: System::Windows::Forms::TextBox^ txt_id_paiement_comm;
+
 
 
 
@@ -292,7 +292,6 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			this->listBox_console_comm = (gcnew System::Windows::Forms::ListBox());
 			this->label_date_prevu_comm = (gcnew System::Windows::Forms::Label());
 			this->label_id_comm = (gcnew System::Windows::Forms::Label());
-			this->label_id_paiement_comm = (gcnew System::Windows::Forms::Label());
 			this->label_ttc_comm = (gcnew System::Windows::Forms::Label());
 			this->label_tva_comm = (gcnew System::Windows::Forms::Label());
 			this->label_ref_comm = (gcnew System::Windows::Forms::Label());
@@ -308,7 +307,6 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			this->txt_ref_comm = (gcnew System::Windows::Forms::TextBox());
 			this->txt_date_em_comm = (gcnew System::Windows::Forms::TextBox());
 			this->txt_id_comm = (gcnew System::Windows::Forms::TextBox());
-			this->txt_id_paiement_comm = (gcnew System::Windows::Forms::TextBox());
 			this->txt_ttc_comm = (gcnew System::Windows::Forms::TextBox());
 			this->txt_date_prevu_comm = (gcnew System::Windows::Forms::TextBox());
 			this->dgv_comm = (gcnew System::Windows::Forms::DataGridView());
@@ -397,7 +395,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// txt_id_cl
 			// 
-			this->txt_id_cl->Location = System::Drawing::Point(166, 292);
+			this->txt_id_cl->Location = System::Drawing::Point(166, 239);
 			this->txt_id_cl->Margin = System::Windows::Forms::Padding(4);
 			this->txt_id_cl->Name = L"txt_id_cl";
 			this->txt_id_cl->Size = System::Drawing::Size(153, 22);
@@ -405,7 +403,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// txt_nom_cl
 			// 
-			this->txt_nom_cl->Location = System::Drawing::Point(166, 239);
+			this->txt_nom_cl->Location = System::Drawing::Point(166, 292);
 			this->txt_nom_cl->Margin = System::Windows::Forms::Padding(4);
 			this->txt_nom_cl->Name = L"txt_nom_cl";
 			this->txt_nom_cl->Size = System::Drawing::Size(153, 22);
@@ -413,7 +411,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// txt_prenom_cl
 			// 
-			this->txt_prenom_cl->Location = System::Drawing::Point(353, 239);
+			this->txt_prenom_cl->Location = System::Drawing::Point(343, 292);
 			this->txt_prenom_cl->Margin = System::Windows::Forms::Padding(4);
 			this->txt_prenom_cl->Name = L"txt_prenom_cl";
 			this->txt_prenom_cl->Size = System::Drawing::Size(153, 22);
@@ -422,7 +420,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// lbl_id_cl
 			// 
 			this->lbl_id_cl->AutoSize = true;
-			this->lbl_id_cl->Location = System::Drawing::Point(163, 271);
+			this->lbl_id_cl->Location = System::Drawing::Point(163, 218);
 			this->lbl_id_cl->Name = L"lbl_id_cl";
 			this->lbl_id_cl->Size = System::Drawing::Size(19, 17);
 			this->lbl_id_cl->TabIndex = 8;
@@ -431,7 +429,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// lbl_prenom_cl
 			// 
 			this->lbl_prenom_cl->AutoSize = true;
-			this->lbl_prenom_cl->Location = System::Drawing::Point(350, 218);
+			this->lbl_prenom_cl->Location = System::Drawing::Point(340, 271);
 			this->lbl_prenom_cl->Name = L"lbl_prenom_cl";
 			this->lbl_prenom_cl->Size = System::Drawing::Size(57, 17);
 			this->lbl_prenom_cl->TabIndex = 9;
@@ -440,7 +438,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// lbl_nom_cl
 			// 
 			this->lbl_nom_cl->AutoSize = true;
-			this->lbl_nom_cl->Location = System::Drawing::Point(163, 218);
+			this->lbl_nom_cl->Location = System::Drawing::Point(163, 271);
 			this->lbl_nom_cl->Name = L"lbl_nom_cl";
 			this->lbl_nom_cl->Size = System::Drawing::Size(37, 17);
 			this->lbl_nom_cl->TabIndex = 10;
@@ -554,7 +552,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// lbl_date_premier_achat_cl
 			// 
 			this->lbl_date_premier_achat_cl->AutoSize = true;
-			this->lbl_date_premier_achat_cl->Location = System::Drawing::Point(163, 406);
+			this->lbl_date_premier_achat_cl->Location = System::Drawing::Point(163, 375);
 			this->lbl_date_premier_achat_cl->Name = L"lbl_date_premier_achat_cl";
 			this->lbl_date_premier_achat_cl->Size = System::Drawing::Size(129, 17);
 			this->lbl_date_premier_achat_cl->TabIndex = 23;
@@ -562,16 +560,16 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// txt_date_premier_achat_cl
 			// 
-			this->txt_date_premier_achat_cl->Location = System::Drawing::Point(323, 401);
+			this->txt_date_premier_achat_cl->Location = System::Drawing::Point(166, 396);
 			this->txt_date_premier_achat_cl->Margin = System::Windows::Forms::Padding(4);
 			this->txt_date_premier_achat_cl->Name = L"txt_date_premier_achat_cl";
-			this->txt_date_premier_achat_cl->Size = System::Drawing::Size(204, 22);
+			this->txt_date_premier_achat_cl->Size = System::Drawing::Size(330, 22);
 			this->txt_date_premier_achat_cl->TabIndex = 22;
 			// 
 			// lbl_date_naissance_cl
 			// 
 			this->lbl_date_naissance_cl->AutoSize = true;
-			this->lbl_date_naissance_cl->Location = System::Drawing::Point(163, 378);
+			this->lbl_date_naissance_cl->Location = System::Drawing::Point(163, 322);
 			this->lbl_date_naissance_cl->Name = L"lbl_date_naissance_cl";
 			this->lbl_date_naissance_cl->Size = System::Drawing::Size(106, 17);
 			this->lbl_date_naissance_cl->TabIndex = 21;
@@ -579,16 +577,16 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// txt_date_naissance_cl
 			// 
-			this->txt_date_naissance_cl->Location = System::Drawing::Point(323, 373);
+			this->txt_date_naissance_cl->Location = System::Drawing::Point(166, 346);
 			this->txt_date_naissance_cl->Margin = System::Windows::Forms::Padding(4);
 			this->txt_date_naissance_cl->Name = L"txt_date_naissance_cl";
-			this->txt_date_naissance_cl->Size = System::Drawing::Size(204, 22);
+			this->txt_date_naissance_cl->Size = System::Drawing::Size(330, 22);
 			this->txt_date_naissance_cl->TabIndex = 20;
 			// 
 			// lbl_adr_facturation_cl
 			// 
 			this->lbl_adr_facturation_cl->AutoSize = true;
-			this->lbl_adr_facturation_cl->Location = System::Drawing::Point(594, 432);
+			this->lbl_adr_facturation_cl->Location = System::Drawing::Point(594, 436);
 			this->lbl_adr_facturation_cl->Name = L"lbl_adr_facturation_cl";
 			this->lbl_adr_facturation_cl->Size = System::Drawing::Size(151, 17);
 			this->lbl_adr_facturation_cl->TabIndex = 19;
@@ -605,10 +603,10 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// txt_adr_facturation_cl
 			// 
-			this->txt_adr_facturation_cl->Location = System::Drawing::Point(754, 427);
+			this->txt_adr_facturation_cl->Location = System::Drawing::Point(754, 431);
 			this->txt_adr_facturation_cl->Margin = System::Windows::Forms::Padding(4);
 			this->txt_adr_facturation_cl->Name = L"txt_adr_facturation_cl";
-			this->txt_adr_facturation_cl->Size = System::Drawing::Size(204, 22);
+			this->txt_adr_facturation_cl->Size = System::Drawing::Size(407, 22);
 			this->txt_adr_facturation_cl->TabIndex = 17;
 			// 
 			// txt_adr_livraison_cl
@@ -616,13 +614,13 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			this->txt_adr_livraison_cl->Location = System::Drawing::Point(754, 401);
 			this->txt_adr_livraison_cl->Margin = System::Windows::Forms::Padding(4);
 			this->txt_adr_livraison_cl->Name = L"txt_adr_livraison_cl";
-			this->txt_adr_livraison_cl->Size = System::Drawing::Size(204, 22);
+			this->txt_adr_livraison_cl->Size = System::Drawing::Size(407, 22);
 			this->txt_adr_livraison_cl->TabIndex = 16;
 			// 
 			// lbl_genre_cl
 			// 
 			this->lbl_genre_cl->AutoSize = true;
-			this->lbl_genre_cl->Location = System::Drawing::Point(350, 271);
+			this->lbl_genre_cl->Location = System::Drawing::Point(340, 218);
 			this->lbl_genre_cl->Name = L"lbl_genre_cl";
 			this->lbl_genre_cl->Size = System::Drawing::Size(48, 17);
 			this->lbl_genre_cl->TabIndex = 15;
@@ -630,7 +628,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// txt_genre_cl
 			// 
-			this->txt_genre_cl->Location = System::Drawing::Point(353, 292);
+			this->txt_genre_cl->Location = System::Drawing::Point(343, 239);
 			this->txt_genre_cl->Margin = System::Windows::Forms::Padding(4);
 			this->txt_genre_cl->Name = L"txt_genre_cl";
 			this->txt_genre_cl->Size = System::Drawing::Size(153, 22);
@@ -710,7 +708,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// txt_type_pers
 			// 
-			this->txt_type_pers->Location = System::Drawing::Point(18, 519);
+			this->txt_type_pers->Location = System::Drawing::Point(18, 421);
 			this->txt_type_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txt_type_pers->Name = L"txt_type_pers";
 			this->txt_type_pers->Size = System::Drawing::Size(141, 22);
@@ -721,7 +719,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// lbl_type_pers
 			// 
 			this->lbl_type_pers->AutoSize = true;
-			this->lbl_type_pers->Location = System::Drawing::Point(14, 494);
+			this->lbl_type_pers->Location = System::Drawing::Point(14, 396);
 			this->lbl_type_pers->Name = L"lbl_type_pers";
 			this->lbl_type_pers->Size = System::Drawing::Size(124, 17);
 			this->lbl_type_pers->TabIndex = 27;
@@ -729,40 +727,40 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// txt_date_emb_sup_pers
 			// 
-			this->txt_date_emb_sup_pers->Location = System::Drawing::Point(464, 448);
+			this->txt_date_emb_sup_pers->Location = System::Drawing::Point(556, 290);
 			this->txt_date_emb_sup_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txt_date_emb_sup_pers->Name = L"txt_date_emb_sup_pers";
-			this->txt_date_emb_sup_pers->Size = System::Drawing::Size(141, 22);
+			this->txt_date_emb_sup_pers->Size = System::Drawing::Size(222, 22);
 			this->txt_date_emb_sup_pers->TabIndex = 26;
 			// 
 			// txt_nom_sup_pers
 			// 
-			this->txt_nom_sup_pers->Location = System::Drawing::Point(464, 380);
+			this->txt_nom_sup_pers->Location = System::Drawing::Point(556, 236);
 			this->txt_nom_sup_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txt_nom_sup_pers->Name = L"txt_nom_sup_pers";
-			this->txt_nom_sup_pers->Size = System::Drawing::Size(141, 22);
+			this->txt_nom_sup_pers->Size = System::Drawing::Size(222, 22);
 			this->txt_nom_sup_pers->TabIndex = 25;
 			// 
 			// txt_date_emb_pers
 			// 
-			this->txt_date_emb_pers->Location = System::Drawing::Point(189, 448);
+			this->txt_date_emb_pers->Location = System::Drawing::Point(167, 393);
 			this->txt_date_emb_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txt_date_emb_pers->Name = L"txt_date_emb_pers";
-			this->txt_date_emb_pers->Size = System::Drawing::Size(141, 22);
+			this->txt_date_emb_pers->Size = System::Drawing::Size(325, 22);
 			this->txt_date_emb_pers->TabIndex = 24;
 			// 
 			// txt_adr_pers
 			// 
-			this->txt_adr_pers->Location = System::Drawing::Point(189, 380);
+			this->txt_adr_pers->Location = System::Drawing::Point(167, 344);
 			this->txt_adr_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txt_adr_pers->Name = L"txt_adr_pers";
-			this->txt_adr_pers->Size = System::Drawing::Size(141, 22);
+			this->txt_adr_pers->Size = System::Drawing::Size(325, 22);
 			this->txt_adr_pers->TabIndex = 23;
 			// 
 			// lbl_date_emb_sup_pers
 			// 
 			this->lbl_date_emb_sup_pers->AutoSize = true;
-			this->lbl_date_emb_sup_pers->Location = System::Drawing::Point(460, 423);
+			this->lbl_date_emb_sup_pers->Location = System::Drawing::Point(553, 265);
 			this->lbl_date_emb_sup_pers->Name = L"lbl_date_emb_sup_pers";
 			this->lbl_date_emb_sup_pers->Size = System::Drawing::Size(183, 17);
 			this->lbl_date_emb_sup_pers->TabIndex = 22;
@@ -771,7 +769,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// lbl_nom_sup_pers
 			// 
 			this->lbl_nom_sup_pers->AutoSize = true;
-			this->lbl_nom_sup_pers->Location = System::Drawing::Point(460, 355);
+			this->lbl_nom_sup_pers->Location = System::Drawing::Point(552, 211);
 			this->lbl_nom_sup_pers->Name = L"lbl_nom_sup_pers";
 			this->lbl_nom_sup_pers->Size = System::Drawing::Size(121, 17);
 			this->lbl_nom_sup_pers->TabIndex = 21;
@@ -780,7 +778,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// lbl_date_emb_pers
 			// 
 			this->lbl_date_emb_pers->AutoSize = true;
-			this->lbl_date_emb_pers->Location = System::Drawing::Point(185, 423);
+			this->lbl_date_emb_pers->Location = System::Drawing::Point(164, 371);
 			this->lbl_date_emb_pers->Name = L"lbl_date_emb_pers";
 			this->lbl_date_emb_pers->Size = System::Drawing::Size(119, 17);
 			this->lbl_date_emb_pers->TabIndex = 20;
@@ -789,7 +787,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// lbl_adr_pers
 			// 
 			this->lbl_adr_pers->AutoSize = true;
-			this->lbl_adr_pers->Location = System::Drawing::Point(185, 355);
+			this->lbl_adr_pers->Location = System::Drawing::Point(163, 319);
 			this->lbl_adr_pers->Name = L"lbl_adr_pers";
 			this->lbl_adr_pers->Size = System::Drawing::Size(60, 17);
 			this->lbl_adr_pers->TabIndex = 19;
@@ -797,7 +795,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// txt_genre_pers
 			// 
-			this->txt_genre_pers->Location = System::Drawing::Point(701, 284);
+			this->txt_genre_pers->Location = System::Drawing::Point(351, 236);
 			this->txt_genre_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txt_genre_pers->Name = L"txt_genre_pers";
 			this->txt_genre_pers->Size = System::Drawing::Size(141, 22);
@@ -806,7 +804,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// lbl_genre_pers
 			// 
 			this->lbl_genre_pers->AutoSize = true;
-			this->lbl_genre_pers->Location = System::Drawing::Point(697, 259);
+			this->lbl_genre_pers->Location = System::Drawing::Point(347, 211);
 			this->lbl_genre_pers->Name = L"lbl_genre_pers";
 			this->lbl_genre_pers->Size = System::Drawing::Size(48, 17);
 			this->lbl_genre_pers->TabIndex = 16;
@@ -815,7 +813,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// lbl_prenom_pers
 			// 
 			this->lbl_prenom_pers->AutoSize = true;
-			this->lbl_prenom_pers->Location = System::Drawing::Point(496, 259);
+			this->lbl_prenom_pers->Location = System::Drawing::Point(347, 265);
 			this->lbl_prenom_pers->Name = L"lbl_prenom_pers";
 			this->lbl_prenom_pers->Size = System::Drawing::Size(57, 17);
 			this->lbl_prenom_pers->TabIndex = 12;
@@ -823,7 +821,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// txt_prenom_pers
 			// 
-			this->txt_prenom_pers->Location = System::Drawing::Point(500, 284);
+			this->txt_prenom_pers->Location = System::Drawing::Point(351, 290);
 			this->txt_prenom_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txt_prenom_pers->Name = L"txt_prenom_pers";
 			this->txt_prenom_pers->Size = System::Drawing::Size(141, 22);
@@ -832,7 +830,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// lbl_nom_pers
 			// 
 			this->lbl_nom_pers->AutoSize = true;
-			this->lbl_nom_pers->Location = System::Drawing::Point(318, 259);
+			this->lbl_nom_pers->Location = System::Drawing::Point(164, 268);
 			this->lbl_nom_pers->Name = L"lbl_nom_pers";
 			this->lbl_nom_pers->Size = System::Drawing::Size(37, 17);
 			this->lbl_nom_pers->TabIndex = 12;
@@ -840,7 +838,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// txt_nom_pers
 			// 
-			this->txt_nom_pers->Location = System::Drawing::Point(322, 284);
+			this->txt_nom_pers->Location = System::Drawing::Point(167, 290);
 			this->txt_nom_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txt_nom_pers->Name = L"txt_nom_pers";
 			this->txt_nom_pers->Size = System::Drawing::Size(141, 22);
@@ -849,7 +847,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// lbl_id_pers
 			// 
 			this->lbl_id_pers->AutoSize = true;
-			this->lbl_id_pers->Location = System::Drawing::Point(185, 259);
+			this->lbl_id_pers->Location = System::Drawing::Point(163, 211);
 			this->lbl_id_pers->Name = L"lbl_id_pers";
 			this->lbl_id_pers->Size = System::Drawing::Size(19, 17);
 			this->lbl_id_pers->TabIndex = 12;
@@ -857,10 +855,10 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// txt_id_pers
 			// 
-			this->txt_id_pers->Location = System::Drawing::Point(189, 284);
+			this->txt_id_pers->Location = System::Drawing::Point(167, 236);
 			this->txt_id_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txt_id_pers->Name = L"txt_id_pers";
-			this->txt_id_pers->Size = System::Drawing::Size(47, 22);
+			this->txt_id_pers->Size = System::Drawing::Size(141, 22);
 			this->txt_id_pers->TabIndex = 12;
 			// 
 			// listBox2
@@ -875,10 +873,10 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// btn_del_pres
 			// 
-			this->btn_del_pres->Location = System::Drawing::Point(18, 404);
+			this->btn_del_pres->Location = System::Drawing::Point(18, 322);
 			this->btn_del_pres->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btn_del_pres->Name = L"btn_del_pres";
-			this->btn_del_pres->Size = System::Drawing::Size(112, 58);
+			this->btn_del_pres->Size = System::Drawing::Size(119, 44);
 			this->btn_del_pres->TabIndex = 4;
 			this->btn_del_pres->Text = L"SUPPRIMER";
 			this->btn_del_pres->UseVisualStyleBackColor = true;
@@ -886,10 +884,10 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// btn_update_pers
 			// 
-			this->btn_update_pers->Location = System::Drawing::Point(18, 336);
+			this->btn_update_pers->Location = System::Drawing::Point(18, 268);
 			this->btn_update_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btn_update_pers->Name = L"btn_update_pers";
-			this->btn_update_pers->Size = System::Drawing::Size(112, 58);
+			this->btn_update_pers->Size = System::Drawing::Size(120, 44);
 			this->btn_update_pers->TabIndex = 3;
 			this->btn_update_pers->Text = L"MODIFIER";
 			this->btn_update_pers->UseVisualStyleBackColor = true;
@@ -897,10 +895,10 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// btn_insert_pers
 			// 
-			this->btn_insert_pers->Location = System::Drawing::Point(18, 268);
+			this->btn_insert_pers->Location = System::Drawing::Point(17, 214);
 			this->btn_insert_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btn_insert_pers->Name = L"btn_insert_pers";
-			this->btn_insert_pers->Size = System::Drawing::Size(112, 58);
+			this->btn_insert_pers->Size = System::Drawing::Size(120, 44);
 			this->btn_insert_pers->TabIndex = 2;
 			this->btn_insert_pers->Text = L"INSÉRER";
 			this->btn_insert_pers->UseVisualStyleBackColor = true;
@@ -909,12 +907,12 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// dgv_pers
 			// 
 			this->dgv_pers->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dgv_pers->Location = System::Drawing::Point(18, 22);
-			this->dgv_pers->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
+			this->dgv_pers->Location = System::Drawing::Point(16, 18);
+			this->dgv_pers->Margin = System::Windows::Forms::Padding(4);
 			this->dgv_pers->Name = L"dgv_pers";
 			this->dgv_pers->RowHeadersWidth = 51;
 			this->dgv_pers->RowTemplate->Height = 24;
-			this->dgv_pers->Size = System::Drawing::Size(1143, 196);
+			this->dgv_pers->Size = System::Drawing::Size(1145, 183);
 			this->dgv_pers->TabIndex = 0;
 			this->dgv_pers->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dgv_PER_CellContentClick);
 			// 
@@ -926,7 +924,6 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			this->tabPage3->Controls->Add(this->listBox_console_comm);
 			this->tabPage3->Controls->Add(this->label_date_prevu_comm);
 			this->tabPage3->Controls->Add(this->label_id_comm);
-			this->tabPage3->Controls->Add(this->label_id_paiement_comm);
 			this->tabPage3->Controls->Add(this->label_ttc_comm);
 			this->tabPage3->Controls->Add(this->label_tva_comm);
 			this->tabPage3->Controls->Add(this->label_ref_comm);
@@ -942,7 +939,6 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			this->tabPage3->Controls->Add(this->txt_ref_comm);
 			this->tabPage3->Controls->Add(this->txt_date_em_comm);
 			this->tabPage3->Controls->Add(this->txt_id_comm);
-			this->tabPage3->Controls->Add(this->txt_id_paiement_comm);
 			this->tabPage3->Controls->Add(this->txt_ttc_comm);
 			this->tabPage3->Controls->Add(this->txt_date_prevu_comm);
 			this->tabPage3->Controls->Add(this->dgv_comm);
@@ -1009,15 +1005,6 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			this->label_id_comm->Size = System::Drawing::Size(94, 17);
 			this->label_id_comm->TabIndex = 4;
 			this->label_id_comm->Text = L"ID commande";
-			// 
-			// label_id_paiement_comm
-			// 
-			this->label_id_paiement_comm->AutoSize = true;
-			this->label_id_paiement_comm->Location = System::Drawing::Point(441, 273);
-			this->label_id_paiement_comm->Name = L"label_id_paiement_comm";
-			this->label_id_paiement_comm->Size = System::Drawing::Size(83, 17);
-			this->label_id_paiement_comm->TabIndex = 4;
-			this->label_id_paiement_comm->Text = L"ID paiement";
 			// 
 			// label_ttc_comm
 			// 
@@ -1144,13 +1131,6 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			this->txt_id_comm->Name = L"txt_id_comm";
 			this->txt_id_comm->Size = System::Drawing::Size(183, 22);
 			this->txt_id_comm->TabIndex = 2;
-			// 
-			// txt_id_paiement_comm
-			// 
-			this->txt_id_paiement_comm->Location = System::Drawing::Point(529, 268);
-			this->txt_id_paiement_comm->Name = L"txt_id_paiement_comm";
-			this->txt_id_paiement_comm->Size = System::Drawing::Size(99, 22);
-			this->txt_id_paiement_comm->TabIndex = 2;
 			// 
 			// txt_ttc_comm
 			// 
@@ -1419,7 +1399,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ControlText;
-			this->ClientSize = System::Drawing::Size(1262, 626);
+			this->ClientSize = System::Drawing::Size(1263, 638);
 			this->Controls->Add(this->tabPage_comm);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedToolWindow;
 			this->Margin = System::Windows::Forms::Padding(4);
@@ -1725,10 +1705,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 		String^ textVal4 = this->txt_ttc_comm->Text;
 		double com_tot_ttc = System::Convert::ToDouble(textVal4);
 
-		String^ textVal5 = this->txt_id_paiement_comm->Text;
-		int id_paiement = System::Convert::ToInt32(textVal5);
-
-		this->oSvc->ajouterUneCommande(this->txt_ref_comm->Text, this->txt_date_prevu_comm->Text, this->txt_date_em_comm->Text, com_tot_ar, com_tot_ht, com_tot_tva, com_tot_ttc, id_paiement);
+		this->oSvc->ajouterUneCommande(this->txt_ref_comm->Text, this->txt_date_prevu_comm->Text, this->txt_date_em_comm->Text, com_tot_ar, com_tot_ht, com_tot_tva, com_tot_ttc);
 
 		//Load data
 		this->dgv_comm->Refresh();
@@ -1774,10 +1751,8 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 		String^ textVal4 = this->txt_ttc_comm->Text;
 		double com_tot_ttc = System::Convert::ToDouble(textVal4);
 
-		String^ textVal5 = this->txt_id_paiement_comm->Text;
-		int id_paiement = System::Convert::ToInt32(textVal5);
 
-		this->oSvc->modifierUneCommande(this->txt_ref_comm->Text, this->txt_date_prevu_comm->Text, this->txt_date_em_comm->Text, com_tot_ar, com_tot_ht, com_tot_tva, com_tot_ttc, id_paiement, id_com);
+		this->oSvc->modifierUneCommande(this->txt_ref_comm->Text, this->txt_date_prevu_comm->Text, this->txt_date_em_comm->Text, com_tot_ar, com_tot_ht, com_tot_tva, com_tot_ttc, id_com);
 		//Load data
 		this->dgv_comm->Refresh();
 		this->oDs = this->oSvc->selectionnerToutesLesCommandes("TB_COMMANDE");
@@ -1800,7 +1775,6 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 		this->txt_ht_comm->Text = rowv->Cells["com_tot_ht"]->Value->ToString();
 		this->txt_tva_comm->Text = rowv->Cells["com_tot_tva"]->Value->ToString();
 		this->txt_ttc_comm->Text = rowv->Cells["com_tot_ttc"]->Value->ToString();
-		this->txt_id_paiement_comm->Text = rowv->Cells["pai_id"]->Value->ToString();
 	}
 		   
 
@@ -1817,5 +1791,6 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 		this->dgv_paie->DataSource = this->oDs;
 		this->dgv_paie->DataMember = "TB_STOCK";
 	}
+
 };
 }

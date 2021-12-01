@@ -182,7 +182,7 @@ void NS_Comp_Svc::CLservices::modifierUnPersonnel(System::String^ nom, System::S
 	this->oCad->actionRows(sql);
 }
 //Méthodes gestion des commandes
-void NS_Comp_Svc::CLservices::ajouterUneCommande(System::String^ ref, System::String^ date_prevue, System::String^ date_emission, int tot_ar, double tot_ht, double tot_tva, double tot_ttc, int idpaiement)
+void NS_Comp_Svc::CLservices::ajouterUneCommande(System::String^ ref, System::String^ date_prevue, System::String^ date_emission, int tot_ar, double tot_ht, double tot_tva, double tot_ttc)
 {
 	System::String^ sql;
 
@@ -193,7 +193,6 @@ void NS_Comp_Svc::CLservices::ajouterUneCommande(System::String^ ref, System::St
 	this->oMappComm->setTot_ht(tot_ht);
 	this->oMappComm->setTot_tva(tot_tva);
 	this->oMappComm->setTot_ttc(tot_ttc);
-	this->oMappComm->setId_paiement(idpaiement);
 	sql = this->oMappComm->InsertComm();
 
 	this->oCad->actionRows(sql);
@@ -208,7 +207,7 @@ void NS_Comp_Svc::CLservices::suprimerUneCommande(int id)
 	this->oCad->actionRows(sql);
 
 }
-void NS_Comp_Svc::CLservices::modifierUneCommande(System::String^ ref, System::String^ date_prevue, System::String^ date_emission, int tot_ar, double tot_ht, double tot_tva, double tot_ttc, int idpaiement, int id)
+void NS_Comp_Svc::CLservices::modifierUneCommande(System::String^ ref, System::String^ date_prevue, System::String^ date_emission, int tot_ar, double tot_ht, double tot_tva, double tot_ttc, int id)
 {
 	System::String^ sql;
 
@@ -219,7 +218,6 @@ void NS_Comp_Svc::CLservices::modifierUneCommande(System::String^ ref, System::S
 	this->oMappComm->setTot_ht(tot_ht);
 	this->oMappComm->setTot_tva(tot_tva);
 	this->oMappComm->setTot_ttc(tot_ttc);
-	this->oMappComm->setId_paiement(idpaiement);
 	this->oMappComm->setIdComm(id);
 	sql = this->oMappComm->UpdateComm();
 

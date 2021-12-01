@@ -38,8 +38,8 @@ namespace NS_Comp_Svc
 		void suprimerUnPersonnel(int);
 		void modifierUnPersonnel(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, int);
 		//Méthodes gestion Commandes
-		void ajouterUneCommande(System::String^, System::String^, System::String^, int, double, double, double, int);
+		void ajouterUneCommande(System::String^, System::String^, System::String^, int, double, double, double);
 		void suprimerUneCommande(int);
-		void modifierUneCommande(System::String^, System::String^, System::String^, int, double, double, double, int, int);
+		void modifierUneCommande(System::String^, System::String^, System::String^, int, double, double, double, int);
 	};
 }
