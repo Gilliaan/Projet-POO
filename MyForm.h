@@ -47,7 +47,7 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::TextBox^ txt_nom;
 	private: System::Windows::Forms::TextBox^ txt_prenom;
 
-
+		   
 
 	private: NS_Comp_Svc::CLservices^ oSvc;
 	private: System::Data::DataSet^ oDs;
@@ -175,6 +175,7 @@ private: System::Windows::Forms::Button^ btn_delete;
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
+			this->btn_delete = (gcnew System::Windows::Forms::Button());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
@@ -205,7 +206,6 @@ private: System::Windows::Forms::Button^ btn_delete;
 			this->dataGridView_comm = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
-			this->btn_delete = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_enr))->BeginInit();
 			this->btn_->SuspendLayout();
 			this->tabPage1->SuspendLayout();
@@ -462,6 +462,15 @@ private: System::Windows::Forms::Button^ btn_delete;
 			this->listBox1->Name = L"listBox1";
 			this->listBox1->Size = System::Drawing::Size(612, 43);
 			this->listBox1->TabIndex = 11;
+			// 
+			// btn_delete
+			// 
+			this->btn_delete->Location = System::Drawing::Point(12, 262);
+			this->btn_delete->Name = L"btn_delete";
+			this->btn_delete->Size = System::Drawing::Size(75, 37);
+			this->btn_delete->TabIndex = 3;
+			this->btn_delete->Text = L"DEL";
+			this->btn_delete->UseVisualStyleBackColor = true;
 			// 
 			// tabPage2
 			// 
@@ -752,15 +761,6 @@ private: System::Windows::Forms::Button^ btn_delete;
 			this->tabPage5->Text = L"Statistiques";
 			this->tabPage5->UseVisualStyleBackColor = true;
 			// 
-			// btn_delete
-			// 
-			this->btn_delete->Location = System::Drawing::Point(12, 262);
-			this->btn_delete->Name = L"btn_delete";
-			this->btn_delete->Size = System::Drawing::Size(75, 37);
-			this->btn_delete->TabIndex = 3;
-			this->btn_delete->Text = L"DEL";
-			this->btn_delete->UseVisualStyleBackColor = true;
-			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -836,7 +836,7 @@ private: System::Windows::Forms::Button^ btn_delete;
 		//Affichage de la commande ajouter
 		this->listBox_console_comm->Items->Add("Commande ajouter, Id :" + this->textBox_id_comm->Text + ", Reference =" + this->textBox_ref_comm->Text + " OK"); // a modifier
 	}
-		   /*
+		   
 	private: System::Void btn_delete_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		String^ textVal = this->textBox_id_comm->Text;
@@ -852,7 +852,7 @@ private: System::Windows::Forms::Button^ btn_delete;
 
 		//Affichage de la commande supprimer
 		this->listBox_console_comm->Items->Add("Commande suprimer, Id :" + this->textBox_id_comm->Text + ", reference ="+ this->textBox_ref_comm->Text +" OK");// modif<---------------
-	} */
+	} 
 		   /*
 	private: System::Void btn_update_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
