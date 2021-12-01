@@ -60,7 +60,6 @@ void NS_Comp_Svc::CLservices::modifierUnClient(System::String^ dateNaissance, Sy
 {
 	System::String^ sql;
 
-
 	this->oMappClient->setDateNaissance(dateNaissance);
 	this->oMappClient->setDatePremierAchat(datePremierAchat);
 	this->oMappClient->setGender(genre);
@@ -107,6 +106,7 @@ void NS_Comp_Svc::CLservices::supprimerUnStock(int id)
 void NS_Comp_Svc::CLservices::modifierUnStock(int ref, System::String^ nom ,double prixht,double tauxtva, int prodQuantite, int seuil, int id)
 {
 	System::String^ sql;
+
 	this->oMappStock->setArtName(nom);
 	this->oMappStock->setArtPrixHt(prixht);
 	this->oMappStock->setArtRef(ref);

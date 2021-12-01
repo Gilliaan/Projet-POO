@@ -5,14 +5,14 @@ namespace NS_Comp_Mappage
 	{
 	private:
 		System::String^ sSql;
-		int id_stock;
+		int st_id;
 		int st_prod_quantite;
 		int st_seuil_reap;
 		int art_ref;
 		System::String^ art_name;
 		//int art_designation;
-		double art_prix_ht;
-		double art_taux_tva;
+		int art_prix_ht;
+		int art_taux_tva;
 	public:
 		System::String^ SelectStock(void);
 		System::String^ InsertStock(void);
@@ -24,15 +24,15 @@ namespace NS_Comp_Mappage
 		void setArtRef(int);
 		void setArtName(System::String^);
 		//void setArtDesignation(int);
-		void setArtPrixHt(double);
-		void setArtTauxTva(double);
+		void setArtPrixHt(int);
+		void setArtTauxTva(int);
 		int getIdStock(void);
 		int getStockQuantite(void);
 		int getSeuilReap(void);
 		int getArtRef(void);
 		System::String^ getArtName(void);
 		//int getArtDesignation(void);
-		double getArtPrixHt(void);
-		double getArtTauxTva(void);
+		int getArtPrixHt(void);
+		int getArtTauxTva(void);
 	};
 }

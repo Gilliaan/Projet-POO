@@ -921,7 +921,6 @@ namespace ProjetPOO {
 		this->dgv_stck->DataSource = this->oDs;
 		this->dgv_stck->DataMember = "TB_STOCK";
 	}
-
 	private: System::Void dgv_cl_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 		int rowIndex = e->RowIndex;
 		DataGridViewRow^ rowv = dgv_cl->Rows[rowIndex];
@@ -931,8 +930,6 @@ namespace ProjetPOO {
 		this->txt_date_naissance_cl->Text = rowv->Cells["cl_date_naissance"]->Value->ToString();
 		this->txt_date_premier_achat_cl->Text = rowv->Cells["CL_date_premier_achat"]->Value->ToString();
 		this->txt_genre_cl->Text = rowv->Cells["ppl_gender"]->Value->ToString();
-	
-
 	}
 	private: System::Void dgv_stck_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 		int rowIndex = e->RowIndex;
@@ -945,7 +942,5 @@ namespace ProjetPOO {
 		this->txt_quantite_produit_stck->Text = rowv->Cells["st_prod_quantite"]->Value->ToString();
 		this->txt_seuil_reap_stck->Text = rowv->Cells["st_seuil_reap"]->Value->ToString();
 	}
-
-
 };
 }

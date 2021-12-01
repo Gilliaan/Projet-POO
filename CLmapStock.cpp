@@ -10,22 +10,16 @@ System::String^ NS_Comp_Mappage::CLmapStock::InsertStock(void)
 }
 System::String^ NS_Comp_Mappage::CLmapStock::DeleteStock(void)
 {
-	return "DELETE FROM TB_STOCK WHERE st_id = '" + this->id_stock + "'; ";
+	return "DELETE FROM TB_STOCK WHERE st_id = '" + this->st_id + "'; ";
 }
 System::String^ NS_Comp_Mappage::CLmapStock::UpdateStock(void)
 {
-	return "UPDATE TB_STOCK SET st_prod_quantite = '"
-		+ this->st_prod_quantite + "', st_seuil_reap = '"
-		+ this->st_seuil_reap + "', art_ref = '"
-		+ this->art_ref + "', art_name = '"
-		+ this->art_name + "', art_prix_ht = '"
-		+ this->art_prix_ht + "', art_taux_tva = '"
-		+ this->art_taux_tva + "' WHERE st_id = '" + this->id_stock + "'; ";
+	return "UPDATE TB_STOCK SET st_prod_quantite = '"+ this->st_prod_quantite + "', st_seuil_reap = '"+ this->st_seuil_reap + "', art_ref = '"+ this->art_ref + "', art_name = '"+ this->art_name +"', art_prix_ht = '"+ this->art_prix_ht + "', art_taux_tva = '"+ this->art_taux_tva + "' WHERE st_id = '" + this->st_id + "'; ";
 }
 
 void NS_Comp_Mappage::CLmapStock::setIdStock(int Id)
 {
-	this->id_stock = Id;
+	this->st_id = Id;
 }
 void NS_Comp_Mappage::CLmapStock::setStockQuantite(int quantite)
 {
@@ -43,20 +37,20 @@ void NS_Comp_Mappage::CLmapStock::setArtName(System::String^ name)
 {
 	this->art_name = name;
 }
-void NS_Comp_Mappage::CLmapStock::setArtPrixHt(double prixht)
+void NS_Comp_Mappage::CLmapStock::setArtPrixHt(int prixht)
 {
 	this->art_prix_ht = prixht;
 }
-void NS_Comp_Mappage::CLmapStock::setArtTauxTva(double tauxtva)
+void NS_Comp_Mappage::CLmapStock::setArtTauxTva(int tauxtva)
 {
 	this->art_taux_tva = tauxtva;
 }
 
-int NS_Comp_Mappage::CLmapStock::getIdStock(void) { return this->id_stock; }
+int NS_Comp_Mappage::CLmapStock::getIdStock(void) { return this->st_id; }
 int NS_Comp_Mappage::CLmapStock::getStockQuantite(void) { return this->st_prod_quantite; }
 int NS_Comp_Mappage::CLmapStock::getSeuilReap(void) { return this->st_seuil_reap; }
 //int NS_Comp_Mappage::CLmapStock::getArtDesignation(void) { return this->art_designation; }
 System::String^ NS_Comp_Mappage::CLmapStock::getArtName(void) { return this->art_name; }
-double NS_Comp_Mappage::CLmapStock::getArtPrixHt(void) { return this->art_prix_ht; }
-double NS_Comp_Mappage::CLmapStock::getArtTauxTva(void) { return this->art_taux_tva; }
+int NS_Comp_Mappage::CLmapStock::getArtPrixHt(void) { return this->art_prix_ht; }
+int NS_Comp_Mappage::CLmapStock::getArtTauxTva(void) { return this->art_taux_tva; }
 int NS_Comp_Mappage::CLmapStock::getArtRef(void) { return this->art_ref; }
