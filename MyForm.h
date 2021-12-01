@@ -41,7 +41,7 @@ namespace ProjetPOO {
 
 
 	private: System::Windows::Forms::Button^ btn_insert;
-	private: System::Windows::Forms::Button^ btn_delete;
+
 	private: System::Windows::Forms::Button^ btn_update;
 	private: System::Windows::Forms::TextBox^ txt_id;
 	private: System::Windows::Forms::TextBox^ txt_nom;
@@ -128,6 +128,7 @@ private: System::Windows::Forms::Label^ label_id_comm;
 private: System::Windows::Forms::TextBox^ textBox_id_comm;
 private: System::Windows::Forms::Label^ label_console_comm;
 private: System::Windows::Forms::ListBox^ listBox_console_comm;
+private: System::Windows::Forms::Button^ btn_delete;
 
 
 
@@ -151,7 +152,6 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 		{
 			this->dgv_enr = (gcnew System::Windows::Forms::DataGridView());
 			this->btn_insert = (gcnew System::Windows::Forms::Button());
-			this->btn_delete = (gcnew System::Windows::Forms::Button());
 			this->btn_update = (gcnew System::Windows::Forms::Button());
 			this->txt_id = (gcnew System::Windows::Forms::TextBox());
 			this->txt_nom = (gcnew System::Windows::Forms::TextBox());
@@ -205,6 +205,7 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 			this->dataGridView_comm = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
+			this->btn_delete = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_enr))->BeginInit();
 			this->btn_->SuspendLayout();
 			this->tabPage1->SuspendLayout();
@@ -222,18 +223,13 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 			this->dgv_enr->RowHeadersWidth = 51;
 			this->dgv_enr->Size = System::Drawing::Size(610, 149);
 			this->dgv_enr->TabIndex = 0;
-
-		
 			// 
-			// btn_delete
+			// btn_insert
 			// 
-			this->btn_delete->Location = System::Drawing::Point(12, 262);
-			this->btn_delete->Name = L"btn_delete";
-			this->btn_delete->Size = System::Drawing::Size(75, 37);
-			this->btn_delete->TabIndex = 3;
-			this->btn_delete->Text = L"DEL";
-			this->btn_delete->UseVisualStyleBackColor = true;
-			this->btn_delete->Click += gcnew System::EventHandler(this, &MyForm::btn_delete_Click);
+			this->btn_insert->Location = System::Drawing::Point(0, 0);
+			this->btn_insert->Name = L"btn_insert";
+			this->btn_insert->Size = System::Drawing::Size(75, 23);
+			this->btn_insert->TabIndex = 25;
 			// 
 			// btn_update
 			// 
@@ -243,7 +239,6 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 			this->btn_update->TabIndex = 4;
 			this->btn_update->Text = L"MODIFIER";
 			this->btn_update->UseVisualStyleBackColor = true;
-			this->btn_update->Click += gcnew System::EventHandler(this, &MyForm::btn_update_Click);
 			// 
 			// txt_id
 			// 
@@ -344,7 +339,7 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"Clients";
 			this->tabPage1->UseVisualStyleBackColor = true;
-		
+			// 
 			// label10
 			// 
 			this->label10->AutoSize = true;
@@ -535,7 +530,6 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 			this->tabPage3_comm->TabIndex = 2;
 			this->tabPage3_comm->Text = L"Commandes";
 			this->tabPage3_comm->UseVisualStyleBackColor = true;
-		
 			// 
 			// label_console_comm
 			// 
@@ -625,7 +619,6 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 			this->label_article_comm->Size = System::Drawing::Size(58, 13);
 			this->label_article_comm->TabIndex = 4;
 			this->label_article_comm->Text = L"total article";
-
 			// 
 			// label_date_em_comm
 			// 
@@ -700,7 +693,6 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 			this->textBox_date_em_comm->Name = L"textBox_date_em_comm";
 			this->textBox_date_em_comm->Size = System::Drawing::Size(183, 20);
 			this->textBox_date_em_comm->TabIndex = 2;
-		
 			// 
 			// textBox_id_comm
 			// 
@@ -708,7 +700,6 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 			this->textBox_id_comm->Name = L"textBox_id_comm";
 			this->textBox_id_comm->Size = System::Drawing::Size(183, 20);
 			this->textBox_id_comm->TabIndex = 2;
-			
 			// 
 			// textBox_id_paiement_comm
 			// 
@@ -716,7 +707,6 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 			this->textBox_id_paiement_comm->Name = L"textBox_id_paiement_comm";
 			this->textBox_id_paiement_comm->Size = System::Drawing::Size(183, 20);
 			this->textBox_id_paiement_comm->TabIndex = 2;
-			
 			// 
 			// textBox_ttc_comm
 			// 
@@ -724,7 +714,6 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 			this->textBox_ttc_comm->Name = L"textBox_ttc_comm";
 			this->textBox_ttc_comm->Size = System::Drawing::Size(183, 20);
 			this->textBox_ttc_comm->TabIndex = 2;
-			
 			// 
 			// textBox_date_prevu_comm
 			// 
@@ -732,7 +721,6 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 			this->textBox_date_prevu_comm->Name = L"textBox_date_prevu_comm";
 			this->textBox_date_prevu_comm->Size = System::Drawing::Size(183, 20);
 			this->textBox_date_prevu_comm->TabIndex = 2;
-	
 			// 
 			// dataGridView_comm
 			// 
@@ -764,6 +752,15 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 			this->tabPage5->Text = L"Statistiques";
 			this->tabPage5->UseVisualStyleBackColor = true;
 			// 
+			// btn_delete
+			// 
+			this->btn_delete->Location = System::Drawing::Point(12, 262);
+			this->btn_delete->Name = L"btn_delete";
+			this->btn_delete->Size = System::Drawing::Size(75, 37);
+			this->btn_delete->TabIndex = 3;
+			this->btn_delete->Text = L"DEL";
+			this->btn_delete->UseVisualStyleBackColor = true;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -773,7 +770,7 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView_comm))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_enr))->EndInit();
 			this->btn_->ResumeLayout(false);
 			this->tabPage1->ResumeLayout(false);
 			this->tabPage1->PerformLayout();
@@ -809,8 +806,26 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 		   
 	private: System::Void btn_insert_Click_Comm(System::Object^ sender, System::EventArgs^ e)
 	{
+		
+		String^ textVal = this->textBox_id_comm->Text;
+		int id_com = System::Convert::ToInt32(textVal);
 
-		this->oSvc->selectionnerToutesLesCommandes("TB_COMMANDE");
+		String^ textVal1 = this->textBox_article_comm->Text;
+		int com_tot_ar = System::Convert::ToInt32(textVal1);
+
+		String^ textVal2 = this->textBox_ht_comm->Text;
+		double com_tot_ht = System::Convert::ToDouble(textVal2);
+
+		String^ textVal3 = this->textBox_tva_comm->Text;
+		double com_tot_tva = System::Convert::ToDouble(textVal3);
+
+		String^ textVal4 = this->textBox_ttc_comm->Text;
+		double com_tot_ttc = System::Convert::ToDouble(textVal4);
+
+		String^ textVal5 = this->textBox_id_paiement_comm->Text;
+		int id_paiement = System::Convert::ToInt32(textVal5);
+		
+		this->oSvc->ajouterUneCommande(this->textBox_ref_comm->Text, this->textBox_date_prevu_comm->Text, this->textBox_date_em_comm->Text, com_tot_ar, com_tot_ht, com_tot_tva, com_tot_ttc, id_paiement);
 
 		//Load data
 		this->dataGridView_comm->Refresh();
@@ -819,8 +834,9 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 		this->dataGridView_comm->DataMember = "TB_COMMANDE";
 
 		//Affichage de la commande ajouter
-		this->listBox1->Items->Add("Commande ajouter, Id :" + this->textBox_id_comm->Text + ", Reference =" + this->textBox_ref_comm->Text + " OK"); // a modifier
+		this->listBox_console_comm->Items->Add("Commande ajouter, Id :" + this->textBox_id_comm->Text + ", Reference =" + this->textBox_ref_comm->Text + " OK"); // a modifier
 	}
+		   /*
 	private: System::Void btn_delete_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		String^ textVal = this->textBox_id_comm->Text;
@@ -835,8 +851,9 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 		this->dataGridView_comm->DataMember = "TB_COMMANDE";
 
 		//Affichage de la commande supprimer
-		this->listBox1->Items->Add("Commande suprimer, Id :" + this->textBox_id_comm->Text + ", reference ="+ this->textBox_ref_comm->Text +" OK");// modif<---------------
-	}
+		this->listBox_console_comm->Items->Add("Commande suprimer, Id :" + this->textBox_id_comm->Text + ", reference ="+ this->textBox_ref_comm->Text +" OK");// modif<---------------
+	} */
+		   /*
 	private: System::Void btn_update_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		String^ textVal = this->textBox_id_comm->Text;
@@ -866,20 +883,60 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 		this->dataGridView_comm->DataMember = "TB_COMMANDE";
 
 		//Affichage de la commande modifier
-		this->listBox1->Items->Add("Commande modifier, Id :" + this->textBox_id_comm->Text + ", Reference ="+ this->textBox_ref_comm->Text +" OK");
-	}
+		this->listBox_console_comm->Items->Add("Commande modifier, Id :" + this->textBox_id_comm->Text + ", Reference ="+ this->textBox_ref_comm->Text +" OK");
+	}*/
 		   //Click sur le boutton Supprimer de l'onglet Commandes
 private: System::Void btn_del_comm_Click(System::Object^ sender, System::EventArgs^ e) {
 
+	/*
+	String^ textVal = this->textBox_id_comm->Text;
+	int id_com = System::Convert::ToInt32(textVal);
+	this->oSvc->suprimerUneCommande(id_com);*/
 
 	String^ textVal = this->textBox_id_comm->Text;
 	int id_com = System::Convert::ToInt32(textVal);
 	this->oSvc->suprimerUneCommande(id_com);
 
+
+	//Load data
+	this->dataGridView_comm->Refresh();
+	this->oDs = this->oSvc->selectionnerToutesLesCommandes("TB_COMMANDE");
+	this->dataGridView_comm->DataSource = this->oDs;
+	this->dataGridView_comm->DataMember = "TB_COMMANDE";
+
+	//Affichage de la commande supprimer
+	this->listBox_console_comm->Items->Add("Commande suprimer, Id :" + this->textBox_id_comm->Text + ", reference =" + this->textBox_ref_comm->Text + " OK");
+
 }
 private: System::Void btn_modif_comm_Click(System::Object^ sender, System::EventArgs^ e) {
 
+	String^ textVal = this->textBox_id_comm->Text;
+	int id_com = System::Convert::ToInt32(textVal);
 
+	String^ textVal1 = this->textBox_article_comm->Text;
+	int com_tot_ar = System::Convert::ToInt32(textVal1);
+
+	String^ textVal2 = this->textBox_ht_comm->Text;
+	double com_tot_ht = System::Convert::ToDouble(textVal2);
+
+	String^ textVal3 = this->textBox_tva_comm->Text;
+	double com_tot_tva = System::Convert::ToDouble(textVal3);
+
+	String^ textVal4 = this->textBox_ttc_comm->Text;
+	double com_tot_ttc = System::Convert::ToDouble(textVal4);
+
+	String^ textVal5 = this->textBox_id_paiement_comm->Text;
+	int id_paiement = System::Convert::ToInt32(textVal5);
+
+	this->oSvc->modifierUneCommande(this->textBox_ref_comm->Text, this->textBox_date_prevu_comm->Text, this->textBox_date_em_comm->Text, com_tot_ar, com_tot_ht, com_tot_tva, com_tot_ttc, id_paiement, id_com);
+	//Load data
+	this->dataGridView_comm->Refresh();
+	this->oDs = this->oSvc->selectionnerToutesLesCommandes("TB_COMMANDE");
+	this->dataGridView_comm->DataSource = this->oDs;
+	this->dataGridView_comm->DataMember = "TB_COMMANDE";
+
+	//Affichage de la commande modifier
+	this->listBox_console_comm->Items->Add("Commande modifier, Id :" + this->textBox_id_comm->Text + ", Reference =" + this->textBox_ref_comm->Text + " OK");
 }
 };
 }
