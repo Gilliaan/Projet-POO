@@ -823,9 +823,9 @@ private: System::Windows::Forms::Button^ btn_delete;
 		double com_tot_ttc = System::Convert::ToDouble(textVal4);
 
 		String^ textVal5 = this->textBox_id_paiement_comm->Text;
-		int id_paiement = System::Convert::ToInt32(textVal5);
+		int pai_id = System::Convert::ToInt32(textVal5);
 		
-		this->oSvc->ajouterUneCommande(this->textBox_ref_comm->Text, this->textBox_date_prevu_comm->Text, this->textBox_date_em_comm->Text, com_tot_ar, com_tot_ht, com_tot_tva, com_tot_ttc, id_paiement);
+		this->oSvc->ajouterUneCommande(this->textBox_ref_comm->Text, this->textBox_date_prevu_comm->Text, this->textBox_date_em_comm->Text, com_tot_ar, com_tot_ht, com_tot_tva, com_tot_ttc, pai_id);
 
 		//Load data
 		this->dataGridView_comm->Refresh();
@@ -926,9 +926,9 @@ private: System::Void btn_modif_comm_Click(System::Object^ sender, System::Event
 	double com_tot_ttc = System::Convert::ToDouble(textVal4);
 
 	String^ textVal5 = this->textBox_id_paiement_comm->Text;
-	int id_paiement = System::Convert::ToInt32(textVal5);
+	int pai_id = System::Convert::ToInt32(textVal5);
 
-	this->oSvc->modifierUneCommande(this->textBox_ref_comm->Text, this->textBox_date_prevu_comm->Text, this->textBox_date_em_comm->Text, com_tot_ar, com_tot_ht, com_tot_tva, com_tot_ttc, id_paiement, id_com);
+	this->oSvc->modifierUneCommande(this->textBox_ref_comm->Text, this->textBox_date_prevu_comm->Text, this->textBox_date_em_comm->Text, com_tot_ar, com_tot_ht, com_tot_tva, com_tot_ttc, pai_id, id_com);
 	//Load data
 	this->dataGridView_comm->Refresh();
 	this->oDs = this->oSvc->selectionnerToutesLesCommandes("TB_COMMANDE");

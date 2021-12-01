@@ -1,6 +1,7 @@
 #include "CLservice.h"
 
 
+/*CLservice Commande*/
 
 NS_Comp_Svc::CLservices::CLservices(void)
 {
@@ -14,7 +15,7 @@ System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerToutesLesCommandes(S
 	sql = this->oMappComm->SelectComm();
 	return this->oCad->getRows(sql, dataTablecom);
 }
-void NS_Comp_Svc::CLservices::ajouterUneCommande(System::String^ ref, System::String^ date_prevue, System::String^ date_emission, int tot_ar, double tot_ht, double tot_tva, double tot_ttc, int idpaiement)
+void NS_Comp_Svc::CLservices::ajouterUneCommande(System::String^ ref, System::String^ date_prevue, System::String^ date_emission, int tot_ar, double tot_ht, double tot_tva, double tot_ttc, int idpai)
 {
 	System::String^ sql;
 
@@ -25,7 +26,7 @@ void NS_Comp_Svc::CLservices::ajouterUneCommande(System::String^ ref, System::St
 	this->oMappComm->setTot_ht(tot_ht);
 	this->oMappComm->setTot_tva(tot_tva);
 	this->oMappComm->setTot_ttc(tot_ttc);
-	this->oMappComm->setPai_id(idpaiement);
+	this->oMappComm->setPai_id(idpai);
 	sql = this->oMappComm->InsertComm();
 
 	this->oCad->actionRows(sql);
@@ -40,7 +41,7 @@ void NS_Comp_Svc::CLservices::suprimerUneCommande(int id)
 	this->oCad->actionRows(sql);
 
 }
-void NS_Comp_Svc::CLservices::modifierUneCommande(System::String^ ref, System::String^ date_prevue, System::String^ date_emission, int tot_ar, double tot_ht, double tot_tva, double tot_ttc, int idpaiement, int id)
+void NS_Comp_Svc::CLservices::modifierUneCommande(System::String^ ref, System::String^ date_prevue, System::String^ date_emission, int tot_ar, double tot_ht, double tot_tva, double tot_ttc, int idpai, int id)
 {
 	System::String^ sql;
 
@@ -51,7 +52,7 @@ void NS_Comp_Svc::CLservices::modifierUneCommande(System::String^ ref, System::S
 	this->oMappComm->setTot_ht(tot_ht);
 	this->oMappComm->setTot_tva(tot_tva);
 	this->oMappComm->setTot_ttc(tot_ttc);
-	this->oMappComm->setPai_id(idpaiement);
+	this->oMappComm->setPai_id(idpai);
 	this->oMappComm->setIdComm(id);
 	sql = this->oMappComm->UpdateComm();
 
