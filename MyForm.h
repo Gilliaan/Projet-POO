@@ -1,6 +1,6 @@
 #pragma once
 #include "CLservice.h"
-
+#include <string>
 namespace ProjetPOO {
 
 	using namespace System;
@@ -88,12 +88,12 @@ namespace ProjetPOO {
 
 
 	private: System::Windows::Forms::TextBox^ txt_id_stck;
-	private: System::Windows::Forms::TextBox^ txt_id_article_stck;
+
 
 
 	private: System::Windows::Forms::Label^ lbl_id_stck;
 
-	private: System::Windows::Forms::Label^ lbl_Art_Id;
+
 	private: System::Windows::Forms::Label^ lbl_seuil_reap_stck;
 
 
@@ -105,6 +105,14 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::Button^ aff_adr_cl;
 	private: System::Windows::Forms::Button^ ajt_adr_cl;
 	private: System::Windows::Forms::Label^ lbl_dgv_adresse_cl;
+	private: System::Windows::Forms::TextBox^ txt_taux_tva_art;
+	private: System::Windows::Forms::Label^ lbl_tva_art;
+	private: System::Windows::Forms::Label^ lbl_prixht_art;
+	private: System::Windows::Forms::Label^ lbl_nom_art;
+	private: System::Windows::Forms::Label^ lbl_ref_art;
+	private: System::Windows::Forms::TextBox^ txt_prixht_art;
+	private: System::Windows::Forms::TextBox^ txt_nom_art;
+	private: System::Windows::Forms::TextBox^ txt_ref_art;
 
 
 	protected:
@@ -133,6 +141,7 @@ namespace ProjetPOO {
 			this->lbl_nom_cl = (gcnew System::Windows::Forms::Label());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tab_cl = (gcnew System::Windows::Forms::TabPage());
+			this->lbl_dgv_adresse_cl = (gcnew System::Windows::Forms::Label());
 			this->ajt_adr_cl = (gcnew System::Windows::Forms::Button());
 			this->aff_adr_cl = (gcnew System::Windows::Forms::Button());
 			this->dgv_aff_adr_cl = (gcnew System::Windows::Forms::DataGridView());
@@ -157,9 +166,7 @@ namespace ProjetPOO {
 			this->list_console_stck = (gcnew System::Windows::Forms::ListBox());
 			this->txt_quantite_produit_stck = (gcnew System::Windows::Forms::TextBox());
 			this->txt_id_stck = (gcnew System::Windows::Forms::TextBox());
-			this->txt_id_article_stck = (gcnew System::Windows::Forms::TextBox());
 			this->lbl_id_stck = (gcnew System::Windows::Forms::Label());
-			this->lbl_Art_Id = (gcnew System::Windows::Forms::Label());
 			this->lbl_seuil_reap_stck = (gcnew System::Windows::Forms::Label());
 			this->lbl_stock_quantite_stck = (gcnew System::Windows::Forms::Label());
 			this->txt_seuil_reap_stck = (gcnew System::Windows::Forms::TextBox());
@@ -168,7 +175,14 @@ namespace ProjetPOO {
 			this->btn_inserer_stck = (gcnew System::Windows::Forms::Button());
 			this->dgv_stck = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
-			this->lbl_dgv_adresse_cl = (gcnew System::Windows::Forms::Label());
+			this->txt_ref_art = (gcnew System::Windows::Forms::TextBox());
+			this->txt_nom_art = (gcnew System::Windows::Forms::TextBox());
+			this->txt_prixht_art = (gcnew System::Windows::Forms::TextBox());
+			this->lbl_ref_art = (gcnew System::Windows::Forms::Label());
+			this->lbl_nom_art = (gcnew System::Windows::Forms::Label());
+			this->lbl_prixht_art = (gcnew System::Windows::Forms::Label());
+			this->lbl_tva_art = (gcnew System::Windows::Forms::Label());
+			this->txt_taux_tva_art = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_cl))->BeginInit();
 			this->tabControl1->SuspendLayout();
 			this->tab_cl->SuspendLayout();
@@ -324,6 +338,15 @@ namespace ProjetPOO {
 			this->tab_cl->Size = System::Drawing::Size(1182, 553);
 			this->tab_cl->TabIndex = 0;
 			this->tab_cl->Text = L"Clients";
+			// 
+			// lbl_dgv_adresse_cl
+			// 
+			this->lbl_dgv_adresse_cl->AutoSize = true;
+			this->lbl_dgv_adresse_cl->Location = System::Drawing::Point(594, 258);
+			this->lbl_dgv_adresse_cl->Name = L"lbl_dgv_adresse_cl";
+			this->lbl_dgv_adresse_cl->Size = System::Drawing::Size(112, 17);
+			this->lbl_dgv_adresse_cl->TabIndex = 28;
+			this->lbl_dgv_adresse_cl->Text = L"Adresses client :";
 			// 
 			// ajt_adr_cl
 			// 
@@ -503,13 +526,19 @@ namespace ProjetPOO {
 			// 
 			// tabPage4
 			// 
+			this->tabPage4->Controls->Add(this->txt_taux_tva_art);
+			this->tabPage4->Controls->Add(this->lbl_tva_art);
+			this->tabPage4->Controls->Add(this->lbl_prixht_art);
+			this->tabPage4->Controls->Add(this->lbl_nom_art);
+			this->tabPage4->Controls->Add(this->lbl_ref_art);
+			this->tabPage4->Controls->Add(this->txt_prixht_art);
+			this->tabPage4->Controls->Add(this->txt_nom_art);
+			this->tabPage4->Controls->Add(this->txt_ref_art);
 			this->tabPage4->Controls->Add(this->lbl_console_stck);
 			this->tabPage4->Controls->Add(this->list_console_stck);
 			this->tabPage4->Controls->Add(this->txt_quantite_produit_stck);
 			this->tabPage4->Controls->Add(this->txt_id_stck);
-			this->tabPage4->Controls->Add(this->txt_id_article_stck);
 			this->tabPage4->Controls->Add(this->lbl_id_stck);
-			this->tabPage4->Controls->Add(this->lbl_Art_Id);
 			this->tabPage4->Controls->Add(this->lbl_seuil_reap_stck);
 			this->tabPage4->Controls->Add(this->lbl_stock_quantite_stck);
 			this->tabPage4->Controls->Add(this->txt_seuil_reap_stck);
@@ -557,13 +586,6 @@ namespace ProjetPOO {
 			this->txt_id_stck->Size = System::Drawing::Size(302, 22);
 			this->txt_id_stck->TabIndex = 10;
 			// 
-			// txt_id_article_stck
-			// 
-			this->txt_id_article_stck->Location = System::Drawing::Point(177, 399);
-			this->txt_id_article_stck->Name = L"txt_id_article_stck";
-			this->txt_id_article_stck->Size = System::Drawing::Size(302, 22);
-			this->txt_id_article_stck->TabIndex = 9;
-			// 
 			// lbl_id_stck
 			// 
 			this->lbl_id_stck->AutoSize = true;
@@ -572,15 +594,6 @@ namespace ProjetPOO {
 			this->lbl_id_stck->Size = System::Drawing::Size(58, 17);
 			this->lbl_id_stck->TabIndex = 8;
 			this->lbl_id_stck->Text = L"Stock Id";
-			// 
-			// lbl_Art_Id
-			// 
-			this->lbl_Art_Id->AutoSize = true;
-			this->lbl_Art_Id->Location = System::Drawing::Point(174, 379);
-			this->lbl_Art_Id->Name = L"lbl_Art_Id";
-			this->lbl_Art_Id->Size = System::Drawing::Size(62, 17);
-			this->lbl_Art_Id->TabIndex = 7;
-			this->lbl_Art_Id->Text = L"Article Id";
 			// 
 			// lbl_seuil_reap_stck
 			// 
@@ -655,14 +668,69 @@ namespace ProjetPOO {
 			this->tabPage5->Text = L"Statistiques";
 			this->tabPage5->UseVisualStyleBackColor = true;
 			// 
-			// lbl_dgv_adresse_cl
+			// txt_ref_art
 			// 
-			this->lbl_dgv_adresse_cl->AutoSize = true;
-			this->lbl_dgv_adresse_cl->Location = System::Drawing::Point(594, 258);
-			this->lbl_dgv_adresse_cl->Name = L"lbl_dgv_adresse_cl";
-			this->lbl_dgv_adresse_cl->Size = System::Drawing::Size(112, 17);
-			this->lbl_dgv_adresse_cl->TabIndex = 28;
-			this->lbl_dgv_adresse_cl->Text = L"Adresses client :";
+			this->txt_ref_art->Location = System::Drawing::Point(541, 262);
+			this->txt_ref_art->Name = L"txt_ref_art";
+			this->txt_ref_art->Size = System::Drawing::Size(100, 22);
+			this->txt_ref_art->TabIndex = 14;
+			// 
+			// txt_nom_art
+			// 
+			this->txt_nom_art->Location = System::Drawing::Point(541, 304);
+			this->txt_nom_art->Name = L"txt_nom_art";
+			this->txt_nom_art->Size = System::Drawing::Size(100, 22);
+			this->txt_nom_art->TabIndex = 15;
+			// 
+			// txt_prixht_art
+			// 
+			this->txt_prixht_art->Location = System::Drawing::Point(541, 352);
+			this->txt_prixht_art->Name = L"txt_prixht_art";
+			this->txt_prixht_art->Size = System::Drawing::Size(100, 22);
+			this->txt_prixht_art->TabIndex = 16;
+			// 
+			// lbl_ref_art
+			// 
+			this->lbl_ref_art->AutoSize = true;
+			this->lbl_ref_art->Location = System::Drawing::Point(538, 242);
+			this->lbl_ref_art->Name = L"lbl_ref_art";
+			this->lbl_ref_art->Size = System::Drawing::Size(30, 17);
+			this->lbl_ref_art->TabIndex = 17;
+			this->lbl_ref_art->Text = L"Ref";
+			// 
+			// lbl_nom_art
+			// 
+			this->lbl_nom_art->AutoSize = true;
+			this->lbl_nom_art->Location = System::Drawing::Point(538, 287);
+			this->lbl_nom_art->Name = L"lbl_nom_art";
+			this->lbl_nom_art->Size = System::Drawing::Size(80, 17);
+			this->lbl_nom_art->TabIndex = 18;
+			this->lbl_nom_art->Text = L"Nom Article";
+			// 
+			// lbl_prixht_art
+			// 
+			this->lbl_prixht_art->AutoSize = true;
+			this->lbl_prixht_art->Location = System::Drawing::Point(538, 332);
+			this->lbl_prixht_art->Name = L"lbl_prixht_art";
+			this->lbl_prixht_art->Size = System::Drawing::Size(54, 17);
+			this->lbl_prixht_art->TabIndex = 19;
+			this->lbl_prixht_art->Text = L"Prix HT";
+			// 
+			// lbl_tva_art
+			// 
+			this->lbl_tva_art->AutoSize = true;
+			this->lbl_tva_art->Location = System::Drawing::Point(538, 377);
+			this->lbl_tva_art->Name = L"lbl_tva_art";
+			this->lbl_tva_art->Size = System::Drawing::Size(70, 17);
+			this->lbl_tva_art->TabIndex = 20;
+			this->lbl_tva_art->Text = L"Taux TVA";
+			// 
+			// txt_taux_tva_art
+			// 
+			this->txt_taux_tva_art->Location = System::Drawing::Point(541, 397);
+			this->txt_taux_tva_art->Name = L"txt_taux_tva_art";
+			this->txt_taux_tva_art->Size = System::Drawing::Size(100, 22);
+			this->txt_taux_tva_art->TabIndex = 21;
 			// 
 			// MyForm
 			// 
@@ -761,24 +829,6 @@ namespace ProjetPOO {
 		//Affichage de la personne modifier
 		this->list_console_cl->Items->Add("Personne modifier, Id :" + this->txt_id_cl->Text + ", Nom ="+ this->txt_nom_cl->Text +" OK");
 	}
-	private: System::Void btn_inserer_click_stck(System::Object^ sender, System::EventArgs^ e) 
-	{
-		String^ textquantite = this->txt_quantite_produit_stck->Text;
-		int quantiteProduit = System::Convert::ToInt32(textquantite);
-		String^ textseuil = this->txt_seuil_reap_stck->Text;
-		int seuilReap = System::Convert::ToInt32(textseuil);
-		this->oSvc->ajouterUnStock(quantiteProduit,seuilReap);
-
-		//Load data Stock
-		this->oSvc = gcnew NS_Comp_Svc::CLservices();
-		this->dgv_stck->Refresh();
-		this->oDs = this->oSvc->selectionnerTousLeStock("TB_STOCK");
-		this->dgv_stck->DataSource = this->oDs;
-		this->dgv_stck->DataMember = "TB_STOCK";
-
-		//Affichage de la personne ajouter
-		this->list_console_stck->Items->Add("Stock ajouter, Id :" + this->txt_id_cl->Text + ", Nom =" + this->txt_nom_cl->Text + " OK");
-	}
 	private: System::Void aff_adr_cl_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		String^ val = this->txt_id_cl->Text;
@@ -805,6 +855,29 @@ namespace ProjetPOO {
 		this->oDs = this->oSvc->afficherAdresseClient(id, "TB_ADRESSE");
 		this->dgv_aff_adr_cl->DataSource = this->oDs;
 		this->dgv_aff_adr_cl->DataMember = "TB_ADRESSE";
+	}
+
+	private: System::Void btn_inserer_click_stck(System::Object^ sender, System::EventArgs^ e)
+	{
+		String^ textquantite = this->txt_quantite_produit_stck->Text;
+		int quantiteProduit = System::Convert::ToInt32(textquantite);
+		String^ textseuil = this->txt_seuil_reap_stck->Text;
+		int seuilReap = System::Convert::ToInt32(textseuil);
+		String^ textref = this->txt_ref_art->Text;
+		int ref = System::Convert::ToInt32(textref);
+		String^ textprixht = this->txt_prixht_art->Text;
+		int prixht = System::Convert::ToInt32(textprixht);
+		String^ texttaux = this->txt_taux_tva_art->Text;
+		int taux = System::Convert::ToInt32(texttaux);
+		
+		this->oSvc->ajouterUnStock(ref,this->txt_nom_art->Text,prixht,taux, quantiteProduit, seuilReap);
+
+		//Load data Stock
+		this->oSvc = gcnew NS_Comp_Svc::CLservices();
+		this->dgv_stck->Refresh();
+		this->oDs = this->oSvc->selectionnerTousLeStock("TB_STOCK");
+		this->dgv_stck->DataSource = this->oDs;
+		this->dgv_stck->DataMember = "TB_STOCK";
 	}
 
 };

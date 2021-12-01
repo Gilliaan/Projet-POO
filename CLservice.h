@@ -23,7 +23,7 @@ namespace NS_Comp_Svc
 		void modifierUnClient(System::String^, System::String^, System::String^, System::String^, System::String^, int);
 		void ajouterAdresseClient(System::String^, System::String^, int);
 		//Méthodes gestion Stock
-		void ajouterUnStock(int, int);
+		void ajouterUnStock(int, System::String^, double, double, int, int);
 		void supprimerUnStock(int);
 		void modifierUnStock(int, int, int);
 

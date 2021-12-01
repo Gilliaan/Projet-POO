@@ -82,10 +82,13 @@ void NS_Comp_Svc::CLservices::ajouterAdresseClient(System::String^ adrLivraison,
 	this->oCad->actionRows(sql);
 }
 //Méthodes gestion du stock
-void NS_Comp_Svc::CLservices::ajouterUnStock(int prodQuantite, int seuil) {
+void NS_Comp_Svc::CLservices::ajouterUnStock(int ref, System::String^ nom,double prixht,double tauxtva,int prodQuantite, int seuil) {
 	System::String^ sql;
 
-
+	this->oMappStock->setArtName(nom);
+	this->oMappStock->setArtPrixHt(prixht);
+	this->oMappStock->setArtRef(ref);
+	this->oMappStock->setArtTauxTva(tauxtva);
 	this->oMappStock->setStockQuantite(prodQuantite);
 	this->oMappStock->setSeuilReap(seuil);
 	sql = this->oMappStock->InsertStock();
@@ -96,7 +99,7 @@ void NS_Comp_Svc::CLservices::supprimerUnStock(int id)
 {
 	System::String^ sql;
 
-	this->oMappStock->setIdArticle(id);
+	this->oMappStock->setIdStock(id);
 	sql = this->oMappStock->DeleteStock();
 
 	this->oCad->actionRows(sql);
@@ -107,7 +110,7 @@ void NS_Comp_Svc::CLservices::modifierUnStock(int prodQuantite, int seuil, int i
 
 	this->oMappStock->setStockQuantite(prodQuantite);
 	this->oMappStock->setSeuilReap(seuil);
-	this->oMappStock->setIdArticle(id);
+	this->oMappStock->setIdStock(id);
 	sql = this->oMappClient->UpdateClient();
 
 	this->oCad->actionRows(sql);
