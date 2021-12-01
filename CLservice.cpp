@@ -114,7 +114,7 @@ void NS_Comp_Svc::CLservices::modifierUnStock(int ref, System::String^ nom ,doub
 	this->oMappStock->setStockQuantite(prodQuantite);
 	this->oMappStock->setSeuilReap(seuil);
 	this->oMappStock->setIdStock(id);
-	sql = this->oMappClient->UpdateClient();
+	sql = this->oMappStock->UpdateStock();
 
 	this->oCad->actionRows(sql);
 }

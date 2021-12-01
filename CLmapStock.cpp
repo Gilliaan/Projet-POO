@@ -14,14 +14,15 @@ System::String^ NS_Comp_Mappage::CLmapStock::DeleteStock(void)
 }
 System::String^ NS_Comp_Mappage::CLmapStock::UpdateStock(void)
 {
-	return "UPDATE TB_PEOPLE SET st_prod_quantite = '" 
-		+ this->st_prod_quantite + "', st_seuil_reap = '" 
+	return "UPDATE TB_STOCK SET st_prod_quantite = '"
+		+ this->st_prod_quantite + "', st_seuil_reap = '"
 		+ this->st_seuil_reap + "', art_ref = '"
-		+ this->art_ref +"', art_name = '"
-		+ this->art_name +"', art_prix_ht = '"
-		+ this->art_prix_ht +"', art_taux_tva = '"
-		+ this->art_taux_tva +"', WHERE st_id = '" + this->id_stock + "'; ";
+		+ this->art_ref + "', art_name = '"
+		+ this->art_name + "', art_prix_ht = '"
+		+ this->art_prix_ht + "', art_taux_tva = '"
+		+ this->art_taux_tva + "' WHERE st_id = '" + this->id_stock + "'; ";
 }
+
 void NS_Comp_Mappage::CLmapStock::setIdStock(int Id)
 {
 	this->id_stock = Id;
