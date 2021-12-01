@@ -6,6 +6,7 @@ NS_Comp_Svc::CLservices::CLservices(void)
 	this->oCad = gcnew NS_Comp_Data::CLcad();
 	this->oMappClient = gcnew NS_Comp_Mappage::CLmapClient();
 	this->oMappStock = gcnew NS_Comp_Mappage::CLmapStock();
+	this->oMappPERS = gcnew NS_Comp_Mappage::CLmapPERS();
 }
 //Sélectionner et afficher tous les clients de la table PEOPLE
 System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerTousLesClients(System::String^ type, System::String^ dataTableName)
@@ -22,6 +23,14 @@ System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerTousLeStock(System::
 	System::String^ sql;
 
 	sql = this->oMappStock->SelectStock();
+	return this->oCad->getRows(sql, dataTableName);
+}
+System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerToutLePersonnel(System::String^ PERS, System::String^ dataTableName)
+{
+	System::String^ sql;
+
+	this->oMappPERS->setType(PERS);
+	sql = this->oMappPERS->Select_PERS();
 	return this->oCad->getRows(sql, dataTableName);
 }
 //Sélectionner et afficher les adresses clients
@@ -81,7 +90,7 @@ void NS_Comp_Svc::CLservices::ajouterAdresseClient(System::String^ adrLivraison,
 	this->oCad->actionRows(sql);
 }
 //Méthodes gestion du stock
-void NS_Comp_Svc::CLservices::ajouterUnStock(int ref, System::String^ nom,double prixht,double tauxtva,int prodQuantite, int seuil) {
+void NS_Comp_Svc::CLservices::ajouterUnStock(int ref, System::String^ nom,int prixht,int tauxtva,int prodQuantite, int seuil) {
 	System::String^ sql;
 
 	this->oMappStock->setArtName(nom);
@@ -103,7 +112,7 @@ void NS_Comp_Svc::CLservices::supprimerUnStock(int id)
 
 	this->oCad->actionRows(sql);
 }
-void NS_Comp_Svc::CLservices::modifierUnStock(int ref, System::String^ nom ,double prixht,double tauxtva, int prodQuantite, int seuil, int id)
+void NS_Comp_Svc::CLservices::modifierUnStock(int ref, System::String^ nom ,int prixht,int tauxtva, int prodQuantite, int seuil, int id)
 {
 	System::String^ sql;
 
@@ -115,6 +124,48 @@ void NS_Comp_Svc::CLservices::modifierUnStock(int ref, System::String^ nom ,doub
 	this->oMappStock->setSeuilReap(seuil);
 	this->oMappStock->setIdStock(id);
 	sql = this->oMappStock->UpdateStock();
+
+	this->oCad->actionRows(sql);
+}
+//Méthodes gestion du personnel
+void NS_Comp_Svc::CLservices::ajouterUnPersonnel(System::String^ nom, System::String^ prenom, System::String^ genre, System::String^ emb_date, System::String^ sup_emb_date, System::String^ adresse, System::String^ sup_name)
+{
+	System::String^ sql;
+
+	this->oMappPERS->setNom_PERS(nom);
+	this->oMappPERS->setPrenom_PERS(prenom);
+	this->oMappPERS->setGender(genre);
+	this->oMappPERS->setEmbDate(emb_date);
+	this->oMappPERS->setSupEmbDate(sup_emb_date);
+	this->oMappPERS->setAdresse(adresse);
+	this->oMappPERS->setSupName(sup_name);
+	sql = this->oMappPERS->Insert_PERS();
+
+	this->oCad->actionRows(sql);
+}
+void NS_Comp_Svc::CLservices::suprimerUnPersonnel(int id)
+{
+	System::String^ sql;
+
+	this->oMappPERS->setId_PERS(id);
+	sql = this->oMappPERS->Delete_PERS();
+
+	this->oCad->actionRows(sql);
+
+}
+void NS_Comp_Svc::CLservices::modifierUnPersonnel(System::String^ nom, System::String^ prenom, System::String^ genre, System::String^ emb_date, System::String^ sup_emb_date, System::String^ adresse, System::String^ sup_name, int id)
+{
+	System::String^ sql;
+
+	this->oMappPERS->setNom_PERS(nom);
+	this->oMappPERS->setPrenom_PERS(prenom);
+	this->oMappPERS->setGender(genre);
+	this->oMappPERS->setEmbDate(emb_date);
+	this->oMappPERS->setSupEmbDate(sup_emb_date);
+	this->oMappPERS->setAdresse(adresse);
+	this->oMappPERS->setSupName(sup_name);
+	this->oMappPERS->setId_PERS(id);
+	sql = this->oMappPERS->Update_PERS();
 
 	this->oCad->actionRows(sql);
 }

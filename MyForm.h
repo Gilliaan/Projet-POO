@@ -38,14 +38,10 @@ namespace ProjetPOO {
 		}
 	private: System::Windows::Forms::DataGridView^ dgv_cl;
 	protected:
-
 	private: System::Windows::Forms::Button^ btn_inserer_cl;
 	private: System::Windows::Forms::Button^ btn_supprimer_cl;
-
-
 	private: System::Windows::Forms::Button^ btn_modifier_cl;
 	protected:
-
 	private: System::Windows::Forms::TextBox^ txt_id_cl;
 	private: System::Windows::Forms::TextBox^ txt_nom_cl;
 	private: System::Windows::Forms::TextBox^ txt_prenom_cl;
@@ -57,7 +53,6 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::Label^ lbl_nom_cl;
 	private: System::Windows::Forms::TabControl^ tabControl1;
 	private: System::Windows::Forms::TabPage^ tab_cl;
-
 	private: System::Windows::Forms::TabPage^ tabPage2;
 	private: System::Windows::Forms::TabPage^ tabPage3;
 	private: System::Windows::Forms::TabPage^ tabPage4;
@@ -78,25 +73,12 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::Label^ lbl_console_cl;
 	private: System::Windows::Forms::DataGridView^ dgv_stck;
 	private: System::Windows::Forms::Button^ btn_modifier_stck;
-
-
-
 	private: System::Windows::Forms::Button^ btn_supprimer_stck;
-
 	private: System::Windows::Forms::Button^ btn_inserer_stck;
 	private: System::Windows::Forms::TextBox^ txt_quantite_produit_stck;
-
-
 	private: System::Windows::Forms::TextBox^ txt_id_stck;
-
-
-
 	private: System::Windows::Forms::Label^ lbl_id_stck;
-
-
 	private: System::Windows::Forms::Label^ lbl_seuil_reap_stck;
-
-
 	private: System::Windows::Forms::Label^ lbl_stock_quantite_stck;
 	private: System::Windows::Forms::TextBox^ txt_seuil_reap_stck;
 	private: System::Windows::Forms::Label^ lbl_console_stck;
@@ -113,6 +95,31 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::TextBox^ txt_prixht_art;
 	private: System::Windows::Forms::TextBox^ txt_nom_art;
 	private: System::Windows::Forms::TextBox^ txt_ref_art;
+	//Gestion Personnel
+	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::DataGridView^ dgv_PER;
+	private: System::Windows::Forms::Button^ button3;
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::ListBox^ listBox2;
+	private: System::Windows::Forms::Label^ label15;
+	private: System::Windows::Forms::TextBox^ genre_personnel;
+	private: System::Windows::Forms::Label^ label14;
+	private: System::Windows::Forms::Label^ label13;
+	private: System::Windows::Forms::TextBox^ prenom_personnel;
+	private: System::Windows::Forms::Label^ label12;
+	private: System::Windows::Forms::TextBox^ nom_personnel;
+	private: System::Windows::Forms::Label^ label11;
+	private: System::Windows::Forms::TextBox^ Id_personnel;
+	private: System::Windows::Forms::TextBox^ txt_type_pers;
+	private: System::Windows::Forms::Label^ label19;
+	private: System::Windows::Forms::TextBox^ date_embauche_supérieur;
+	private: System::Windows::Forms::TextBox^ nom_supérieur;
+	private: System::Windows::Forms::TextBox^ date_embauche_personnel;
+	private: System::Windows::Forms::TextBox^ adresse_personnel;
+	private: System::Windows::Forms::Label^ label18;
+	private: System::Windows::Forms::Label^ label17;
+	private: System::Windows::Forms::Label^ label16;
+	private: System::Windows::Forms::Label^ label20;
 
 
 	protected:
@@ -160,6 +167,30 @@ namespace ProjetPOO {
 			this->txt_type_cl = (gcnew System::Windows::Forms::TextBox());
 			this->list_console_cl = (gcnew System::Windows::Forms::ListBox());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
+			this->label20 = (gcnew System::Windows::Forms::Label());
+			this->txt_type_pers = (gcnew System::Windows::Forms::TextBox());
+			this->label19 = (gcnew System::Windows::Forms::Label());
+			this->date_embauche_supérieur = (gcnew System::Windows::Forms::TextBox());
+			this->nom_supérieur = (gcnew System::Windows::Forms::TextBox());
+			this->date_embauche_personnel = (gcnew System::Windows::Forms::TextBox());
+			this->adresse_personnel = (gcnew System::Windows::Forms::TextBox());
+			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->label17 = (gcnew System::Windows::Forms::Label());
+			this->label16 = (gcnew System::Windows::Forms::Label());
+			this->label15 = (gcnew System::Windows::Forms::Label());
+			this->genre_personnel = (gcnew System::Windows::Forms::TextBox());
+			this->label14 = (gcnew System::Windows::Forms::Label());
+			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->prenom_personnel = (gcnew System::Windows::Forms::TextBox());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->nom_personnel = (gcnew System::Windows::Forms::TextBox());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->Id_personnel = (gcnew System::Windows::Forms::TextBox());
+			this->listBox2 = (gcnew System::Windows::Forms::ListBox());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->dgv_PER = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
 			this->txt_taux_tva_art = (gcnew System::Windows::Forms::TextBox());
@@ -187,6 +218,8 @@ namespace ProjetPOO {
 			this->tabControl1->SuspendLayout();
 			this->tab_cl->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_aff_adr_cl))->BeginInit();
+			this->tabPage2->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_PER))->BeginInit();
 			this->tabPage4->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_stck))->BeginInit();
 			this->SuspendLayout();
@@ -507,19 +540,264 @@ namespace ProjetPOO {
 			// 
 			// tabPage2
 			// 
+			this->tabPage2->Controls->Add(this->label20);
+			this->tabPage2->Controls->Add(this->txt_type_pers);
+			this->tabPage2->Controls->Add(this->label19);
+			this->tabPage2->Controls->Add(this->date_embauche_supérieur);
+			this->tabPage2->Controls->Add(this->nom_supérieur);
+			this->tabPage2->Controls->Add(this->date_embauche_personnel);
+			this->tabPage2->Controls->Add(this->adresse_personnel);
+			this->tabPage2->Controls->Add(this->label18);
+			this->tabPage2->Controls->Add(this->label17);
+			this->tabPage2->Controls->Add(this->label16);
+			this->tabPage2->Controls->Add(this->label15);
+			this->tabPage2->Controls->Add(this->genre_personnel);
+			this->tabPage2->Controls->Add(this->label14);
+			this->tabPage2->Controls->Add(this->label13);
+			this->tabPage2->Controls->Add(this->prenom_personnel);
+			this->tabPage2->Controls->Add(this->label12);
+			this->tabPage2->Controls->Add(this->nom_personnel);
+			this->tabPage2->Controls->Add(this->label11);
+			this->tabPage2->Controls->Add(this->Id_personnel);
+			this->tabPage2->Controls->Add(this->listBox2);
+			this->tabPage2->Controls->Add(this->button3);
+			this->tabPage2->Controls->Add(this->button1);
+			this->tabPage2->Controls->Add(this->button2);
+			this->tabPage2->Controls->Add(this->dgv_PER);
 			this->tabPage2->Location = System::Drawing::Point(4, 25);
+			this->tabPage2->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->tabPage2->Name = L"tabPage2";
-			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage2->Padding = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->tabPage2->Size = System::Drawing::Size(1182, 553);
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"Personnel";
 			this->tabPage2->UseVisualStyleBackColor = true;
 			// 
+			// label20
+			// 
+			this->label20->AutoSize = true;
+			this->label20->Location = System::Drawing::Point(14, 589);
+			this->label20->Name = L"label20";
+			this->label20->Size = System::Drawing::Size(59, 17);
+			this->label20->TabIndex = 29;
+			this->label20->Text = L"Console";
+			// 
+			// txt_type_pers
+			// 
+			this->txt_type_pers->Location = System::Drawing::Point(18, 519);
+			this->txt_type_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->txt_type_pers->Name = L"txt_type_pers";
+			this->txt_type_pers->Size = System::Drawing::Size(141, 22);
+			this->txt_type_pers->TabIndex = 28;
+			this->txt_type_pers->Text = L"Personnel";
+			this->txt_type_pers->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			// 
+			// label19
+			// 
+			this->label19->AutoSize = true;
+			this->label19->Location = System::Drawing::Point(14, 494);
+			this->label19->Name = L"label19";
+			this->label19->Size = System::Drawing::Size(124, 17);
+			this->label19->TabIndex = 27;
+			this->label19->Text = L"Type de personne";
+			// 
+			// date_embauche_supérieur
+			// 
+			this->date_embauche_supérieur->Location = System::Drawing::Point(464, 448);
+			this->date_embauche_supérieur->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->date_embauche_supérieur->Name = L"date_embauche_supérieur";
+			this->date_embauche_supérieur->Size = System::Drawing::Size(141, 22);
+			this->date_embauche_supérieur->TabIndex = 26;
+			// 
+			// nom_supérieur
+			// 
+			this->nom_supérieur->Location = System::Drawing::Point(464, 380);
+			this->nom_supérieur->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->nom_supérieur->Name = L"nom_supérieur";
+			this->nom_supérieur->Size = System::Drawing::Size(141, 22);
+			this->nom_supérieur->TabIndex = 25;
+			// 
+			// date_embauche_personnel
+			// 
+			this->date_embauche_personnel->Location = System::Drawing::Point(189, 448);
+			this->date_embauche_personnel->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->date_embauche_personnel->Name = L"date_embauche_personnel";
+			this->date_embauche_personnel->Size = System::Drawing::Size(141, 22);
+			this->date_embauche_personnel->TabIndex = 24;
+			// 
+			// adresse_personnel
+			// 
+			this->adresse_personnel->Location = System::Drawing::Point(189, 380);
+			this->adresse_personnel->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->adresse_personnel->Name = L"adresse_personnel";
+			this->adresse_personnel->Size = System::Drawing::Size(141, 22);
+			this->adresse_personnel->TabIndex = 23;
+			// 
+			// label18
+			// 
+			this->label18->AutoSize = true;
+			this->label18->Location = System::Drawing::Point(460, 423);
+			this->label18->Name = L"label18";
+			this->label18->Size = System::Drawing::Size(183, 17);
+			this->label18->TabIndex = 22;
+			this->label18->Text = L"Date d\'embauche supérieur";
+			// 
+			// label17
+			// 
+			this->label17->AutoSize = true;
+			this->label17->Location = System::Drawing::Point(460, 355);
+			this->label17->Name = L"label17";
+			this->label17->Size = System::Drawing::Size(121, 17);
+			this->label17->TabIndex = 21;
+			this->label17->Text = L"Nom du supérieur";
+			// 
+			// label16
+			// 
+			this->label16->AutoSize = true;
+			this->label16->Location = System::Drawing::Point(185, 423);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(119, 17);
+			this->label16->TabIndex = 20;
+			this->label16->Text = L"Date d\'embauche";
+			// 
+			// label15
+			// 
+			this->label15->AutoSize = true;
+			this->label15->Location = System::Drawing::Point(185, 355);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(60, 17);
+			this->label15->TabIndex = 19;
+			this->label15->Text = L"Adresse";
+			// 
+			// genre_personnel
+			// 
+			this->genre_personnel->Location = System::Drawing::Point(701, 284);
+			this->genre_personnel->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->genre_personnel->Name = L"genre_personnel";
+			this->genre_personnel->Size = System::Drawing::Size(141, 22);
+			this->genre_personnel->TabIndex = 15;
+			// 
+			// label14
+			// 
+			this->label14->AutoSize = true;
+			this->label14->Location = System::Drawing::Point(697, 259);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(48, 17);
+			this->label14->TabIndex = 16;
+			this->label14->Text = L"Genre";
+			// 
+			// label13
+			// 
+			this->label13->AutoSize = true;
+			this->label13->Location = System::Drawing::Point(496, 259);
+			this->label13->Name = L"label13";
+			this->label13->Size = System::Drawing::Size(57, 17);
+			this->label13->TabIndex = 12;
+			this->label13->Text = L"Prenom";
+			// 
+			// prenom_personnel
+			// 
+			this->prenom_personnel->Location = System::Drawing::Point(500, 284);
+			this->prenom_personnel->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->prenom_personnel->Name = L"prenom_personnel";
+			this->prenom_personnel->Size = System::Drawing::Size(141, 22);
+			this->prenom_personnel->TabIndex = 12;
+			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->Location = System::Drawing::Point(318, 259);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(37, 17);
+			this->label12->TabIndex = 12;
+			this->label12->Text = L"Nom";
+			// 
+			// nom_personnel
+			// 
+			this->nom_personnel->Location = System::Drawing::Point(322, 284);
+			this->nom_personnel->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->nom_personnel->Name = L"nom_personnel";
+			this->nom_personnel->Size = System::Drawing::Size(141, 22);
+			this->nom_personnel->TabIndex = 12;
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Location = System::Drawing::Point(185, 259);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(19, 17);
+			this->label11->TabIndex = 12;
+			this->label11->Text = L"Id";
+			// 
+			// Id_personnel
+			// 
+			this->Id_personnel->Location = System::Drawing::Point(189, 284);
+			this->Id_personnel->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->Id_personnel->Name = L"Id_personnel";
+			this->Id_personnel->Size = System::Drawing::Size(47, 22);
+			this->Id_personnel->TabIndex = 12;
+			// 
+			// listBox2
+			// 
+			this->listBox2->FormattingEnabled = true;
+			this->listBox2->ItemHeight = 16;
+			this->listBox2->Location = System::Drawing::Point(18, 613);
+			this->listBox2->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
+			this->listBox2->Name = L"listBox2";
+			this->listBox2->Size = System::Drawing::Size(915, 52);
+			this->listBox2->TabIndex = 12;
+			// 
+			// button3
+			// 
+			this->button3->Location = System::Drawing::Point(18, 404);
+			this->button3->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(112, 58);
+			this->button3->TabIndex = 4;
+			this->button3->Text = L"DEL";
+			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button_delete2_Click);
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(18, 336);
+			this->button1->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(112, 58);
+			this->button1->TabIndex = 3;
+			this->button1->Text = L"MODIFIER";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button_update2_Click);
+			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(18, 268);
+			this->button2->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(112, 58);
+			this->button2->TabIndex = 2;
+			this->button2->Text = L"INSÉRER";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button_insert2_Click);
+			// 
+			// dgv_PER
+			// 
+			this->dgv_PER->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dgv_PER->Location = System::Drawing::Point(18, 22);
+			this->dgv_PER->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
+			this->dgv_PER->Name = L"dgv_PER";
+			this->dgv_PER->RowHeadersWidth = 51;
+			this->dgv_PER->RowTemplate->Height = 24;
+			this->dgv_PER->Size = System::Drawing::Size(1143, 196);
+			this->dgv_PER->TabIndex = 0;
+			this->dgv_PER->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dgv_PER_CellContentClick);
+			// 
 			// tabPage3
 			// 
 			this->tabPage3->Location = System::Drawing::Point(4, 25);
+			this->tabPage3->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->tabPage3->Name = L"tabPage3";
-			this->tabPage3->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage3->Padding = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->tabPage3->Size = System::Drawing::Size(1182, 553);
 			this->tabPage3->TabIndex = 2;
 			this->tabPage3->Text = L"Commandes";
@@ -548,8 +826,9 @@ namespace ProjetPOO {
 			this->tabPage4->Controls->Add(this->btn_inserer_stck);
 			this->tabPage4->Controls->Add(this->dgv_stck);
 			this->tabPage4->Location = System::Drawing::Point(4, 25);
+			this->tabPage4->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->tabPage4->Name = L"tabPage4";
-			this->tabPage4->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage4->Padding = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->tabPage4->Size = System::Drawing::Size(1182, 553);
 			this->tabPage4->TabIndex = 3;
 			this->tabPage4->Text = L"Stock";
@@ -729,8 +1008,9 @@ namespace ProjetPOO {
 			// tabPage5
 			// 
 			this->tabPage5->Location = System::Drawing::Point(4, 25);
+			this->tabPage5->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->tabPage5->Name = L"tabPage5";
-			this->tabPage5->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage5->Padding = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->tabPage5->Size = System::Drawing::Size(1182, 553);
 			this->tabPage5->TabIndex = 4;
 			this->tabPage5->Text = L"Statistiques";
@@ -740,10 +1020,10 @@ namespace ProjetPOO {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::SystemColors::HotTrack;
+			this->BackColor = System::Drawing::SystemColors::ControlText;
 			this->ClientSize = System::Drawing::Size(1262, 626);
 			this->Controls->Add(this->tabControl1);
-			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedToolWindow;
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
@@ -754,6 +1034,9 @@ namespace ProjetPOO {
 			this->tab_cl->ResumeLayout(false);
 			this->tab_cl->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_aff_adr_cl))->EndInit();
+			this->tabPage2->ResumeLayout(false);
+			this->tabPage2->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_PER))->EndInit();
 			this->tabPage4->ResumeLayout(false);
 			this->tabPage4->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_stck))->EndInit();
@@ -777,6 +1060,14 @@ namespace ProjetPOO {
 		this->oDs = this->oSvc->selectionnerTousLeStock("TB_STOCK");
 		this->dgv_stck->DataSource = this->oDs;
 		this->dgv_stck->DataMember = "TB_STOCK";
+
+		//Load data personnel
+		this->oSvc = gcnew NS_Comp_Svc::CLservices();
+		this->oSvc = gcnew NS_Comp_Svc::CLservices();
+		this->dgv_PER->Refresh();
+		this->oDs = this->oSvc->selectionnerToutLePersonnel(this->txt_type_pers->Text, "TB_PEOPLE");
+		this->dgv_PER->DataSource = this->oDs;
+		this->dgv_PER->DataMember = "TB_PEOPLE";
 	}
 
 	//Click sur le boutton Insérer de l'onglet Clients
@@ -870,9 +1161,9 @@ namespace ProjetPOO {
 		String^ textref = this->txt_ref_art->Text;
 		int ref = System::Convert::ToInt32(textref);
 		String^ textprixht = this->txt_prixht_art->Text;
-		double prixht = System::Convert::ToDouble(textprixht);
+		int prixht = System::Convert::ToInt32(textprixht);
 		String^ texttaux = this->txt_taux_tva_art->Text;
-		double taux = System::Convert::ToDouble(texttaux);
+		int taux = System::Convert::ToInt32(texttaux);
 		
 		this->oSvc->ajouterUnStock(ref, this->txt_nom_art->Text, prixht, taux, quantiteProduit, seuilReap);
 
@@ -906,9 +1197,9 @@ namespace ProjetPOO {
 		String^ textref = this->txt_ref_art->Text;
 		int ref = System::Convert::ToInt32(textref);
 		String^ textprixht = this->txt_prixht_art->Text;
-		double prixht = System::Convert::ToDouble(textprixht);
+		int prixht = System::Convert::ToInt32(textprixht);
 		String^ texttaux = this->txt_taux_tva_art->Text;
-		double taux = System::Convert::ToDouble(texttaux);
+		int taux = System::Convert::ToInt32(texttaux);
 		String^ txtid = this->txt_ref_art->Text;
 		int id = System::Convert::ToInt32(txtid);
 
@@ -942,5 +1233,64 @@ namespace ProjetPOO {
 		this->txt_quantite_produit_stck->Text = rowv->Cells["st_prod_quantite"]->Value->ToString();
 		this->txt_seuil_reap_stck->Text = rowv->Cells["st_seuil_reap"]->Value->ToString();
 	}
+	private: System::Void button_update2_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ textVal = this->Id_personnel->Text;
+		int id_people = System::Convert::ToInt32(textVal);
+		this->oSvc->modifierUnPersonnel(this->nom_personnel->Text, this->prenom_personnel->Text,this->genre_personnel->Text,this->date_embauche_personnel->Text,this->date_embauche_supérieur->Text,this->adresse_personnel->Text,this->nom_supérieur->Text, id_people);
+
+		//Load data
+		this->oSvc = gcnew NS_Comp_Svc::CLservices();
+		this->dgv_PER->Refresh();
+		this->oDs = this->oSvc->selectionnerToutLePersonnel(this->txt_type_pers->Text, "TB_PEOPLE");
+		this->dgv_PER->DataSource = this->oDs;
+		this->dgv_PER->DataMember = "TB_PEOPLE";
+
+		//Affichage de la personne modifier
+		this->listBox2->Items->Add("Personne modifiée, Id :" + this->Id_personnel->Text + ", Nom =" + this->nom_personnel->Text + " OK");
+	}
+	private: System::Void button_insert2_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		this->oSvc->ajouterUnPersonnel(this->nom_personnel->Text, this->prenom_personnel->Text, this->genre_personnel->Text, this->date_embauche_personnel->Text, this->date_embauche_supérieur->Text, this->adresse_personnel->Text, this->nom_supérieur->Text);
+		//Load data
+		this->oSvc = gcnew NS_Comp_Svc::CLservices();
+		this->dgv_PER->Refresh();
+		this->oDs = this->oSvc->selectionnerToutLePersonnel(this->txt_type_pers->Text, "TB_PEOPLE");
+		this->dgv_PER->DataSource = this->oDs;
+		this->dgv_PER->DataMember = "TB_PEOPLE";
+
+		//Affichage de la personne ajouter
+		this->listBox2->Items->Add("Personne ajoutée, Id :" + this->Id_personnel->Text + ", Nom =" + this->nom_personnel->Text + " OK");
+
+	}
+	private: System::Void button_delete2_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ textVal = this->Id_personnel->Text;
+		int id_people = System::Convert::ToInt32(textVal);
+		this->oSvc->suprimerUnPersonnel(id_people);
+
+		//Load data
+		this->oSvc = gcnew NS_Comp_Svc::CLservices();
+		this->dgv_PER->Refresh();
+		this->oDs = this->oSvc->selectionnerToutLePersonnel(this->txt_type_pers->Text, "TB_PEOPLE");
+		this->dgv_PER->DataSource = this->oDs;
+		this->dgv_PER->DataMember = "TB_PEOPLE";
+
+		//Affichage de la personne supprimer
+		this->listBox2->Items->Add("Personne suprimée, Id :" + this->Id_personnel->Text + ", Nom =" + this->nom_personnel->Text + " OK");
+	}
+
+	private: System::Void dgv_PER_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+		int rowIndex = e->RowIndex;
+		DataGridViewRow^ rowv = dgv_PER->Rows[rowIndex];
+
+		this->Id_personnel->Text = rowv->Cells["id_ppl"]->Value->ToString();
+		this->genre_personnel->Text = rowv->Cells["ppl_gender"]->Value->ToString();
+		this->nom_personnel->Text = rowv->Cells["ppl_nom"]->Value->ToString();
+		this->prenom_personnel->Text = rowv->Cells["ppl_prenom"]->Value->ToString();
+		this->date_embauche_personnel->Text = rowv->Cells["p_emb_date"]->Value->ToString();
+		this->adresse_personnel->Text = rowv->Cells["p_adresse"]->Value->ToString();
+		this->nom_supérieur->Text = rowv->Cells["p_sup_name"]->Value->ToString();
+		this->date_embauche_supérieur->Text = rowv->Cells["p_sup_emb_date"]->Value->ToString();
+	};
+
 };
 }
