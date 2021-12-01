@@ -23,6 +23,7 @@ namespace NS_Comp_Svc
 		System::Data::DataSet^ selectionnerToutLePersonnel(System::String^, System::String^);
 		System::Data::DataSet^ selectionnerToutesLesCommandes(System::String^);
 		System::Data::DataSet^ afficherAdresseClient(int ,System::String^);
+		System::Data::DataSet^ afficherPaiement(System::String^);
 		//Méthodes gestion Clients
 		void ajouterUnClient(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^);
 		void supprimerUnClient(int);

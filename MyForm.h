@@ -201,6 +201,15 @@ private: System::Windows::Forms::Label^ label_console_comm;
 private: System::Windows::Forms::ListBox^ listBox_console_comm;
 private: System::Windows::Forms::Button^ btn_delete;
 	   private: System::Windows::Forms::TabPage^ tabPage3_comm;
+private: System::Windows::Forms::Button^ btn_aff_paie;
+
+private: System::Windows::Forms::Button^ button2;
+private: System::Windows::Forms::Button^ button1;
+private: System::Windows::Forms::Label^ lbl_moyen_paiement;
+private: System::Windows::Forms::Label^ lbl_date_paiement;
+private: System::Windows::Forms::TextBox^ txt_moy_paie;
+private: System::Windows::Forms::TextBox^ txt_date_paie;
+private: System::Windows::Forms::DataGridView^ dgv_paie;
 
 
 	protected:
@@ -273,6 +282,14 @@ private: System::Windows::Forms::Button^ btn_delete;
 			this->btn_insert_pers = (gcnew System::Windows::Forms::Button());
 			this->dgv_pers = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
+			this->btn_aff_paie = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->lbl_moyen_paiement = (gcnew System::Windows::Forms::Label());
+			this->lbl_date_paiement = (gcnew System::Windows::Forms::Label());
+			this->txt_moy_paie = (gcnew System::Windows::Forms::TextBox());
+			this->txt_date_paie = (gcnew System::Windows::Forms::TextBox());
+			this->dgv_paie = (gcnew System::Windows::Forms::DataGridView());
 			this->label_console_comm = (gcnew System::Windows::Forms::Label());
 			this->listBox_console_comm = (gcnew System::Windows::Forms::ListBox());
 			this->label_date_prevu_comm = (gcnew System::Windows::Forms::Label());
@@ -327,6 +344,7 @@ private: System::Windows::Forms::Button^ btn_delete;
 			this->tabPage_pers->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_pers))->BeginInit();
 			this->tabPage3->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_paie))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_comm))->BeginInit();
 			this->tabPage_stck->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_stck))->BeginInit();
@@ -902,6 +920,14 @@ private: System::Windows::Forms::Button^ btn_delete;
 			// 
 			// tabPage3
 			// 
+			this->tabPage3->Controls->Add(this->btn_aff_paie);
+			this->tabPage3->Controls->Add(this->button2);
+			this->tabPage3->Controls->Add(this->button1);
+			this->tabPage3->Controls->Add(this->lbl_moyen_paiement);
+			this->tabPage3->Controls->Add(this->lbl_date_paiement);
+			this->tabPage3->Controls->Add(this->txt_moy_paie);
+			this->tabPage3->Controls->Add(this->txt_date_paie);
+			this->tabPage3->Controls->Add(this->dgv_paie);
 			this->tabPage3->Controls->Add(this->label_console_comm);
 			this->tabPage3->Controls->Add(this->listBox_console_comm);
 			this->tabPage3->Controls->Add(this->label_date_prevu_comm);
@@ -935,6 +961,73 @@ private: System::Windows::Forms::Button^ btn_delete;
 			this->tabPage3->Text = L"Commandes";
 			this->tabPage3->UseVisualStyleBackColor = true;
 			// 
+			// btn_aff_paie
+			// 
+			this->btn_aff_paie->Location = System::Drawing::Point(650, 181);
+			this->btn_aff_paie->Name = L"btn_aff_paie";
+			this->btn_aff_paie->Size = System::Drawing::Size(163, 48);
+			this->btn_aff_paie->TabIndex = 14;
+			this->btn_aff_paie->Text = L"AFFICHER PAIEMENT";
+			this->btn_aff_paie->UseVisualStyleBackColor = true;
+			this->btn_aff_paie->Click += gcnew System::EventHandler(this, &MyForm::btn_aff_paie_Click);
+			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(824, 181);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(163, 48);
+			this->button2->TabIndex = 13;
+			this->button2->UseVisualStyleBackColor = true;
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(993, 181);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(163, 48);
+			this->button1->TabIndex = 12;
+			this->button1->UseVisualStyleBackColor = true;
+			// 
+			// lbl_moyen_paiement
+			// 
+			this->lbl_moyen_paiement->AutoSize = true;
+			this->lbl_moyen_paiement->Location = System::Drawing::Point(647, 432);
+			this->lbl_moyen_paiement->Name = L"lbl_moyen_paiement";
+			this->lbl_moyen_paiement->Size = System::Drawing::Size(132, 17);
+			this->lbl_moyen_paiement->TabIndex = 11;
+			this->lbl_moyen_paiement->Text = L"Moyen de paiement";
+			// 
+			// lbl_date_paiement
+			// 
+			this->lbl_date_paiement->AutoSize = true;
+			this->lbl_date_paiement->Location = System::Drawing::Point(647, 387);
+			this->lbl_date_paiement->Name = L"lbl_date_paiement";
+			this->lbl_date_paiement->Size = System::Drawing::Size(112, 17);
+			this->lbl_date_paiement->TabIndex = 10;
+			this->lbl_date_paiement->Text = L"Date de paiment";
+			// 
+			// txt_moy_paie
+			// 
+			this->txt_moy_paie->Location = System::Drawing::Point(650, 452);
+			this->txt_moy_paie->Name = L"txt_moy_paie";
+			this->txt_moy_paie->Size = System::Drawing::Size(99, 22);
+			this->txt_moy_paie->TabIndex = 9;
+			// 
+			// txt_date_paie
+			// 
+			this->txt_date_paie->Location = System::Drawing::Point(650, 407);
+			this->txt_date_paie->Name = L"txt_date_paie";
+			this->txt_date_paie->Size = System::Drawing::Size(99, 22);
+			this->txt_date_paie->TabIndex = 8;
+			// 
+			// dgv_paie
+			// 
+			this->dgv_paie->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dgv_paie->Location = System::Drawing::Point(650, 240);
+			this->dgv_paie->Name = L"dgv_paie";
+			this->dgv_paie->RowHeadersWidth = 51;
+			this->dgv_paie->Size = System::Drawing::Size(506, 129);
+			this->dgv_paie->TabIndex = 7;
+			// 
 			// label_console_comm
 			// 
 			this->label_console_comm->AutoSize = true;
@@ -950,13 +1043,13 @@ private: System::Windows::Forms::Button^ btn_delete;
 			this->listBox_console_comm->ItemHeight = 16;
 			this->listBox_console_comm->Location = System::Drawing::Point(23, 377);
 			this->listBox_console_comm->Name = L"listBox_console_comm";
-			this->listBox_console_comm->Size = System::Drawing::Size(592, 52);
+			this->listBox_console_comm->Size = System::Drawing::Size(605, 52);
 			this->listBox_console_comm->TabIndex = 5;
 			// 
 			// label_date_prevu_comm
 			// 
 			this->label_date_prevu_comm->AutoSize = true;
-			this->label_date_prevu_comm->Location = System::Drawing::Point(184, 217);
+			this->label_date_prevu_comm->Location = System::Drawing::Point(164, 217);
 			this->label_date_prevu_comm->Name = L"label_date_prevu_comm";
 			this->label_date_prevu_comm->Size = System::Drawing::Size(84, 17);
 			this->label_date_prevu_comm->TabIndex = 4;
@@ -965,7 +1058,7 @@ private: System::Windows::Forms::Button^ btn_delete;
 			// label_id_comm
 			// 
 			this->label_id_comm->AutoSize = true;
-			this->label_id_comm->Location = System::Drawing::Point(162, 332);
+			this->label_id_comm->Location = System::Drawing::Point(142, 332);
 			this->label_id_comm->Name = L"label_id_comm";
 			this->label_id_comm->Size = System::Drawing::Size(94, 17);
 			this->label_id_comm->TabIndex = 4;
@@ -974,7 +1067,7 @@ private: System::Windows::Forms::Button^ btn_delete;
 			// label_id_paiement_comm
 			// 
 			this->label_id_paiement_comm->AutoSize = true;
-			this->label_id_paiement_comm->Location = System::Drawing::Point(461, 334);
+			this->label_id_paiement_comm->Location = System::Drawing::Point(441, 273);
 			this->label_id_paiement_comm->Name = L"label_id_paiement_comm";
 			this->label_id_paiement_comm->Size = System::Drawing::Size(83, 17);
 			this->label_id_paiement_comm->TabIndex = 4;
@@ -983,7 +1076,7 @@ private: System::Windows::Forms::Button^ btn_delete;
 			// label_ttc_comm
 			// 
 			this->label_ttc_comm->AutoSize = true;
-			this->label_ttc_comm->Location = System::Drawing::Point(477, 212);
+			this->label_ttc_comm->Location = System::Drawing::Point(457, 212);
 			this->label_ttc_comm->Name = L"label_ttc_comm";
 			this->label_ttc_comm->Size = System::Drawing::Size(66, 17);
 			this->label_ttc_comm->TabIndex = 4;
@@ -992,7 +1085,7 @@ private: System::Windows::Forms::Button^ btn_delete;
 			// label_tva_comm
 			// 
 			this->label_tva_comm->AutoSize = true;
-			this->label_tva_comm->Location = System::Drawing::Point(477, 180);
+			this->label_tva_comm->Location = System::Drawing::Point(457, 180);
 			this->label_tva_comm->Name = L"label_tva_comm";
 			this->label_tva_comm->Size = System::Drawing::Size(66, 17);
 			this->label_tva_comm->TabIndex = 4;
@@ -1001,7 +1094,7 @@ private: System::Windows::Forms::Button^ btn_delete;
 			// label_ref_comm
 			// 
 			this->label_ref_comm->AutoSize = true;
-			this->label_ref_comm->Location = System::Drawing::Point(197, 178);
+			this->label_ref_comm->Location = System::Drawing::Point(177, 178);
 			this->label_ref_comm->Name = L"label_ref_comm";
 			this->label_ref_comm->Size = System::Drawing::Size(69, 17);
 			this->label_ref_comm->TabIndex = 4;
@@ -1010,7 +1103,7 @@ private: System::Windows::Forms::Button^ btn_delete;
 			// label_ht_comm
 			// 
 			this->label_ht_comm->AutoSize = true;
-			this->label_ht_comm->Location = System::Drawing::Point(477, 245);
+			this->label_ht_comm->Location = System::Drawing::Point(457, 245);
 			this->label_ht_comm->Name = L"label_ht_comm";
 			this->label_ht_comm->Size = System::Drawing::Size(58, 17);
 			this->label_ht_comm->TabIndex = 4;
@@ -1019,7 +1112,7 @@ private: System::Windows::Forms::Button^ btn_delete;
 			// label_article_comm
 			// 
 			this->label_article_comm->AutoSize = true;
-			this->label_article_comm->Location = System::Drawing::Point(184, 287);
+			this->label_article_comm->Location = System::Drawing::Point(164, 287);
 			this->label_article_comm->Name = L"label_article_comm";
 			this->label_article_comm->Size = System::Drawing::Size(77, 17);
 			this->label_article_comm->TabIndex = 4;
@@ -1028,7 +1121,7 @@ private: System::Windows::Forms::Button^ btn_delete;
 			// label_date_em_comm
 			// 
 			this->label_date_em_comm->AutoSize = true;
-			this->label_date_em_comm->Location = System::Drawing::Point(162, 250);
+			this->label_date_em_comm->Location = System::Drawing::Point(142, 250);
 			this->label_date_em_comm->Name = L"label_date_em_comm";
 			this->label_date_em_comm->Size = System::Drawing::Size(106, 17);
 			this->label_date_em_comm->TabIndex = 4;
@@ -1066,63 +1159,63 @@ private: System::Windows::Forms::Button^ btn_delete;
 			// 
 			// txt_article_comm
 			// 
-			this->txt_article_comm->Location = System::Drawing::Point(272, 282);
+			this->txt_article_comm->Location = System::Drawing::Point(252, 282);
 			this->txt_article_comm->Name = L"txt_article_comm";
 			this->txt_article_comm->Size = System::Drawing::Size(183, 22);
 			this->txt_article_comm->TabIndex = 2;
 			// 
 			// txt_ht_comm
 			// 
-			this->txt_ht_comm->Location = System::Drawing::Point(549, 240);
+			this->txt_ht_comm->Location = System::Drawing::Point(529, 240);
 			this->txt_ht_comm->Name = L"txt_ht_comm";
-			this->txt_ht_comm->Size = System::Drawing::Size(183, 22);
+			this->txt_ht_comm->Size = System::Drawing::Size(99, 22);
 			this->txt_ht_comm->TabIndex = 2;
 			// 
 			// txt_tva_comm
 			// 
-			this->txt_tva_comm->Location = System::Drawing::Point(549, 178);
+			this->txt_tva_comm->Location = System::Drawing::Point(529, 178);
 			this->txt_tva_comm->Name = L"txt_tva_comm";
-			this->txt_tva_comm->Size = System::Drawing::Size(183, 22);
+			this->txt_tva_comm->Size = System::Drawing::Size(99, 22);
 			this->txt_tva_comm->TabIndex = 2;
 			// 
 			// txt_ref_comm
 			// 
-			this->txt_ref_comm->Location = System::Drawing::Point(272, 175);
+			this->txt_ref_comm->Location = System::Drawing::Point(252, 175);
 			this->txt_ref_comm->Name = L"txt_ref_comm";
 			this->txt_ref_comm->Size = System::Drawing::Size(183, 22);
 			this->txt_ref_comm->TabIndex = 2;
 			// 
 			// txt_date_em_comm
 			// 
-			this->txt_date_em_comm->Location = System::Drawing::Point(272, 245);
+			this->txt_date_em_comm->Location = System::Drawing::Point(252, 245);
 			this->txt_date_em_comm->Name = L"txt_date_em_comm";
 			this->txt_date_em_comm->Size = System::Drawing::Size(183, 22);
 			this->txt_date_em_comm->TabIndex = 2;
 			// 
 			// txt_id_comm
 			// 
-			this->txt_id_comm->Location = System::Drawing::Point(272, 327);
+			this->txt_id_comm->Location = System::Drawing::Point(252, 327);
 			this->txt_id_comm->Name = L"txt_id_comm";
 			this->txt_id_comm->Size = System::Drawing::Size(183, 22);
 			this->txt_id_comm->TabIndex = 2;
 			// 
 			// txt_id_paiement_comm
 			// 
-			this->txt_id_paiement_comm->Location = System::Drawing::Point(549, 329);
+			this->txt_id_paiement_comm->Location = System::Drawing::Point(529, 268);
 			this->txt_id_paiement_comm->Name = L"txt_id_paiement_comm";
-			this->txt_id_paiement_comm->Size = System::Drawing::Size(183, 22);
+			this->txt_id_paiement_comm->Size = System::Drawing::Size(99, 22);
 			this->txt_id_paiement_comm->TabIndex = 2;
 			// 
 			// txt_ttc_comm
 			// 
-			this->txt_ttc_comm->Location = System::Drawing::Point(549, 209);
+			this->txt_ttc_comm->Location = System::Drawing::Point(529, 209);
 			this->txt_ttc_comm->Name = L"txt_ttc_comm";
-			this->txt_ttc_comm->Size = System::Drawing::Size(183, 22);
+			this->txt_ttc_comm->Size = System::Drawing::Size(99, 22);
 			this->txt_ttc_comm->TabIndex = 2;
 			// 
 			// txt_date_prevu_comm
 			// 
-			this->txt_date_prevu_comm->Location = System::Drawing::Point(272, 212);
+			this->txt_date_prevu_comm->Location = System::Drawing::Point(252, 212);
 			this->txt_date_prevu_comm->Name = L"txt_date_prevu_comm";
 			this->txt_date_prevu_comm->Size = System::Drawing::Size(183, 22);
 			this->txt_date_prevu_comm->TabIndex = 2;
@@ -1380,6 +1473,7 @@ private: System::Windows::Forms::Button^ btn_delete;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_pers))->EndInit();
 			this->tabPage3->ResumeLayout(false);
 			this->tabPage3->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_paie))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_comm))->EndInit();
 			this->tabPage_stck->ResumeLayout(false);
 			this->tabPage_stck->PerformLayout();
@@ -1419,6 +1513,8 @@ private: System::Windows::Forms::Button^ btn_delete;
 		this->oDs = this->oSvc->selectionnerToutesLesCommandes("TB_COMMANDE");
 		this->dgv_comm->DataSource = this->oDs;
 		this->dgv_comm->DataMember = "TB_COMMANDE";
+
+		
 	}
 
 	//Click sur le boutton Insérer de l'onglet Clients
@@ -1646,25 +1742,25 @@ private: System::Windows::Forms::Button^ btn_delete;
 	private: System::Void btn_insert_Click_Comm(System::Object^ sender, System::EventArgs^ e)
 	{
 
-		String^ textVal = this->text_id_comm->Text;
+		String^ textVal = this->txt_id_comm->Text;
 		int id_com = System::Convert::ToInt32(textVal);
 
-		String^ textVal1 = this->text_article_comm->Text;
+		String^ textVal1 = this->txt_article_comm->Text;
 		int com_tot_ar = System::Convert::ToInt32(textVal1);
 
-		String^ textVal2 = this->text_ht_comm->Text;
+		String^ textVal2 = this->txt_ht_comm->Text;
 		double com_tot_ht = System::Convert::ToDouble(textVal2);
 
-		String^ textVal3 = this->text_tva_comm->Text;
+		String^ textVal3 = this->txt_tva_comm->Text;
 		double com_tot_tva = System::Convert::ToDouble(textVal3);
 
-		String^ textVal4 = this->text_ttc_comm->Text;
+		String^ textVal4 = this->txt_ttc_comm->Text;
 		double com_tot_ttc = System::Convert::ToDouble(textVal4);
 
-		String^ textVal5 = this->text_id_paiement_comm->Text;
+		String^ textVal5 = this->txt_id_paiement_comm->Text;
 		int id_paiement = System::Convert::ToInt32(textVal5);
 
-		this->oSvc->ajouterUneCommande(this->text_ref_comm->Text, this->text_date_prevu_comm->Text, this->text_date_em_comm->Text, com_tot_ar, com_tot_ht, com_tot_tva, com_tot_ttc, id_paiement);
+		this->oSvc->ajouterUneCommande(this->txt_ref_comm->Text, this->txt_date_prevu_comm->Text, this->txt_date_em_comm->Text, com_tot_ar, com_tot_ht, com_tot_tva, com_tot_ttc, id_paiement);
 
 		//Load data
 		this->dgv_comm->Refresh();
@@ -1673,11 +1769,11 @@ private: System::Windows::Forms::Button^ btn_delete;
 		this->dgv_comm->DataMember = "TB_COMMANDE";
 
 		//Affichage de la commande ajouter
-		this->listBox_console_comm->Items->Add("Commande ajouter, Id :" + this->text_id_comm->Text + ", Reference =" + this->text_ref_comm->Text + " OK"); // a modifier
+		this->listBox_console_comm->Items->Add("Commande ajouter, Id :" + this->txt_id_comm->Text + ", Reference =" + this->txt_ref_comm->Text + " OK"); // a modifier
 	}
 	private: System::Void btn_del_comm_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
-		String^ textVal = this->text_id_comm->Text;
+		String^ textVal = this->txt_id_comm->Text;
 
 		int id_com = System::Convert::ToInt32(textVal);
 		this->oSvc->suprimerUneCommande(id_com);
@@ -1690,30 +1786,30 @@ private: System::Windows::Forms::Button^ btn_delete;
 		this->dgv_comm->DataMember = "TB_COMMANDE";
 
 		//Affichage de la commande supprimer
-		this->listBox_console_comm->Items->Add("Commande suprimer, Id :" + this->text_id_comm->Text + ", reference =" + this->text_ref_comm->Text + " OK");
+		this->listBox_console_comm->Items->Add("Commande suprimer, Id :" + this->txt_id_comm->Text + ", reference =" + this->txt_ref_comm->Text + " OK");
 
 	}
 	private: System::Void btn_modif_comm_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		String^ textVal = this->text_id_comm->Text;
+		String^ textVal = this->txt_id_comm->Text;
 		int id_com = System::Convert::ToInt32(textVal);
 
-		String^ textVal1 = this->text_article_comm->Text;
+		String^ textVal1 = this->txt_article_comm->Text;
 		int com_tot_ar = System::Convert::ToInt32(textVal1);
 
-		String^ textVal2 = this->text_ht_comm->Text;
+		String^ textVal2 = this->txt_ht_comm->Text;
 		double com_tot_ht = System::Convert::ToDouble(textVal2);
 
-		String^ textVal3 = this->text_tva_comm->Text;
+		String^ textVal3 = this->txt_tva_comm->Text;
 		double com_tot_tva = System::Convert::ToDouble(textVal3);
 
-		String^ textVal4 = this->text_ttc_comm->Text;
+		String^ textVal4 = this->txt_ttc_comm->Text;
 		double com_tot_ttc = System::Convert::ToDouble(textVal4);
 
-		String^ textVal5 = this->text_id_paiement_comm->Text;
+		String^ textVal5 = this->txt_id_paiement_comm->Text;
 		int id_paiement = System::Convert::ToInt32(textVal5);
 
-		this->oSvc->modifierUneCommande(this->text_ref_comm->Text, this->text_date_prevu_comm->Text, this->text_date_em_comm->Text, com_tot_ar, com_tot_ht, com_tot_tva, com_tot_ttc, id_paiement, id_com);
+		this->oSvc->modifierUneCommande(this->txt_ref_comm->Text, this->txt_date_prevu_comm->Text, this->txt_date_em_comm->Text, com_tot_ar, com_tot_ht, com_tot_tva, com_tot_ttc, id_paiement, id_com);
 		//Load data
 		this->dgv_comm->Refresh();
 		this->oDs = this->oSvc->selectionnerToutesLesCommandes("TB_COMMANDE");
@@ -1721,7 +1817,7 @@ private: System::Windows::Forms::Button^ btn_delete;
 		this->dgv_comm->DataMember = "TB_COMMANDE";
 
 		//Affichage de la commande modifier
-		this->listBox_console_comm->Items->Add("Commande modifier, Id :" + this->text_id_comm->Text + ", Reference =" + this->text_ref_comm->Text + " OK");
+		this->listBox_console_comm->Items->Add("Commande modifier, Id :" + this->txt_id_comm->Text + ", Reference =" + this->txt_ref_comm->Text + " OK");
 	}
 
 	private: System::Void dgv_comm_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
@@ -1737,6 +1833,17 @@ private: System::Windows::Forms::Button^ btn_delete;
 		this->txt_tva_comm->Text = rowv->Cells["com_tot_tva"]->Value->ToString();
 		this->txt_ttc_comm->Text = rowv->Cells["com_tot_ttc"]->Value->ToString();
 		this->txt_id_paiement_comm->Text = rowv->Cells["pai_id"]->Value->ToString();
+	}
+		   
+
+	private: System::Void btn_aff_paie_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		//Load data Client
+		this->oSvc = gcnew NS_Comp_Svc::CLservices();
+		this->dgv_paie->Refresh();
+		this->oDs = this->oSvc->afficherPaiement("TB_PAIEMENT");
+		this->dgv_paie->DataSource = this->oDs;
+		this->dgv_paie->DataMember = "TB_PAIEMENT";
 	}
 };
 }

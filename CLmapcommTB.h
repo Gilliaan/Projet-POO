@@ -19,6 +19,7 @@ namespace NS_Comp_Mappage
         System::String^ InsertComm(void);
         System::String^ DeleteComm(void);
         System::String^ UpdateComm(void);
+        System::String^ AfficherPaiement(void);
         void setIdComm(int);
         void setRef(System::String^);
         void setDate_Prevue(System::String^);

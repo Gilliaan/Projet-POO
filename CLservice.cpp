@@ -222,3 +222,10 @@ void NS_Comp_Svc::CLservices::modifierUneCommande(System::String^ ref, System::S
 
 	this->oCad->actionRows(sql);
 }
+System::Data::DataSet^ NS_Comp_Svc::CLservices::afficherPaiement(System::String^ dataTableName)
+{
+	System::String^ sql;
+
+	sql = this->oMappComm->AfficherPaiement();
+	return this->oCad->getRows(sql, dataTableName);
+}
