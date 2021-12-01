@@ -203,6 +203,7 @@ private: System::Windows::Forms::ListBox^ listBox_console_comm;
 private: System::Windows::Forms::Button^ btn_delete;
 	   private: System::Windows::Forms::TabPage^ tabPage3_comm;
 private: System::Windows::Forms::Button^ btn_aff_art;
+private: System::Windows::Forms::DataGridView^ dgv_art_comm;
 
 
 
@@ -211,7 +212,7 @@ private: System::Windows::Forms::Button^ btn_aff_art;
 
 
 
-private: System::Windows::Forms::DataGridView^ dgv_paie;
+
 private: System::Windows::Forms::Label^ lbl_id_com;
 private: System::Windows::Forms::TextBox^ txt_id_com;
 
@@ -287,7 +288,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			this->dgv_pers = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->btn_aff_art = (gcnew System::Windows::Forms::Button());
-			this->dgv_paie = (gcnew System::Windows::Forms::DataGridView());
+			this->dgv_art_comm = (gcnew System::Windows::Forms::DataGridView());
 			this->label_console_comm = (gcnew System::Windows::Forms::Label());
 			this->listBox_console_comm = (gcnew System::Windows::Forms::ListBox());
 			this->label_date_prevu_comm = (gcnew System::Windows::Forms::Label());
@@ -342,7 +343,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			this->tabPage_pers->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_pers))->BeginInit();
 			this->tabPage3->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_paie))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_art_comm))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_comm))->BeginInit();
 			this->tabPage_stck->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_stck))->BeginInit();
@@ -873,10 +874,10 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// btn_del_pres
 			// 
-			this->btn_del_pres->Location = System::Drawing::Point(18, 322);
+			this->btn_del_pres->Location = System::Drawing::Point(16, 322);
 			this->btn_del_pres->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btn_del_pres->Name = L"btn_del_pres";
-			this->btn_del_pres->Size = System::Drawing::Size(119, 44);
+			this->btn_del_pres->Size = System::Drawing::Size(121, 46);
 			this->btn_del_pres->TabIndex = 4;
 			this->btn_del_pres->Text = L"SUPPRIMER";
 			this->btn_del_pres->UseVisualStyleBackColor = true;
@@ -884,10 +885,10 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// btn_update_pers
 			// 
-			this->btn_update_pers->Location = System::Drawing::Point(18, 268);
+			this->btn_update_pers->Location = System::Drawing::Point(16, 268);
 			this->btn_update_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btn_update_pers->Name = L"btn_update_pers";
-			this->btn_update_pers->Size = System::Drawing::Size(120, 44);
+			this->btn_update_pers->Size = System::Drawing::Size(121, 46);
 			this->btn_update_pers->TabIndex = 3;
 			this->btn_update_pers->Text = L"MODIFIER";
 			this->btn_update_pers->UseVisualStyleBackColor = true;
@@ -895,10 +896,10 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// btn_insert_pers
 			// 
-			this->btn_insert_pers->Location = System::Drawing::Point(17, 214);
+			this->btn_insert_pers->Location = System::Drawing::Point(16, 215);
 			this->btn_insert_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->btn_insert_pers->Name = L"btn_insert_pers";
-			this->btn_insert_pers->Size = System::Drawing::Size(120, 44);
+			this->btn_insert_pers->Size = System::Drawing::Size(121, 46);
 			this->btn_insert_pers->TabIndex = 2;
 			this->btn_insert_pers->Text = L"INSÉRER";
 			this->btn_insert_pers->UseVisualStyleBackColor = true;
@@ -919,7 +920,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// tabPage3
 			// 
 			this->tabPage3->Controls->Add(this->btn_aff_art);
-			this->tabPage3->Controls->Add(this->dgv_paie);
+			this->tabPage3->Controls->Add(this->dgv_art_comm);
 			this->tabPage3->Controls->Add(this->label_console_comm);
 			this->tabPage3->Controls->Add(this->listBox_console_comm);
 			this->tabPage3->Controls->Add(this->label_date_prevu_comm);
@@ -953,27 +954,27 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// btn_aff_art
 			// 
-			this->btn_aff_art->Location = System::Drawing::Point(650, 181);
+			this->btn_aff_art->Location = System::Drawing::Point(643, 214);
 			this->btn_aff_art->Name = L"btn_aff_art";
-			this->btn_aff_art->Size = System::Drawing::Size(506, 48);
+			this->btn_aff_art->Size = System::Drawing::Size(518, 48);
 			this->btn_aff_art->TabIndex = 14;
 			this->btn_aff_art->Text = L"AFFICHE TOUT LES ARTICLES DE LA COMMANDE";
 			this->btn_aff_art->UseVisualStyleBackColor = true;
 			this->btn_aff_art->Click += gcnew System::EventHandler(this, &MyForm::btn_aff_art_Click);
 			// 
-			// dgv_paie
+			// dgv_art_comm
 			// 
-			this->dgv_paie->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dgv_paie->Location = System::Drawing::Point(650, 240);
-			this->dgv_paie->Name = L"dgv_paie";
-			this->dgv_paie->RowHeadersWidth = 51;
-			this->dgv_paie->Size = System::Drawing::Size(506, 302);
-			this->dgv_paie->TabIndex = 7;
+			this->dgv_art_comm->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dgv_art_comm->Location = System::Drawing::Point(643, 277);
+			this->dgv_art_comm->Name = L"dgv_art_comm";
+			this->dgv_art_comm->RowHeadersWidth = 51;
+			this->dgv_art_comm->Size = System::Drawing::Size(518, 255);
+			this->dgv_art_comm->TabIndex = 7;
 			// 
 			// label_console_comm
 			// 
 			this->label_console_comm->AutoSize = true;
-			this->label_console_comm->Location = System::Drawing::Point(24, 358);
+			this->label_console_comm->Location = System::Drawing::Point(13, 460);
 			this->label_console_comm->Name = L"label_console_comm";
 			this->label_console_comm->Size = System::Drawing::Size(59, 17);
 			this->label_console_comm->TabIndex = 6;
@@ -983,7 +984,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			this->listBox_console_comm->FormattingEnabled = true;
 			this->listBox_console_comm->ItemHeight = 16;
-			this->listBox_console_comm->Location = System::Drawing::Point(23, 377);
+			this->listBox_console_comm->Location = System::Drawing::Point(16, 480);
 			this->listBox_console_comm->Name = L"listBox_console_comm";
 			this->listBox_console_comm->Size = System::Drawing::Size(605, 52);
 			this->listBox_console_comm->TabIndex = 5;
@@ -991,7 +992,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// label_date_prevu_comm
 			// 
 			this->label_date_prevu_comm->AutoSize = true;
-			this->label_date_prevu_comm->Location = System::Drawing::Point(164, 217);
+			this->label_date_prevu_comm->Location = System::Drawing::Point(157, 269);
 			this->label_date_prevu_comm->Name = L"label_date_prevu_comm";
 			this->label_date_prevu_comm->Size = System::Drawing::Size(84, 17);
 			this->label_date_prevu_comm->TabIndex = 4;
@@ -1000,7 +1001,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// label_id_comm
 			// 
 			this->label_id_comm->AutoSize = true;
-			this->label_id_comm->Location = System::Drawing::Point(142, 332);
+			this->label_id_comm->Location = System::Drawing::Point(135, 384);
 			this->label_id_comm->Name = L"label_id_comm";
 			this->label_id_comm->Size = System::Drawing::Size(94, 17);
 			this->label_id_comm->TabIndex = 4;
@@ -1009,7 +1010,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// label_ttc_comm
 			// 
 			this->label_ttc_comm->AutoSize = true;
-			this->label_ttc_comm->Location = System::Drawing::Point(457, 212);
+			this->label_ttc_comm->Location = System::Drawing::Point(450, 264);
 			this->label_ttc_comm->Name = L"label_ttc_comm";
 			this->label_ttc_comm->Size = System::Drawing::Size(66, 17);
 			this->label_ttc_comm->TabIndex = 4;
@@ -1018,7 +1019,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// label_tva_comm
 			// 
 			this->label_tva_comm->AutoSize = true;
-			this->label_tva_comm->Location = System::Drawing::Point(457, 180);
+			this->label_tva_comm->Location = System::Drawing::Point(450, 232);
 			this->label_tva_comm->Name = L"label_tva_comm";
 			this->label_tva_comm->Size = System::Drawing::Size(66, 17);
 			this->label_tva_comm->TabIndex = 4;
@@ -1027,7 +1028,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// label_ref_comm
 			// 
 			this->label_ref_comm->AutoSize = true;
-			this->label_ref_comm->Location = System::Drawing::Point(177, 178);
+			this->label_ref_comm->Location = System::Drawing::Point(170, 230);
 			this->label_ref_comm->Name = L"label_ref_comm";
 			this->label_ref_comm->Size = System::Drawing::Size(69, 17);
 			this->label_ref_comm->TabIndex = 4;
@@ -1036,7 +1037,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// label_ht_comm
 			// 
 			this->label_ht_comm->AutoSize = true;
-			this->label_ht_comm->Location = System::Drawing::Point(457, 245);
+			this->label_ht_comm->Location = System::Drawing::Point(450, 297);
 			this->label_ht_comm->Name = L"label_ht_comm";
 			this->label_ht_comm->Size = System::Drawing::Size(58, 17);
 			this->label_ht_comm->TabIndex = 4;
@@ -1045,7 +1046,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// label_article_comm
 			// 
 			this->label_article_comm->AutoSize = true;
-			this->label_article_comm->Location = System::Drawing::Point(164, 287);
+			this->label_article_comm->Location = System::Drawing::Point(157, 339);
 			this->label_article_comm->Name = L"label_article_comm";
 			this->label_article_comm->Size = System::Drawing::Size(77, 17);
 			this->label_article_comm->TabIndex = 4;
@@ -1054,7 +1055,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// label_date_em_comm
 			// 
 			this->label_date_em_comm->AutoSize = true;
-			this->label_date_em_comm->Location = System::Drawing::Point(142, 250);
+			this->label_date_em_comm->Location = System::Drawing::Point(135, 302);
 			this->label_date_em_comm->Name = L"label_date_em_comm";
 			this->label_date_em_comm->Size = System::Drawing::Size(106, 17);
 			this->label_date_em_comm->TabIndex = 4;
@@ -1062,9 +1063,9 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// btn_del_comm
 			// 
-			this->btn_del_comm->Location = System::Drawing::Point(23, 282);
+			this->btn_del_comm->Location = System::Drawing::Point(16, 322);
 			this->btn_del_comm->Name = L"btn_del_comm";
-			this->btn_del_comm->Size = System::Drawing::Size(112, 48);
+			this->btn_del_comm->Size = System::Drawing::Size(121, 46);
 			this->btn_del_comm->TabIndex = 3;
 			this->btn_del_comm->Text = L"SUPPRIMER";
 			this->btn_del_comm->UseVisualStyleBackColor = true;
@@ -1072,9 +1073,9 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// btn_modif_comm
 			// 
-			this->btn_modif_comm->Location = System::Drawing::Point(23, 225);
+			this->btn_modif_comm->Location = System::Drawing::Point(16, 268);
 			this->btn_modif_comm->Name = L"btn_modif_comm";
-			this->btn_modif_comm->Size = System::Drawing::Size(112, 48);
+			this->btn_modif_comm->Size = System::Drawing::Size(121, 46);
 			this->btn_modif_comm->TabIndex = 3;
 			this->btn_modif_comm->Text = L"MODIFIER";
 			this->btn_modif_comm->UseVisualStyleBackColor = true;
@@ -1082,9 +1083,9 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// btn_inser_comm
 			// 
-			this->btn_inser_comm->Location = System::Drawing::Point(23, 171);
+			this->btn_inser_comm->Location = System::Drawing::Point(16, 215);
 			this->btn_inser_comm->Name = L"btn_inser_comm";
-			this->btn_inser_comm->Size = System::Drawing::Size(112, 48);
+			this->btn_inser_comm->Size = System::Drawing::Size(121, 46);
 			this->btn_inser_comm->TabIndex = 3;
 			this->btn_inser_comm->Text = L"INSÉRER";
 			this->btn_inser_comm->UseVisualStyleBackColor = true;
@@ -1092,56 +1093,56 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// txt_tot_article_comm
 			// 
-			this->txt_tot_article_comm->Location = System::Drawing::Point(252, 282);
+			this->txt_tot_article_comm->Location = System::Drawing::Point(245, 334);
 			this->txt_tot_article_comm->Name = L"txt_tot_article_comm";
 			this->txt_tot_article_comm->Size = System::Drawing::Size(183, 22);
 			this->txt_tot_article_comm->TabIndex = 2;
 			// 
 			// txt_ht_comm
 			// 
-			this->txt_ht_comm->Location = System::Drawing::Point(529, 240);
+			this->txt_ht_comm->Location = System::Drawing::Point(522, 292);
 			this->txt_ht_comm->Name = L"txt_ht_comm";
 			this->txt_ht_comm->Size = System::Drawing::Size(99, 22);
 			this->txt_ht_comm->TabIndex = 2;
 			// 
 			// txt_tva_comm
 			// 
-			this->txt_tva_comm->Location = System::Drawing::Point(529, 178);
+			this->txt_tva_comm->Location = System::Drawing::Point(522, 230);
 			this->txt_tva_comm->Name = L"txt_tva_comm";
 			this->txt_tva_comm->Size = System::Drawing::Size(99, 22);
 			this->txt_tva_comm->TabIndex = 2;
 			// 
 			// txt_ref_comm
 			// 
-			this->txt_ref_comm->Location = System::Drawing::Point(252, 175);
+			this->txt_ref_comm->Location = System::Drawing::Point(245, 227);
 			this->txt_ref_comm->Name = L"txt_ref_comm";
 			this->txt_ref_comm->Size = System::Drawing::Size(183, 22);
 			this->txt_ref_comm->TabIndex = 2;
 			// 
 			// txt_date_em_comm
 			// 
-			this->txt_date_em_comm->Location = System::Drawing::Point(252, 245);
+			this->txt_date_em_comm->Location = System::Drawing::Point(245, 297);
 			this->txt_date_em_comm->Name = L"txt_date_em_comm";
 			this->txt_date_em_comm->Size = System::Drawing::Size(183, 22);
 			this->txt_date_em_comm->TabIndex = 2;
 			// 
 			// txt_id_comm
 			// 
-			this->txt_id_comm->Location = System::Drawing::Point(252, 327);
+			this->txt_id_comm->Location = System::Drawing::Point(245, 379);
 			this->txt_id_comm->Name = L"txt_id_comm";
 			this->txt_id_comm->Size = System::Drawing::Size(183, 22);
 			this->txt_id_comm->TabIndex = 2;
 			// 
 			// txt_ttc_comm
 			// 
-			this->txt_ttc_comm->Location = System::Drawing::Point(529, 209);
+			this->txt_ttc_comm->Location = System::Drawing::Point(522, 261);
 			this->txt_ttc_comm->Name = L"txt_ttc_comm";
 			this->txt_ttc_comm->Size = System::Drawing::Size(99, 22);
 			this->txt_ttc_comm->TabIndex = 2;
 			// 
 			// txt_date_prevu_comm
 			// 
-			this->txt_date_prevu_comm->Location = System::Drawing::Point(252, 212);
+			this->txt_date_prevu_comm->Location = System::Drawing::Point(245, 264);
 			this->txt_date_prevu_comm->Name = L"txt_date_prevu_comm";
 			this->txt_date_prevu_comm->Size = System::Drawing::Size(183, 22);
 			this->txt_date_prevu_comm->TabIndex = 2;
@@ -1149,10 +1150,10 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// dgv_comm
 			// 
 			this->dgv_comm->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dgv_comm->Location = System::Drawing::Point(23, 15);
+			this->dgv_comm->Location = System::Drawing::Point(16, 18);
 			this->dgv_comm->Name = L"dgv_comm";
 			this->dgv_comm->RowHeadersWidth = 51;
-			this->dgv_comm->Size = System::Drawing::Size(1133, 150);
+			this->dgv_comm->Size = System::Drawing::Size(1145, 183);
 			this->dgv_comm->TabIndex = 0;
 			this->dgv_comm->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dgv_comm_CellContentClick);
 			// 
@@ -1337,9 +1338,9 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// btn_modifier_stck
 			// 
-			this->btn_modifier_stck->Location = System::Drawing::Point(16, 338);
+			this->btn_modifier_stck->Location = System::Drawing::Point(16, 268);
 			this->btn_modifier_stck->Name = L"btn_modifier_stck";
-			this->btn_modifier_stck->Size = System::Drawing::Size(110, 50);
+			this->btn_modifier_stck->Size = System::Drawing::Size(121, 46);
 			this->btn_modifier_stck->TabIndex = 3;
 			this->btn_modifier_stck->Text = L"MODIFIER";
 			this->btn_modifier_stck->UseVisualStyleBackColor = true;
@@ -1347,9 +1348,9 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// btn_supprimer_stck
 			// 
-			this->btn_supprimer_stck->Location = System::Drawing::Point(16, 280);
+			this->btn_supprimer_stck->Location = System::Drawing::Point(16, 322);
 			this->btn_supprimer_stck->Name = L"btn_supprimer_stck";
-			this->btn_supprimer_stck->Size = System::Drawing::Size(110, 50);
+			this->btn_supprimer_stck->Size = System::Drawing::Size(121, 46);
 			this->btn_supprimer_stck->TabIndex = 2;
 			this->btn_supprimer_stck->Text = L"SUPPRIMER";
 			this->btn_supprimer_stck->UseVisualStyleBackColor = true;
@@ -1357,9 +1358,9 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// btn_inserer_stck
 			// 
-			this->btn_inserer_stck->Location = System::Drawing::Point(16, 224);
+			this->btn_inserer_stck->Location = System::Drawing::Point(16, 215);
 			this->btn_inserer_stck->Name = L"btn_inserer_stck";
-			this->btn_inserer_stck->Size = System::Drawing::Size(110, 50);
+			this->btn_inserer_stck->Size = System::Drawing::Size(121, 46);
 			this->btn_inserer_stck->TabIndex = 1;
 			this->btn_inserer_stck->Text = L"INSÉRER";
 			this->btn_inserer_stck->UseVisualStyleBackColor = true;
@@ -1368,11 +1369,11 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// dgv_stck
 			// 
 			this->dgv_stck->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dgv_stck->Location = System::Drawing::Point(16, 20);
+			this->dgv_stck->Location = System::Drawing::Point(16, 18);
 			this->dgv_stck->Name = L"dgv_stck";
 			this->dgv_stck->RowHeadersWidth = 51;
 			this->dgv_stck->RowTemplate->Height = 24;
-			this->dgv_stck->Size = System::Drawing::Size(1147, 184);
+			this->dgv_stck->Size = System::Drawing::Size(1145, 183);
 			this->dgv_stck->TabIndex = 0;
 			this->dgv_stck->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dgv_stck_CellContentClick);
 			// 
@@ -1417,7 +1418,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_pers))->EndInit();
 			this->tabPage3->ResumeLayout(false);
 			this->tabPage3->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_paie))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_art_comm))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_comm))->EndInit();
 			this->tabPage_stck->ResumeLayout(false);
 			this->tabPage_stck->PerformLayout();
@@ -1786,10 +1787,10 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 
 		//Load data Client
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
-		this->dgv_paie->Refresh();
+		this->dgv_art_comm->Refresh();
 		this->oDs = this->oSvc->afficherArticleComm(id_comm, "TB_STOCK");
-		this->dgv_paie->DataSource = this->oDs;
-		this->dgv_paie->DataMember = "TB_STOCK";
+		this->dgv_art_comm->DataSource = this->oDs;
+		this->dgv_art_comm->DataMember = "TB_STOCK";
 	}
 
 };
