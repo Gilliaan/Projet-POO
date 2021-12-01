@@ -13,12 +13,14 @@ namespace NS_Comp_Mappage
 		//int art_designation;
 		int art_prix_ht;
 		int art_taux_tva;
+		int com_id;
 	public:
 		System::String^ SelectStock(void);
 		System::String^ InsertStock(void);
 		System::String^ DeleteStock(void);
 		System::String^ UpdateStock(void);
 		void setIdStock(int);
+		void setIdCom(int);
 		void setStockQuantite(int);
 		void setSeuilReap(int);
 		void setArtRef(int);
@@ -26,6 +28,7 @@ namespace NS_Comp_Mappage
 		//void setArtDesignation(int);
 		void setArtPrixHt(int);
 		void setArtTauxTva(int);
+		int getIdCom(void);
 		int getIdStock(void);
 		int getStockQuantite(void);
 		int getSeuilReap(void);

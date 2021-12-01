@@ -2,11 +2,11 @@
 
 System::String^ NS_Comp_Mappage::CLmapcommTB::SelectComm(void)
 {
-    return "SELECT * FROM [DB_PROJET_POO].[dbo].[TB_COMMANDE]";
+    return "SELECT id_com,com_ref,com_date_prevue,com_date_emission,com_tot_ar,com_tot_ht,com_tot_tva,com_tot_ttc FROM [DB_PROJET_POO].[dbo].[TB_COMMANDE]";
 }
-System::String^ NS_Comp_Mappage::CLmapcommTB::AfficherPaiement(void)
+System::String^ NS_Comp_Mappage::CLmapcommTB::AfficherArticleComm(void)
 {
-    return "SELECT id_paiement, pai_date, pai_moy FROM TB_COMMANDE INNER JOIN TB_PAIEMENT ON TB_COMMANDE.pai_id = TB_PAIEMENT.id_paiement";
+    return "SELECT id_com, art_name, art_prix_ht FROM TB_STOCK INNER JOIN TB_COMMANDE ON TB_STOCK.com_id = TB_COMMANDE.id_com WHERE id_com = '"+ this->id_com +"';";
 }
 System::String^ NS_Comp_Mappage::CLmapcommTB::InsertComm(void)
 {

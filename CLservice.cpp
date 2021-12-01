@@ -99,9 +99,10 @@ void NS_Comp_Svc::CLservices::ajouterAdresseClient(System::String^ adrLivraison,
 	this->oCad->actionRows(sql);
 }
 //Méthodes gestion du stock
-void NS_Comp_Svc::CLservices::ajouterUnStock(int ref, System::String^ nom,int prixht,int tauxtva,int prodQuantite, int seuil) {
+void NS_Comp_Svc::CLservices::ajouterUnStock(int ref, System::String^ nom,int prixht,int tauxtva,int prodQuantite, int seuil,int com_id) {
 	System::String^ sql;
 
+	this->oMappStock->setIdCom(com_id);
 	this->oMappStock->setArtName(nom);
 	this->oMappStock->setArtPrixHt(prixht);
 	this->oMappStock->setArtRef(ref);
@@ -121,10 +122,11 @@ void NS_Comp_Svc::CLservices::supprimerUnStock(int id)
 
 	this->oCad->actionRows(sql);
 }
-void NS_Comp_Svc::CLservices::modifierUnStock(int ref, System::String^ nom ,int prixht,int tauxtva, int prodQuantite, int seuil, int id)
+void NS_Comp_Svc::CLservices::modifierUnStock(int ref, System::String^ nom ,int prixht,int tauxtva, int prodQuantite, int seuil, int id,int com_id)
 {
 	System::String^ sql;
 
+	this->oMappStock->setIdCom(com_id);
 	this->oMappStock->setArtName(nom);
 	this->oMappStock->setArtPrixHt(prixht);
 	this->oMappStock->setArtRef(ref);
@@ -137,10 +139,11 @@ void NS_Comp_Svc::CLservices::modifierUnStock(int ref, System::String^ nom ,int 
 	this->oCad->actionRows(sql);
 }
 //Méthodes gestion du personnel
-void NS_Comp_Svc::CLservices::ajouterUnPersonnel(System::String^ nom, System::String^ prenom, System::String^ genre, System::String^ emb_date, System::String^ sup_emb_date, System::String^ adresse, System::String^ sup_name)
+void NS_Comp_Svc::CLservices::ajouterUnPersonnel(System::String^ type,System::String^ nom, System::String^ prenom, System::String^ genre, System::String^ emb_date, System::String^ sup_emb_date, System::String^ adresse, System::String^ sup_name)
 {
 	System::String^ sql;
 
+	this->oMappPERS->setType(type);
 	this->oMappPERS->setNom_PERS(nom);
 	this->oMappPERS->setPrenom_PERS(prenom);
 	this->oMappPERS->setGender(genre);
@@ -222,10 +225,11 @@ void NS_Comp_Svc::CLservices::modifierUneCommande(System::String^ ref, System::S
 
 	this->oCad->actionRows(sql);
 }
-System::Data::DataSet^ NS_Comp_Svc::CLservices::afficherPaiement(System::String^ dataTableName)
+System::Data::DataSet^ NS_Comp_Svc::CLservices::afficherArticleComm(int id, System::String^ dataTableName)
 {
 	System::String^ sql;
 
-	sql = this->oMappComm->AfficherPaiement();
+	this->oMappComm->setIdComm(id);
+	sql = this->oMappComm->AfficherArticleComm();
 	return this->oCad->getRows(sql, dataTableName);
 }

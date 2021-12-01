@@ -177,7 +177,8 @@ private: System::Windows::Forms::TextBox^ txt_date_prevu_comm;
 	private: System::Windows::Forms::Label^ label_ref_comm;
 	private: System::Windows::Forms::Label^ label_ht_comm;
 	private: System::Windows::Forms::Label^ label_article_comm;
-private: System::Windows::Forms::TextBox^ txt_article_comm;
+private: System::Windows::Forms::TextBox^ txt_tot_article_comm;
+
 private: System::Windows::Forms::TextBox^ txt_tva_comm;
 private: System::Windows::Forms::TextBox^ txt_id_paiement_comm;
 
@@ -201,15 +202,18 @@ private: System::Windows::Forms::Label^ label_console_comm;
 private: System::Windows::Forms::ListBox^ listBox_console_comm;
 private: System::Windows::Forms::Button^ btn_delete;
 	   private: System::Windows::Forms::TabPage^ tabPage3_comm;
-private: System::Windows::Forms::Button^ btn_aff_paie;
+private: System::Windows::Forms::Button^ btn_aff_art;
 
-private: System::Windows::Forms::Button^ button2;
-private: System::Windows::Forms::Button^ button1;
-private: System::Windows::Forms::Label^ lbl_moyen_paiement;
-private: System::Windows::Forms::Label^ lbl_date_paiement;
-private: System::Windows::Forms::TextBox^ txt_moy_paie;
-private: System::Windows::Forms::TextBox^ txt_date_paie;
+
+
+
+
+
+
+
 private: System::Windows::Forms::DataGridView^ dgv_paie;
+private: System::Windows::Forms::Label^ lbl_id_com;
+private: System::Windows::Forms::TextBox^ txt_id_com;
 
 
 	protected:
@@ -282,13 +286,7 @@ private: System::Windows::Forms::DataGridView^ dgv_paie;
 			this->btn_insert_pers = (gcnew System::Windows::Forms::Button());
 			this->dgv_pers = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
-			this->btn_aff_paie = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->lbl_moyen_paiement = (gcnew System::Windows::Forms::Label());
-			this->lbl_date_paiement = (gcnew System::Windows::Forms::Label());
-			this->txt_moy_paie = (gcnew System::Windows::Forms::TextBox());
-			this->txt_date_paie = (gcnew System::Windows::Forms::TextBox());
+			this->btn_aff_art = (gcnew System::Windows::Forms::Button());
 			this->dgv_paie = (gcnew System::Windows::Forms::DataGridView());
 			this->label_console_comm = (gcnew System::Windows::Forms::Label());
 			this->listBox_console_comm = (gcnew System::Windows::Forms::ListBox());
@@ -304,7 +302,7 @@ private: System::Windows::Forms::DataGridView^ dgv_paie;
 			this->btn_del_comm = (gcnew System::Windows::Forms::Button());
 			this->btn_modif_comm = (gcnew System::Windows::Forms::Button());
 			this->btn_inser_comm = (gcnew System::Windows::Forms::Button());
-			this->txt_article_comm = (gcnew System::Windows::Forms::TextBox());
+			this->txt_tot_article_comm = (gcnew System::Windows::Forms::TextBox());
 			this->txt_ht_comm = (gcnew System::Windows::Forms::TextBox());
 			this->txt_tva_comm = (gcnew System::Windows::Forms::TextBox());
 			this->txt_ref_comm = (gcnew System::Windows::Forms::TextBox());
@@ -315,6 +313,8 @@ private: System::Windows::Forms::DataGridView^ dgv_paie;
 			this->txt_date_prevu_comm = (gcnew System::Windows::Forms::TextBox());
 			this->dgv_comm = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage_stck = (gcnew System::Windows::Forms::TabPage());
+			this->lbl_id_com = (gcnew System::Windows::Forms::Label());
+			this->txt_id_com = (gcnew System::Windows::Forms::TextBox());
 			this->txt_taux_tva_art = (gcnew System::Windows::Forms::TextBox());
 			this->lbl_tva_art = (gcnew System::Windows::Forms::Label());
 			this->lbl_prixht_art = (gcnew System::Windows::Forms::Label());
@@ -920,13 +920,7 @@ private: System::Windows::Forms::DataGridView^ dgv_paie;
 			// 
 			// tabPage3
 			// 
-			this->tabPage3->Controls->Add(this->btn_aff_paie);
-			this->tabPage3->Controls->Add(this->button2);
-			this->tabPage3->Controls->Add(this->button1);
-			this->tabPage3->Controls->Add(this->lbl_moyen_paiement);
-			this->tabPage3->Controls->Add(this->lbl_date_paiement);
-			this->tabPage3->Controls->Add(this->txt_moy_paie);
-			this->tabPage3->Controls->Add(this->txt_date_paie);
+			this->tabPage3->Controls->Add(this->btn_aff_art);
 			this->tabPage3->Controls->Add(this->dgv_paie);
 			this->tabPage3->Controls->Add(this->label_console_comm);
 			this->tabPage3->Controls->Add(this->listBox_console_comm);
@@ -942,7 +936,7 @@ private: System::Windows::Forms::DataGridView^ dgv_paie;
 			this->tabPage3->Controls->Add(this->btn_del_comm);
 			this->tabPage3->Controls->Add(this->btn_modif_comm);
 			this->tabPage3->Controls->Add(this->btn_inser_comm);
-			this->tabPage3->Controls->Add(this->txt_article_comm);
+			this->tabPage3->Controls->Add(this->txt_tot_article_comm);
 			this->tabPage3->Controls->Add(this->txt_ht_comm);
 			this->tabPage3->Controls->Add(this->txt_tva_comm);
 			this->tabPage3->Controls->Add(this->txt_ref_comm);
@@ -961,63 +955,15 @@ private: System::Windows::Forms::DataGridView^ dgv_paie;
 			this->tabPage3->Text = L"Commandes";
 			this->tabPage3->UseVisualStyleBackColor = true;
 			// 
-			// btn_aff_paie
+			// btn_aff_art
 			// 
-			this->btn_aff_paie->Location = System::Drawing::Point(650, 181);
-			this->btn_aff_paie->Name = L"btn_aff_paie";
-			this->btn_aff_paie->Size = System::Drawing::Size(163, 48);
-			this->btn_aff_paie->TabIndex = 14;
-			this->btn_aff_paie->Text = L"AFFICHER PAIEMENT";
-			this->btn_aff_paie->UseVisualStyleBackColor = true;
-			this->btn_aff_paie->Click += gcnew System::EventHandler(this, &MyForm::btn_aff_paie_Click);
-			// 
-			// button2
-			// 
-			this->button2->Location = System::Drawing::Point(824, 181);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(163, 48);
-			this->button2->TabIndex = 13;
-			this->button2->UseVisualStyleBackColor = true;
-			// 
-			// button1
-			// 
-			this->button1->Location = System::Drawing::Point(993, 181);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(163, 48);
-			this->button1->TabIndex = 12;
-			this->button1->UseVisualStyleBackColor = true;
-			// 
-			// lbl_moyen_paiement
-			// 
-			this->lbl_moyen_paiement->AutoSize = true;
-			this->lbl_moyen_paiement->Location = System::Drawing::Point(647, 432);
-			this->lbl_moyen_paiement->Name = L"lbl_moyen_paiement";
-			this->lbl_moyen_paiement->Size = System::Drawing::Size(132, 17);
-			this->lbl_moyen_paiement->TabIndex = 11;
-			this->lbl_moyen_paiement->Text = L"Moyen de paiement";
-			// 
-			// lbl_date_paiement
-			// 
-			this->lbl_date_paiement->AutoSize = true;
-			this->lbl_date_paiement->Location = System::Drawing::Point(647, 387);
-			this->lbl_date_paiement->Name = L"lbl_date_paiement";
-			this->lbl_date_paiement->Size = System::Drawing::Size(112, 17);
-			this->lbl_date_paiement->TabIndex = 10;
-			this->lbl_date_paiement->Text = L"Date de paiment";
-			// 
-			// txt_moy_paie
-			// 
-			this->txt_moy_paie->Location = System::Drawing::Point(650, 452);
-			this->txt_moy_paie->Name = L"txt_moy_paie";
-			this->txt_moy_paie->Size = System::Drawing::Size(99, 22);
-			this->txt_moy_paie->TabIndex = 9;
-			// 
-			// txt_date_paie
-			// 
-			this->txt_date_paie->Location = System::Drawing::Point(650, 407);
-			this->txt_date_paie->Name = L"txt_date_paie";
-			this->txt_date_paie->Size = System::Drawing::Size(99, 22);
-			this->txt_date_paie->TabIndex = 8;
+			this->btn_aff_art->Location = System::Drawing::Point(650, 181);
+			this->btn_aff_art->Name = L"btn_aff_art";
+			this->btn_aff_art->Size = System::Drawing::Size(506, 48);
+			this->btn_aff_art->TabIndex = 14;
+			this->btn_aff_art->Text = L"AFFICHE TOUT LES ARTICLES DE LA COMMANDE";
+			this->btn_aff_art->UseVisualStyleBackColor = true;
+			this->btn_aff_art->Click += gcnew System::EventHandler(this, &MyForm::btn_aff_art_Click);
 			// 
 			// dgv_paie
 			// 
@@ -1025,7 +971,7 @@ private: System::Windows::Forms::DataGridView^ dgv_paie;
 			this->dgv_paie->Location = System::Drawing::Point(650, 240);
 			this->dgv_paie->Name = L"dgv_paie";
 			this->dgv_paie->RowHeadersWidth = 51;
-			this->dgv_paie->Size = System::Drawing::Size(506, 129);
+			this->dgv_paie->Size = System::Drawing::Size(506, 302);
 			this->dgv_paie->TabIndex = 7;
 			// 
 			// label_console_comm
@@ -1157,12 +1103,12 @@ private: System::Windows::Forms::DataGridView^ dgv_paie;
 			this->btn_inser_comm->UseVisualStyleBackColor = true;
 			this->btn_inser_comm->Click += gcnew System::EventHandler(this, &MyForm::btn_insert_Click_Comm);
 			// 
-			// txt_article_comm
+			// txt_tot_article_comm
 			// 
-			this->txt_article_comm->Location = System::Drawing::Point(252, 282);
-			this->txt_article_comm->Name = L"txt_article_comm";
-			this->txt_article_comm->Size = System::Drawing::Size(183, 22);
-			this->txt_article_comm->TabIndex = 2;
+			this->txt_tot_article_comm->Location = System::Drawing::Point(252, 282);
+			this->txt_tot_article_comm->Name = L"txt_tot_article_comm";
+			this->txt_tot_article_comm->Size = System::Drawing::Size(183, 22);
+			this->txt_tot_article_comm->TabIndex = 2;
 			// 
 			// txt_ht_comm
 			// 
@@ -1232,6 +1178,8 @@ private: System::Windows::Forms::DataGridView^ dgv_paie;
 			// 
 			// tabPage_stck
 			// 
+			this->tabPage_stck->Controls->Add(this->lbl_id_com);
+			this->tabPage_stck->Controls->Add(this->txt_id_com);
 			this->tabPage_stck->Controls->Add(this->txt_taux_tva_art);
 			this->tabPage_stck->Controls->Add(this->lbl_tva_art);
 			this->tabPage_stck->Controls->Add(this->lbl_prixht_art);
@@ -1260,6 +1208,22 @@ private: System::Windows::Forms::DataGridView^ dgv_paie;
 			this->tabPage_stck->TabIndex = 3;
 			this->tabPage_stck->Text = L"Stock";
 			this->tabPage_stck->UseVisualStyleBackColor = true;
+			// 
+			// lbl_id_com
+			// 
+			this->lbl_id_com->AutoSize = true;
+			this->lbl_id_com->Location = System::Drawing::Point(174, 377);
+			this->lbl_id_com->Name = L"lbl_id_com";
+			this->lbl_id_com->Size = System::Drawing::Size(94, 17);
+			this->lbl_id_com->TabIndex = 23;
+			this->lbl_id_com->Text = L"ID commande";
+			// 
+			// txt_id_com
+			// 
+			this->txt_id_com->Location = System::Drawing::Point(177, 397);
+			this->txt_id_com->Name = L"txt_id_com";
+			this->txt_id_com->Size = System::Drawing::Size(302, 22);
+			this->txt_id_com->TabIndex = 22;
 			// 
 			// txt_taux_tva_art
 			// 
@@ -1611,8 +1575,10 @@ private: System::Windows::Forms::DataGridView^ dgv_paie;
 		int prixht = System::Convert::ToInt32(textprixht);
 		String^ texttaux = this->txt_taux_tva_art->Text;
 		int taux = System::Convert::ToInt32(texttaux);
+		String^ textid_com = this->txt_id_com->Text;
+		int id_com = System::Convert::ToInt32(textid_com);
 		
-		this->oSvc->ajouterUnStock(ref, this->txt_nom_art->Text, prixht, taux, quantiteProduit, seuilReap);
+		this->oSvc->ajouterUnStock(ref, this->txt_nom_art->Text, prixht, taux, quantiteProduit, seuilReap,id_com);
 
 		//Load data Stock
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
@@ -1649,8 +1615,10 @@ private: System::Windows::Forms::DataGridView^ dgv_paie;
 		int taux = System::Convert::ToInt32(texttaux);
 		String^ txtid = this->txt_id_stck->Text;
 		int id = System::Convert::ToInt32(txtid);
+		String^ textid_com = this->txt_id_com->Text;
+		int id_com = System::Convert::ToInt32(textid_com);
 
-		this->oSvc->modifierUnStock(ref, this->txt_nom_art->Text, prixht, taux, quantiteProduit, seuilReap, id);
+		this->oSvc->modifierUnStock(ref, this->txt_nom_art->Text, prixht, taux, quantiteProduit, seuilReap, id,id_com);
 
 		//Load data Stock
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
@@ -1697,7 +1665,7 @@ private: System::Windows::Forms::DataGridView^ dgv_paie;
 	}
 	private: System::Void button_insert2_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
-		this->oSvc->ajouterUnPersonnel(this->txt_nom_pers->Text, this->txt_prenom_pers->Text, this->txt_genre_pers->Text, this->txt_date_emb_pers->Text, this->txt_date_emb_sup_pers->Text, this->txt_adr_pers->Text, this->txt_nom_sup_pers->Text);
+		this->oSvc->ajouterUnPersonnel(this->txt_type_pers->Text, this->txt_nom_pers->Text, this->txt_prenom_pers->Text, this->txt_genre_pers->Text, this->txt_date_emb_pers->Text, this->txt_date_emb_sup_pers->Text, this->txt_adr_pers->Text, this->txt_nom_sup_pers->Text);
 		//Load data
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
 		this->dgv_pers->Refresh();
@@ -1745,7 +1713,7 @@ private: System::Windows::Forms::DataGridView^ dgv_paie;
 		String^ textVal = this->txt_id_comm->Text;
 		int id_com = System::Convert::ToInt32(textVal);
 
-		String^ textVal1 = this->txt_article_comm->Text;
+		String^ textVal1 = this->txt_tot_article_comm->Text;
 		int com_tot_ar = System::Convert::ToInt32(textVal1);
 
 		String^ textVal2 = this->txt_ht_comm->Text;
@@ -1794,7 +1762,7 @@ private: System::Windows::Forms::DataGridView^ dgv_paie;
 		String^ textVal = this->txt_id_comm->Text;
 		int id_com = System::Convert::ToInt32(textVal);
 
-		String^ textVal1 = this->txt_article_comm->Text;
+		String^ textVal1 = this->txt_tot_article_comm->Text;
 		int com_tot_ar = System::Convert::ToInt32(textVal1);
 
 		String^ textVal2 = this->txt_ht_comm->Text;
@@ -1828,22 +1796,26 @@ private: System::Windows::Forms::DataGridView^ dgv_paie;
 		this->txt_ref_comm->Text = rowv->Cells["com_ref"]->Value->ToString();
 		this->txt_date_em_comm->Text = rowv->Cells["com_date_prevue"]->Value->ToString();
 		this->txt_date_prevu_comm->Text = rowv->Cells["com_date_emission"]->Value->ToString();
-		this->txt_taux_tva_art->Text = rowv->Cells["com_tot_ar"]->Value->ToString();
-		this->txt_ttc_comm->Text = rowv->Cells["com_tot_ht"]->Value->ToString();
+		this->txt_tot_article_comm->Text = rowv->Cells["com_tot_ar"]->Value->ToString();
+		this->txt_ht_comm->Text = rowv->Cells["com_tot_ht"]->Value->ToString();
 		this->txt_tva_comm->Text = rowv->Cells["com_tot_tva"]->Value->ToString();
 		this->txt_ttc_comm->Text = rowv->Cells["com_tot_ttc"]->Value->ToString();
 		this->txt_id_paiement_comm->Text = rowv->Cells["pai_id"]->Value->ToString();
 	}
 		   
 
-	private: System::Void btn_aff_paie_Click(System::Object^ sender, System::EventArgs^ e) 
+	private: System::Void btn_aff_art_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
+
+		String^ textIdCom = this->txt_id_comm->Text;
+		int id_comm = System::Convert::ToInt32(textIdCom);
+
 		//Load data Client
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
 		this->dgv_paie->Refresh();
-		this->oDs = this->oSvc->afficherPaiement("TB_PAIEMENT");
+		this->oDs = this->oSvc->afficherArticleComm(id_comm, "TB_STOCK");
 		this->dgv_paie->DataSource = this->oDs;
-		this->dgv_paie->DataMember = "TB_PAIEMENT";
+		this->dgv_paie->DataMember = "TB_STOCK";
 	}
 };
 }
