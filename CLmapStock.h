@@ -34,7 +34,5 @@ namespace NS_Comp_Mappage
 		//int getArtDesignation(void);
 		double getArtPrixHt(void);
 		double getArtTauxTva(void);
-		
-		
 	};
 }

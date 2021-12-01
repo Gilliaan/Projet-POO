@@ -104,10 +104,13 @@ void NS_Comp_Svc::CLservices::supprimerUnStock(int id)
 
 	this->oCad->actionRows(sql);
 }
-void NS_Comp_Svc::CLservices::modifierUnStock(int prodQuantite, int seuil, int id)
+void NS_Comp_Svc::CLservices::modifierUnStock(int ref, System::String^ nom ,double prixht,double tauxtva, int prodQuantite, int seuil, int id)
 {
 	System::String^ sql;
-
+	this->oMappStock->setArtName(nom);
+	this->oMappStock->setArtPrixHt(prixht);
+	this->oMappStock->setArtRef(ref);
+	this->oMappStock->setArtTauxTva(tauxtva);
 	this->oMappStock->setStockQuantite(prodQuantite);
 	this->oMappStock->setSeuilReap(seuil);
 	this->oMappStock->setIdStock(id);

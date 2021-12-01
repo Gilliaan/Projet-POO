@@ -25,7 +25,6 @@ namespace NS_Comp_Svc
 		//Méthodes gestion Stock
 		void ajouterUnStock(int, System::String^, double, double, int, int);
 		void supprimerUnStock(int);
-		void modifierUnStock(int, int, int);
-
+		void modifierUnStock(int, System::String^, double, double, int, int, int);
 	};
 }

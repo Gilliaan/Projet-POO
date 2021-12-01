@@ -162,6 +162,14 @@ namespace ProjetPOO {
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
+			this->txt_taux_tva_art = (gcnew System::Windows::Forms::TextBox());
+			this->lbl_tva_art = (gcnew System::Windows::Forms::Label());
+			this->lbl_prixht_art = (gcnew System::Windows::Forms::Label());
+			this->lbl_nom_art = (gcnew System::Windows::Forms::Label());
+			this->lbl_ref_art = (gcnew System::Windows::Forms::Label());
+			this->txt_prixht_art = (gcnew System::Windows::Forms::TextBox());
+			this->txt_nom_art = (gcnew System::Windows::Forms::TextBox());
+			this->txt_ref_art = (gcnew System::Windows::Forms::TextBox());
 			this->lbl_console_stck = (gcnew System::Windows::Forms::Label());
 			this->list_console_stck = (gcnew System::Windows::Forms::ListBox());
 			this->txt_quantite_produit_stck = (gcnew System::Windows::Forms::TextBox());
@@ -175,14 +183,6 @@ namespace ProjetPOO {
 			this->btn_inserer_stck = (gcnew System::Windows::Forms::Button());
 			this->dgv_stck = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
-			this->txt_ref_art = (gcnew System::Windows::Forms::TextBox());
-			this->txt_nom_art = (gcnew System::Windows::Forms::TextBox());
-			this->txt_prixht_art = (gcnew System::Windows::Forms::TextBox());
-			this->lbl_ref_art = (gcnew System::Windows::Forms::Label());
-			this->lbl_nom_art = (gcnew System::Windows::Forms::Label());
-			this->lbl_prixht_art = (gcnew System::Windows::Forms::Label());
-			this->lbl_tva_art = (gcnew System::Windows::Forms::Label());
-			this->txt_taux_tva_art = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_cl))->BeginInit();
 			this->tabControl1->SuspendLayout();
 			this->tab_cl->SuspendLayout();
@@ -200,6 +200,7 @@ namespace ProjetPOO {
 			this->dgv_cl->RowHeadersWidth = 51;
 			this->dgv_cl->Size = System::Drawing::Size(1145, 183);
 			this->dgv_cl->TabIndex = 0;
+			this->dgv_cl->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dgv_cl_CellContentClick);
 			// 
 			// btn_inserer_cl
 			// 
@@ -554,6 +555,70 @@ namespace ProjetPOO {
 			this->tabPage4->Text = L"Stock";
 			this->tabPage4->UseVisualStyleBackColor = true;
 			// 
+			// txt_taux_tva_art
+			// 
+			this->txt_taux_tva_art->Location = System::Drawing::Point(541, 397);
+			this->txt_taux_tva_art->Name = L"txt_taux_tva_art";
+			this->txt_taux_tva_art->Size = System::Drawing::Size(100, 22);
+			this->txt_taux_tva_art->TabIndex = 21;
+			// 
+			// lbl_tva_art
+			// 
+			this->lbl_tva_art->AutoSize = true;
+			this->lbl_tva_art->Location = System::Drawing::Point(538, 377);
+			this->lbl_tva_art->Name = L"lbl_tva_art";
+			this->lbl_tva_art->Size = System::Drawing::Size(70, 17);
+			this->lbl_tva_art->TabIndex = 20;
+			this->lbl_tva_art->Text = L"Taux TVA";
+			// 
+			// lbl_prixht_art
+			// 
+			this->lbl_prixht_art->AutoSize = true;
+			this->lbl_prixht_art->Location = System::Drawing::Point(538, 332);
+			this->lbl_prixht_art->Name = L"lbl_prixht_art";
+			this->lbl_prixht_art->Size = System::Drawing::Size(54, 17);
+			this->lbl_prixht_art->TabIndex = 19;
+			this->lbl_prixht_art->Text = L"Prix HT";
+			// 
+			// lbl_nom_art
+			// 
+			this->lbl_nom_art->AutoSize = true;
+			this->lbl_nom_art->Location = System::Drawing::Point(538, 287);
+			this->lbl_nom_art->Name = L"lbl_nom_art";
+			this->lbl_nom_art->Size = System::Drawing::Size(80, 17);
+			this->lbl_nom_art->TabIndex = 18;
+			this->lbl_nom_art->Text = L"Nom Article";
+			// 
+			// lbl_ref_art
+			// 
+			this->lbl_ref_art->AutoSize = true;
+			this->lbl_ref_art->Location = System::Drawing::Point(538, 242);
+			this->lbl_ref_art->Name = L"lbl_ref_art";
+			this->lbl_ref_art->Size = System::Drawing::Size(30, 17);
+			this->lbl_ref_art->TabIndex = 17;
+			this->lbl_ref_art->Text = L"Ref";
+			// 
+			// txt_prixht_art
+			// 
+			this->txt_prixht_art->Location = System::Drawing::Point(541, 352);
+			this->txt_prixht_art->Name = L"txt_prixht_art";
+			this->txt_prixht_art->Size = System::Drawing::Size(100, 22);
+			this->txt_prixht_art->TabIndex = 16;
+			// 
+			// txt_nom_art
+			// 
+			this->txt_nom_art->Location = System::Drawing::Point(541, 304);
+			this->txt_nom_art->Name = L"txt_nom_art";
+			this->txt_nom_art->Size = System::Drawing::Size(100, 22);
+			this->txt_nom_art->TabIndex = 15;
+			// 
+			// txt_ref_art
+			// 
+			this->txt_ref_art->Location = System::Drawing::Point(541, 262);
+			this->txt_ref_art->Name = L"txt_ref_art";
+			this->txt_ref_art->Size = System::Drawing::Size(100, 22);
+			this->txt_ref_art->TabIndex = 14;
+			// 
 			// lbl_console_stck
 			// 
 			this->lbl_console_stck->AutoSize = true;
@@ -628,6 +693,7 @@ namespace ProjetPOO {
 			this->btn_modifier_stck->TabIndex = 3;
 			this->btn_modifier_stck->Text = L"MODIFIER";
 			this->btn_modifier_stck->UseVisualStyleBackColor = true;
+			this->btn_modifier_stck->Click += gcnew System::EventHandler(this, &MyForm::btn_modifier_stck_Click);
 			// 
 			// btn_supprimer_stck
 			// 
@@ -637,6 +703,7 @@ namespace ProjetPOO {
 			this->btn_supprimer_stck->TabIndex = 2;
 			this->btn_supprimer_stck->Text = L"SUPPRIMER";
 			this->btn_supprimer_stck->UseVisualStyleBackColor = true;
+			this->btn_supprimer_stck->Click += gcnew System::EventHandler(this, &MyForm::btn_supprimer_stck_Click);
 			// 
 			// btn_inserer_stck
 			// 
@@ -657,6 +724,7 @@ namespace ProjetPOO {
 			this->dgv_stck->RowTemplate->Height = 24;
 			this->dgv_stck->Size = System::Drawing::Size(1147, 184);
 			this->dgv_stck->TabIndex = 0;
+			this->dgv_stck->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dgv_stck_CellContentClick);
 			// 
 			// tabPage5
 			// 
@@ -667,70 +735,6 @@ namespace ProjetPOO {
 			this->tabPage5->TabIndex = 4;
 			this->tabPage5->Text = L"Statistiques";
 			this->tabPage5->UseVisualStyleBackColor = true;
-			// 
-			// txt_ref_art
-			// 
-			this->txt_ref_art->Location = System::Drawing::Point(541, 262);
-			this->txt_ref_art->Name = L"txt_ref_art";
-			this->txt_ref_art->Size = System::Drawing::Size(100, 22);
-			this->txt_ref_art->TabIndex = 14;
-			// 
-			// txt_nom_art
-			// 
-			this->txt_nom_art->Location = System::Drawing::Point(541, 304);
-			this->txt_nom_art->Name = L"txt_nom_art";
-			this->txt_nom_art->Size = System::Drawing::Size(100, 22);
-			this->txt_nom_art->TabIndex = 15;
-			// 
-			// txt_prixht_art
-			// 
-			this->txt_prixht_art->Location = System::Drawing::Point(541, 352);
-			this->txt_prixht_art->Name = L"txt_prixht_art";
-			this->txt_prixht_art->Size = System::Drawing::Size(100, 22);
-			this->txt_prixht_art->TabIndex = 16;
-			// 
-			// lbl_ref_art
-			// 
-			this->lbl_ref_art->AutoSize = true;
-			this->lbl_ref_art->Location = System::Drawing::Point(538, 242);
-			this->lbl_ref_art->Name = L"lbl_ref_art";
-			this->lbl_ref_art->Size = System::Drawing::Size(30, 17);
-			this->lbl_ref_art->TabIndex = 17;
-			this->lbl_ref_art->Text = L"Ref";
-			// 
-			// lbl_nom_art
-			// 
-			this->lbl_nom_art->AutoSize = true;
-			this->lbl_nom_art->Location = System::Drawing::Point(538, 287);
-			this->lbl_nom_art->Name = L"lbl_nom_art";
-			this->lbl_nom_art->Size = System::Drawing::Size(80, 17);
-			this->lbl_nom_art->TabIndex = 18;
-			this->lbl_nom_art->Text = L"Nom Article";
-			// 
-			// lbl_prixht_art
-			// 
-			this->lbl_prixht_art->AutoSize = true;
-			this->lbl_prixht_art->Location = System::Drawing::Point(538, 332);
-			this->lbl_prixht_art->Name = L"lbl_prixht_art";
-			this->lbl_prixht_art->Size = System::Drawing::Size(54, 17);
-			this->lbl_prixht_art->TabIndex = 19;
-			this->lbl_prixht_art->Text = L"Prix HT";
-			// 
-			// lbl_tva_art
-			// 
-			this->lbl_tva_art->AutoSize = true;
-			this->lbl_tva_art->Location = System::Drawing::Point(538, 377);
-			this->lbl_tva_art->Name = L"lbl_tva_art";
-			this->lbl_tva_art->Size = System::Drawing::Size(70, 17);
-			this->lbl_tva_art->TabIndex = 20;
-			this->lbl_tva_art->Text = L"Taux TVA";
-			// 
-			// txt_taux_tva_art
-			// 
-			this->txt_taux_tva_art->Location = System::Drawing::Point(541, 397);
-			this->txt_taux_tva_art->Name = L"txt_taux_tva_art";
-			this->txt_taux_tva_art->Size = System::Drawing::Size(100, 22);
-			this->txt_taux_tva_art->TabIndex = 21;
 			// 
 			// MyForm
 			// 
@@ -866,11 +870,11 @@ namespace ProjetPOO {
 		String^ textref = this->txt_ref_art->Text;
 		int ref = System::Convert::ToInt32(textref);
 		String^ textprixht = this->txt_prixht_art->Text;
-		int prixht = System::Convert::ToInt32(textprixht);
+		double prixht = System::Convert::ToDouble(textprixht);
 		String^ texttaux = this->txt_taux_tva_art->Text;
-		int taux = System::Convert::ToInt32(texttaux);
+		double taux = System::Convert::ToDouble(texttaux);
 		
-		this->oSvc->ajouterUnStock(ref,this->txt_nom_art->Text,prixht,taux, quantiteProduit, seuilReap);
+		this->oSvc->ajouterUnStock(ref, this->txt_nom_art->Text, prixht, taux, quantiteProduit, seuilReap);
 
 		//Load data Stock
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
@@ -879,6 +883,69 @@ namespace ProjetPOO {
 		this->dgv_stck->DataSource = this->oDs;
 		this->dgv_stck->DataMember = "TB_STOCK";
 	}
+	private: System::Void btn_supprimer_stck_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		String^ txtid = this->txt_id_stck->Text;
+		int id = System::Convert::ToInt32(txtid);
+
+		this->oSvc->supprimerUnStock(id);
+
+		//Load data Stock
+		this->oSvc = gcnew NS_Comp_Svc::CLservices();
+		this->dgv_stck->Refresh();
+		this->oDs = this->oSvc->selectionnerTousLeStock("TB_STOCK");
+		this->dgv_stck->DataSource = this->oDs;
+		this->dgv_stck->DataMember = "TB_STOCK";
+	}
+	private: System::Void btn_modifier_stck_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		String^ textquantite = this->txt_quantite_produit_stck->Text;
+		int quantiteProduit = System::Convert::ToInt32(textquantite);
+		String^ textseuil = this->txt_seuil_reap_stck->Text;
+		int seuilReap = System::Convert::ToInt32(textseuil);
+		String^ textref = this->txt_ref_art->Text;
+		int ref = System::Convert::ToInt32(textref);
+		String^ textprixht = this->txt_prixht_art->Text;
+		double prixht = System::Convert::ToDouble(textprixht);
+		String^ texttaux = this->txt_taux_tva_art->Text;
+		double taux = System::Convert::ToDouble(texttaux);
+		String^ txtid = this->txt_ref_art->Text;
+		int id = System::Convert::ToInt32(txtid);
+
+		this->oSvc->modifierUnStock(ref, this->txt_nom_art->Text, prixht, taux, quantiteProduit, seuilReap, id);
+
+		//Load data Stock
+		this->oSvc = gcnew NS_Comp_Svc::CLservices();
+		this->dgv_stck->Refresh();
+		this->oDs = this->oSvc->selectionnerTousLeStock("TB_STOCK");
+		this->dgv_stck->DataSource = this->oDs;
+		this->dgv_stck->DataMember = "TB_STOCK";
+	}
+
+	private: System::Void dgv_cl_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+		int rowIndex = e->RowIndex;
+		DataGridViewRow^ rowv = dgv_cl->Rows[rowIndex];
+		this->txt_id_cl->Text = rowv->Cells["id_ppl"]->Value->ToString();
+		this->txt_nom_cl->Text = rowv->Cells["ppl_nom"]->Value->ToString();
+		this->txt_prenom_cl->Text = rowv->Cells["ppl_prenom"]->Value->ToString();
+		this->txt_date_naissance_cl->Text = rowv->Cells["cl_date_naissance"]->Value->ToString();
+		this->txt_date_premier_achat_cl->Text = rowv->Cells["CL_date_premier_achat"]->Value->ToString();
+		this->txt_genre_cl->Text = rowv->Cells["ppl_gender"]->Value->ToString();
+	
+
+	}
+	private: System::Void dgv_stck_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+		int rowIndex = e->RowIndex;
+		DataGridViewRow^ rowv = dgv_stck->Rows[rowIndex];
+		this->txt_id_stck->Text = rowv->Cells["st_id"]->Value->ToString();
+		this->txt_ref_art->Text = rowv->Cells["art_ref"]->Value->ToString();
+		this->txt_nom_art->Text = rowv->Cells["art_name"]->Value->ToString();
+		this->txt_prixht_art->Text = rowv->Cells["art_prix_ht"]->Value->ToString();
+		this->txt_taux_tva_art->Text = rowv->Cells["art_taux_tva"]->Value->ToString();
+		this->txt_quantite_produit_stck->Text = rowv->Cells["st_prod_quantite"]->Value->ToString();
+		this->txt_seuil_reap_stck->Text = rowv->Cells["st_seuil_reap"]->Value->ToString();
+	}
+
 
 };
 }

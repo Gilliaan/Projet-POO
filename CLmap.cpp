@@ -19,7 +19,7 @@ System::String^ NS_Comp_Mappage::CLmapClient::InsertClient(void)
 }
 System::String^ NS_Comp_Mappage::CLmapClient::DeleteClient(void)
 {
-	return "DELETE FROM TB_PEOPLE WHERE id_ppl = '" + this->id_ppl + "'; ";
+	return "DELETE FROM TB_ADRESSE WHERE ppl_id = '"+ this->id_ppl +"' DELETE FROM TB_PEOPLE WHERE id_ppl = '" + this->id_ppl + "'; ";
 }
 System::String^ NS_Comp_Mappage::CLmapClient::UpdateClient(void)
 {
@@ -28,7 +28,7 @@ System::String^ NS_Comp_Mappage::CLmapClient::UpdateClient(void)
 		+ this->ppl_prenom + "', ppl_gender = '"
 		+ this->ppl_gender + "', cl_date_naissance = '"
 		+ this->cl_date_naissance + "', CL_date_premier_achat = '"
-		+ this->CL_date_premier_achat + "'; ";
+		+ this->CL_date_premier_achat + "' WHERE id_ppl = '"+ this->id_ppl +"'; ";
 }
 void NS_Comp_Mappage::CLmapClient::setId(int Id)
 {
