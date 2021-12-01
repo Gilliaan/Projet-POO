@@ -706,6 +706,7 @@ namespace ProjetPOO {
 			this->dgv_PER->RowTemplate->Height = 24;
 			this->dgv_PER->Size = System::Drawing::Size(915, 222);
 			this->dgv_PER->TabIndex = 0;
+			this->dgv_PER->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dgv_PER_CellContentClick);
 			// 
 			// tabPage3
 			// 
@@ -785,11 +786,11 @@ namespace ProjetPOO {
 	}
 	private: System::Void btn_insert_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		
+
 
 		//Load data
 		this->dgv_enr->Refresh();
-		
+
 		this->dgv_enr->DataSource = this->oDs;
 		this->dgv_enr->DataMember = "TB_PEOPLE";
 
@@ -804,7 +805,7 @@ namespace ProjetPOO {
 
 		//Load data
 		this->dgv_enr->Refresh();
-		
+
 		this->dgv_enr->DataSource = this->oDs;
 		this->dgv_enr->DataMember = "TB_PEOPLE";
 
@@ -819,7 +820,7 @@ namespace ProjetPOO {
 
 		//Load data
 		this->dgv_enr->Refresh();
-		
+
 		this->dgv_enr->DataSource = this->oDs;
 		this->dgv_enr->DataMember = "TB_PEOPLE";
 
@@ -870,5 +871,19 @@ namespace ProjetPOO {
 		this->listBox2->Items->Add("Personne suprimée, Id :" + this->Id_personnel->Text + ", Nom =" + this->nom_personnel->Text + " OK");
 	}
 
+	private: System::Void dgv_PER_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+		int rowIndex = e->RowIndex;
+		DataGridViewRow^ rowv = dgv_PER->Rows[rowIndex];
+
+		this->Id_personnel->Text = rowv->Cells["id_ppl"]->Value->ToString();
+		this->genre_personnel->Text = rowv->Cells["ppl_gender"]->Value->ToString();
+		this->nom_personnel->Text = rowv->Cells["ppl_nom"]->Value->ToString();
+		this->prenom_personnel->Text = rowv->Cells["ppl_prenom"]->Value->ToString();
+		this->date_embauche_personnel->Text = rowv->Cells["p_emb_date"]->Value->ToString();
+		this->adresse_personnel->Text = rowv->Cells["p_adresse"]->Value->ToString();
+		this->nom_supérieur->Text = rowv->Cells["p_sup_name"]->Value->ToString();
+		this->date_embauche_supérieur->Text = rowv->Cells["p_sup_emb_date"]->Value->ToString();
+
+	};
 	};
 }
