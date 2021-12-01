@@ -25,7 +25,7 @@ void NS_Comp_Svc::CLservices::ajouterUneCommande(System::String^ ref, System::St
 	this->oMappComm->setTot_ht(tot_ht);
 	this->oMappComm->setTot_tva(tot_tva);
 	this->oMappComm->setTot_ttc(tot_ttc);
-	this->oMappComm->setId_paiement(idpaiement);
+	this->oMappComm->setPai_id(idpaiement);
 	sql = this->oMappComm->InsertComm();
 
 	this->oCad->actionRows(sql);
@@ -51,7 +51,7 @@ void NS_Comp_Svc::CLservices::modifierUneCommande(System::String^ ref, System::S
 	this->oMappComm->setTot_ht(tot_ht);
 	this->oMappComm->setTot_tva(tot_tva);
 	this->oMappComm->setTot_ttc(tot_ttc);
-	this->oMappComm->setId_paiement(idpaiement);
+	this->oMappComm->setPai_id(idpaiement);
 	this->oMappComm->setIdComm(id);
 	sql = this->oMappComm->UpdateComm();
 
