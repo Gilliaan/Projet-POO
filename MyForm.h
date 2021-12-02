@@ -356,21 +356,19 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// dgv_cl
 			// 
 			this->dgv_cl->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dgv_cl->Location = System::Drawing::Point(16, 18);
-			this->dgv_cl->Margin = System::Windows::Forms::Padding(4);
+			this->dgv_cl->Location = System::Drawing::Point(12, 15);
 			this->dgv_cl->Name = L"dgv_cl";
 			this->dgv_cl->RowHeadersWidth = 51;
-			this->dgv_cl->Size = System::Drawing::Size(1145, 183);
+			this->dgv_cl->Size = System::Drawing::Size(859, 149);
 			this->dgv_cl->TabIndex = 0;
 			this->dgv_cl->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dgv_cl_CellContentClick);
 			// 
 			// btn_inserer_cl
 			// 
 			this->btn_inserer_cl->BackColor = System::Drawing::Color::Transparent;
-			this->btn_inserer_cl->Location = System::Drawing::Point(16, 215);
-			this->btn_inserer_cl->Margin = System::Windows::Forms::Padding(4);
+			this->btn_inserer_cl->Location = System::Drawing::Point(12, 175);
 			this->btn_inserer_cl->Name = L"btn_inserer_cl";
-			this->btn_inserer_cl->Size = System::Drawing::Size(121, 46);
+			this->btn_inserer_cl->Size = System::Drawing::Size(91, 37);
 			this->btn_inserer_cl->TabIndex = 2;
 			this->btn_inserer_cl->Text = L"INSÉRER";
 			this->btn_inserer_cl->UseVisualStyleBackColor = false;
@@ -378,10 +376,9 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// 
 			// btn_supprimer_cl
 			// 
-			this->btn_supprimer_cl->Location = System::Drawing::Point(16, 322);
-			this->btn_supprimer_cl->Margin = System::Windows::Forms::Padding(4);
+			this->btn_supprimer_cl->Location = System::Drawing::Point(12, 262);
 			this->btn_supprimer_cl->Name = L"btn_supprimer_cl";
-			this->btn_supprimer_cl->Size = System::Drawing::Size(121, 46);
+			this->btn_supprimer_cl->Size = System::Drawing::Size(91, 37);
 			this->btn_supprimer_cl->TabIndex = 3;
 			this->btn_supprimer_cl->Text = L"SUPPRIMER";
 			this->btn_supprimer_cl->UseVisualStyleBackColor = true;
@@ -389,10 +386,9 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// 
 			// btn_modifier_cl
 			// 
-			this->btn_modifier_cl->Location = System::Drawing::Point(16, 268);
-			this->btn_modifier_cl->Margin = System::Windows::Forms::Padding(4);
+			this->btn_modifier_cl->Location = System::Drawing::Point(12, 218);
 			this->btn_modifier_cl->Name = L"btn_modifier_cl";
-			this->btn_modifier_cl->Size = System::Drawing::Size(121, 46);
+			this->btn_modifier_cl->Size = System::Drawing::Size(91, 37);
 			this->btn_modifier_cl->TabIndex = 4;
 			this->btn_modifier_cl->Text = L"MODIFIER";
 			this->btn_modifier_cl->UseVisualStyleBackColor = true;
@@ -400,52 +396,52 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// 
 			// txt_id_cl
 			// 
-			this->txt_id_cl->Location = System::Drawing::Point(166, 239);
-			this->txt_id_cl->Margin = System::Windows::Forms::Padding(4);
+			this->txt_id_cl->Location = System::Drawing::Point(124, 194);
 			this->txt_id_cl->Name = L"txt_id_cl";
-			this->txt_id_cl->Size = System::Drawing::Size(153, 22);
+			this->txt_id_cl->Size = System::Drawing::Size(116, 20);
 			this->txt_id_cl->TabIndex = 5;
 			// 
 			// txt_nom_cl
 			// 
-			this->txt_nom_cl->Location = System::Drawing::Point(166, 292);
-			this->txt_nom_cl->Margin = System::Windows::Forms::Padding(4);
+			this->txt_nom_cl->Location = System::Drawing::Point(124, 237);
 			this->txt_nom_cl->Name = L"txt_nom_cl";
-			this->txt_nom_cl->Size = System::Drawing::Size(153, 22);
+			this->txt_nom_cl->Size = System::Drawing::Size(116, 20);
 			this->txt_nom_cl->TabIndex = 6;
 			// 
 			// txt_prenom_cl
 			// 
-			this->txt_prenom_cl->Location = System::Drawing::Point(343, 292);
-			this->txt_prenom_cl->Margin = System::Windows::Forms::Padding(4);
+			this->txt_prenom_cl->Location = System::Drawing::Point(257, 237);
 			this->txt_prenom_cl->Name = L"txt_prenom_cl";
-			this->txt_prenom_cl->Size = System::Drawing::Size(153, 22);
+			this->txt_prenom_cl->Size = System::Drawing::Size(116, 20);
 			this->txt_prenom_cl->TabIndex = 7;
 			// 
 			// lbl_id_cl
 			// 
 			this->lbl_id_cl->AutoSize = true;
-			this->lbl_id_cl->Location = System::Drawing::Point(163, 218);
+			this->lbl_id_cl->Location = System::Drawing::Point(122, 177);
+			this->lbl_id_cl->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_id_cl->Name = L"lbl_id_cl";
-			this->lbl_id_cl->Size = System::Drawing::Size(19, 17);
+			this->lbl_id_cl->Size = System::Drawing::Size(16, 13);
 			this->lbl_id_cl->TabIndex = 8;
 			this->lbl_id_cl->Text = L"Id";
 			// 
 			// lbl_prenom_cl
 			// 
 			this->lbl_prenom_cl->AutoSize = true;
-			this->lbl_prenom_cl->Location = System::Drawing::Point(340, 271);
+			this->lbl_prenom_cl->Location = System::Drawing::Point(255, 220);
+			this->lbl_prenom_cl->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_prenom_cl->Name = L"lbl_prenom_cl";
-			this->lbl_prenom_cl->Size = System::Drawing::Size(57, 17);
+			this->lbl_prenom_cl->Size = System::Drawing::Size(43, 13);
 			this->lbl_prenom_cl->TabIndex = 9;
 			this->lbl_prenom_cl->Text = L"Prenom";
 			// 
 			// lbl_nom_cl
 			// 
 			this->lbl_nom_cl->AutoSize = true;
-			this->lbl_nom_cl->Location = System::Drawing::Point(163, 271);
+			this->lbl_nom_cl->Location = System::Drawing::Point(122, 220);
+			this->lbl_nom_cl->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_nom_cl->Name = L"lbl_nom_cl";
-			this->lbl_nom_cl->Size = System::Drawing::Size(37, 17);
+			this->lbl_nom_cl->Size = System::Drawing::Size(29, 13);
 			this->lbl_nom_cl->TabIndex = 10;
 			this->lbl_nom_cl->Text = L"Nom";
 			// 
@@ -457,9 +453,10 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			this->tabPage_comm->Controls->Add(this->tabPage_stck);
 			this->tabPage_comm->Controls->Add(this->tabPage5);
 			this->tabPage_comm->Location = System::Drawing::Point(0, 0);
+			this->tabPage_comm->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->tabPage_comm->Name = L"tabPage_comm";
 			this->tabPage_comm->SelectedIndex = 0;
-			this->tabPage_comm->Size = System::Drawing::Size(1213, 597);
+			this->tabPage_comm->Size = System::Drawing::Size(910, 485);
 			this->tabPage_comm->TabIndex = 11;
 			// 
 			// tabPage_cl
@@ -496,18 +493,20 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			this->tabPage_cl->Controls->Add(this->lbl_id_cl);
 			this->tabPage_cl->Controls->Add(this->txt_prenom_cl);
 			this->tabPage_cl->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->tabPage_cl->Location = System::Drawing::Point(4, 25);
+			this->tabPage_cl->Location = System::Drawing::Point(4, 22);
+			this->tabPage_cl->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->tabPage_cl->Name = L"tabPage_cl";
-			this->tabPage_cl->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage_cl->Size = System::Drawing::Size(1205, 568);
+			this->tabPage_cl->Padding = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->tabPage_cl->Size = System::Drawing::Size(902, 459);
 			this->tabPage_cl->TabIndex = 0;
 			this->tabPage_cl->Text = L"Clients";
 			// 
 			// btn_refresh_cl
 			// 
-			this->btn_refresh_cl->Location = System::Drawing::Point(166, 425);
+			this->btn_refresh_cl->Location = System::Drawing::Point(124, 345);
+			this->btn_refresh_cl->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btn_refresh_cl->Name = L"btn_refresh_cl";
-			this->btn_refresh_cl->Size = System::Drawing::Size(330, 46);
+			this->btn_refresh_cl->Size = System::Drawing::Size(248, 37);
 			this->btn_refresh_cl->TabIndex = 30;
 			this->btn_refresh_cl->Text = L"Refresh";
 			this->btn_refresh_cl->UseVisualStyleBackColor = true;
@@ -516,19 +515,19 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// lbl_dgv_adresse_cl
 			// 
 			this->lbl_dgv_adresse_cl->AutoSize = true;
-			this->lbl_dgv_adresse_cl->Location = System::Drawing::Point(594, 258);
+			this->lbl_dgv_adresse_cl->Location = System::Drawing::Point(446, 210);
+			this->lbl_dgv_adresse_cl->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_dgv_adresse_cl->Name = L"lbl_dgv_adresse_cl";
-			this->lbl_dgv_adresse_cl->Size = System::Drawing::Size(112, 17);
+			this->lbl_dgv_adresse_cl->Size = System::Drawing::Size(84, 13);
 			this->lbl_dgv_adresse_cl->TabIndex = 28;
 			this->lbl_dgv_adresse_cl->Text = L"Adresses client :";
 			// 
 			// ajt_adr_cl
 			// 
 			this->ajt_adr_cl->BackColor = System::Drawing::Color::Transparent;
-			this->ajt_adr_cl->Location = System::Drawing::Point(951, 215);
-			this->ajt_adr_cl->Margin = System::Windows::Forms::Padding(4);
+			this->ajt_adr_cl->Location = System::Drawing::Point(713, 175);
 			this->ajt_adr_cl->Name = L"ajt_adr_cl";
-			this->ajt_adr_cl->Size = System::Drawing::Size(210, 46);
+			this->ajt_adr_cl->Size = System::Drawing::Size(158, 37);
 			this->ajt_adr_cl->TabIndex = 27;
 			this->ajt_adr_cl->Text = L"CRÉER ADRESSE";
 			this->ajt_adr_cl->UseVisualStyleBackColor = false;
@@ -537,10 +536,9 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// aff_adr_cl
 			// 
 			this->aff_adr_cl->BackColor = System::Drawing::Color::Transparent;
-			this->aff_adr_cl->Location = System::Drawing::Point(722, 215);
-			this->aff_adr_cl->Margin = System::Windows::Forms::Padding(4);
+			this->aff_adr_cl->Location = System::Drawing::Point(542, 175);
 			this->aff_adr_cl->Name = L"aff_adr_cl";
-			this->aff_adr_cl->Size = System::Drawing::Size(210, 46);
+			this->aff_adr_cl->Size = System::Drawing::Size(158, 37);
 			this->aff_adr_cl->TabIndex = 26;
 			this->aff_adr_cl->Text = L"AFFICHER ADRESSE";
 			this->aff_adr_cl->UseVisualStyleBackColor = false;
@@ -549,96 +547,97 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// dgv_aff_adr_cl
 			// 
 			this->dgv_aff_adr_cl->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dgv_aff_adr_cl->Location = System::Drawing::Point(595, 279);
-			this->dgv_aff_adr_cl->Margin = System::Windows::Forms::Padding(4);
+			this->dgv_aff_adr_cl->Location = System::Drawing::Point(446, 227);
 			this->dgv_aff_adr_cl->Name = L"dgv_aff_adr_cl";
 			this->dgv_aff_adr_cl->RowHeadersWidth = 51;
-			this->dgv_aff_adr_cl->Size = System::Drawing::Size(566, 113);
+			this->dgv_aff_adr_cl->Size = System::Drawing::Size(424, 92);
 			this->dgv_aff_adr_cl->TabIndex = 25;
 			// 
 			// lbl_console_cl
 			// 
 			this->lbl_console_cl->AutoSize = true;
-			this->lbl_console_cl->Location = System::Drawing::Point(13, 478);
+			this->lbl_console_cl->Location = System::Drawing::Point(10, 388);
+			this->lbl_console_cl->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_console_cl->Name = L"lbl_console_cl";
-			this->lbl_console_cl->Size = System::Drawing::Size(59, 17);
+			this->lbl_console_cl->Size = System::Drawing::Size(45, 13);
 			this->lbl_console_cl->TabIndex = 24;
 			this->lbl_console_cl->Text = L"Console";
 			// 
 			// lbl_date_premier_achat_cl
 			// 
 			this->lbl_date_premier_achat_cl->AutoSize = true;
-			this->lbl_date_premier_achat_cl->Location = System::Drawing::Point(163, 375);
+			this->lbl_date_premier_achat_cl->Location = System::Drawing::Point(122, 305);
+			this->lbl_date_premier_achat_cl->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_date_premier_achat_cl->Name = L"lbl_date_premier_achat_cl";
-			this->lbl_date_premier_achat_cl->Size = System::Drawing::Size(129, 17);
+			this->lbl_date_premier_achat_cl->Size = System::Drawing::Size(97, 13);
 			this->lbl_date_premier_achat_cl->TabIndex = 23;
 			this->lbl_date_premier_achat_cl->Text = L"Date premier achat";
 			// 
 			// txt_date_premier_achat_cl
 			// 
-			this->txt_date_premier_achat_cl->Location = System::Drawing::Point(166, 396);
-			this->txt_date_premier_achat_cl->Margin = System::Windows::Forms::Padding(4);
+			this->txt_date_premier_achat_cl->Location = System::Drawing::Point(124, 322);
 			this->txt_date_premier_achat_cl->Name = L"txt_date_premier_achat_cl";
-			this->txt_date_premier_achat_cl->Size = System::Drawing::Size(330, 22);
+			this->txt_date_premier_achat_cl->Size = System::Drawing::Size(248, 20);
 			this->txt_date_premier_achat_cl->TabIndex = 22;
 			// 
 			// lbl_date_naissance_cl
 			// 
 			this->lbl_date_naissance_cl->AutoSize = true;
-			this->lbl_date_naissance_cl->Location = System::Drawing::Point(163, 322);
+			this->lbl_date_naissance_cl->Location = System::Drawing::Point(122, 262);
+			this->lbl_date_naissance_cl->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_date_naissance_cl->Name = L"lbl_date_naissance_cl";
-			this->lbl_date_naissance_cl->Size = System::Drawing::Size(106, 17);
+			this->lbl_date_naissance_cl->Size = System::Drawing::Size(81, 13);
 			this->lbl_date_naissance_cl->TabIndex = 21;
 			this->lbl_date_naissance_cl->Text = L"Date naissance";
 			// 
 			// txt_date_naissance_cl
 			// 
-			this->txt_date_naissance_cl->Location = System::Drawing::Point(166, 346);
-			this->txt_date_naissance_cl->Margin = System::Windows::Forms::Padding(4);
+			this->txt_date_naissance_cl->Location = System::Drawing::Point(124, 281);
 			this->txt_date_naissance_cl->Name = L"txt_date_naissance_cl";
-			this->txt_date_naissance_cl->Size = System::Drawing::Size(330, 22);
+			this->txt_date_naissance_cl->Size = System::Drawing::Size(248, 20);
 			this->txt_date_naissance_cl->TabIndex = 20;
 			// 
 			// lbl_adr_facturation_cl
 			// 
 			this->lbl_adr_facturation_cl->AutoSize = true;
-			this->lbl_adr_facturation_cl->Location = System::Drawing::Point(594, 436);
+			this->lbl_adr_facturation_cl->Location = System::Drawing::Point(446, 354);
+			this->lbl_adr_facturation_cl->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_adr_facturation_cl->Name = L"lbl_adr_facturation_cl";
-			this->lbl_adr_facturation_cl->Size = System::Drawing::Size(151, 17);
+			this->lbl_adr_facturation_cl->Size = System::Drawing::Size(113, 13);
 			this->lbl_adr_facturation_cl->TabIndex = 19;
 			this->lbl_adr_facturation_cl->Text = L"Adresse de facturation";
 			// 
 			// lbl_adr_livraison_cl
 			// 
 			this->lbl_adr_livraison_cl->AutoSize = true;
-			this->lbl_adr_livraison_cl->Location = System::Drawing::Point(594, 406);
+			this->lbl_adr_livraison_cl->Location = System::Drawing::Point(446, 330);
+			this->lbl_adr_livraison_cl->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_adr_livraison_cl->Name = L"lbl_adr_livraison_cl";
-			this->lbl_adr_livraison_cl->Size = System::Drawing::Size(136, 17);
+			this->lbl_adr_livraison_cl->Size = System::Drawing::Size(101, 13);
 			this->lbl_adr_livraison_cl->TabIndex = 18;
 			this->lbl_adr_livraison_cl->Text = L"Adresse de livraison";
 			// 
 			// txt_adr_facturation_cl
 			// 
-			this->txt_adr_facturation_cl->Location = System::Drawing::Point(754, 431);
-			this->txt_adr_facturation_cl->Margin = System::Windows::Forms::Padding(4);
+			this->txt_adr_facturation_cl->Location = System::Drawing::Point(566, 350);
 			this->txt_adr_facturation_cl->Name = L"txt_adr_facturation_cl";
-			this->txt_adr_facturation_cl->Size = System::Drawing::Size(407, 22);
+			this->txt_adr_facturation_cl->Size = System::Drawing::Size(306, 20);
 			this->txt_adr_facturation_cl->TabIndex = 17;
 			// 
 			// txt_adr_livraison_cl
 			// 
-			this->txt_adr_livraison_cl->Location = System::Drawing::Point(754, 401);
-			this->txt_adr_livraison_cl->Margin = System::Windows::Forms::Padding(4);
+			this->txt_adr_livraison_cl->Location = System::Drawing::Point(566, 326);
 			this->txt_adr_livraison_cl->Name = L"txt_adr_livraison_cl";
-			this->txt_adr_livraison_cl->Size = System::Drawing::Size(407, 22);
+			this->txt_adr_livraison_cl->Size = System::Drawing::Size(306, 20);
 			this->txt_adr_livraison_cl->TabIndex = 16;
 			// 
 			// lbl_genre_cl
 			// 
 			this->lbl_genre_cl->AutoSize = true;
-			this->lbl_genre_cl->Location = System::Drawing::Point(340, 218);
+			this->lbl_genre_cl->Location = System::Drawing::Point(255, 177);
+			this->lbl_genre_cl->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_genre_cl->Name = L"lbl_genre_cl";
-			this->lbl_genre_cl->Size = System::Drawing::Size(48, 17);
+			this->lbl_genre_cl->Size = System::Drawing::Size(36, 13);
 			this->lbl_genre_cl->TabIndex = 15;
 			this->lbl_genre_cl->Text = L"Genre";
 			// 
@@ -646,26 +645,27 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// 
 			this->comBoxGenreCl->FormattingEnabled = true;
 			this->comBoxGenreCl->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Homme ", L"Femme" });
-			this->comBoxGenreCl->Location = System::Drawing::Point(343, 237);
+			this->comBoxGenreCl->Location = System::Drawing::Point(257, 193);
+			this->comBoxGenreCl->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->comBoxGenreCl->Name = L"comBoxGenreCl";
-			this->comBoxGenreCl->Size = System::Drawing::Size(153, 24);
+			this->comBoxGenreCl->Size = System::Drawing::Size(116, 21);
 			this->comBoxGenreCl->TabIndex = 29;
 			// 
 			// lbl_type_personne_cl
 			// 
 			this->lbl_type_personne_cl->AutoSize = true;
-			this->lbl_type_personne_cl->Location = System::Drawing::Point(13, 392);
+			this->lbl_type_personne_cl->Location = System::Drawing::Point(10, 318);
+			this->lbl_type_personne_cl->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_type_personne_cl->Name = L"lbl_type_personne_cl";
-			this->lbl_type_personne_cl->Size = System::Drawing::Size(124, 17);
+			this->lbl_type_personne_cl->Size = System::Drawing::Size(93, 13);
 			this->lbl_type_personne_cl->TabIndex = 13;
 			this->lbl_type_personne_cl->Text = L"Type de personne";
 			// 
 			// txt_type_cl
 			// 
-			this->txt_type_cl->Location = System::Drawing::Point(16, 413);
-			this->txt_type_cl->Margin = System::Windows::Forms::Padding(4);
+			this->txt_type_cl->Location = System::Drawing::Point(12, 336);
 			this->txt_type_cl->Name = L"txt_type_cl";
-			this->txt_type_cl->Size = System::Drawing::Size(121, 22);
+			this->txt_type_cl->Size = System::Drawing::Size(92, 20);
 			this->txt_type_cl->TabIndex = 12;
 			this->txt_type_cl->Text = L"Client";
 			this->txt_type_cl->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
@@ -673,10 +673,10 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// list_console_cl
 			// 
 			this->list_console_cl->FormattingEnabled = true;
-			this->list_console_cl->ItemHeight = 16;
-			this->list_console_cl->Location = System::Drawing::Point(16, 498);
+			this->list_console_cl->Location = System::Drawing::Point(12, 405);
+			this->list_console_cl->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->list_console_cl->Name = L"list_console_cl";
-			this->list_console_cl->Size = System::Drawing::Size(1145, 52);
+			this->list_console_cl->Size = System::Drawing::Size(860, 43);
 			this->list_console_cl->TabIndex = 11;
 			// 
 			// tabPage_pers
@@ -705,11 +705,11 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			this->tabPage_pers->Controls->Add(this->btn_update_pers);
 			this->tabPage_pers->Controls->Add(this->btn_insert_pers);
 			this->tabPage_pers->Controls->Add(this->dgv_pers);
-			this->tabPage_pers->Location = System::Drawing::Point(4, 25);
-			this->tabPage_pers->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
+			this->tabPage_pers->Location = System::Drawing::Point(4, 22);
+			this->tabPage_pers->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			this->tabPage_pers->Name = L"tabPage_pers";
-			this->tabPage_pers->Padding = System::Windows::Forms::Padding(3, 4, 3, 4);
-			this->tabPage_pers->Size = System::Drawing::Size(1205, 568);
+			this->tabPage_pers->Padding = System::Windows::Forms::Padding(2, 3, 2, 3);
+			this->tabPage_pers->Size = System::Drawing::Size(902, 459);
 			this->tabPage_pers->TabIndex = 1;
 			this->tabPage_pers->Text = L"Personnel";
 			this->tabPage_pers->UseVisualStyleBackColor = true;
@@ -718,26 +718,28 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// 
 			this->comBoxGenrePers->FormattingEnabled = true;
 			this->comBoxGenrePers->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Homme", L"Femme" });
-			this->comBoxGenrePers->Location = System::Drawing::Point(343, 237);
+			this->comBoxGenrePers->Location = System::Drawing::Point(257, 193);
+			this->comBoxGenrePers->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->comBoxGenrePers->Name = L"comBoxGenrePers";
-			this->comBoxGenrePers->Size = System::Drawing::Size(153, 24);
+			this->comBoxGenrePers->Size = System::Drawing::Size(116, 21);
 			this->comBoxGenrePers->TabIndex = 30;
 			// 
 			// label20
 			// 
 			this->label20->AutoSize = true;
-			this->label20->Location = System::Drawing::Point(13, 478);
+			this->label20->Location = System::Drawing::Point(10, 388);
+			this->label20->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label20->Name = L"label20";
-			this->label20->Size = System::Drawing::Size(59, 17);
+			this->label20->Size = System::Drawing::Size(45, 13);
 			this->label20->TabIndex = 29;
 			this->label20->Text = L"Console";
 			// 
 			// txt_type_pers
 			// 
-			this->txt_type_pers->Location = System::Drawing::Point(16, 413);
-			this->txt_type_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->txt_type_pers->Location = System::Drawing::Point(12, 336);
+			this->txt_type_pers->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->txt_type_pers->Name = L"txt_type_pers";
-			this->txt_type_pers->Size = System::Drawing::Size(121, 22);
+			this->txt_type_pers->Size = System::Drawing::Size(92, 20);
 			this->txt_type_pers->TabIndex = 28;
 			this->txt_type_pers->Text = L"Personnel";
 			this->txt_type_pers->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
@@ -745,156 +747,164 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// lbl_type_pers
 			// 
 			this->lbl_type_pers->AutoSize = true;
-			this->lbl_type_pers->Location = System::Drawing::Point(13, 392);
+			this->lbl_type_pers->Location = System::Drawing::Point(10, 318);
+			this->lbl_type_pers->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_type_pers->Name = L"lbl_type_pers";
-			this->lbl_type_pers->Size = System::Drawing::Size(124, 17);
+			this->lbl_type_pers->Size = System::Drawing::Size(93, 13);
 			this->lbl_type_pers->TabIndex = 27;
 			this->lbl_type_pers->Text = L"Type de personne";
 			// 
 			// txt_date_emb_sup_pers
 			// 
-			this->txt_date_emb_sup_pers->Location = System::Drawing::Point(556, 290);
-			this->txt_date_emb_sup_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->txt_date_emb_sup_pers->Location = System::Drawing::Point(417, 236);
+			this->txt_date_emb_sup_pers->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->txt_date_emb_sup_pers->Name = L"txt_date_emb_sup_pers";
-			this->txt_date_emb_sup_pers->Size = System::Drawing::Size(222, 22);
+			this->txt_date_emb_sup_pers->Size = System::Drawing::Size(168, 20);
 			this->txt_date_emb_sup_pers->TabIndex = 26;
 			// 
 			// txt_nom_sup_pers
 			// 
-			this->txt_nom_sup_pers->Location = System::Drawing::Point(556, 236);
-			this->txt_nom_sup_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->txt_nom_sup_pers->Location = System::Drawing::Point(417, 192);
+			this->txt_nom_sup_pers->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->txt_nom_sup_pers->Name = L"txt_nom_sup_pers";
-			this->txt_nom_sup_pers->Size = System::Drawing::Size(222, 22);
+			this->txt_nom_sup_pers->Size = System::Drawing::Size(168, 20);
 			this->txt_nom_sup_pers->TabIndex = 25;
 			// 
 			// txt_date_emb_pers
 			// 
-			this->txt_date_emb_pers->Location = System::Drawing::Point(166, 396);
-			this->txt_date_emb_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->txt_date_emb_pers->Location = System::Drawing::Point(124, 322);
+			this->txt_date_emb_pers->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->txt_date_emb_pers->Name = L"txt_date_emb_pers";
-			this->txt_date_emb_pers->Size = System::Drawing::Size(330, 22);
+			this->txt_date_emb_pers->Size = System::Drawing::Size(248, 20);
 			this->txt_date_emb_pers->TabIndex = 24;
 			// 
 			// txt_adr_pers
 			// 
-			this->txt_adr_pers->Location = System::Drawing::Point(166, 346);
-			this->txt_adr_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->txt_adr_pers->Location = System::Drawing::Point(124, 281);
+			this->txt_adr_pers->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->txt_adr_pers->Name = L"txt_adr_pers";
-			this->txt_adr_pers->Size = System::Drawing::Size(330, 22);
+			this->txt_adr_pers->Size = System::Drawing::Size(248, 20);
 			this->txt_adr_pers->TabIndex = 23;
 			// 
 			// lbl_date_emb_sup_pers
 			// 
 			this->lbl_date_emb_sup_pers->AutoSize = true;
-			this->lbl_date_emb_sup_pers->Location = System::Drawing::Point(553, 265);
+			this->lbl_date_emb_sup_pers->Location = System::Drawing::Point(415, 215);
+			this->lbl_date_emb_sup_pers->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_date_emb_sup_pers->Name = L"lbl_date_emb_sup_pers";
-			this->lbl_date_emb_sup_pers->Size = System::Drawing::Size(183, 17);
+			this->lbl_date_emb_sup_pers->Size = System::Drawing::Size(137, 13);
 			this->lbl_date_emb_sup_pers->TabIndex = 22;
 			this->lbl_date_emb_sup_pers->Text = L"Date d\'embauche supérieur";
 			// 
 			// lbl_nom_sup_pers
 			// 
 			this->lbl_nom_sup_pers->AutoSize = true;
-			this->lbl_nom_sup_pers->Location = System::Drawing::Point(552, 211);
+			this->lbl_nom_sup_pers->Location = System::Drawing::Point(414, 171);
+			this->lbl_nom_sup_pers->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_nom_sup_pers->Name = L"lbl_nom_sup_pers";
-			this->lbl_nom_sup_pers->Size = System::Drawing::Size(121, 17);
+			this->lbl_nom_sup_pers->Size = System::Drawing::Size(90, 13);
 			this->lbl_nom_sup_pers->TabIndex = 21;
 			this->lbl_nom_sup_pers->Text = L"Nom du supérieur";
 			// 
 			// lbl_date_emb_pers
 			// 
 			this->lbl_date_emb_pers->AutoSize = true;
-			this->lbl_date_emb_pers->Location = System::Drawing::Point(163, 375);
+			this->lbl_date_emb_pers->Location = System::Drawing::Point(122, 305);
+			this->lbl_date_emb_pers->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_date_emb_pers->Name = L"lbl_date_emb_pers";
-			this->lbl_date_emb_pers->Size = System::Drawing::Size(119, 17);
+			this->lbl_date_emb_pers->Size = System::Drawing::Size(91, 13);
 			this->lbl_date_emb_pers->TabIndex = 20;
 			this->lbl_date_emb_pers->Text = L"Date d\'embauche";
 			// 
 			// lbl_adr_pers
 			// 
 			this->lbl_adr_pers->AutoSize = true;
-			this->lbl_adr_pers->Location = System::Drawing::Point(163, 322);
+			this->lbl_adr_pers->Location = System::Drawing::Point(122, 262);
+			this->lbl_adr_pers->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_adr_pers->Name = L"lbl_adr_pers";
-			this->lbl_adr_pers->Size = System::Drawing::Size(60, 17);
+			this->lbl_adr_pers->Size = System::Drawing::Size(45, 13);
 			this->lbl_adr_pers->TabIndex = 19;
 			this->lbl_adr_pers->Text = L"Adresse";
 			// 
 			// lbl_genre_pers
 			// 
 			this->lbl_genre_pers->AutoSize = true;
-			this->lbl_genre_pers->Location = System::Drawing::Point(340, 218);
+			this->lbl_genre_pers->Location = System::Drawing::Point(255, 177);
+			this->lbl_genre_pers->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_genre_pers->Name = L"lbl_genre_pers";
-			this->lbl_genre_pers->Size = System::Drawing::Size(48, 17);
+			this->lbl_genre_pers->Size = System::Drawing::Size(36, 13);
 			this->lbl_genre_pers->TabIndex = 16;
 			this->lbl_genre_pers->Text = L"Genre";
 			// 
 			// lbl_prenom_pers
 			// 
 			this->lbl_prenom_pers->AutoSize = true;
-			this->lbl_prenom_pers->Location = System::Drawing::Point(340, 271);
+			this->lbl_prenom_pers->Location = System::Drawing::Point(255, 220);
+			this->lbl_prenom_pers->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_prenom_pers->Name = L"lbl_prenom_pers";
-			this->lbl_prenom_pers->Size = System::Drawing::Size(57, 17);
+			this->lbl_prenom_pers->Size = System::Drawing::Size(43, 13);
 			this->lbl_prenom_pers->TabIndex = 12;
 			this->lbl_prenom_pers->Text = L"Prenom";
 			// 
 			// txt_prenom_pers
 			// 
-			this->txt_prenom_pers->Location = System::Drawing::Point(343, 292);
-			this->txt_prenom_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->txt_prenom_pers->Location = System::Drawing::Point(257, 237);
+			this->txt_prenom_pers->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->txt_prenom_pers->Name = L"txt_prenom_pers";
-			this->txt_prenom_pers->Size = System::Drawing::Size(153, 22);
+			this->txt_prenom_pers->Size = System::Drawing::Size(116, 20);
 			this->txt_prenom_pers->TabIndex = 12;
 			// 
 			// lbl_nom_pers
 			// 
 			this->lbl_nom_pers->AutoSize = true;
-			this->lbl_nom_pers->Location = System::Drawing::Point(163, 271);
+			this->lbl_nom_pers->Location = System::Drawing::Point(122, 220);
+			this->lbl_nom_pers->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_nom_pers->Name = L"lbl_nom_pers";
-			this->lbl_nom_pers->Size = System::Drawing::Size(37, 17);
+			this->lbl_nom_pers->Size = System::Drawing::Size(29, 13);
 			this->lbl_nom_pers->TabIndex = 12;
 			this->lbl_nom_pers->Text = L"Nom";
 			// 
 			// txt_nom_pers
 			// 
-			this->txt_nom_pers->Location = System::Drawing::Point(166, 292);
-			this->txt_nom_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->txt_nom_pers->Location = System::Drawing::Point(124, 237);
+			this->txt_nom_pers->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->txt_nom_pers->Name = L"txt_nom_pers";
-			this->txt_nom_pers->Size = System::Drawing::Size(153, 22);
+			this->txt_nom_pers->Size = System::Drawing::Size(116, 20);
 			this->txt_nom_pers->TabIndex = 12;
 			// 
 			// lbl_id_pers
 			// 
 			this->lbl_id_pers->AutoSize = true;
-			this->lbl_id_pers->Location = System::Drawing::Point(163, 218);
+			this->lbl_id_pers->Location = System::Drawing::Point(122, 177);
+			this->lbl_id_pers->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_id_pers->Name = L"lbl_id_pers";
-			this->lbl_id_pers->Size = System::Drawing::Size(19, 17);
+			this->lbl_id_pers->Size = System::Drawing::Size(16, 13);
 			this->lbl_id_pers->TabIndex = 12;
 			this->lbl_id_pers->Text = L"Id";
 			// 
 			// txt_id_pers
 			// 
-			this->txt_id_pers->Location = System::Drawing::Point(166, 239);
-			this->txt_id_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->txt_id_pers->Location = System::Drawing::Point(124, 194);
+			this->txt_id_pers->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->txt_id_pers->Name = L"txt_id_pers";
-			this->txt_id_pers->Size = System::Drawing::Size(153, 22);
+			this->txt_id_pers->Size = System::Drawing::Size(116, 20);
 			this->txt_id_pers->TabIndex = 12;
 			// 
 			// listBox2
 			// 
 			this->listBox2->FormattingEnabled = true;
-			this->listBox2->ItemHeight = 16;
-			this->listBox2->Location = System::Drawing::Point(16, 498);
-			this->listBox2->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
+			this->listBox2->Location = System::Drawing::Point(12, 405);
+			this->listBox2->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			this->listBox2->Name = L"listBox2";
-			this->listBox2->Size = System::Drawing::Size(1145, 52);
+			this->listBox2->Size = System::Drawing::Size(860, 43);
 			this->listBox2->TabIndex = 12;
 			// 
 			// btn_del_pres
 			// 
-			this->btn_del_pres->Location = System::Drawing::Point(16, 322);
-			this->btn_del_pres->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->btn_del_pres->Location = System::Drawing::Point(12, 262);
+			this->btn_del_pres->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->btn_del_pres->Name = L"btn_del_pres";
-			this->btn_del_pres->Size = System::Drawing::Size(121, 46);
+			this->btn_del_pres->Size = System::Drawing::Size(91, 37);
 			this->btn_del_pres->TabIndex = 4;
 			this->btn_del_pres->Text = L"SUPPRIMER";
 			this->btn_del_pres->UseVisualStyleBackColor = true;
@@ -902,10 +912,10 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// 
 			// btn_update_pers
 			// 
-			this->btn_update_pers->Location = System::Drawing::Point(16, 268);
-			this->btn_update_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->btn_update_pers->Location = System::Drawing::Point(12, 218);
+			this->btn_update_pers->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->btn_update_pers->Name = L"btn_update_pers";
-			this->btn_update_pers->Size = System::Drawing::Size(121, 46);
+			this->btn_update_pers->Size = System::Drawing::Size(91, 37);
 			this->btn_update_pers->TabIndex = 3;
 			this->btn_update_pers->Text = L"MODIFIER";
 			this->btn_update_pers->UseVisualStyleBackColor = true;
@@ -913,10 +923,10 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// 
 			// btn_insert_pers
 			// 
-			this->btn_insert_pers->Location = System::Drawing::Point(16, 215);
-			this->btn_insert_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->btn_insert_pers->Location = System::Drawing::Point(12, 175);
+			this->btn_insert_pers->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->btn_insert_pers->Name = L"btn_insert_pers";
-			this->btn_insert_pers->Size = System::Drawing::Size(121, 46);
+			this->btn_insert_pers->Size = System::Drawing::Size(91, 37);
 			this->btn_insert_pers->TabIndex = 2;
 			this->btn_insert_pers->Text = L"INSÉRER";
 			this->btn_insert_pers->UseVisualStyleBackColor = true;
@@ -925,12 +935,11 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// dgv_pers
 			// 
 			this->dgv_pers->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dgv_pers->Location = System::Drawing::Point(16, 18);
-			this->dgv_pers->Margin = System::Windows::Forms::Padding(4);
+			this->dgv_pers->Location = System::Drawing::Point(12, 15);
 			this->dgv_pers->Name = L"dgv_pers";
 			this->dgv_pers->RowHeadersWidth = 51;
 			this->dgv_pers->RowTemplate->Height = 24;
-			this->dgv_pers->Size = System::Drawing::Size(1145, 183);
+			this->dgv_pers->Size = System::Drawing::Size(859, 149);
 			this->dgv_pers->TabIndex = 0;
 			this->dgv_pers->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dgv_PER_CellContentClick);
 			// 
@@ -960,20 +969,21 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			this->tabPage3->Controls->Add(this->txt_ttc_comm);
 			this->tabPage3->Controls->Add(this->txt_date_prevu_comm);
 			this->tabPage3->Controls->Add(this->dgv_comm);
-			this->tabPage3->Location = System::Drawing::Point(4, 25);
+			this->tabPage3->Location = System::Drawing::Point(4, 22);
 			this->tabPage3->Margin = System::Windows::Forms::Padding(2);
 			this->tabPage3->Name = L"tabPage3";
 			this->tabPage3->Padding = System::Windows::Forms::Padding(2);
-			this->tabPage3->Size = System::Drawing::Size(1205, 568);
+			this->tabPage3->Size = System::Drawing::Size(902, 459);
 			this->tabPage3->TabIndex = 2;
 			this->tabPage3->Text = L"Commandes";
 			this->tabPage3->UseVisualStyleBackColor = true;
 			// 
 			// btn_aff_art
 			// 
-			this->btn_aff_art->Location = System::Drawing::Point(643, 214);
+			this->btn_aff_art->Location = System::Drawing::Point(482, 174);
+			this->btn_aff_art->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btn_aff_art->Name = L"btn_aff_art";
-			this->btn_aff_art->Size = System::Drawing::Size(518, 48);
+			this->btn_aff_art->Size = System::Drawing::Size(388, 39);
 			this->btn_aff_art->TabIndex = 14;
 			this->btn_aff_art->Text = L"AFFICHE TOUT LES ARTICLES DE LA COMMANDE";
 			this->btn_aff_art->UseVisualStyleBackColor = true;
@@ -982,107 +992,118 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// dgv_art_comm
 			// 
 			this->dgv_art_comm->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dgv_art_comm->Location = System::Drawing::Point(643, 277);
+			this->dgv_art_comm->Location = System::Drawing::Point(482, 225);
+			this->dgv_art_comm->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->dgv_art_comm->Name = L"dgv_art_comm";
 			this->dgv_art_comm->RowHeadersWidth = 51;
-			this->dgv_art_comm->Size = System::Drawing::Size(518, 273);
+			this->dgv_art_comm->Size = System::Drawing::Size(388, 222);
 			this->dgv_art_comm->TabIndex = 7;
 			// 
 			// label_console_comm
 			// 
 			this->label_console_comm->AutoSize = true;
-			this->label_console_comm->Location = System::Drawing::Point(13, 478);
+			this->label_console_comm->Location = System::Drawing::Point(10, 388);
+			this->label_console_comm->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label_console_comm->Name = L"label_console_comm";
-			this->label_console_comm->Size = System::Drawing::Size(59, 17);
+			this->label_console_comm->Size = System::Drawing::Size(45, 13);
 			this->label_console_comm->TabIndex = 6;
 			this->label_console_comm->Text = L"Console";
 			// 
 			// listBox_console_comm
 			// 
 			this->listBox_console_comm->FormattingEnabled = true;
-			this->listBox_console_comm->ItemHeight = 16;
-			this->listBox_console_comm->Location = System::Drawing::Point(16, 498);
+			this->listBox_console_comm->Location = System::Drawing::Point(12, 405);
+			this->listBox_console_comm->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->listBox_console_comm->Name = L"listBox_console_comm";
-			this->listBox_console_comm->Size = System::Drawing::Size(605, 52);
+			this->listBox_console_comm->Size = System::Drawing::Size(455, 43);
 			this->listBox_console_comm->TabIndex = 5;
 			// 
 			// label_date_prevu_comm
 			// 
 			this->label_date_prevu_comm->AutoSize = true;
-			this->label_date_prevu_comm->Location = System::Drawing::Point(163, 326);
+			this->label_date_prevu_comm->Location = System::Drawing::Point(122, 265);
+			this->label_date_prevu_comm->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label_date_prevu_comm->Name = L"label_date_prevu_comm";
-			this->label_date_prevu_comm->Size = System::Drawing::Size(162, 17);
+			this->label_date_prevu_comm->Size = System::Drawing::Size(122, 13);
 			this->label_date_prevu_comm->TabIndex = 4;
 			this->label_date_prevu_comm->Text = L"Date de livraison prévue";
 			// 
 			// label_id_comm
 			// 
 			this->label_id_comm->AutoSize = true;
-			this->label_id_comm->Location = System::Drawing::Point(163, 218);
+			this->label_id_comm->Location = System::Drawing::Point(122, 177);
+			this->label_id_comm->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label_id_comm->Name = L"label_id_comm";
-			this->label_id_comm->Size = System::Drawing::Size(92, 17);
+			this->label_id_comm->Size = System::Drawing::Size(71, 13);
 			this->label_id_comm->TabIndex = 4;
 			this->label_id_comm->Text = L"Id commande";
 			// 
 			// label_ttc_comm
 			// 
 			this->label_ttc_comm->AutoSize = true;
-			this->label_ttc_comm->Location = System::Drawing::Point(340, 272);
+			this->label_ttc_comm->Location = System::Drawing::Point(255, 221);
+			this->label_ttc_comm->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label_ttc_comm->Name = L"label_ttc_comm";
-			this->label_ttc_comm->Size = System::Drawing::Size(71, 17);
+			this->label_ttc_comm->Size = System::Drawing::Size(55, 13);
 			this->label_ttc_comm->TabIndex = 4;
 			this->label_ttc_comm->Text = L"Total TTC";
 			// 
 			// label_tva_comm
 			// 
 			this->label_tva_comm->AutoSize = true;
-			this->label_tva_comm->Location = System::Drawing::Point(340, 218);
+			this->label_tva_comm->Location = System::Drawing::Point(255, 177);
+			this->label_tva_comm->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label_tva_comm->Name = L"label_tva_comm";
-			this->label_tva_comm->Size = System::Drawing::Size(71, 17);
+			this->label_tva_comm->Size = System::Drawing::Size(55, 13);
 			this->label_tva_comm->TabIndex = 4;
 			this->label_tva_comm->Text = L"Total TVA";
 			// 
 			// label_ref_comm
 			// 
 			this->label_ref_comm->AutoSize = true;
-			this->label_ref_comm->Location = System::Drawing::Point(163, 272);
+			this->label_ref_comm->Location = System::Drawing::Point(122, 221);
+			this->label_ref_comm->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label_ref_comm->Name = L"label_ref_comm";
-			this->label_ref_comm->Size = System::Drawing::Size(74, 17);
+			this->label_ref_comm->Size = System::Drawing::Size(57, 13);
 			this->label_ref_comm->TabIndex = 4;
 			this->label_ref_comm->Text = L"Référence";
 			// 
 			// label_ht_comm
 			// 
 			this->label_ht_comm->AutoSize = true;
-			this->label_ht_comm->Location = System::Drawing::Point(340, 326);
+			this->label_ht_comm->Location = System::Drawing::Point(255, 265);
+			this->label_ht_comm->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label_ht_comm->Name = L"label_ht_comm";
-			this->label_ht_comm->Size = System::Drawing::Size(63, 17);
+			this->label_ht_comm->Size = System::Drawing::Size(49, 13);
 			this->label_ht_comm->TabIndex = 4;
 			this->label_ht_comm->Text = L"Total HT";
 			// 
 			// label_article_comm
 			// 
 			this->label_article_comm->AutoSize = true;
-			this->label_article_comm->Location = System::Drawing::Point(340, 375);
+			this->label_article_comm->Location = System::Drawing::Point(255, 305);
+			this->label_article_comm->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label_article_comm->Name = L"label_article_comm";
-			this->label_article_comm->Size = System::Drawing::Size(82, 17);
+			this->label_article_comm->Size = System::Drawing::Size(62, 13);
 			this->label_article_comm->TabIndex = 4;
 			this->label_article_comm->Text = L"Total article";
 			// 
 			// label_date_em_comm
 			// 
 			this->label_date_em_comm->AutoSize = true;
-			this->label_date_em_comm->Location = System::Drawing::Point(163, 375);
+			this->label_date_em_comm->Location = System::Drawing::Point(122, 305);
+			this->label_date_em_comm->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label_date_em_comm->Name = L"label_date_em_comm";
-			this->label_date_em_comm->Size = System::Drawing::Size(108, 17);
+			this->label_date_em_comm->Size = System::Drawing::Size(81, 13);
 			this->label_date_em_comm->TabIndex = 4;
 			this->label_date_em_comm->Text = L"Date d\'émission";
 			// 
 			// btn_del_comm
 			// 
-			this->btn_del_comm->Location = System::Drawing::Point(16, 322);
+			this->btn_del_comm->Location = System::Drawing::Point(12, 262);
+			this->btn_del_comm->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btn_del_comm->Name = L"btn_del_comm";
-			this->btn_del_comm->Size = System::Drawing::Size(121, 46);
+			this->btn_del_comm->Size = System::Drawing::Size(91, 37);
 			this->btn_del_comm->TabIndex = 3;
 			this->btn_del_comm->Text = L"SUPPRIMER";
 			this->btn_del_comm->UseVisualStyleBackColor = true;
@@ -1090,9 +1111,10 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// 
 			// btn_modif_comm
 			// 
-			this->btn_modif_comm->Location = System::Drawing::Point(16, 268);
+			this->btn_modif_comm->Location = System::Drawing::Point(12, 218);
+			this->btn_modif_comm->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btn_modif_comm->Name = L"btn_modif_comm";
-			this->btn_modif_comm->Size = System::Drawing::Size(121, 46);
+			this->btn_modif_comm->Size = System::Drawing::Size(91, 37);
 			this->btn_modif_comm->TabIndex = 3;
 			this->btn_modif_comm->Text = L"MODIFIER";
 			this->btn_modif_comm->UseVisualStyleBackColor = true;
@@ -1100,9 +1122,10 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// 
 			// btn_inser_comm
 			// 
-			this->btn_inser_comm->Location = System::Drawing::Point(16, 215);
+			this->btn_inser_comm->Location = System::Drawing::Point(12, 175);
+			this->btn_inser_comm->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btn_inser_comm->Name = L"btn_inser_comm";
-			this->btn_inser_comm->Size = System::Drawing::Size(121, 46);
+			this->btn_inser_comm->Size = System::Drawing::Size(91, 37);
 			this->btn_inser_comm->TabIndex = 3;
 			this->btn_inser_comm->Text = L"INSÉRER";
 			this->btn_inser_comm->UseVisualStyleBackColor = true;
@@ -1110,67 +1133,76 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// 
 			// txt_tot_article_comm
 			// 
-			this->txt_tot_article_comm->Location = System::Drawing::Point(343, 396);
+			this->txt_tot_article_comm->Location = System::Drawing::Point(257, 322);
+			this->txt_tot_article_comm->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txt_tot_article_comm->Name = L"txt_tot_article_comm";
-			this->txt_tot_article_comm->Size = System::Drawing::Size(153, 22);
+			this->txt_tot_article_comm->Size = System::Drawing::Size(116, 20);
 			this->txt_tot_article_comm->TabIndex = 2;
 			// 
 			// txt_ht_comm
 			// 
-			this->txt_ht_comm->Location = System::Drawing::Point(343, 346);
+			this->txt_ht_comm->Location = System::Drawing::Point(257, 281);
+			this->txt_ht_comm->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txt_ht_comm->Name = L"txt_ht_comm";
-			this->txt_ht_comm->Size = System::Drawing::Size(153, 22);
+			this->txt_ht_comm->Size = System::Drawing::Size(116, 20);
 			this->txt_ht_comm->TabIndex = 2;
 			// 
 			// txt_tva_comm
 			// 
-			this->txt_tva_comm->Location = System::Drawing::Point(343, 237);
+			this->txt_tva_comm->Location = System::Drawing::Point(257, 193);
+			this->txt_tva_comm->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txt_tva_comm->Name = L"txt_tva_comm";
-			this->txt_tva_comm->Size = System::Drawing::Size(153, 22);
+			this->txt_tva_comm->Size = System::Drawing::Size(116, 20);
 			this->txt_tva_comm->TabIndex = 2;
 			// 
 			// txt_ref_comm
 			// 
-			this->txt_ref_comm->Location = System::Drawing::Point(166, 292);
+			this->txt_ref_comm->Location = System::Drawing::Point(124, 237);
+			this->txt_ref_comm->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txt_ref_comm->Name = L"txt_ref_comm";
-			this->txt_ref_comm->Size = System::Drawing::Size(153, 22);
+			this->txt_ref_comm->Size = System::Drawing::Size(116, 20);
 			this->txt_ref_comm->TabIndex = 2;
 			// 
 			// txt_date_em_comm
 			// 
-			this->txt_date_em_comm->Location = System::Drawing::Point(166, 396);
+			this->txt_date_em_comm->Location = System::Drawing::Point(124, 322);
+			this->txt_date_em_comm->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txt_date_em_comm->Name = L"txt_date_em_comm";
-			this->txt_date_em_comm->Size = System::Drawing::Size(153, 22);
+			this->txt_date_em_comm->Size = System::Drawing::Size(116, 20);
 			this->txt_date_em_comm->TabIndex = 2;
 			// 
 			// txt_id_comm
 			// 
-			this->txt_id_comm->Location = System::Drawing::Point(166, 239);
+			this->txt_id_comm->Location = System::Drawing::Point(124, 194);
+			this->txt_id_comm->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txt_id_comm->Name = L"txt_id_comm";
-			this->txt_id_comm->Size = System::Drawing::Size(153, 22);
+			this->txt_id_comm->Size = System::Drawing::Size(116, 20);
 			this->txt_id_comm->TabIndex = 2;
 			// 
 			// txt_ttc_comm
 			// 
-			this->txt_ttc_comm->Location = System::Drawing::Point(343, 292);
+			this->txt_ttc_comm->Location = System::Drawing::Point(257, 237);
+			this->txt_ttc_comm->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txt_ttc_comm->Name = L"txt_ttc_comm";
-			this->txt_ttc_comm->Size = System::Drawing::Size(153, 22);
+			this->txt_ttc_comm->Size = System::Drawing::Size(116, 20);
 			this->txt_ttc_comm->TabIndex = 2;
 			// 
 			// txt_date_prevu_comm
 			// 
-			this->txt_date_prevu_comm->Location = System::Drawing::Point(166, 346);
+			this->txt_date_prevu_comm->Location = System::Drawing::Point(124, 281);
+			this->txt_date_prevu_comm->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txt_date_prevu_comm->Name = L"txt_date_prevu_comm";
-			this->txt_date_prevu_comm->Size = System::Drawing::Size(153, 22);
+			this->txt_date_prevu_comm->Size = System::Drawing::Size(116, 20);
 			this->txt_date_prevu_comm->TabIndex = 2;
 			// 
 			// dgv_comm
 			// 
 			this->dgv_comm->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dgv_comm->Location = System::Drawing::Point(16, 18);
+			this->dgv_comm->Location = System::Drawing::Point(12, 15);
+			this->dgv_comm->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->dgv_comm->Name = L"dgv_comm";
 			this->dgv_comm->RowHeadersWidth = 51;
-			this->dgv_comm->Size = System::Drawing::Size(1145, 183);
+			this->dgv_comm->Size = System::Drawing::Size(859, 149);
 			this->dgv_comm->TabIndex = 0;
 			this->dgv_comm->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dgv_comm_CellContentClick);
 			// 
@@ -1198,11 +1230,11 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			this->tabPage_stck->Controls->Add(this->btn_supprimer_stck);
 			this->tabPage_stck->Controls->Add(this->btn_inserer_stck);
 			this->tabPage_stck->Controls->Add(this->dgv_stck);
-			this->tabPage_stck->Location = System::Drawing::Point(4, 25);
-			this->tabPage_stck->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
+			this->tabPage_stck->Location = System::Drawing::Point(4, 22);
+			this->tabPage_stck->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			this->tabPage_stck->Name = L"tabPage_stck";
-			this->tabPage_stck->Padding = System::Windows::Forms::Padding(3, 4, 3, 4);
-			this->tabPage_stck->Size = System::Drawing::Size(1205, 568);
+			this->tabPage_stck->Padding = System::Windows::Forms::Padding(2, 3, 2, 3);
+			this->tabPage_stck->Size = System::Drawing::Size(902, 459);
 			this->tabPage_stck->TabIndex = 3;
 			this->tabPage_stck->Text = L"Stock";
 			this->tabPage_stck->UseVisualStyleBackColor = true;
@@ -1210,154 +1242,172 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// lbl_id_com
 			// 
 			this->lbl_id_com->AutoSize = true;
-			this->lbl_id_com->Location = System::Drawing::Point(163, 375);
+			this->lbl_id_com->Location = System::Drawing::Point(122, 305);
+			this->lbl_id_com->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_id_com->Name = L"lbl_id_com";
-			this->lbl_id_com->Size = System::Drawing::Size(94, 17);
+			this->lbl_id_com->Size = System::Drawing::Size(73, 13);
 			this->lbl_id_com->TabIndex = 23;
 			this->lbl_id_com->Text = L"ID commande";
 			// 
 			// txt_id_com
 			// 
-			this->txt_id_com->Location = System::Drawing::Point(166, 396);
+			this->txt_id_com->Location = System::Drawing::Point(124, 322);
+			this->txt_id_com->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txt_id_com->Name = L"txt_id_com";
-			this->txt_id_com->Size = System::Drawing::Size(153, 22);
+			this->txt_id_com->Size = System::Drawing::Size(116, 20);
 			this->txt_id_com->TabIndex = 22;
 			// 
 			// txt_taux_tva_art
 			// 
-			this->txt_taux_tva_art->Location = System::Drawing::Point(343, 396);
+			this->txt_taux_tva_art->Location = System::Drawing::Point(257, 322);
+			this->txt_taux_tva_art->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txt_taux_tva_art->Name = L"txt_taux_tva_art";
-			this->txt_taux_tva_art->Size = System::Drawing::Size(153, 22);
+			this->txt_taux_tva_art->Size = System::Drawing::Size(116, 20);
 			this->txt_taux_tva_art->TabIndex = 21;
 			// 
 			// lbl_tva_art
 			// 
 			this->lbl_tva_art->AutoSize = true;
-			this->lbl_tva_art->Location = System::Drawing::Point(340, 375);
+			this->lbl_tva_art->Location = System::Drawing::Point(255, 305);
+			this->lbl_tva_art->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_tva_art->Name = L"lbl_tva_art";
-			this->lbl_tva_art->Size = System::Drawing::Size(70, 17);
+			this->lbl_tva_art->Size = System::Drawing::Size(55, 13);
 			this->lbl_tva_art->TabIndex = 20;
 			this->lbl_tva_art->Text = L"Taux TVA";
 			// 
 			// lbl_prixht_art
 			// 
 			this->lbl_prixht_art->AutoSize = true;
-			this->lbl_prixht_art->Location = System::Drawing::Point(340, 326);
+			this->lbl_prixht_art->Location = System::Drawing::Point(255, 265);
+			this->lbl_prixht_art->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_prixht_art->Name = L"lbl_prixht_art";
-			this->lbl_prixht_art->Size = System::Drawing::Size(54, 17);
+			this->lbl_prixht_art->Size = System::Drawing::Size(42, 13);
 			this->lbl_prixht_art->TabIndex = 19;
 			this->lbl_prixht_art->Text = L"Prix HT";
 			// 
 			// lbl_nom_art
 			// 
 			this->lbl_nom_art->AutoSize = true;
-			this->lbl_nom_art->Location = System::Drawing::Point(340, 272);
+			this->lbl_nom_art->Location = System::Drawing::Point(255, 221);
+			this->lbl_nom_art->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_nom_art->Name = L"lbl_nom_art";
-			this->lbl_nom_art->Size = System::Drawing::Size(80, 17);
+			this->lbl_nom_art->Size = System::Drawing::Size(61, 13);
 			this->lbl_nom_art->TabIndex = 18;
 			this->lbl_nom_art->Text = L"Nom Article";
 			// 
 			// lbl_ref_art
 			// 
 			this->lbl_ref_art->AutoSize = true;
-			this->lbl_ref_art->Location = System::Drawing::Point(340, 218);
+			this->lbl_ref_art->Location = System::Drawing::Point(255, 177);
+			this->lbl_ref_art->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_ref_art->Name = L"lbl_ref_art";
-			this->lbl_ref_art->Size = System::Drawing::Size(30, 17);
+			this->lbl_ref_art->Size = System::Drawing::Size(24, 13);
 			this->lbl_ref_art->TabIndex = 17;
 			this->lbl_ref_art->Text = L"Ref";
 			// 
 			// txt_prixht_art
 			// 
-			this->txt_prixht_art->Location = System::Drawing::Point(343, 346);
+			this->txt_prixht_art->Location = System::Drawing::Point(257, 281);
+			this->txt_prixht_art->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txt_prixht_art->Name = L"txt_prixht_art";
-			this->txt_prixht_art->Size = System::Drawing::Size(153, 22);
+			this->txt_prixht_art->Size = System::Drawing::Size(116, 20);
 			this->txt_prixht_art->TabIndex = 16;
 			// 
 			// txt_nom_art
 			// 
-			this->txt_nom_art->Location = System::Drawing::Point(343, 292);
+			this->txt_nom_art->Location = System::Drawing::Point(257, 237);
+			this->txt_nom_art->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txt_nom_art->Name = L"txt_nom_art";
-			this->txt_nom_art->Size = System::Drawing::Size(153, 22);
+			this->txt_nom_art->Size = System::Drawing::Size(116, 20);
 			this->txt_nom_art->TabIndex = 15;
 			// 
 			// txt_ref_art
 			// 
-			this->txt_ref_art->Location = System::Drawing::Point(343, 237);
+			this->txt_ref_art->Location = System::Drawing::Point(257, 193);
+			this->txt_ref_art->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txt_ref_art->Name = L"txt_ref_art";
-			this->txt_ref_art->Size = System::Drawing::Size(153, 22);
+			this->txt_ref_art->Size = System::Drawing::Size(116, 20);
 			this->txt_ref_art->TabIndex = 14;
 			// 
 			// lbl_console_stck
 			// 
 			this->lbl_console_stck->AutoSize = true;
-			this->lbl_console_stck->Location = System::Drawing::Point(13, 478);
+			this->lbl_console_stck->Location = System::Drawing::Point(10, 388);
+			this->lbl_console_stck->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_console_stck->Name = L"lbl_console_stck";
-			this->lbl_console_stck->Size = System::Drawing::Size(59, 17);
+			this->lbl_console_stck->Size = System::Drawing::Size(45, 13);
 			this->lbl_console_stck->TabIndex = 13;
 			this->lbl_console_stck->Text = L"Console";
 			// 
 			// list_console_stck
 			// 
 			this->list_console_stck->FormattingEnabled = true;
-			this->list_console_stck->ItemHeight = 16;
-			this->list_console_stck->Location = System::Drawing::Point(16, 498);
+			this->list_console_stck->Location = System::Drawing::Point(12, 405);
+			this->list_console_stck->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->list_console_stck->Name = L"list_console_stck";
-			this->list_console_stck->Size = System::Drawing::Size(1147, 52);
+			this->list_console_stck->Size = System::Drawing::Size(861, 43);
 			this->list_console_stck->TabIndex = 12;
 			// 
 			// txt_quantite_produit_stck
 			// 
-			this->txt_quantite_produit_stck->Location = System::Drawing::Point(166, 292);
+			this->txt_quantite_produit_stck->Location = System::Drawing::Point(124, 237);
+			this->txt_quantite_produit_stck->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txt_quantite_produit_stck->Name = L"txt_quantite_produit_stck";
-			this->txt_quantite_produit_stck->Size = System::Drawing::Size(153, 22);
+			this->txt_quantite_produit_stck->Size = System::Drawing::Size(116, 20);
 			this->txt_quantite_produit_stck->TabIndex = 11;
 			// 
 			// txt_id_stck
 			// 
-			this->txt_id_stck->Location = System::Drawing::Point(166, 239);
+			this->txt_id_stck->Location = System::Drawing::Point(124, 194);
+			this->txt_id_stck->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txt_id_stck->Name = L"txt_id_stck";
-			this->txt_id_stck->Size = System::Drawing::Size(153, 22);
+			this->txt_id_stck->Size = System::Drawing::Size(116, 20);
 			this->txt_id_stck->TabIndex = 10;
 			// 
 			// lbl_id_stck
 			// 
 			this->lbl_id_stck->AutoSize = true;
-			this->lbl_id_stck->Location = System::Drawing::Point(163, 218);
+			this->lbl_id_stck->Location = System::Drawing::Point(122, 177);
+			this->lbl_id_stck->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_id_stck->Name = L"lbl_id_stck";
-			this->lbl_id_stck->Size = System::Drawing::Size(58, 17);
+			this->lbl_id_stck->Size = System::Drawing::Size(47, 13);
 			this->lbl_id_stck->TabIndex = 8;
 			this->lbl_id_stck->Text = L"Stock Id";
 			// 
 			// lbl_seuil_reap_stck
 			// 
 			this->lbl_seuil_reap_stck->AutoSize = true;
-			this->lbl_seuil_reap_stck->Location = System::Drawing::Point(163, 326);
+			this->lbl_seuil_reap_stck->Location = System::Drawing::Point(122, 265);
+			this->lbl_seuil_reap_stck->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_seuil_reap_stck->Name = L"lbl_seuil_reap_stck";
-			this->lbl_seuil_reap_stck->Size = System::Drawing::Size(168, 17);
+			this->lbl_seuil_reap_stck->Size = System::Drawing::Size(125, 13);
 			this->lbl_seuil_reap_stck->TabIndex = 6;
 			this->lbl_seuil_reap_stck->Text = L"Seuil réaprovisionnement";
 			// 
 			// lbl_stock_quantite_stck
 			// 
 			this->lbl_stock_quantite_stck->AutoSize = true;
-			this->lbl_stock_quantite_stck->Location = System::Drawing::Point(163, 272);
+			this->lbl_stock_quantite_stck->Location = System::Drawing::Point(122, 221);
+			this->lbl_stock_quantite_stck->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_stock_quantite_stck->Name = L"lbl_stock_quantite_stck";
-			this->lbl_stock_quantite_stck->Size = System::Drawing::Size(111, 17);
+			this->lbl_stock_quantite_stck->Size = System::Drawing::Size(83, 13);
 			this->lbl_stock_quantite_stck->TabIndex = 5;
 			this->lbl_stock_quantite_stck->Text = L"Quantite Produit";
 			// 
 			// txt_seuil_reap_stck
 			// 
-			this->txt_seuil_reap_stck->Location = System::Drawing::Point(166, 346);
+			this->txt_seuil_reap_stck->Location = System::Drawing::Point(124, 281);
+			this->txt_seuil_reap_stck->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txt_seuil_reap_stck->Name = L"txt_seuil_reap_stck";
-			this->txt_seuil_reap_stck->Size = System::Drawing::Size(153, 22);
+			this->txt_seuil_reap_stck->Size = System::Drawing::Size(116, 20);
 			this->txt_seuil_reap_stck->TabIndex = 4;
 			// 
 			// btn_modifier_stck
 			// 
-			this->btn_modifier_stck->Location = System::Drawing::Point(16, 268);
+			this->btn_modifier_stck->Location = System::Drawing::Point(12, 218);
+			this->btn_modifier_stck->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btn_modifier_stck->Name = L"btn_modifier_stck";
-			this->btn_modifier_stck->Size = System::Drawing::Size(121, 46);
+			this->btn_modifier_stck->Size = System::Drawing::Size(91, 37);
 			this->btn_modifier_stck->TabIndex = 3;
 			this->btn_modifier_stck->Text = L"MODIFIER";
 			this->btn_modifier_stck->UseVisualStyleBackColor = true;
@@ -1365,9 +1415,10 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// 
 			// btn_supprimer_stck
 			// 
-			this->btn_supprimer_stck->Location = System::Drawing::Point(16, 322);
+			this->btn_supprimer_stck->Location = System::Drawing::Point(12, 262);
+			this->btn_supprimer_stck->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btn_supprimer_stck->Name = L"btn_supprimer_stck";
-			this->btn_supprimer_stck->Size = System::Drawing::Size(121, 46);
+			this->btn_supprimer_stck->Size = System::Drawing::Size(91, 37);
 			this->btn_supprimer_stck->TabIndex = 2;
 			this->btn_supprimer_stck->Text = L"SUPPRIMER";
 			this->btn_supprimer_stck->UseVisualStyleBackColor = true;
@@ -1375,9 +1426,10 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// 
 			// btn_inserer_stck
 			// 
-			this->btn_inserer_stck->Location = System::Drawing::Point(16, 215);
+			this->btn_inserer_stck->Location = System::Drawing::Point(12, 175);
+			this->btn_inserer_stck->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btn_inserer_stck->Name = L"btn_inserer_stck";
-			this->btn_inserer_stck->Size = System::Drawing::Size(121, 46);
+			this->btn_inserer_stck->Size = System::Drawing::Size(91, 37);
 			this->btn_inserer_stck->TabIndex = 1;
 			this->btn_inserer_stck->Text = L"INSÉRER";
 			this->btn_inserer_stck->UseVisualStyleBackColor = true;
@@ -1386,21 +1438,22 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// dgv_stck
 			// 
 			this->dgv_stck->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dgv_stck->Location = System::Drawing::Point(16, 18);
+			this->dgv_stck->Location = System::Drawing::Point(12, 15);
+			this->dgv_stck->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->dgv_stck->Name = L"dgv_stck";
 			this->dgv_stck->RowHeadersWidth = 51;
 			this->dgv_stck->RowTemplate->Height = 24;
-			this->dgv_stck->Size = System::Drawing::Size(1145, 183);
+			this->dgv_stck->Size = System::Drawing::Size(859, 149);
 			this->dgv_stck->TabIndex = 0;
 			this->dgv_stck->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dgv_stck_CellContentClick);
 			// 
 			// tabPage5
 			// 
-			this->tabPage5->Location = System::Drawing::Point(4, 25);
+			this->tabPage5->Location = System::Drawing::Point(4, 22);
 			this->tabPage5->Margin = System::Windows::Forms::Padding(2);
 			this->tabPage5->Name = L"tabPage5";
 			this->tabPage5->Padding = System::Windows::Forms::Padding(2);
-			this->tabPage5->Size = System::Drawing::Size(1205, 568);
+			this->tabPage5->Size = System::Drawing::Size(902, 459);
 			this->tabPage5->TabIndex = 4;
 			this->tabPage5->Text = L"Statistiques";
 			this->tabPage5->UseVisualStyleBackColor = true;
@@ -1414,13 +1467,12 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ControlText;
-			this->ClientSize = System::Drawing::Size(1279, 690);
+			this->ClientSize = System::Drawing::Size(959, 561);
 			this->Controls->Add(this->tabPage_comm);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedToolWindow;
-			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"MyForm";
