@@ -1,6 +1,7 @@
 #include "CLservice.h"
 #include "CLmapStock.h"
 #include "CLmapcommTB.h"
+
 //#include "pch.h"
 NS_Comp_Svc::CLservices::CLservices(void)
 {
@@ -230,4 +231,13 @@ System::Data::DataSet^ NS_Comp_Svc::CLservices::afficherArticleComm(int id, Syst
 	this->oMappComm->setIdComm(id);
 	sql = this->oMappComm->AfficherArticleComm();
 	return this->oCad->getRows(sql, dataTableName);
+}
+
+System::Data::DataSet^ NS_Comp_Svc::CLservices::afficherRequete1(System::String^ dataTableName)
+{
+	System::String^ sql;
+
+	sql = this->oMappComm->AfficherArticleComm();
+	return this->oCad->getRows(sql, dataTableName);
+	
 }

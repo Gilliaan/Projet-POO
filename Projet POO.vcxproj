@@ -124,6 +124,7 @@
     <ClCompile Include="CLmap.cpp" />
     <ClCompile Include="CLmapcommTB.cpp" />
     <ClCompile Include="CLmapPERS.cpp" />
+    <ClCompile Include="CLmapStats.cpp" />
     <ClCompile Include="CLmapStock.cpp" />
     <ClCompile Include="CLservice.cpp" />
     <ClCompile Include="MyForm.cpp" />
@@ -133,6 +134,7 @@
     <ClInclude Include="CLmap.h" />
     <ClInclude Include="CLmapcommTB.h" />
     <ClInclude Include="CLmapPERS.h" />
+    <ClInclude Include="CLmapStats.h" />
     <ClInclude Include="CLmapStock.h" />
     <ClInclude Include="CLservice.h" />
     <ClInclude Include="MyForm.h">

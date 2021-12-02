@@ -4,7 +4,12 @@
 #include "CLmapStock.h"
 #include "CLmapPERS.h"
 #include "CLmapcommTB.h"
+#include "CLmapStats.h"
+#include <iostream> 
+#include <string> 
+#include <fstream>
 
+using namespace std;
 namespace NS_Comp_Svc
 {
 	ref class CLservices
@@ -15,7 +20,10 @@ namespace NS_Comp_Svc
 		NS_Comp_Mappage::CLmapStock^ oMappStock;
 		NS_Comp_Mappage::CLmapPERS^ oMappPERS;
 		NS_Comp_Mappage::CLmapcommTB^ oMappComm;
+		NS_Comp_Mappage::CLmapStats^ oMappStats;
 		//System::String^ typec;
+		
+
 	public:
 		CLservices(void);
 		System::Data::DataSet^ selectionnerTousLesClients(System::String^, System::String^);
@@ -24,6 +32,7 @@ namespace NS_Comp_Svc
 		System::Data::DataSet^ selectionnerToutesLesCommandes(System::String^);
 		System::Data::DataSet^ afficherAdresseClient(int ,System::String^);
 		System::Data::DataSet^ afficherArticleComm(int, System::String^);
+		System::Data::DataSet^ afficherRequete1(System::String^);
 		//Méthodes gestion Clients
 		void ajouterUnClient(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^);
 		void supprimerUnClient(int);
@@ -42,5 +51,6 @@ namespace NS_Comp_Svc
 		void suprimerUneCommande(int);
 		void modifierUneCommande(System::String^, System::String^, System::String^, int, double, double, double, int);
 		//Load Data
+
 	};
 }
