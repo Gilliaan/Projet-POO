@@ -456,10 +456,10 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			this->tabPage_comm->Controls->Add(this->tabPage3);
 			this->tabPage_comm->Controls->Add(this->tabPage_stck);
 			this->tabPage_comm->Controls->Add(this->tabPage5);
-			this->tabPage_comm->Location = System::Drawing::Point(34, 25);
+			this->tabPage_comm->Location = System::Drawing::Point(0, 0);
 			this->tabPage_comm->Name = L"tabPage_comm";
 			this->tabPage_comm->SelectedIndex = 0;
-			this->tabPage_comm->Size = System::Drawing::Size(1190, 589);
+			this->tabPage_comm->Size = System::Drawing::Size(1213, 597);
 			this->tabPage_comm->TabIndex = 11;
 			// 
 			// tabPage_cl
@@ -499,7 +499,7 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			this->tabPage_cl->Location = System::Drawing::Point(4, 25);
 			this->tabPage_cl->Name = L"tabPage_cl";
 			this->tabPage_cl->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage_cl->Size = System::Drawing::Size(1182, 560);
+			this->tabPage_cl->Size = System::Drawing::Size(1205, 568);
 			this->tabPage_cl->TabIndex = 0;
 			this->tabPage_cl->Text = L"Clients";
 			// 
@@ -559,7 +559,7 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// lbl_console_cl
 			// 
 			this->lbl_console_cl->AutoSize = true;
-			this->lbl_console_cl->Location = System::Drawing::Point(13, 457);
+			this->lbl_console_cl->Location = System::Drawing::Point(13, 478);
 			this->lbl_console_cl->Name = L"lbl_console_cl";
 			this->lbl_console_cl->Size = System::Drawing::Size(59, 17);
 			this->lbl_console_cl->TabIndex = 24;
@@ -674,7 +674,7 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// 
 			this->list_console_cl->FormattingEnabled = true;
 			this->list_console_cl->ItemHeight = 16;
-			this->list_console_cl->Location = System::Drawing::Point(16, 477);
+			this->list_console_cl->Location = System::Drawing::Point(16, 498);
 			this->list_console_cl->Name = L"list_console_cl";
 			this->list_console_cl->Size = System::Drawing::Size(1145, 52);
 			this->list_console_cl->TabIndex = 11;
@@ -709,7 +709,7 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			this->tabPage_pers->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->tabPage_pers->Name = L"tabPage_pers";
 			this->tabPage_pers->Padding = System::Windows::Forms::Padding(3, 4, 3, 4);
-			this->tabPage_pers->Size = System::Drawing::Size(1182, 560);
+			this->tabPage_pers->Size = System::Drawing::Size(1205, 568);
 			this->tabPage_pers->TabIndex = 1;
 			this->tabPage_pers->Text = L"Personnel";
 			this->tabPage_pers->UseVisualStyleBackColor = true;
@@ -726,7 +726,7 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// label20
 			// 
 			this->label20->AutoSize = true;
-			this->label20->Location = System::Drawing::Point(14, 589);
+			this->label20->Location = System::Drawing::Point(13, 478);
 			this->label20->Name = L"label20";
 			this->label20->Size = System::Drawing::Size(59, 17);
 			this->label20->TabIndex = 29;
@@ -737,7 +737,7 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			this->txt_type_pers->Location = System::Drawing::Point(16, 413);
 			this->txt_type_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txt_type_pers->Name = L"txt_type_pers";
-			this->txt_type_pers->Size = System::Drawing::Size(141, 22);
+			this->txt_type_pers->Size = System::Drawing::Size(121, 22);
 			this->txt_type_pers->TabIndex = 28;
 			this->txt_type_pers->Text = L"Personnel";
 			this->txt_type_pers->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
@@ -883,10 +883,10 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// 
 			this->listBox2->FormattingEnabled = true;
 			this->listBox2->ItemHeight = 16;
-			this->listBox2->Location = System::Drawing::Point(18, 613);
+			this->listBox2->Location = System::Drawing::Point(16, 498);
 			this->listBox2->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->listBox2->Name = L"listBox2";
-			this->listBox2->Size = System::Drawing::Size(915, 52);
+			this->listBox2->Size = System::Drawing::Size(1145, 52);
 			this->listBox2->TabIndex = 12;
 			// 
 			// btn_del_pres
@@ -964,7 +964,7 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			this->tabPage3->Margin = System::Windows::Forms::Padding(2);
 			this->tabPage3->Name = L"tabPage3";
 			this->tabPage3->Padding = System::Windows::Forms::Padding(2);
-			this->tabPage3->Size = System::Drawing::Size(1182, 560);
+			this->tabPage3->Size = System::Drawing::Size(1205, 568);
 			this->tabPage3->TabIndex = 2;
 			this->tabPage3->Text = L"Commandes";
 			this->tabPage3->UseVisualStyleBackColor = true;
@@ -991,7 +991,7 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// label_console_comm
 			// 
 			this->label_console_comm->AutoSize = true;
-			this->label_console_comm->Location = System::Drawing::Point(13, 460);
+			this->label_console_comm->Location = System::Drawing::Point(13, 478);
 			this->label_console_comm->Name = L"label_console_comm";
 			this->label_console_comm->Size = System::Drawing::Size(59, 17);
 			this->label_console_comm->TabIndex = 6;
@@ -1001,7 +1001,7 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// 
 			this->listBox_console_comm->FormattingEnabled = true;
 			this->listBox_console_comm->ItemHeight = 16;
-			this->listBox_console_comm->Location = System::Drawing::Point(16, 480);
+			this->listBox_console_comm->Location = System::Drawing::Point(16, 498);
 			this->listBox_console_comm->Name = L"listBox_console_comm";
 			this->listBox_console_comm->Size = System::Drawing::Size(605, 52);
 			this->listBox_console_comm->TabIndex = 5;
@@ -1202,7 +1202,7 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			this->tabPage_stck->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->tabPage_stck->Name = L"tabPage_stck";
 			this->tabPage_stck->Padding = System::Windows::Forms::Padding(3, 4, 3, 4);
-			this->tabPage_stck->Size = System::Drawing::Size(1182, 560);
+			this->tabPage_stck->Size = System::Drawing::Size(1205, 568);
 			this->tabPage_stck->TabIndex = 3;
 			this->tabPage_stck->Text = L"Stock";
 			this->tabPage_stck->UseVisualStyleBackColor = true;
@@ -1290,17 +1290,17 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// lbl_console_stck
 			// 
 			this->lbl_console_stck->AutoSize = true;
-			this->lbl_console_stck->Location = System::Drawing::Point(32, 463);
+			this->lbl_console_stck->Location = System::Drawing::Point(13, 478);
 			this->lbl_console_stck->Name = L"lbl_console_stck";
-			this->lbl_console_stck->Size = System::Drawing::Size(46, 17);
+			this->lbl_console_stck->Size = System::Drawing::Size(59, 17);
 			this->lbl_console_stck->TabIndex = 13;
-			this->lbl_console_stck->Text = L"label1";
+			this->lbl_console_stck->Text = L"Console";
 			// 
 			// list_console_stck
 			// 
 			this->list_console_stck->FormattingEnabled = true;
 			this->list_console_stck->ItemHeight = 16;
-			this->list_console_stck->Location = System::Drawing::Point(16, 477);
+			this->list_console_stck->Location = System::Drawing::Point(16, 498);
 			this->list_console_stck->Name = L"list_console_stck";
 			this->list_console_stck->Size = System::Drawing::Size(1147, 52);
 			this->list_console_stck->TabIndex = 12;
@@ -1400,7 +1400,7 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			this->tabPage5->Margin = System::Windows::Forms::Padding(2);
 			this->tabPage5->Name = L"tabPage5";
 			this->tabPage5->Padding = System::Windows::Forms::Padding(2);
-			this->tabPage5->Size = System::Drawing::Size(1182, 560);
+			this->tabPage5->Size = System::Drawing::Size(1205, 568);
 			this->tabPage5->TabIndex = 4;
 			this->tabPage5->Text = L"Statistiques";
 			this->tabPage5->UseVisualStyleBackColor = true;
@@ -1417,13 +1417,14 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ControlText;
-			this->ClientSize = System::Drawing::Size(1263, 638);
+			this->ClientSize = System::Drawing::Size(1279, 690);
 			this->Controls->Add(this->tabPage_comm);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedToolWindow;
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"MyForm";
+			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_cl))->EndInit();
 			this->tabPage_comm->ResumeLayout(false);
