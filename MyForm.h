@@ -226,7 +226,8 @@ private: System::Windows::Forms::DataGridView^ dgv_stats;
 private: System::Windows::Forms::Label^ label1;
 private: System::Windows::Forms::TextBox^ txt_mois_stats;
 private: System::Windows::Forms::Button^ btn_rq5_stats;
-private: System::Windows::Forms::Label^ lbl_mois_stats;
+private: System::Windows::Forms::Label^ lbl_client_stats;
+
 private: System::Windows::Forms::TextBox^ txt_client_stats;
 private: System::Windows::Forms::Button^ btn_rq4_stats;
 private: System::Windows::Forms::Button^ btn_rq3_stats;
@@ -356,7 +357,7 @@ private: System::Windows::Forms::Button^ btn_rq2_stats;
 			this->dgv_stck = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
 			this->btn_rq5_stats = (gcnew System::Windows::Forms::Button());
-			this->lbl_mois_stats = (gcnew System::Windows::Forms::Label());
+			this->lbl_client_stats = (gcnew System::Windows::Forms::Label());
 			this->txt_client_stats = (gcnew System::Windows::Forms::TextBox());
 			this->btn_rq4_stats = (gcnew System::Windows::Forms::Button());
 			this->btn_rq3_stats = (gcnew System::Windows::Forms::Button());
@@ -1436,7 +1437,7 @@ private: System::Windows::Forms::Button^ btn_rq2_stats;
 			// tabPage5
 			// 
 			this->tabPage5->Controls->Add(this->btn_rq5_stats);
-			this->tabPage5->Controls->Add(this->lbl_mois_stats);
+			this->tabPage5->Controls->Add(this->lbl_client_stats);
 			this->tabPage5->Controls->Add(this->txt_client_stats);
 			this->tabPage5->Controls->Add(this->btn_rq4_stats);
 			this->tabPage5->Controls->Add(this->btn_rq3_stats);
@@ -1464,14 +1465,14 @@ private: System::Windows::Forms::Button^ btn_rq2_stats;
 			this->btn_rq5_stats->UseVisualStyleBackColor = true;
 			this->btn_rq5_stats->Click += gcnew System::EventHandler(this, &MyForm::btn_rq5_stats_Click);
 			// 
-			// lbl_mois_stats
+			// lbl_client_stats
 			// 
-			this->lbl_mois_stats->AutoSize = true;
-			this->lbl_mois_stats->Location = System::Drawing::Point(8, 435);
-			this->lbl_mois_stats->Name = L"lbl_mois_stats";
-			this->lbl_mois_stats->Size = System::Drawing::Size(45, 17);
-			this->lbl_mois_stats->TabIndex = 8;
-			this->lbl_mois_stats->Text = L"Mois :";
+			this->lbl_client_stats->AutoSize = true;
+			this->lbl_client_stats->Location = System::Drawing::Point(8, 435);
+			this->lbl_client_stats->Name = L"lbl_client_stats";
+			this->lbl_client_stats->Size = System::Drawing::Size(64, 17);
+			this->lbl_client_stats->TabIndex = 8;
+			this->lbl_client_stats->Text = L"Id client :";
 			// 
 			// txt_client_stats
 			// 
@@ -1991,7 +1992,7 @@ private: System::Windows::Forms::Button^ btn_rq2_stats;
 	{
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
 		this->dgv_stats->Refresh();
-		this->oDs = this->oSvc->afficherRequete1("TB_COMMANDE");
+		this->oDs = this->oSvc->afficherRequete1(this->txt_mois_stats->Text, "TB_COMMANDE");
 		this->dgv_stats->DataSource = this->oDs;
 		this->dgv_stats->DataMember = "TB_COMMANDE";
 	}
@@ -2011,9 +2012,13 @@ private: System::Windows::Forms::Button^ btn_rq2_stats;
 		this->dgv_stats->DataMember = "TB_STOCK";
 	}
 private: System::Void btn_rq4_stats_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	String^ textidstats = this->txt_client_stats->Text;
+	int id_cl_stats = System::Convert::ToInt32(textidstats);
+
 	this->oSvc = gcnew NS_Comp_Svc::CLservices();
 	this->dgv_stats->Refresh();
-	this->oDs = this->oSvc->afficherRequete4("TB_STOCK");
+	this->oDs = this->oSvc->afficherRequete4(id_cl_stats, "TB_STOCK");
 	this->dgv_stats->DataSource = this->oDs;
 	this->dgv_stats->DataMember = "TB_STOCK";
 }

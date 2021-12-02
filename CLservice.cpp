@@ -10,6 +10,7 @@ NS_Comp_Svc::CLservices::CLservices(void)
 	this->oMappStock = gcnew NS_Comp_Mappage::CLmapStock();
 	this->oMappPERS = gcnew NS_Comp_Mappage::CLmapPERS();
 	this->oMappComm = gcnew NS_Comp_Mappage::CLmapcommTB();
+	this->oMappStats = gcnew NS_Comp_Mappage::CLmapStats();
 }
 //Sélectionner et afficher tous les clients de la table PEOPLE
 System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerTousLesClients(System::String^ type, System::String^ dataTableName)
