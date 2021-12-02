@@ -225,6 +225,12 @@ private: System::Windows::Forms::Button^ btn_rq1_stats;
 private: System::Windows::Forms::DataGridView^ dgv_stats;
 private: System::Windows::Forms::Label^ label1;
 private: System::Windows::Forms::TextBox^ txt_mois_stats;
+private: System::Windows::Forms::Button^ btn_rq5_stats;
+private: System::Windows::Forms::Label^ lbl_mois_stats;
+private: System::Windows::Forms::TextBox^ txt_client_stats;
+private: System::Windows::Forms::Button^ btn_rq4_stats;
+private: System::Windows::Forms::Button^ btn_rq3_stats;
+private: System::Windows::Forms::Button^ btn_rq2_stats;
 
 
 
@@ -349,11 +355,17 @@ private: System::Windows::Forms::TextBox^ txt_mois_stats;
 			this->btn_inserer_stck = (gcnew System::Windows::Forms::Button());
 			this->dgv_stck = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
+			this->btn_rq5_stats = (gcnew System::Windows::Forms::Button());
+			this->lbl_mois_stats = (gcnew System::Windows::Forms::Label());
+			this->txt_client_stats = (gcnew System::Windows::Forms::TextBox());
+			this->btn_rq4_stats = (gcnew System::Windows::Forms::Button());
+			this->btn_rq3_stats = (gcnew System::Windows::Forms::Button());
+			this->btn_rq2_stats = (gcnew System::Windows::Forms::Button());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->txt_mois_stats = (gcnew System::Windows::Forms::TextBox());
 			this->btn_rq1_stats = (gcnew System::Windows::Forms::Button());
 			this->dgv_stats = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage3_comm = (gcnew System::Windows::Forms::TabPage());
-			this->txt_mois_stats = (gcnew System::Windows::Forms::TextBox());
-			this->label1 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_cl))->BeginInit();
 			this->tabPage_comm->SuspendLayout();
 			this->tabPage_cl->SuspendLayout();
@@ -1423,6 +1435,12 @@ private: System::Windows::Forms::TextBox^ txt_mois_stats;
 			// 
 			// tabPage5
 			// 
+			this->tabPage5->Controls->Add(this->btn_rq5_stats);
+			this->tabPage5->Controls->Add(this->lbl_mois_stats);
+			this->tabPage5->Controls->Add(this->txt_client_stats);
+			this->tabPage5->Controls->Add(this->btn_rq4_stats);
+			this->tabPage5->Controls->Add(this->btn_rq3_stats);
+			this->tabPage5->Controls->Add(this->btn_rq2_stats);
 			this->tabPage5->Controls->Add(this->label1);
 			this->tabPage5->Controls->Add(this->txt_mois_stats);
 			this->tabPage5->Controls->Add(this->btn_rq1_stats);
@@ -1435,6 +1453,78 @@ private: System::Windows::Forms::TextBox^ txt_mois_stats;
 			this->tabPage5->TabIndex = 4;
 			this->tabPage5->Text = L"Statistiques";
 			this->tabPage5->UseVisualStyleBackColor = true;
+			// 
+			// btn_rq5_stats
+			// 
+			this->btn_rq5_stats->Location = System::Drawing::Point(336, 185);
+			this->btn_rq5_stats->Name = L"btn_rq5_stats";
+			this->btn_rq5_stats->Size = System::Drawing::Size(290, 36);
+			this->btn_rq5_stats->TabIndex = 9;
+			this->btn_rq5_stats->Text = L"Requête : Valeur d\'achat du stock";
+			this->btn_rq5_stats->UseVisualStyleBackColor = true;
+			this->btn_rq5_stats->Click += gcnew System::EventHandler(this, &MyForm::btn_rq5_stats_Click);
+			// 
+			// lbl_mois_stats
+			// 
+			this->lbl_mois_stats->AutoSize = true;
+			this->lbl_mois_stats->Location = System::Drawing::Point(8, 435);
+			this->lbl_mois_stats->Name = L"lbl_mois_stats";
+			this->lbl_mois_stats->Size = System::Drawing::Size(45, 17);
+			this->lbl_mois_stats->TabIndex = 8;
+			this->lbl_mois_stats->Text = L"Mois :";
+			// 
+			// txt_client_stats
+			// 
+			this->txt_client_stats->Location = System::Drawing::Point(11, 453);
+			this->txt_client_stats->Name = L"txt_client_stats";
+			this->txt_client_stats->Size = System::Drawing::Size(290, 22);
+			this->txt_client_stats->TabIndex = 7;
+			// 
+			// btn_rq4_stats
+			// 
+			this->btn_rq4_stats->Location = System::Drawing::Point(11, 387);
+			this->btn_rq4_stats->Name = L"btn_rq4_stats";
+			this->btn_rq4_stats->Size = System::Drawing::Size(290, 45);
+			this->btn_rq4_stats->TabIndex = 6;
+			this->btn_rq4_stats->Text = L"Requête : Montant total des achats pour un client";
+			this->btn_rq4_stats->UseVisualStyleBackColor = true;
+			this->btn_rq4_stats->Click += gcnew System::EventHandler(this, &MyForm::btn_rq4_stats_Click);
+			// 
+			// btn_rq3_stats
+			// 
+			this->btn_rq3_stats->Location = System::Drawing::Point(11, 324);
+			this->btn_rq3_stats->Name = L"btn_rq3_stats";
+			this->btn_rq3_stats->Size = System::Drawing::Size(290, 46);
+			this->btn_rq3_stats->TabIndex = 5;
+			this->btn_rq3_stats->Text = L"Requête : Produit sous le seuil de réaprovisionnement";
+			this->btn_rq3_stats->UseVisualStyleBackColor = true;
+			this->btn_rq3_stats->Click += gcnew System::EventHandler(this, &MyForm::btn_rq3_stats_Click);
+			// 
+			// btn_rq2_stats
+			// 
+			this->btn_rq2_stats->Location = System::Drawing::Point(8, 272);
+			this->btn_rq2_stats->Name = L"btn_rq2_stats";
+			this->btn_rq2_stats->Size = System::Drawing::Size(290, 36);
+			this->btn_rq2_stats->TabIndex = 4;
+			this->btn_rq2_stats->Text = L"Requête : Valeur commerciale du stock";
+			this->btn_rq2_stats->UseVisualStyleBackColor = true;
+			this->btn_rq2_stats->Click += gcnew System::EventHandler(this, &MyForm::btn_rq2_stats_Click);
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(8, 224);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(45, 17);
+			this->label1->TabIndex = 3;
+			this->label1->Text = L"Mois :";
+			// 
+			// txt_mois_stats
+			// 
+			this->txt_mois_stats->Location = System::Drawing::Point(8, 244);
+			this->txt_mois_stats->Name = L"txt_mois_stats";
+			this->txt_mois_stats->Size = System::Drawing::Size(290, 22);
+			this->txt_mois_stats->TabIndex = 2;
 			// 
 			// btn_rq1_stats
 			// 
@@ -1462,22 +1552,6 @@ private: System::Windows::Forms::TextBox^ txt_mois_stats;
 			this->tabPage3_comm->Name = L"tabPage3_comm";
 			this->tabPage3_comm->Size = System::Drawing::Size(200, 100);
 			this->tabPage3_comm->TabIndex = 0;
-			// 
-			// txt_mois_stats
-			// 
-			this->txt_mois_stats->Location = System::Drawing::Point(8, 244);
-			this->txt_mois_stats->Name = L"txt_mois_stats";
-			this->txt_mois_stats->Size = System::Drawing::Size(290, 22);
-			this->txt_mois_stats->TabIndex = 2;
-			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(8, 224);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(45, 17);
-			this->label1->TabIndex = 3;
-			this->label1->Text = L"Mois :";
 			// 
 			// MyForm
 			// 
@@ -1922,5 +1996,33 @@ private: System::Windows::Forms::TextBox^ txt_mois_stats;
 		this->dgv_stats->DataMember = "TB_COMMANDE";
 	}
 
+	private: System::Void btn_rq2_stats_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->oSvc = gcnew NS_Comp_Svc::CLservices();
+		this->dgv_stats->Refresh();
+		this->oDs = this->oSvc->afficherRequete2("TB_STOCK");
+		this->dgv_stats->DataSource = this->oDs;
+		this->dgv_stats->DataMember = "TB_STOCK";
+	}
+	private: System::Void btn_rq3_stats_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->oSvc = gcnew NS_Comp_Svc::CLservices();
+		this->dgv_stats->Refresh();
+		this->oDs = this->oSvc->afficherRequete3("TB_STOCK");
+		this->dgv_stats->DataSource = this->oDs;
+		this->dgv_stats->DataMember = "TB_STOCK";
+	}
+private: System::Void btn_rq4_stats_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->oSvc = gcnew NS_Comp_Svc::CLservices();
+	this->dgv_stats->Refresh();
+	this->oDs = this->oSvc->afficherRequete4("TB_STOCK");
+	this->dgv_stats->DataSource = this->oDs;
+	this->dgv_stats->DataMember = "TB_STOCK";
+}
+private: System::Void btn_rq5_stats_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->oSvc = gcnew NS_Comp_Svc::CLservices();
+	this->dgv_stats->Refresh();
+	this->oDs = this->oSvc->afficherRequete5("TB_STOCK");
+	this->dgv_stats->DataSource = this->oDs;
+	this->dgv_stats->DataMember = "TB_STOCK";
+}
 };
 }

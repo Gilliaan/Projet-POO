@@ -33,6 +33,10 @@ namespace NS_Comp_Svc
 		System::Data::DataSet^ afficherAdresseClient(int ,System::String^);
 		System::Data::DataSet^ afficherArticleComm(int, System::String^);
 		System::Data::DataSet^ afficherRequete1(System::String^);
+		System::Data::DataSet^ afficherRequete2(System::String^);
+		System::Data::DataSet^ afficherRequete3(System::String^);
+		System::Data::DataSet^ afficherRequete4(int,System::String^);
+		System::Data::DataSet^ afficherRequete5(System::String^);
 		//Méthodes gestion Clients
 		void ajouterUnClient(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^);
 		void supprimerUnClient(int);
