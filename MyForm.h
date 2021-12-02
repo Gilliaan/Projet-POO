@@ -224,7 +224,7 @@ private: System::Windows::Forms::Button^ btn_crea_facture;
 private: System::Windows::Forms::Button^ btn_rq1_stats;
 private: System::Windows::Forms::DataGridView^ dgv_stats;
 private: System::Windows::Forms::Label^ label1;
-private: System::Windows::Forms::TextBox^ txt_mois_stats;
+
 private: System::Windows::Forms::Button^ btn_rq5_stats;
 private: System::Windows::Forms::Label^ lbl_client_stats;
 
@@ -232,6 +232,7 @@ private: System::Windows::Forms::TextBox^ txt_client_stats;
 private: System::Windows::Forms::Button^ btn_rq4_stats;
 private: System::Windows::Forms::Button^ btn_rq3_stats;
 private: System::Windows::Forms::Button^ btn_rq2_stats;
+private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 
 
 
@@ -356,6 +357,7 @@ private: System::Windows::Forms::Button^ btn_rq2_stats;
 			this->btn_inserer_stck = (gcnew System::Windows::Forms::Button());
 			this->dgv_stck = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
+			this->comBoxMoisStats = (gcnew System::Windows::Forms::ComboBox());
 			this->btn_rq5_stats = (gcnew System::Windows::Forms::Button());
 			this->lbl_client_stats = (gcnew System::Windows::Forms::Label());
 			this->txt_client_stats = (gcnew System::Windows::Forms::TextBox());
@@ -363,7 +365,6 @@ private: System::Windows::Forms::Button^ btn_rq2_stats;
 			this->btn_rq3_stats = (gcnew System::Windows::Forms::Button());
 			this->btn_rq2_stats = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->txt_mois_stats = (gcnew System::Windows::Forms::TextBox());
 			this->btn_rq1_stats = (gcnew System::Windows::Forms::Button());
 			this->dgv_stats = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage3_comm = (gcnew System::Windows::Forms::TabPage());
@@ -1436,6 +1437,7 @@ private: System::Windows::Forms::Button^ btn_rq2_stats;
 			// 
 			// tabPage5
 			// 
+			this->tabPage5->Controls->Add(this->comBoxMoisStats);
 			this->tabPage5->Controls->Add(this->btn_rq5_stats);
 			this->tabPage5->Controls->Add(this->lbl_client_stats);
 			this->tabPage5->Controls->Add(this->txt_client_stats);
@@ -1443,7 +1445,6 @@ private: System::Windows::Forms::Button^ btn_rq2_stats;
 			this->tabPage5->Controls->Add(this->btn_rq3_stats);
 			this->tabPage5->Controls->Add(this->btn_rq2_stats);
 			this->tabPage5->Controls->Add(this->label1);
-			this->tabPage5->Controls->Add(this->txt_mois_stats);
 			this->tabPage5->Controls->Add(this->btn_rq1_stats);
 			this->tabPage5->Controls->Add(this->dgv_stats);
 			this->tabPage5->Location = System::Drawing::Point(4, 25);
@@ -1454,6 +1455,18 @@ private: System::Windows::Forms::Button^ btn_rq2_stats;
 			this->tabPage5->TabIndex = 4;
 			this->tabPage5->Text = L"Statistiques";
 			this->tabPage5->UseVisualStyleBackColor = true;
+			// 
+			// comBoxMoisStats
+			// 
+			this->comBoxMoisStats->FormattingEnabled = true;
+			this->comBoxMoisStats->Items->AddRange(gcnew cli::array< System::Object^  >(12) {
+				L"01/01/2021", L"01/02/2021", L"01/03/2021",
+					L"01/04/2021", L"01/05/2021", L"01/06/2021", L"01/07/2021", L"01/08/2021", L"01/09/2021", L"01/10/2021", L"01/11/2021", L"01/12/2021"
+			});
+			this->comBoxMoisStats->Location = System::Drawing::Point(11, 242);
+			this->comBoxMoisStats->Name = L"comBoxMoisStats";
+			this->comBoxMoisStats->Size = System::Drawing::Size(287, 24);
+			this->comBoxMoisStats->TabIndex = 10;
 			// 
 			// btn_rq5_stats
 			// 
@@ -1519,13 +1532,6 @@ private: System::Windows::Forms::Button^ btn_rq2_stats;
 			this->label1->Size = System::Drawing::Size(45, 17);
 			this->label1->TabIndex = 3;
 			this->label1->Text = L"Mois :";
-			// 
-			// txt_mois_stats
-			// 
-			this->txt_mois_stats->Location = System::Drawing::Point(8, 244);
-			this->txt_mois_stats->Name = L"txt_mois_stats";
-			this->txt_mois_stats->Size = System::Drawing::Size(290, 22);
-			this->txt_mois_stats->TabIndex = 2;
 			// 
 			// btn_rq1_stats
 			// 
@@ -1992,7 +1998,7 @@ private: System::Windows::Forms::Button^ btn_rq2_stats;
 	{
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
 		this->dgv_stats->Refresh();
-		this->oDs = this->oSvc->afficherRequete1(this->txt_mois_stats->Text, "TB_COMMANDE");
+		this->oDs = this->oSvc->afficherRequete1(this->comBoxMoisStats->Text, "TB_COMMANDE");
 		this->dgv_stats->DataSource = this->oDs;
 		this->dgv_stats->DataMember = "TB_COMMANDE";
 	}
@@ -2012,7 +2018,7 @@ private: System::Windows::Forms::Button^ btn_rq2_stats;
 		this->dgv_stats->DataMember = "TB_STOCK";
 	}
 private: System::Void btn_rq4_stats_Click(System::Object^ sender, System::EventArgs^ e) {
-
+	
 	String^ textidstats = this->txt_client_stats->Text;
 	int id_cl_stats = System::Convert::ToInt32(textidstats);
 

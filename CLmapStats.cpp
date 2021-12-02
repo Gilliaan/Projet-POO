@@ -2,7 +2,7 @@
 //Chiffre d'affaire sur un mois
 System::String^ NS_Comp_Mappage::CLmapStats::AffichageRequete1(void)
 {
-	return "SELECT SUM(com_tot_ht) AS Chiffre_Affaire_Mars FROM TB_COMMANDE INNER JOIN TB_PAIEMENT ON  TB_COMMANDE.id_com = TB_PAIEMENT.com_id WHERE MONTH('" + this->mois_stats + "') = 03";
+	return "SELECT SUM(com_tot_ht) AS Chiffre_Affaire_Mars FROM TB_COMMANDE INNER JOIN TB_PAIEMENT ON  TB_COMMANDE.id_com = TB_PAIEMENT.com_id WHERE MONTH('" + this->mois_stats + "') = 3";
 }
 //Valeur commerciale du stock
 System::String^ NS_Comp_Mappage::CLmapStats::AffichageRequete2(void)
@@ -17,7 +17,7 @@ System::String^ NS_Comp_Mappage::CLmapStats::AffichageRequete3(void)
 //Montant total des achats pour un client
 System::String^ NS_Comp_Mappage::CLmapStats::AffichageRequete4(void)
 {
-	return "SELECT com_tot_ttc AS Montant_total_achat_client_1 FROM TB_COMMANDE	WHERE('"+this->id_cl_stats +"' = 1) ";
+	return "SELECT com_tot_ttc AS Montant_total_achat_client_1 FROM TB_COMMANDE	WHERE(ppl_id = 1)";
 }
 //Valeur d'achat du stock
 System::String^ NS_Comp_Mappage::CLmapStats::AffichageRequete5(void)
