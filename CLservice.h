@@ -41,5 +41,6 @@ namespace NS_Comp_Svc
 		void ajouterUneCommande(System::String^, System::String^, System::String^, int, double, double, double);
 		void suprimerUneCommande(int);
 		void modifierUneCommande(System::String^, System::String^, System::String^, int, double, double, double, int);
+		//Load Data
 	};
 }

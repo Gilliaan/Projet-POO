@@ -66,7 +66,6 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::TextBox^ txt_adr_facturation_cl;
 	private: System::Windows::Forms::TextBox^ txt_adr_livraison_cl;
 	private: System::Windows::Forms::Label^ lbl_genre_cl;
-	private: System::Windows::Forms::TextBox^ txt_genre_cl;
 	private: System::Windows::Forms::Label^ lbl_type_personne_cl;
 	private: System::Windows::Forms::Label^ lbl_date_premier_achat_cl;
 	private: System::Windows::Forms::TextBox^ txt_date_premier_achat_cl;
@@ -106,7 +105,7 @@ namespace ProjetPOO {
 
 	private: System::Windows::Forms::ListBox^ listBox2;
 	private: System::Windows::Forms::Label^ lbl_adr_pers;
-	private: System::Windows::Forms::TextBox^ txt_genre_pers;
+
 
 
 	private: System::Windows::Forms::Label^ lbl_genre_pers;
@@ -215,6 +214,10 @@ private: System::Windows::Forms::DataGridView^ dgv_art_comm;
 
 private: System::Windows::Forms::Label^ lbl_id_com;
 private: System::Windows::Forms::TextBox^ txt_id_com;
+private: System::Windows::Forms::ComboBox^ comBoxGenreCl;
+private: System::Windows::Forms::ComboBox^ comBoxGenrePers;
+private: System::Windows::Forms::Button^ btn_refresh_cl;
+
 
 
 	protected:
@@ -243,6 +246,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			this->lbl_nom_cl = (gcnew System::Windows::Forms::Label());
 			this->tabPage_comm = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage_cl = (gcnew System::Windows::Forms::TabPage());
+			this->btn_refresh_cl = (gcnew System::Windows::Forms::Button());
 			this->lbl_dgv_adresse_cl = (gcnew System::Windows::Forms::Label());
 			this->ajt_adr_cl = (gcnew System::Windows::Forms::Button());
 			this->aff_adr_cl = (gcnew System::Windows::Forms::Button());
@@ -257,11 +261,12 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			this->txt_adr_facturation_cl = (gcnew System::Windows::Forms::TextBox());
 			this->txt_adr_livraison_cl = (gcnew System::Windows::Forms::TextBox());
 			this->lbl_genre_cl = (gcnew System::Windows::Forms::Label());
-			this->txt_genre_cl = (gcnew System::Windows::Forms::TextBox());
+			this->comBoxGenreCl = (gcnew System::Windows::Forms::ComboBox());
 			this->lbl_type_personne_cl = (gcnew System::Windows::Forms::Label());
 			this->txt_type_cl = (gcnew System::Windows::Forms::TextBox());
 			this->list_console_cl = (gcnew System::Windows::Forms::ListBox());
 			this->tabPage_pers = (gcnew System::Windows::Forms::TabPage());
+			this->comBoxGenrePers = (gcnew System::Windows::Forms::ComboBox());
 			this->label20 = (gcnew System::Windows::Forms::Label());
 			this->txt_type_pers = (gcnew System::Windows::Forms::TextBox());
 			this->lbl_type_pers = (gcnew System::Windows::Forms::Label());
@@ -273,7 +278,6 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			this->lbl_nom_sup_pers = (gcnew System::Windows::Forms::Label());
 			this->lbl_date_emb_pers = (gcnew System::Windows::Forms::Label());
 			this->lbl_adr_pers = (gcnew System::Windows::Forms::Label());
-			this->txt_genre_pers = (gcnew System::Windows::Forms::TextBox());
 			this->lbl_genre_pers = (gcnew System::Windows::Forms::Label());
 			this->lbl_prenom_pers = (gcnew System::Windows::Forms::Label());
 			this->txt_prenom_pers = (gcnew System::Windows::Forms::TextBox());
@@ -462,6 +466,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			this->tabPage_cl->BackColor = System::Drawing::Color::White;
 			this->tabPage_cl->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
+			this->tabPage_cl->Controls->Add(this->btn_refresh_cl);
 			this->tabPage_cl->Controls->Add(this->lbl_dgv_adresse_cl);
 			this->tabPage_cl->Controls->Add(this->ajt_adr_cl);
 			this->tabPage_cl->Controls->Add(this->aff_adr_cl);
@@ -476,7 +481,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			this->tabPage_cl->Controls->Add(this->txt_adr_facturation_cl);
 			this->tabPage_cl->Controls->Add(this->txt_adr_livraison_cl);
 			this->tabPage_cl->Controls->Add(this->lbl_genre_cl);
-			this->tabPage_cl->Controls->Add(this->txt_genre_cl);
+			this->tabPage_cl->Controls->Add(this->comBoxGenreCl);
 			this->tabPage_cl->Controls->Add(this->lbl_type_personne_cl);
 			this->tabPage_cl->Controls->Add(this->txt_type_cl);
 			this->tabPage_cl->Controls->Add(this->list_console_cl);
@@ -497,6 +502,16 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			this->tabPage_cl->Size = System::Drawing::Size(1182, 560);
 			this->tabPage_cl->TabIndex = 0;
 			this->tabPage_cl->Text = L"Clients";
+			// 
+			// btn_refresh_cl
+			// 
+			this->btn_refresh_cl->Location = System::Drawing::Point(166, 425);
+			this->btn_refresh_cl->Name = L"btn_refresh_cl";
+			this->btn_refresh_cl->Size = System::Drawing::Size(330, 46);
+			this->btn_refresh_cl->TabIndex = 30;
+			this->btn_refresh_cl->Text = L"Refresh";
+			this->btn_refresh_cl->UseVisualStyleBackColor = true;
+			this->btn_refresh_cl->Click += gcnew System::EventHandler(this, &MyForm::btn_refresh_cl_Click);
 			// 
 			// lbl_dgv_adresse_cl
 			// 
@@ -627,13 +642,14 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			this->lbl_genre_cl->TabIndex = 15;
 			this->lbl_genre_cl->Text = L"Genre";
 			// 
-			// txt_genre_cl
+			// comBoxGenreCl
 			// 
-			this->txt_genre_cl->Location = System::Drawing::Point(343, 239);
-			this->txt_genre_cl->Margin = System::Windows::Forms::Padding(4);
-			this->txt_genre_cl->Name = L"txt_genre_cl";
-			this->txt_genre_cl->Size = System::Drawing::Size(153, 22);
-			this->txt_genre_cl->TabIndex = 14;
+			this->comBoxGenreCl->FormattingEnabled = true;
+			this->comBoxGenreCl->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Homme ", L"Femme" });
+			this->comBoxGenreCl->Location = System::Drawing::Point(343, 237);
+			this->comBoxGenreCl->Name = L"comBoxGenreCl";
+			this->comBoxGenreCl->Size = System::Drawing::Size(153, 24);
+			this->comBoxGenreCl->TabIndex = 29;
 			// 
 			// lbl_type_personne_cl
 			// 
@@ -665,6 +681,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// tabPage_pers
 			// 
+			this->tabPage_pers->Controls->Add(this->comBoxGenrePers);
 			this->tabPage_pers->Controls->Add(this->label20);
 			this->tabPage_pers->Controls->Add(this->txt_type_pers);
 			this->tabPage_pers->Controls->Add(this->lbl_type_pers);
@@ -676,7 +693,6 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			this->tabPage_pers->Controls->Add(this->lbl_nom_sup_pers);
 			this->tabPage_pers->Controls->Add(this->lbl_date_emb_pers);
 			this->tabPage_pers->Controls->Add(this->lbl_adr_pers);
-			this->tabPage_pers->Controls->Add(this->txt_genre_pers);
 			this->tabPage_pers->Controls->Add(this->lbl_genre_pers);
 			this->tabPage_pers->Controls->Add(this->lbl_prenom_pers);
 			this->tabPage_pers->Controls->Add(this->txt_prenom_pers);
@@ -698,6 +714,15 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			this->tabPage_pers->Text = L"Personnel";
 			this->tabPage_pers->UseVisualStyleBackColor = true;
 			// 
+			// comBoxGenrePers
+			// 
+			this->comBoxGenrePers->FormattingEnabled = true;
+			this->comBoxGenrePers->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Homme", L"Femme" });
+			this->comBoxGenrePers->Location = System::Drawing::Point(343, 237);
+			this->comBoxGenrePers->Name = L"comBoxGenrePers";
+			this->comBoxGenrePers->Size = System::Drawing::Size(153, 24);
+			this->comBoxGenrePers->TabIndex = 30;
+			// 
 			// label20
 			// 
 			this->label20->AutoSize = true;
@@ -709,7 +734,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// txt_type_pers
 			// 
-			this->txt_type_pers->Location = System::Drawing::Point(18, 421);
+			this->txt_type_pers->Location = System::Drawing::Point(16, 413);
 			this->txt_type_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txt_type_pers->Name = L"txt_type_pers";
 			this->txt_type_pers->Size = System::Drawing::Size(141, 22);
@@ -720,7 +745,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// lbl_type_pers
 			// 
 			this->lbl_type_pers->AutoSize = true;
-			this->lbl_type_pers->Location = System::Drawing::Point(14, 396);
+			this->lbl_type_pers->Location = System::Drawing::Point(13, 392);
 			this->lbl_type_pers->Name = L"lbl_type_pers";
 			this->lbl_type_pers->Size = System::Drawing::Size(124, 17);
 			this->lbl_type_pers->TabIndex = 27;
@@ -744,7 +769,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// txt_date_emb_pers
 			// 
-			this->txt_date_emb_pers->Location = System::Drawing::Point(167, 393);
+			this->txt_date_emb_pers->Location = System::Drawing::Point(166, 396);
 			this->txt_date_emb_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txt_date_emb_pers->Name = L"txt_date_emb_pers";
 			this->txt_date_emb_pers->Size = System::Drawing::Size(325, 22);
@@ -752,7 +777,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// txt_adr_pers
 			// 
-			this->txt_adr_pers->Location = System::Drawing::Point(167, 344);
+			this->txt_adr_pers->Location = System::Drawing::Point(166, 346);
 			this->txt_adr_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txt_adr_pers->Name = L"txt_adr_pers";
 			this->txt_adr_pers->Size = System::Drawing::Size(325, 22);
@@ -779,7 +804,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// lbl_date_emb_pers
 			// 
 			this->lbl_date_emb_pers->AutoSize = true;
-			this->lbl_date_emb_pers->Location = System::Drawing::Point(164, 371);
+			this->lbl_date_emb_pers->Location = System::Drawing::Point(163, 375);
 			this->lbl_date_emb_pers->Name = L"lbl_date_emb_pers";
 			this->lbl_date_emb_pers->Size = System::Drawing::Size(119, 17);
 			this->lbl_date_emb_pers->TabIndex = 20;
@@ -788,24 +813,16 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// lbl_adr_pers
 			// 
 			this->lbl_adr_pers->AutoSize = true;
-			this->lbl_adr_pers->Location = System::Drawing::Point(163, 319);
+			this->lbl_adr_pers->Location = System::Drawing::Point(163, 322);
 			this->lbl_adr_pers->Name = L"lbl_adr_pers";
 			this->lbl_adr_pers->Size = System::Drawing::Size(60, 17);
 			this->lbl_adr_pers->TabIndex = 19;
 			this->lbl_adr_pers->Text = L"Adresse";
 			// 
-			// txt_genre_pers
-			// 
-			this->txt_genre_pers->Location = System::Drawing::Point(351, 236);
-			this->txt_genre_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->txt_genre_pers->Name = L"txt_genre_pers";
-			this->txt_genre_pers->Size = System::Drawing::Size(141, 22);
-			this->txt_genre_pers->TabIndex = 15;
-			// 
 			// lbl_genre_pers
 			// 
 			this->lbl_genre_pers->AutoSize = true;
-			this->lbl_genre_pers->Location = System::Drawing::Point(347, 211);
+			this->lbl_genre_pers->Location = System::Drawing::Point(340, 218);
 			this->lbl_genre_pers->Name = L"lbl_genre_pers";
 			this->lbl_genre_pers->Size = System::Drawing::Size(48, 17);
 			this->lbl_genre_pers->TabIndex = 16;
@@ -814,7 +831,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// lbl_prenom_pers
 			// 
 			this->lbl_prenom_pers->AutoSize = true;
-			this->lbl_prenom_pers->Location = System::Drawing::Point(347, 265);
+			this->lbl_prenom_pers->Location = System::Drawing::Point(340, 271);
 			this->lbl_prenom_pers->Name = L"lbl_prenom_pers";
 			this->lbl_prenom_pers->Size = System::Drawing::Size(57, 17);
 			this->lbl_prenom_pers->TabIndex = 12;
@@ -822,16 +839,16 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// txt_prenom_pers
 			// 
-			this->txt_prenom_pers->Location = System::Drawing::Point(351, 290);
+			this->txt_prenom_pers->Location = System::Drawing::Point(343, 292);
 			this->txt_prenom_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txt_prenom_pers->Name = L"txt_prenom_pers";
-			this->txt_prenom_pers->Size = System::Drawing::Size(141, 22);
+			this->txt_prenom_pers->Size = System::Drawing::Size(153, 22);
 			this->txt_prenom_pers->TabIndex = 12;
 			// 
 			// lbl_nom_pers
 			// 
 			this->lbl_nom_pers->AutoSize = true;
-			this->lbl_nom_pers->Location = System::Drawing::Point(164, 268);
+			this->lbl_nom_pers->Location = System::Drawing::Point(163, 271);
 			this->lbl_nom_pers->Name = L"lbl_nom_pers";
 			this->lbl_nom_pers->Size = System::Drawing::Size(37, 17);
 			this->lbl_nom_pers->TabIndex = 12;
@@ -839,16 +856,16 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// txt_nom_pers
 			// 
-			this->txt_nom_pers->Location = System::Drawing::Point(167, 290);
+			this->txt_nom_pers->Location = System::Drawing::Point(166, 292);
 			this->txt_nom_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txt_nom_pers->Name = L"txt_nom_pers";
-			this->txt_nom_pers->Size = System::Drawing::Size(141, 22);
+			this->txt_nom_pers->Size = System::Drawing::Size(153, 22);
 			this->txt_nom_pers->TabIndex = 12;
 			// 
 			// lbl_id_pers
 			// 
 			this->lbl_id_pers->AutoSize = true;
-			this->lbl_id_pers->Location = System::Drawing::Point(163, 211);
+			this->lbl_id_pers->Location = System::Drawing::Point(163, 218);
 			this->lbl_id_pers->Name = L"lbl_id_pers";
 			this->lbl_id_pers->Size = System::Drawing::Size(19, 17);
 			this->lbl_id_pers->TabIndex = 12;
@@ -856,10 +873,10 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// txt_id_pers
 			// 
-			this->txt_id_pers->Location = System::Drawing::Point(167, 236);
+			this->txt_id_pers->Location = System::Drawing::Point(166, 239);
 			this->txt_id_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txt_id_pers->Name = L"txt_id_pers";
-			this->txt_id_pers->Size = System::Drawing::Size(141, 22);
+			this->txt_id_pers->Size = System::Drawing::Size(153, 22);
 			this->txt_id_pers->TabIndex = 12;
 			// 
 			// listBox2
@@ -1297,9 +1314,9 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 			// 
 			// txt_id_stck
 			// 
-			this->txt_id_stck->Location = System::Drawing::Point(177, 262);
+			this->txt_id_stck->Location = System::Drawing::Point(166, 239);
 			this->txt_id_stck->Name = L"txt_id_stck";
-			this->txt_id_stck->Size = System::Drawing::Size(302, 22);
+			this->txt_id_stck->Size = System::Drawing::Size(153, 22);
 			this->txt_id_stck->TabIndex = 10;
 			// 
 			// lbl_id_stck
@@ -1465,7 +1482,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 	//Click sur le boutton Insérer de l'onglet Clients
 	private: System::Void btn_insert_click_cl(System::Object^ sender, System::EventArgs^ e)
 	{
-		this->oSvc->ajouterUnClient(this->txt_type_cl->Text, this->txt_date_naissance_cl->Text, this->txt_date_premier_achat_cl->Text, this->txt_genre_cl->Text, this->txt_nom_cl->Text, this->txt_prenom_cl->Text);
+		this->oSvc->ajouterUnClient(this->txt_type_cl->Text, this->txt_date_naissance_cl->Text, this->txt_date_premier_achat_cl->Text, this->comBoxGenreCl->Text, this->txt_nom_cl->Text, this->txt_prenom_cl->Text);
 		
 		//Load data Client
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
@@ -1503,7 +1520,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 	{
 		String^ textVal = this->txt_id_cl->Text;
 		int id_people = System::Convert::ToInt32(textVal);
-		this->oSvc->modifierUnClient(this->txt_date_naissance_cl->Text, this->txt_date_premier_achat_cl->Text, this->txt_genre_cl->Text, this->txt_nom_cl->Text, this->txt_prenom_cl->Text, id_people);
+		this->oSvc->modifierUnClient(this->txt_date_naissance_cl->Text, this->txt_date_premier_achat_cl->Text, this->comBoxGenreCl->Text, this->txt_nom_cl->Text, this->txt_prenom_cl->Text, id_people);
 	
 
 		//Load data Client
@@ -1616,7 +1633,17 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 		this->txt_prenom_cl->Text = rowv->Cells["ppl_prenom"]->Value->ToString();
 		this->txt_date_naissance_cl->Text = rowv->Cells["cl_date_naissance"]->Value->ToString();
 		this->txt_date_premier_achat_cl->Text = rowv->Cells["CL_date_premier_achat"]->Value->ToString();
-		this->txt_genre_cl->Text = rowv->Cells["ppl_gender"]->Value->ToString();
+		this->comBoxGenreCl->Text = rowv->Cells["ppl_gender"]->Value->ToString();
+
+		String^ val = this->txt_id_cl->Text;
+		int id = System::Convert::ToInt32(val);
+
+		//Load data Adresse
+		this->oSvc = gcnew NS_Comp_Svc::CLservices();
+		this->dgv_aff_adr_cl->Refresh();
+		this->oDs = this->oSvc->afficherAdresseClient(id, "TB_ADRESSE");
+		this->dgv_aff_adr_cl->DataSource = this->oDs;
+		this->dgv_aff_adr_cl->DataMember = "TB_ADRESSE";
 	}
 	private: System::Void dgv_stck_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 		int rowIndex = e->RowIndex;
@@ -1632,7 +1659,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 	private: System::Void button_update2_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ textVal = this->txt_id_pers->Text;
 		int id_people = System::Convert::ToInt32(textVal);
-		this->oSvc->modifierUnPersonnel(this->txt_nom_pers->Text, this->txt_prenom_pers->Text,this->txt_genre_pers->Text,this->txt_date_emb_pers->Text,this->txt_date_emb_sup_pers->Text,this->txt_adr_pers->Text,this->txt_nom_sup_pers->Text, id_people);
+		this->oSvc->modifierUnPersonnel(this->txt_nom_pers->Text, this->txt_prenom_pers->Text,this->comBoxGenrePers->Text,this->txt_date_emb_pers->Text,this->txt_date_emb_sup_pers->Text,this->txt_adr_pers->Text,this->txt_nom_sup_pers->Text, id_people);
 
 		//Load data
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
@@ -1646,7 +1673,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 	}
 	private: System::Void button_insert2_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
-		this->oSvc->ajouterUnPersonnel(this->txt_type_pers->Text, this->txt_nom_pers->Text, this->txt_prenom_pers->Text, this->txt_genre_pers->Text, this->txt_date_emb_pers->Text, this->txt_date_emb_sup_pers->Text, this->txt_adr_pers->Text, this->txt_nom_sup_pers->Text);
+		this->oSvc->ajouterUnPersonnel(this->txt_type_pers->Text, this->txt_nom_pers->Text, this->txt_prenom_pers->Text, this->comBoxGenrePers->Text, this->txt_date_emb_pers->Text, this->txt_date_emb_sup_pers->Text, this->txt_adr_pers->Text, this->txt_nom_sup_pers->Text);
 		//Load data
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
 		this->dgv_pers->Refresh();
@@ -1679,7 +1706,7 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 		DataGridViewRow^ rowv = dgv_pers->Rows[rowIndex];
 
 		this->txt_id_pers->Text = rowv->Cells["id_ppl"]->Value->ToString();
-		this->txt_genre_pers->Text = rowv->Cells["ppl_gender"]->Value->ToString();
+		this->comBoxGenrePers->Text = rowv->Cells["ppl_gender"]->Value->ToString();
 		this->txt_nom_pers->Text = rowv->Cells["ppl_nom"]->Value->ToString();
 		this->txt_prenom_pers->Text = rowv->Cells["ppl_prenom"]->Value->ToString();
 		this->txt_date_emb_pers->Text = rowv->Cells["p_emb_date"]->Value->ToString();
@@ -1793,5 +1820,16 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 		this->dgv_art_comm->DataMember = "TB_STOCK";
 	}
 
+
+private: System::Void btn_refresh_cl_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->txt_nom_cl->Text = "";
+	this->txt_prenom_cl->Text = "";
+	this->txt_id_cl->Text = "";
+	this->txt_adr_livraison_cl->Text = "";
+	this->txt_adr_facturation_cl->Text = "";
+	this->comBoxGenreCl->Text = "";
+	this->txt_date_naissance_cl->Text = "";
+	this->txt_date_premier_achat_cl->Text = "";
+}
 };
 }
