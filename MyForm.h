@@ -985,7 +985,7 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			this->dgv_art_comm->Location = System::Drawing::Point(643, 277);
 			this->dgv_art_comm->Name = L"dgv_art_comm";
 			this->dgv_art_comm->RowHeadersWidth = 51;
-			this->dgv_art_comm->Size = System::Drawing::Size(518, 255);
+			this->dgv_art_comm->Size = System::Drawing::Size(518, 273);
 			this->dgv_art_comm->TabIndex = 7;
 			// 
 			// label_console_comm
@@ -1009,74 +1009,74 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// label_date_prevu_comm
 			// 
 			this->label_date_prevu_comm->AutoSize = true;
-			this->label_date_prevu_comm->Location = System::Drawing::Point(157, 269);
+			this->label_date_prevu_comm->Location = System::Drawing::Point(163, 326);
 			this->label_date_prevu_comm->Name = L"label_date_prevu_comm";
-			this->label_date_prevu_comm->Size = System::Drawing::Size(84, 17);
+			this->label_date_prevu_comm->Size = System::Drawing::Size(162, 17);
 			this->label_date_prevu_comm->TabIndex = 4;
-			this->label_date_prevu_comm->Text = L"date prevue";
+			this->label_date_prevu_comm->Text = L"Date de livraison prévue";
 			// 
 			// label_id_comm
 			// 
 			this->label_id_comm->AutoSize = true;
-			this->label_id_comm->Location = System::Drawing::Point(135, 384);
+			this->label_id_comm->Location = System::Drawing::Point(163, 218);
 			this->label_id_comm->Name = L"label_id_comm";
-			this->label_id_comm->Size = System::Drawing::Size(94, 17);
+			this->label_id_comm->Size = System::Drawing::Size(92, 17);
 			this->label_id_comm->TabIndex = 4;
-			this->label_id_comm->Text = L"ID commande";
+			this->label_id_comm->Text = L"Id commande";
 			// 
 			// label_ttc_comm
 			// 
 			this->label_ttc_comm->AutoSize = true;
-			this->label_ttc_comm->Location = System::Drawing::Point(450, 264);
+			this->label_ttc_comm->Location = System::Drawing::Point(340, 272);
 			this->label_ttc_comm->Name = L"label_ttc_comm";
-			this->label_ttc_comm->Size = System::Drawing::Size(66, 17);
+			this->label_ttc_comm->Size = System::Drawing::Size(71, 17);
 			this->label_ttc_comm->TabIndex = 4;
-			this->label_ttc_comm->Text = L"total TTC";
+			this->label_ttc_comm->Text = L"Total TTC";
 			// 
 			// label_tva_comm
 			// 
 			this->label_tva_comm->AutoSize = true;
-			this->label_tva_comm->Location = System::Drawing::Point(450, 232);
+			this->label_tva_comm->Location = System::Drawing::Point(340, 218);
 			this->label_tva_comm->Name = L"label_tva_comm";
-			this->label_tva_comm->Size = System::Drawing::Size(66, 17);
+			this->label_tva_comm->Size = System::Drawing::Size(71, 17);
 			this->label_tva_comm->TabIndex = 4;
-			this->label_tva_comm->Text = L"total TVA";
+			this->label_tva_comm->Text = L"Total TVA";
 			// 
 			// label_ref_comm
 			// 
 			this->label_ref_comm->AutoSize = true;
-			this->label_ref_comm->Location = System::Drawing::Point(170, 230);
+			this->label_ref_comm->Location = System::Drawing::Point(163, 272);
 			this->label_ref_comm->Name = L"label_ref_comm";
-			this->label_ref_comm->Size = System::Drawing::Size(69, 17);
+			this->label_ref_comm->Size = System::Drawing::Size(74, 17);
 			this->label_ref_comm->TabIndex = 4;
-			this->label_ref_comm->Text = L"reference";
+			this->label_ref_comm->Text = L"Référence";
 			// 
 			// label_ht_comm
 			// 
 			this->label_ht_comm->AutoSize = true;
-			this->label_ht_comm->Location = System::Drawing::Point(450, 297);
+			this->label_ht_comm->Location = System::Drawing::Point(340, 326);
 			this->label_ht_comm->Name = L"label_ht_comm";
-			this->label_ht_comm->Size = System::Drawing::Size(58, 17);
+			this->label_ht_comm->Size = System::Drawing::Size(63, 17);
 			this->label_ht_comm->TabIndex = 4;
-			this->label_ht_comm->Text = L"total HT";
+			this->label_ht_comm->Text = L"Total HT";
 			// 
 			// label_article_comm
 			// 
 			this->label_article_comm->AutoSize = true;
-			this->label_article_comm->Location = System::Drawing::Point(157, 339);
+			this->label_article_comm->Location = System::Drawing::Point(340, 375);
 			this->label_article_comm->Name = L"label_article_comm";
-			this->label_article_comm->Size = System::Drawing::Size(77, 17);
+			this->label_article_comm->Size = System::Drawing::Size(82, 17);
 			this->label_article_comm->TabIndex = 4;
-			this->label_article_comm->Text = L"total article";
+			this->label_article_comm->Text = L"Total article";
 			// 
 			// label_date_em_comm
 			// 
 			this->label_date_em_comm->AutoSize = true;
-			this->label_date_em_comm->Location = System::Drawing::Point(135, 302);
+			this->label_date_em_comm->Location = System::Drawing::Point(163, 375);
 			this->label_date_em_comm->Name = L"label_date_em_comm";
-			this->label_date_em_comm->Size = System::Drawing::Size(106, 17);
+			this->label_date_em_comm->Size = System::Drawing::Size(108, 17);
 			this->label_date_em_comm->TabIndex = 4;
-			this->label_date_em_comm->Text = L"date d\'emission";
+			this->label_date_em_comm->Text = L"Date d\'émission";
 			// 
 			// btn_del_comm
 			// 
@@ -1110,58 +1110,58 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// 
 			// txt_tot_article_comm
 			// 
-			this->txt_tot_article_comm->Location = System::Drawing::Point(245, 334);
+			this->txt_tot_article_comm->Location = System::Drawing::Point(343, 396);
 			this->txt_tot_article_comm->Name = L"txt_tot_article_comm";
-			this->txt_tot_article_comm->Size = System::Drawing::Size(183, 22);
+			this->txt_tot_article_comm->Size = System::Drawing::Size(153, 22);
 			this->txt_tot_article_comm->TabIndex = 2;
 			// 
 			// txt_ht_comm
 			// 
-			this->txt_ht_comm->Location = System::Drawing::Point(522, 292);
+			this->txt_ht_comm->Location = System::Drawing::Point(343, 346);
 			this->txt_ht_comm->Name = L"txt_ht_comm";
-			this->txt_ht_comm->Size = System::Drawing::Size(99, 22);
+			this->txt_ht_comm->Size = System::Drawing::Size(153, 22);
 			this->txt_ht_comm->TabIndex = 2;
 			// 
 			// txt_tva_comm
 			// 
-			this->txt_tva_comm->Location = System::Drawing::Point(522, 230);
+			this->txt_tva_comm->Location = System::Drawing::Point(343, 237);
 			this->txt_tva_comm->Name = L"txt_tva_comm";
-			this->txt_tva_comm->Size = System::Drawing::Size(99, 22);
+			this->txt_tva_comm->Size = System::Drawing::Size(153, 22);
 			this->txt_tva_comm->TabIndex = 2;
 			// 
 			// txt_ref_comm
 			// 
-			this->txt_ref_comm->Location = System::Drawing::Point(245, 227);
+			this->txt_ref_comm->Location = System::Drawing::Point(166, 292);
 			this->txt_ref_comm->Name = L"txt_ref_comm";
-			this->txt_ref_comm->Size = System::Drawing::Size(183, 22);
+			this->txt_ref_comm->Size = System::Drawing::Size(153, 22);
 			this->txt_ref_comm->TabIndex = 2;
 			// 
 			// txt_date_em_comm
 			// 
-			this->txt_date_em_comm->Location = System::Drawing::Point(245, 297);
+			this->txt_date_em_comm->Location = System::Drawing::Point(166, 396);
 			this->txt_date_em_comm->Name = L"txt_date_em_comm";
-			this->txt_date_em_comm->Size = System::Drawing::Size(183, 22);
+			this->txt_date_em_comm->Size = System::Drawing::Size(153, 22);
 			this->txt_date_em_comm->TabIndex = 2;
 			// 
 			// txt_id_comm
 			// 
-			this->txt_id_comm->Location = System::Drawing::Point(245, 379);
+			this->txt_id_comm->Location = System::Drawing::Point(166, 239);
 			this->txt_id_comm->Name = L"txt_id_comm";
-			this->txt_id_comm->Size = System::Drawing::Size(183, 22);
+			this->txt_id_comm->Size = System::Drawing::Size(153, 22);
 			this->txt_id_comm->TabIndex = 2;
 			// 
 			// txt_ttc_comm
 			// 
-			this->txt_ttc_comm->Location = System::Drawing::Point(522, 261);
+			this->txt_ttc_comm->Location = System::Drawing::Point(343, 292);
 			this->txt_ttc_comm->Name = L"txt_ttc_comm";
-			this->txt_ttc_comm->Size = System::Drawing::Size(99, 22);
+			this->txt_ttc_comm->Size = System::Drawing::Size(153, 22);
 			this->txt_ttc_comm->TabIndex = 2;
 			// 
 			// txt_date_prevu_comm
 			// 
-			this->txt_date_prevu_comm->Location = System::Drawing::Point(245, 264);
+			this->txt_date_prevu_comm->Location = System::Drawing::Point(166, 346);
 			this->txt_date_prevu_comm->Name = L"txt_date_prevu_comm";
-			this->txt_date_prevu_comm->Size = System::Drawing::Size(183, 22);
+			this->txt_date_prevu_comm->Size = System::Drawing::Size(153, 22);
 			this->txt_date_prevu_comm->TabIndex = 2;
 			// 
 			// dgv_comm
@@ -1210,7 +1210,7 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// lbl_id_com
 			// 
 			this->lbl_id_com->AutoSize = true;
-			this->lbl_id_com->Location = System::Drawing::Point(174, 377);
+			this->lbl_id_com->Location = System::Drawing::Point(163, 375);
 			this->lbl_id_com->Name = L"lbl_id_com";
 			this->lbl_id_com->Size = System::Drawing::Size(94, 17);
 			this->lbl_id_com->TabIndex = 23;
@@ -1218,22 +1218,22 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// 
 			// txt_id_com
 			// 
-			this->txt_id_com->Location = System::Drawing::Point(177, 397);
+			this->txt_id_com->Location = System::Drawing::Point(166, 396);
 			this->txt_id_com->Name = L"txt_id_com";
-			this->txt_id_com->Size = System::Drawing::Size(302, 22);
+			this->txt_id_com->Size = System::Drawing::Size(153, 22);
 			this->txt_id_com->TabIndex = 22;
 			// 
 			// txt_taux_tva_art
 			// 
-			this->txt_taux_tva_art->Location = System::Drawing::Point(541, 397);
+			this->txt_taux_tva_art->Location = System::Drawing::Point(343, 396);
 			this->txt_taux_tva_art->Name = L"txt_taux_tva_art";
-			this->txt_taux_tva_art->Size = System::Drawing::Size(100, 22);
+			this->txt_taux_tva_art->Size = System::Drawing::Size(153, 22);
 			this->txt_taux_tva_art->TabIndex = 21;
 			// 
 			// lbl_tva_art
 			// 
 			this->lbl_tva_art->AutoSize = true;
-			this->lbl_tva_art->Location = System::Drawing::Point(538, 377);
+			this->lbl_tva_art->Location = System::Drawing::Point(340, 375);
 			this->lbl_tva_art->Name = L"lbl_tva_art";
 			this->lbl_tva_art->Size = System::Drawing::Size(70, 17);
 			this->lbl_tva_art->TabIndex = 20;
@@ -1242,7 +1242,7 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// lbl_prixht_art
 			// 
 			this->lbl_prixht_art->AutoSize = true;
-			this->lbl_prixht_art->Location = System::Drawing::Point(538, 332);
+			this->lbl_prixht_art->Location = System::Drawing::Point(340, 326);
 			this->lbl_prixht_art->Name = L"lbl_prixht_art";
 			this->lbl_prixht_art->Size = System::Drawing::Size(54, 17);
 			this->lbl_prixht_art->TabIndex = 19;
@@ -1251,7 +1251,7 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// lbl_nom_art
 			// 
 			this->lbl_nom_art->AutoSize = true;
-			this->lbl_nom_art->Location = System::Drawing::Point(538, 287);
+			this->lbl_nom_art->Location = System::Drawing::Point(340, 272);
 			this->lbl_nom_art->Name = L"lbl_nom_art";
 			this->lbl_nom_art->Size = System::Drawing::Size(80, 17);
 			this->lbl_nom_art->TabIndex = 18;
@@ -1260,7 +1260,7 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// lbl_ref_art
 			// 
 			this->lbl_ref_art->AutoSize = true;
-			this->lbl_ref_art->Location = System::Drawing::Point(538, 242);
+			this->lbl_ref_art->Location = System::Drawing::Point(340, 218);
 			this->lbl_ref_art->Name = L"lbl_ref_art";
 			this->lbl_ref_art->Size = System::Drawing::Size(30, 17);
 			this->lbl_ref_art->TabIndex = 17;
@@ -1268,23 +1268,23 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// 
 			// txt_prixht_art
 			// 
-			this->txt_prixht_art->Location = System::Drawing::Point(541, 352);
+			this->txt_prixht_art->Location = System::Drawing::Point(343, 346);
 			this->txt_prixht_art->Name = L"txt_prixht_art";
-			this->txt_prixht_art->Size = System::Drawing::Size(100, 22);
+			this->txt_prixht_art->Size = System::Drawing::Size(153, 22);
 			this->txt_prixht_art->TabIndex = 16;
 			// 
 			// txt_nom_art
 			// 
-			this->txt_nom_art->Location = System::Drawing::Point(541, 304);
+			this->txt_nom_art->Location = System::Drawing::Point(343, 292);
 			this->txt_nom_art->Name = L"txt_nom_art";
-			this->txt_nom_art->Size = System::Drawing::Size(100, 22);
+			this->txt_nom_art->Size = System::Drawing::Size(153, 22);
 			this->txt_nom_art->TabIndex = 15;
 			// 
 			// txt_ref_art
 			// 
-			this->txt_ref_art->Location = System::Drawing::Point(541, 262);
+			this->txt_ref_art->Location = System::Drawing::Point(343, 237);
 			this->txt_ref_art->Name = L"txt_ref_art";
-			this->txt_ref_art->Size = System::Drawing::Size(100, 22);
+			this->txt_ref_art->Size = System::Drawing::Size(153, 22);
 			this->txt_ref_art->TabIndex = 14;
 			// 
 			// lbl_console_stck
@@ -1307,9 +1307,9 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// 
 			// txt_quantite_produit_stck
 			// 
-			this->txt_quantite_produit_stck->Location = System::Drawing::Point(177, 307);
+			this->txt_quantite_produit_stck->Location = System::Drawing::Point(166, 292);
 			this->txt_quantite_produit_stck->Name = L"txt_quantite_produit_stck";
-			this->txt_quantite_produit_stck->Size = System::Drawing::Size(302, 22);
+			this->txt_quantite_produit_stck->Size = System::Drawing::Size(153, 22);
 			this->txt_quantite_produit_stck->TabIndex = 11;
 			// 
 			// txt_id_stck
@@ -1322,7 +1322,7 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// lbl_id_stck
 			// 
 			this->lbl_id_stck->AutoSize = true;
-			this->lbl_id_stck->Location = System::Drawing::Point(174, 241);
+			this->lbl_id_stck->Location = System::Drawing::Point(163, 218);
 			this->lbl_id_stck->Name = L"lbl_id_stck";
 			this->lbl_id_stck->Size = System::Drawing::Size(58, 17);
 			this->lbl_id_stck->TabIndex = 8;
@@ -1331,7 +1331,7 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// lbl_seuil_reap_stck
 			// 
 			this->lbl_seuil_reap_stck->AutoSize = true;
-			this->lbl_seuil_reap_stck->Location = System::Drawing::Point(174, 332);
+			this->lbl_seuil_reap_stck->Location = System::Drawing::Point(163, 326);
 			this->lbl_seuil_reap_stck->Name = L"lbl_seuil_reap_stck";
 			this->lbl_seuil_reap_stck->Size = System::Drawing::Size(168, 17);
 			this->lbl_seuil_reap_stck->TabIndex = 6;
@@ -1340,7 +1340,7 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// lbl_stock_quantite_stck
 			// 
 			this->lbl_stock_quantite_stck->AutoSize = true;
-			this->lbl_stock_quantite_stck->Location = System::Drawing::Point(174, 287);
+			this->lbl_stock_quantite_stck->Location = System::Drawing::Point(163, 272);
 			this->lbl_stock_quantite_stck->Name = L"lbl_stock_quantite_stck";
 			this->lbl_stock_quantite_stck->Size = System::Drawing::Size(111, 17);
 			this->lbl_stock_quantite_stck->TabIndex = 5;
@@ -1348,9 +1348,9 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			// 
 			// txt_seuil_reap_stck
 			// 
-			this->txt_seuil_reap_stck->Location = System::Drawing::Point(177, 352);
+			this->txt_seuil_reap_stck->Location = System::Drawing::Point(166, 346);
 			this->txt_seuil_reap_stck->Name = L"txt_seuil_reap_stck";
-			this->txt_seuil_reap_stck->Size = System::Drawing::Size(302, 22);
+			this->txt_seuil_reap_stck->Size = System::Drawing::Size(153, 22);
 			this->txt_seuil_reap_stck->TabIndex = 4;
 			// 
 			// btn_modifier_stck
@@ -1832,5 +1832,6 @@ private: System::Void btn_refresh_cl_Click(System::Object^ sender, System::Event
 	this->txt_date_naissance_cl->Text = "";
 	this->txt_date_premier_achat_cl->Text = "";
 }
+
 };
 }
