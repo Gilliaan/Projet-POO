@@ -772,7 +772,7 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			this->txt_date_emb_pers->Location = System::Drawing::Point(166, 396);
 			this->txt_date_emb_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txt_date_emb_pers->Name = L"txt_date_emb_pers";
-			this->txt_date_emb_pers->Size = System::Drawing::Size(325, 22);
+			this->txt_date_emb_pers->Size = System::Drawing::Size(330, 22);
 			this->txt_date_emb_pers->TabIndex = 24;
 			// 
 			// txt_adr_pers
@@ -780,7 +780,7 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 			this->txt_adr_pers->Location = System::Drawing::Point(166, 346);
 			this->txt_adr_pers->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
 			this->txt_adr_pers->Name = L"txt_adr_pers";
-			this->txt_adr_pers->Size = System::Drawing::Size(325, 22);
+			this->txt_adr_pers->Size = System::Drawing::Size(330, 22);
 			this->txt_adr_pers->TabIndex = 23;
 			// 
 			// lbl_date_emb_sup_pers
