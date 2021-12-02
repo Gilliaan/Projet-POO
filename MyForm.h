@@ -223,6 +223,8 @@ private: System::Windows::Forms::Button^ btn_refresh_cl;
 private: System::Windows::Forms::Button^ btn_crea_facture;
 private: System::Windows::Forms::Button^ btn_rq1_stats;
 private: System::Windows::Forms::DataGridView^ dgv_stats;
+private: System::Windows::Forms::Label^ label1;
+private: System::Windows::Forms::TextBox^ txt_mois_stats;
 
 
 
@@ -347,9 +349,11 @@ private: System::Windows::Forms::DataGridView^ dgv_stats;
 			this->btn_inserer_stck = (gcnew System::Windows::Forms::Button());
 			this->dgv_stck = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
-			this->tabPage3_comm = (gcnew System::Windows::Forms::TabPage());
-			this->dgv_stats = (gcnew System::Windows::Forms::DataGridView());
 			this->btn_rq1_stats = (gcnew System::Windows::Forms::Button());
+			this->dgv_stats = (gcnew System::Windows::Forms::DataGridView());
+			this->tabPage3_comm = (gcnew System::Windows::Forms::TabPage());
+			this->txt_mois_stats = (gcnew System::Windows::Forms::TextBox());
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_cl))->BeginInit();
 			this->tabPage_comm->SuspendLayout();
 			this->tabPage_cl->SuspendLayout();
@@ -1419,6 +1423,8 @@ private: System::Windows::Forms::DataGridView^ dgv_stats;
 			// 
 			// tabPage5
 			// 
+			this->tabPage5->Controls->Add(this->label1);
+			this->tabPage5->Controls->Add(this->txt_mois_stats);
 			this->tabPage5->Controls->Add(this->btn_rq1_stats);
 			this->tabPage5->Controls->Add(this->dgv_stats);
 			this->tabPage5->Location = System::Drawing::Point(4, 25);
@@ -1430,12 +1436,15 @@ private: System::Windows::Forms::DataGridView^ dgv_stats;
 			this->tabPage5->Text = L"Statistiques";
 			this->tabPage5->UseVisualStyleBackColor = true;
 			// 
-			// tabPage3_comm
+			// btn_rq1_stats
 			// 
-			this->tabPage3_comm->Location = System::Drawing::Point(0, 0);
-			this->tabPage3_comm->Name = L"tabPage3_comm";
-			this->tabPage3_comm->Size = System::Drawing::Size(200, 100);
-			this->tabPage3_comm->TabIndex = 0;
+			this->btn_rq1_stats->Location = System::Drawing::Point(8, 185);
+			this->btn_rq1_stats->Name = L"btn_rq1_stats";
+			this->btn_rq1_stats->Size = System::Drawing::Size(290, 36);
+			this->btn_rq1_stats->TabIndex = 1;
+			this->btn_rq1_stats->Text = L"Requête : chiffre d\'affaire sur un mois ";
+			this->btn_rq1_stats->UseVisualStyleBackColor = true;
+			this->btn_rq1_stats->Click += gcnew System::EventHandler(this, &MyForm::btn_rq1_stats_Click);
 			// 
 			// dgv_stats
 			// 
@@ -1447,15 +1456,28 @@ private: System::Windows::Forms::DataGridView^ dgv_stats;
 			this->dgv_stats->Size = System::Drawing::Size(858, 153);
 			this->dgv_stats->TabIndex = 0;
 			// 
-			// btn_rq1_stats
+			// tabPage3_comm
 			// 
-			this->btn_rq1_stats->Location = System::Drawing::Point(36, 218);
-			this->btn_rq1_stats->Name = L"btn_rq1_stats";
-			this->btn_rq1_stats->Size = System::Drawing::Size(91, 36);
-			this->btn_rq1_stats->TabIndex = 1;
-			this->btn_rq1_stats->Text = L"button1";
-			this->btn_rq1_stats->UseVisualStyleBackColor = true;
-			this->btn_rq1_stats->Click += gcnew System::EventHandler(this, &MyForm::btn_rq1_stats_Click);
+			this->tabPage3_comm->Location = System::Drawing::Point(0, 0);
+			this->tabPage3_comm->Name = L"tabPage3_comm";
+			this->tabPage3_comm->Size = System::Drawing::Size(200, 100);
+			this->tabPage3_comm->TabIndex = 0;
+			// 
+			// txt_mois_stats
+			// 
+			this->txt_mois_stats->Location = System::Drawing::Point(8, 244);
+			this->txt_mois_stats->Name = L"txt_mois_stats";
+			this->txt_mois_stats->Size = System::Drawing::Size(290, 22);
+			this->txt_mois_stats->TabIndex = 2;
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(8, 224);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(45, 17);
+			this->label1->TabIndex = 3;
+			this->label1->Text = L"Mois :";
 			// 
 			// MyForm
 			// 
@@ -1487,6 +1509,7 @@ private: System::Windows::Forms::DataGridView^ dgv_stats;
 			this->tabPage_stck->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_stck))->EndInit();
 			this->tabPage5->ResumeLayout(false);
+			this->tabPage5->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_stats))->EndInit();
 			this->ResumeLayout(false);
 
@@ -1897,8 +1920,7 @@ private: System::Windows::Forms::DataGridView^ dgv_stats;
 		this->oDs = this->oSvc->afficherRequete1("TB_COMMANDE");
 		this->dgv_stats->DataSource = this->oDs;
 		this->dgv_stats->DataMember = "TB_COMMANDE";
-
-
 	}
+
 };
 }
