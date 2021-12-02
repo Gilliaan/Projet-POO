@@ -1894,9 +1894,9 @@ private: System::Windows::Forms::DataGridView^ dgv_stats;
 	{
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
 		this->dgv_stats->Refresh();
-		this->oDs = this->oSvc->afficherRequete1("TB_STOCK");
+		this->oDs = this->oSvc->afficherRequete1("TB_COMMANDE");
 		this->dgv_stats->DataSource = this->oDs;
-		this->dgv_stats->DataMember = "TB_STOCK";
+		this->dgv_stats->DataMember = "TB_COMMANDE";
 
 
 	}

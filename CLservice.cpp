@@ -237,7 +237,7 @@ System::Data::DataSet^ NS_Comp_Svc::CLservices::afficherRequete1(System::String^
 {
 	System::String^ sql;
 
-	sql = this->oMappComm->AfficherArticleComm();
+	sql = this->oMappStats->AffichageRequete1();
 	return this->oCad->getRows(sql, dataTableName);
 	
 }
