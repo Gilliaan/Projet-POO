@@ -21,10 +21,9 @@ namespace NS_Comp_Svc
 		NS_Comp_Mappage::CLmapPERS^ oMappPERS;
 		NS_Comp_Mappage::CLmapcommTB^ oMappComm;
 		NS_Comp_Mappage::CLmapStats^ oMappStats;
-		//System::String^ typec;
+	public:
 		
 
-	public:
 		CLservices(void);
 		System::Data::DataSet^ selectionnerTousLesClients(System::String^, System::String^);
 		System::Data::DataSet^ selectionnerTousLeStock(System::String^);
