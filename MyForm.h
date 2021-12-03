@@ -85,7 +85,7 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::Label^ lbl_console_stck;
 	private: System::Windows::Forms::ListBox^ list_console_stck;
 	private: System::Windows::Forms::DataGridView^ dgv_aff_adr_cl;
-	private: System::Windows::Forms::Button^ aff_adr_cl;
+
 	private: System::Windows::Forms::Button^ ajt_adr_cl;
 	private: System::Windows::Forms::Label^ lbl_dgv_adresse_cl;
 	private: System::Windows::Forms::TextBox^ txt_taux_tva_art;
@@ -199,8 +199,8 @@ private: System::Windows::Forms::Label^ label_id_comm;
 private: System::Windows::Forms::TextBox^ txt_id_comm;
 
 
-private: System::Windows::Forms::Label^ label_console_comm;
-private: System::Windows::Forms::ListBox^ listBox_facture;
+
+
 
 private: System::Windows::Forms::Button^ btn_delete;
 	   private: System::Windows::Forms::TabPage^ tabPage3_comm;
@@ -220,19 +220,26 @@ private: System::Windows::Forms::TextBox^ txt_id_com;
 private: System::Windows::Forms::ComboBox^ comBoxGenreCl;
 private: System::Windows::Forms::ComboBox^ comBoxGenrePers;
 private: System::Windows::Forms::Button^ btn_refresh_cl;
-private: System::Windows::Forms::Button^ btn_crea_facture;
+
 private: System::Windows::Forms::Button^ btn_rq1_stats;
 private: System::Windows::Forms::DataGridView^ dgv_stats;
-private: System::Windows::Forms::Label^ label1;
+
 
 private: System::Windows::Forms::Button^ btn_rq5_stats;
-private: System::Windows::Forms::Label^ lbl_client_stats;
 
-private: System::Windows::Forms::TextBox^ txt_client_stats;
+
+
 private: System::Windows::Forms::Button^ btn_rq4_stats;
 private: System::Windows::Forms::Button^ btn_rq3_stats;
 private: System::Windows::Forms::Button^ btn_rq2_stats;
-private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
+
+private: System::Windows::Forms::Button^ btn_rq7_stats;
+
+private: System::Windows::Forms::Button^ btn_rq6_stats;
+private: System::Windows::Forms::Label^ label1;
+private: System::Windows::Forms::ListBox^ listBox_commande;
+
+
 
 
 
@@ -266,7 +273,6 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 			this->btn_refresh_cl = (gcnew System::Windows::Forms::Button());
 			this->lbl_dgv_adresse_cl = (gcnew System::Windows::Forms::Label());
 			this->ajt_adr_cl = (gcnew System::Windows::Forms::Button());
-			this->aff_adr_cl = (gcnew System::Windows::Forms::Button());
 			this->dgv_aff_adr_cl = (gcnew System::Windows::Forms::DataGridView());
 			this->lbl_console_cl = (gcnew System::Windows::Forms::Label());
 			this->lbl_date_premier_achat_cl = (gcnew System::Windows::Forms::Label());
@@ -308,11 +314,10 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 			this->btn_insert_pers = (gcnew System::Windows::Forms::Button());
 			this->dgv_pers = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
-			this->btn_crea_facture = (gcnew System::Windows::Forms::Button());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->listBox_commande = (gcnew System::Windows::Forms::ListBox());
 			this->btn_aff_art = (gcnew System::Windows::Forms::Button());
 			this->dgv_art_comm = (gcnew System::Windows::Forms::DataGridView());
-			this->label_console_comm = (gcnew System::Windows::Forms::Label());
-			this->listBox_facture = (gcnew System::Windows::Forms::ListBox());
 			this->label_date_prevu_comm = (gcnew System::Windows::Forms::Label());
 			this->label_id_comm = (gcnew System::Windows::Forms::Label());
 			this->label_ttc_comm = (gcnew System::Windows::Forms::Label());
@@ -357,14 +362,12 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 			this->btn_inserer_stck = (gcnew System::Windows::Forms::Button());
 			this->dgv_stck = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
-			this->comBoxMoisStats = (gcnew System::Windows::Forms::ComboBox());
+			this->btn_rq7_stats = (gcnew System::Windows::Forms::Button());
+			this->btn_rq6_stats = (gcnew System::Windows::Forms::Button());
 			this->btn_rq5_stats = (gcnew System::Windows::Forms::Button());
-			this->lbl_client_stats = (gcnew System::Windows::Forms::Label());
-			this->txt_client_stats = (gcnew System::Windows::Forms::TextBox());
 			this->btn_rq4_stats = (gcnew System::Windows::Forms::Button());
 			this->btn_rq3_stats = (gcnew System::Windows::Forms::Button());
 			this->btn_rq2_stats = (gcnew System::Windows::Forms::Button());
-			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->btn_rq1_stats = (gcnew System::Windows::Forms::Button());
 			this->dgv_stats = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage3_comm = (gcnew System::Windows::Forms::TabPage());
@@ -489,7 +492,7 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 			this->tabPage_comm->Location = System::Drawing::Point(0, 0);
 			this->tabPage_comm->Name = L"tabPage_comm";
 			this->tabPage_comm->SelectedIndex = 0;
-			this->tabPage_comm->Size = System::Drawing::Size(1213, 660);
+			this->tabPage_comm->Size = System::Drawing::Size(1213, 602);
 			this->tabPage_comm->TabIndex = 11;
 			// 
 			// tabPage_cl
@@ -499,7 +502,6 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 			this->tabPage_cl->Controls->Add(this->btn_refresh_cl);
 			this->tabPage_cl->Controls->Add(this->lbl_dgv_adresse_cl);
 			this->tabPage_cl->Controls->Add(this->ajt_adr_cl);
-			this->tabPage_cl->Controls->Add(this->aff_adr_cl);
 			this->tabPage_cl->Controls->Add(this->dgv_aff_adr_cl);
 			this->tabPage_cl->Controls->Add(this->lbl_console_cl);
 			this->tabPage_cl->Controls->Add(this->lbl_date_premier_achat_cl);
@@ -529,7 +531,7 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 			this->tabPage_cl->Location = System::Drawing::Point(4, 25);
 			this->tabPage_cl->Name = L"tabPage_cl";
 			this->tabPage_cl->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage_cl->Size = System::Drawing::Size(1205, 631);
+			this->tabPage_cl->Size = System::Drawing::Size(1205, 573);
 			this->tabPage_cl->TabIndex = 0;
 			this->tabPage_cl->Text = L"Clients";
 			// 
@@ -555,26 +557,14 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 			// ajt_adr_cl
 			// 
 			this->ajt_adr_cl->BackColor = System::Drawing::Color::Transparent;
-			this->ajt_adr_cl->Location = System::Drawing::Point(951, 215);
+			this->ajt_adr_cl->Location = System::Drawing::Point(713, 215);
 			this->ajt_adr_cl->Margin = System::Windows::Forms::Padding(4);
 			this->ajt_adr_cl->Name = L"ajt_adr_cl";
-			this->ajt_adr_cl->Size = System::Drawing::Size(210, 46);
+			this->ajt_adr_cl->Size = System::Drawing::Size(448, 46);
 			this->ajt_adr_cl->TabIndex = 27;
 			this->ajt_adr_cl->Text = L"CRÉER ADRESSE";
 			this->ajt_adr_cl->UseVisualStyleBackColor = false;
 			this->ajt_adr_cl->Click += gcnew System::EventHandler(this, &MyForm::ajt_adr_cl_Click);
-			// 
-			// aff_adr_cl
-			// 
-			this->aff_adr_cl->BackColor = System::Drawing::Color::Transparent;
-			this->aff_adr_cl->Location = System::Drawing::Point(722, 215);
-			this->aff_adr_cl->Margin = System::Windows::Forms::Padding(4);
-			this->aff_adr_cl->Name = L"aff_adr_cl";
-			this->aff_adr_cl->Size = System::Drawing::Size(210, 46);
-			this->aff_adr_cl->TabIndex = 26;
-			this->aff_adr_cl->Text = L"AFFICHER ADRESSE";
-			this->aff_adr_cl->UseVisualStyleBackColor = false;
-			this->aff_adr_cl->Click += gcnew System::EventHandler(this, &MyForm::aff_adr_cl_Click);
 			// 
 			// dgv_aff_adr_cl
 			// 
@@ -585,6 +575,7 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 			this->dgv_aff_adr_cl->RowHeadersWidth = 51;
 			this->dgv_aff_adr_cl->Size = System::Drawing::Size(566, 113);
 			this->dgv_aff_adr_cl->TabIndex = 25;
+			this->dgv_aff_adr_cl->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dgv_aff_adr_cl_CellContentClick);
 			// 
 			// lbl_console_cl
 			// 
@@ -739,7 +730,7 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 			this->tabPage_pers->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->tabPage_pers->Name = L"tabPage_pers";
 			this->tabPage_pers->Padding = System::Windows::Forms::Padding(3, 4, 3, 4);
-			this->tabPage_pers->Size = System::Drawing::Size(1205, 631);
+			this->tabPage_pers->Size = System::Drawing::Size(1205, 573);
 			this->tabPage_pers->TabIndex = 1;
 			this->tabPage_pers->Text = L"Personnel";
 			this->tabPage_pers->UseVisualStyleBackColor = true;
@@ -966,11 +957,10 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 			// 
 			// tabPage3
 			// 
-			this->tabPage3->Controls->Add(this->btn_crea_facture);
+			this->tabPage3->Controls->Add(this->label1);
+			this->tabPage3->Controls->Add(this->listBox_commande);
 			this->tabPage3->Controls->Add(this->btn_aff_art);
 			this->tabPage3->Controls->Add(this->dgv_art_comm);
-			this->tabPage3->Controls->Add(this->label_console_comm);
-			this->tabPage3->Controls->Add(this->listBox_facture);
 			this->tabPage3->Controls->Add(this->label_date_prevu_comm);
 			this->tabPage3->Controls->Add(this->label_id_comm);
 			this->tabPage3->Controls->Add(this->label_ttc_comm);
@@ -995,20 +985,28 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 			this->tabPage3->Margin = System::Windows::Forms::Padding(2);
 			this->tabPage3->Name = L"tabPage3";
 			this->tabPage3->Padding = System::Windows::Forms::Padding(2);
-			this->tabPage3->Size = System::Drawing::Size(1205, 631);
+			this->tabPage3->Size = System::Drawing::Size(1205, 573);
 			this->tabPage3->TabIndex = 2;
 			this->tabPage3->Text = L"Commandes";
 			this->tabPage3->UseVisualStyleBackColor = true;
 			// 
-			// btn_crea_facture
+			// label1
 			// 
-			this->btn_crea_facture->Location = System::Drawing::Point(166, 434);
-			this->btn_crea_facture->Name = L"btn_crea_facture";
-			this->btn_crea_facture->Size = System::Drawing::Size(153, 44);
-			this->btn_crea_facture->TabIndex = 15;
-			this->btn_crea_facture->Text = L"CRÉER FACTURE";
-			this->btn_crea_facture->UseVisualStyleBackColor = true;
-			this->btn_crea_facture->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(13, 474);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(59, 17);
+			this->label1->TabIndex = 16;
+			this->label1->Text = L"Console";
+			// 
+			// listBox_commande
+			// 
+			this->listBox_commande->FormattingEnabled = true;
+			this->listBox_commande->ItemHeight = 16;
+			this->listBox_commande->Location = System::Drawing::Point(16, 494);
+			this->listBox_commande->Name = L"listBox_commande";
+			this->listBox_commande->Size = System::Drawing::Size(599, 68);
+			this->listBox_commande->TabIndex = 15;
 			// 
 			// btn_aff_art
 			// 
@@ -1028,24 +1026,6 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 			this->dgv_art_comm->RowHeadersWidth = 51;
 			this->dgv_art_comm->Size = System::Drawing::Size(518, 273);
 			this->dgv_art_comm->TabIndex = 7;
-			// 
-			// label_console_comm
-			// 
-			this->label_console_comm->AutoSize = true;
-			this->label_console_comm->Location = System::Drawing::Point(13, 371);
-			this->label_console_comm->Name = L"label_console_comm";
-			this->label_console_comm->Size = System::Drawing::Size(56, 17);
-			this->label_console_comm->TabIndex = 6;
-			this->label_console_comm->Text = L"Facture";
-			// 
-			// listBox_facture
-			// 
-			this->listBox_facture->FormattingEnabled = true;
-			this->listBox_facture->ItemHeight = 16;
-			this->listBox_facture->Location = System::Drawing::Point(16, 391);
-			this->listBox_facture->Name = L"listBox_facture";
-			this->listBox_facture->Size = System::Drawing::Size(121, 212);
-			this->listBox_facture->TabIndex = 5;
 			// 
 			// label_date_prevu_comm
 			// 
@@ -1243,7 +1223,7 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 			this->tabPage_stck->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->tabPage_stck->Name = L"tabPage_stck";
 			this->tabPage_stck->Padding = System::Windows::Forms::Padding(3, 4, 3, 4);
-			this->tabPage_stck->Size = System::Drawing::Size(1205, 631);
+			this->tabPage_stck->Size = System::Drawing::Size(1205, 573);
 			this->tabPage_stck->TabIndex = 3;
 			this->tabPage_stck->Text = L"Stock";
 			this->tabPage_stck->UseVisualStyleBackColor = true;
@@ -1437,39 +1417,51 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 			// 
 			// tabPage5
 			// 
-			this->tabPage5->Controls->Add(this->comBoxMoisStats);
+			this->tabPage5->Controls->Add(this->btn_rq7_stats);
+			this->tabPage5->Controls->Add(this->btn_rq6_stats);
 			this->tabPage5->Controls->Add(this->btn_rq5_stats);
-			this->tabPage5->Controls->Add(this->lbl_client_stats);
-			this->tabPage5->Controls->Add(this->txt_client_stats);
 			this->tabPage5->Controls->Add(this->btn_rq4_stats);
 			this->tabPage5->Controls->Add(this->btn_rq3_stats);
 			this->tabPage5->Controls->Add(this->btn_rq2_stats);
-			this->tabPage5->Controls->Add(this->label1);
 			this->tabPage5->Controls->Add(this->btn_rq1_stats);
 			this->tabPage5->Controls->Add(this->dgv_stats);
 			this->tabPage5->Location = System::Drawing::Point(4, 25);
 			this->tabPage5->Margin = System::Windows::Forms::Padding(2);
 			this->tabPage5->Name = L"tabPage5";
 			this->tabPage5->Padding = System::Windows::Forms::Padding(2);
-			this->tabPage5->Size = System::Drawing::Size(1205, 631);
+			this->tabPage5->Size = System::Drawing::Size(1205, 573);
 			this->tabPage5->TabIndex = 4;
 			this->tabPage5->Text = L"Statistiques";
 			this->tabPage5->UseVisualStyleBackColor = true;
 			// 
-			// comBoxMoisStats
+			// btn_rq7_stats
 			// 
-			this->comBoxMoisStats->FormattingEnabled = true;
-			this->comBoxMoisStats->Items->AddRange(gcnew cli::array< System::Object^  >(12) {
-				L"01/01/2021", L"01/02/2021", L"01/03/2021",
-					L"01/04/2021", L"01/05/2021", L"01/06/2021", L"01/07/2021", L"01/08/2021", L"01/09/2021", L"01/10/2021", L"01/11/2021", L"01/12/2021"
-			});
-			this->comBoxMoisStats->Location = System::Drawing::Point(11, 242);
-			this->comBoxMoisStats->Name = L"comBoxMoisStats";
-			this->comBoxMoisStats->Size = System::Drawing::Size(287, 24);
-			this->comBoxMoisStats->TabIndex = 10;
+			this->btn_rq7_stats->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btn_rq7_stats->Location = System::Drawing::Point(336, 269);
+			this->btn_rq7_stats->Name = L"btn_rq7_stats";
+			this->btn_rq7_stats->Size = System::Drawing::Size(290, 36);
+			this->btn_rq7_stats->TabIndex = 12;
+			this->btn_rq7_stats->Text = L"Requête : Les 10 articles les moins vendus";
+			this->btn_rq7_stats->UseVisualStyleBackColor = true;
+			this->btn_rq7_stats->Click += gcnew System::EventHandler(this, &MyForm::btn_rq7_stats_Click);
+			// 
+			// btn_rq6_stats
+			// 
+			this->btn_rq6_stats->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btn_rq6_stats->Location = System::Drawing::Point(336, 227);
+			this->btn_rq6_stats->Name = L"btn_rq6_stats";
+			this->btn_rq6_stats->Size = System::Drawing::Size(290, 36);
+			this->btn_rq6_stats->TabIndex = 11;
+			this->btn_rq6_stats->Text = L"Requête : Les 10 articles les plus vendus ";
+			this->btn_rq6_stats->UseVisualStyleBackColor = true;
+			this->btn_rq6_stats->Click += gcnew System::EventHandler(this, &MyForm::button1_Click_1);
 			// 
 			// btn_rq5_stats
 			// 
+			this->btn_rq5_stats->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->btn_rq5_stats->Location = System::Drawing::Point(336, 185);
 			this->btn_rq5_stats->Name = L"btn_rq5_stats";
 			this->btn_rq5_stats->Size = System::Drawing::Size(290, 36);
@@ -1478,25 +1470,9 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 			this->btn_rq5_stats->UseVisualStyleBackColor = true;
 			this->btn_rq5_stats->Click += gcnew System::EventHandler(this, &MyForm::btn_rq5_stats_Click);
 			// 
-			// lbl_client_stats
-			// 
-			this->lbl_client_stats->AutoSize = true;
-			this->lbl_client_stats->Location = System::Drawing::Point(8, 435);
-			this->lbl_client_stats->Name = L"lbl_client_stats";
-			this->lbl_client_stats->Size = System::Drawing::Size(64, 17);
-			this->lbl_client_stats->TabIndex = 8;
-			this->lbl_client_stats->Text = L"Id client :";
-			// 
-			// txt_client_stats
-			// 
-			this->txt_client_stats->Location = System::Drawing::Point(11, 453);
-			this->txt_client_stats->Name = L"txt_client_stats";
-			this->txt_client_stats->Size = System::Drawing::Size(290, 22);
-			this->txt_client_stats->TabIndex = 7;
-			// 
 			// btn_rq4_stats
 			// 
-			this->btn_rq4_stats->Location = System::Drawing::Point(11, 387);
+			this->btn_rq4_stats->Location = System::Drawing::Point(11, 321);
 			this->btn_rq4_stats->Name = L"btn_rq4_stats";
 			this->btn_rq4_stats->Size = System::Drawing::Size(290, 45);
 			this->btn_rq4_stats->TabIndex = 6;
@@ -1506,7 +1482,7 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 			// 
 			// btn_rq3_stats
 			// 
-			this->btn_rq3_stats->Location = System::Drawing::Point(11, 324);
+			this->btn_rq3_stats->Location = System::Drawing::Point(11, 269);
 			this->btn_rq3_stats->Name = L"btn_rq3_stats";
 			this->btn_rq3_stats->Size = System::Drawing::Size(290, 46);
 			this->btn_rq3_stats->TabIndex = 5;
@@ -1516,22 +1492,13 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 			// 
 			// btn_rq2_stats
 			// 
-			this->btn_rq2_stats->Location = System::Drawing::Point(8, 272);
+			this->btn_rq2_stats->Location = System::Drawing::Point(8, 227);
 			this->btn_rq2_stats->Name = L"btn_rq2_stats";
 			this->btn_rq2_stats->Size = System::Drawing::Size(290, 36);
 			this->btn_rq2_stats->TabIndex = 4;
 			this->btn_rq2_stats->Text = L"Requête : Valeur commerciale du stock";
 			this->btn_rq2_stats->UseVisualStyleBackColor = true;
 			this->btn_rq2_stats->Click += gcnew System::EventHandler(this, &MyForm::btn_rq2_stats_Click);
-			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(8, 224);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(45, 17);
-			this->label1->TabIndex = 3;
-			this->label1->Text = L"Mois :";
 			// 
 			// btn_rq1_stats
 			// 
@@ -1590,7 +1557,6 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 			this->tabPage_stck->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_stck))->EndInit();
 			this->tabPage5->ResumeLayout(false);
-			this->tabPage5->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_stats))->EndInit();
 			this->ResumeLayout(false);
 
@@ -1644,7 +1610,7 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 		this->dgv_cl->DataMember = "TB_PEOPLE";
 
 		//Affichage de la personne ajouter
-		this->list_console_cl->Items->Add("Personne ajouter, Id :" + this->txt_id_cl->Text + ", Nom =" + this->txt_nom_cl->Text + " OK");
+		this->list_console_cl->Items->Add("Personne ajouter, Id :" + this->txt_id_cl->Text + ", Nom =" + this->txt_nom_cl->Text + " : OK");
 	}
 
 	//Click sur le boutton Supprimer de l'onglet Clients
@@ -1664,7 +1630,7 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 		this->dgv_cl->DataMember = "TB_PEOPLE";
 
 		//Affichage de la personne supprimer
-		this->list_console_cl->Items->Add("Personne suprimer, Id :" + this->txt_id_cl->Text + ", Nom ="+ this->txt_nom_cl->Text +" OK");
+		this->list_console_cl->Items->Add("Personne suprimer, Id :" + this->txt_id_cl->Text + ", Nom ="+ this->txt_nom_cl->Text +" : OK");
 	}
 
 	//Click sur le boutton Modifier de l'onglet Clients
@@ -1683,19 +1649,7 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 		this->dgv_cl->DataMember = "TB_PEOPLE";
 
 		//Affichage de la personne modifier
-		this->list_console_cl->Items->Add("Personne modifier, Id :" + this->txt_id_cl->Text + ", Nom ="+ this->txt_nom_cl->Text +" OK");
-	}
-	private: System::Void aff_adr_cl_Click(System::Object^ sender, System::EventArgs^ e) 
-	{
-		String^ val = this->txt_id_cl->Text;
-		int id = System::Convert::ToInt32(val);
-
-		//Load data Adresse
-		this->oSvc = gcnew NS_Comp_Svc::CLservices();
-		this->dgv_aff_adr_cl->Refresh();
-		this->oDs = this->oSvc->afficherAdresseClient(id, "TB_ADRESSE");
-		this->dgv_aff_adr_cl->DataSource = this->oDs;
-		this->dgv_aff_adr_cl->DataMember = "TB_ADRESSE";
+		this->list_console_cl->Items->Add("Personne modifier, Id :" + this->txt_id_cl->Text + ", Nom ="+ this->txt_nom_cl->Text +" : OK");
 	}
 	private: System::Void ajt_adr_cl_Click(System::Object^ sender, System::EventArgs^ e)
 	{
@@ -1711,6 +1665,8 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 		this->oDs = this->oSvc->afficherAdresseClient(id, "TB_ADRESSE");
 		this->dgv_aff_adr_cl->DataSource = this->oDs;
 		this->dgv_aff_adr_cl->DataMember = "TB_ADRESSE";
+
+		this->list_console_cl->Items->Add("Création d'adresse, Id :"+id+", Adresse de livraison =" + this->txt_adr_livraison_cl->Text + ", Adresse de facturation =" + this->txt_adr_facturation_cl->Text + " : OK");
 	}
 
 	private: System::Void btn_inserer_click_stck(System::Object^ sender, System::EventArgs^ e)
@@ -1736,6 +1692,8 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 		this->oDs = this->oSvc->selectionnerTousLeStock("TB_STOCK");
 		this->dgv_stck->DataSource = this->oDs;
 		this->dgv_stck->DataMember = "TB_STOCK";
+
+		this->list_console_stck->Items->Add("Ajout d'un article : OK");
 	}
 	private: System::Void btn_supprimer_stck_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
@@ -1750,6 +1708,8 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 		this->oDs = this->oSvc->selectionnerTousLeStock("TB_STOCK");
 		this->dgv_stck->DataSource = this->oDs;
 		this->dgv_stck->DataMember = "TB_STOCK";
+
+		this->list_console_stck->Items->Add("Article supprimer, '"+this->txt_id_stck->Text+"' : OK");
 	}
 	private: System::Void btn_modifier_stck_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
@@ -1776,6 +1736,8 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 		this->oDs = this->oSvc->selectionnerTousLeStock("TB_STOCK");
 		this->dgv_stck->DataSource = this->oDs;
 		this->dgv_stck->DataMember = "TB_STOCK";
+
+		this->list_console_stck->Items->Add("Article modifier, '" + this->txt_id_stck->Text + "' : OK");
 	}
 	private: System::Void dgv_cl_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 		int rowIndex = e->RowIndex;
@@ -1807,6 +1769,7 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 		this->txt_taux_tva_art->Text = rowv->Cells["art_taux_tva"]->Value->ToString();
 		this->txt_quantite_produit_stck->Text = rowv->Cells["st_prod_quantite"]->Value->ToString();
 		this->txt_seuil_reap_stck->Text = rowv->Cells["st_seuil_reap"]->Value->ToString();
+		this->txt_id_com->Text = rowv->Cells["com_id"]->Value->ToString();
 	}
 	private: System::Void button_update2_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ textVal = this->txt_id_pers->Text;
@@ -1821,7 +1784,7 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 		this->dgv_pers->DataMember = "TB_PEOPLE";
 
 		//Affichage de la personne modifier
-		this->listBox2->Items->Add("Personne modifiée, Id :" + this->txt_id_pers->Text + ", Nom =" + this->txt_nom_pers->Text + " OK");
+		this->listBox2->Items->Add("Personne modifiée, Id :" + this->txt_id_pers->Text + ", Nom =" + this->txt_nom_pers->Text + " : OK");
 	}
 	private: System::Void button_insert2_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
@@ -1834,7 +1797,7 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 		this->dgv_pers->DataMember = "TB_PEOPLE";
 
 		//Affichage de la personne ajouter
-		this->listBox2->Items->Add("Personne ajoutée, Id :" + this->txt_id_pers->Text + ", Nom =" + this->txt_nom_pers->Text + " OK");
+		this->listBox2->Items->Add("Personne ajoutée, Id :" + this->txt_id_pers->Text + ", Nom =" + this->txt_nom_pers->Text + " : OK");
 
 	}
 	private: System::Void button_delete2_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1850,7 +1813,7 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 		this->dgv_pers->DataMember = "TB_PEOPLE";
 
 		//Affichage de la personne supprimer
-		this->listBox2->Items->Add("Personne suprimée, Id :" + this->txt_id_pers->Text + ", Nom =" + this->txt_nom_pers->Text + " OK");
+		this->listBox2->Items->Add("Personne suprimée, Id :" + this->txt_id_pers->Text + ", Nom =" + this->txt_nom_pers->Text + " : OK");
 	}
 
 	private: System::Void dgv_PER_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
@@ -1894,7 +1857,7 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 		this->dgv_comm->DataMember = "TB_COMMANDE";
 
 		//Affichage de la commande ajouter
-		this->listBox_facture->Items->Add("Commande ajouter, Id :" + this->txt_id_comm->Text + ", Reference =" + this->txt_ref_comm->Text + " OK"); // a modifier
+		this->listBox_commande->Items->Add("Commande ajouter, Id :" + this->txt_id_comm->Text + ", Reference =" + this->txt_ref_comm->Text + " : OK"); // a modifier
 	}
 	private: System::Void btn_del_comm_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
@@ -1911,7 +1874,7 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 		this->dgv_comm->DataMember = "TB_COMMANDE";
 
 		//Affichage de la commande supprimer
-		this->listBox_facture->Items->Add("Commande suprimer, Id :" + this->txt_id_comm->Text + ", reference =" + this->txt_ref_comm->Text + " OK");
+		this->listBox_commande->Items->Add("Commande suprimer, Id :" + this->txt_id_comm->Text + ", reference =" + this->txt_ref_comm->Text + " : OK");
 
 	}
 	private: System::Void btn_modif_comm_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1940,7 +1903,7 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 		this->dgv_comm->DataMember = "TB_COMMANDE";
 
 		//Affichage de la commande modifier
-		this->listBox_facture->Items->Add("Commande modifier, Id :" + this->txt_id_comm->Text + ", Reference =" + this->txt_ref_comm->Text + " OK");
+		this->listBox_commande->Items->Add("Commande modifier, Id :" + this->txt_id_comm->Text + ", Reference =" + this->txt_ref_comm->Text + " : OK");
 	}
 
 	private: System::Void dgv_comm_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
@@ -1956,11 +1919,8 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 		this->txt_tva_comm->Text = rowv->Cells["com_tot_tva"]->Value->ToString();
 		this->txt_ttc_comm->Text = rowv->Cells["com_tot_ttc"]->Value->ToString();
 	}
-		   
-
 	private: System::Void btn_aff_art_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
-
 		String^ textIdCom = this->txt_id_comm->Text;
 		int id_comm = System::Convert::ToInt32(textIdCom);
 
@@ -1970,6 +1930,8 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 		this->oDs = this->oSvc->afficherArticleComm(id_comm, "TB_STOCK");
 		this->dgv_art_comm->DataSource = this->oDs;
 		this->dgv_art_comm->DataMember = "TB_STOCK";
+
+		this->listBox_commande->Items->Add("Articles afficher : OK");
 	}
 	private: System::Void btn_refresh_cl_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->txt_nom_cl->Text = "";
@@ -1980,29 +1942,16 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 		this->comBoxGenreCl->Text = "";
 		this->txt_date_naissance_cl->Text = "";
 		this->txt_date_premier_achat_cl->Text = "";
-	}
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) 
-	{
-		System::String^ facture;
-		facture = "Société, Labège 31","Numéro de service client : 0001";
-		
-		listBox_facture->Items->Add(this->txt_ht_comm->Text);
-		listBox_facture->Items->Add(this->txt_tva_comm->Text);
-		listBox_facture->Items->Add(this->txt_ttc_comm->Text);
-		listBox_facture->Items->Add(this->lbl_nom_cl->Text);
-		listBox_facture->Items->Add(this->txt_adr_facturation_cl->Text);
-		listBox_facture->Items->Add(this->txt_adr_livraison_cl->Text);
-		listBox_facture->Items->Add(facture);
+		this->list_console_cl->Items->Add("Text Box Clear : OK");
 	}
 	private: System::Void btn_rq1_stats_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
 		this->dgv_stats->Refresh();
-		this->oDs = this->oSvc->afficherRequete1(this->comBoxMoisStats->Text, "TB_COMMANDE");
+		this->oDs = this->oSvc->afficherRequete1("TB_COMMANDE");
 		this->dgv_stats->DataSource = this->oDs;
 		this->dgv_stats->DataMember = "TB_COMMANDE";
 	}
-
 	private: System::Void btn_rq2_stats_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
 		this->dgv_stats->Refresh();
@@ -2017,23 +1966,42 @@ private: System::Windows::Forms::ComboBox^ comBoxMoisStats;
 		this->dgv_stats->DataSource = this->oDs;
 		this->dgv_stats->DataMember = "TB_STOCK";
 	}
-private: System::Void btn_rq4_stats_Click(System::Object^ sender, System::EventArgs^ e) {
-	
-	String^ textidstats = this->txt_client_stats->Text;
-	int id_cl_stats = System::Convert::ToInt32(textidstats);
+	private: System::Void btn_rq4_stats_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->oSvc = gcnew NS_Comp_Svc::CLservices();
+		this->dgv_stats->Refresh();
+		this->oDs = this->oSvc->afficherRequete4( "TB_STOCK");
+		this->dgv_stats->DataSource = this->oDs;
+		this->dgv_stats->DataMember = "TB_STOCK";
+	}
+	private: System::Void btn_rq5_stats_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->oSvc = gcnew NS_Comp_Svc::CLservices();
+		this->dgv_stats->Refresh();
+		this->oDs = this->oSvc->afficherRequete5("TB_STOCK");
+		this->dgv_stats->DataSource = this->oDs;
+		this->dgv_stats->DataMember = "TB_STOCK";
+	}
+	private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+		this->oSvc = gcnew NS_Comp_Svc::CLservices();
+		this->dgv_stats->Refresh();
+		this->oDs = this->oSvc->afficherRequete6("TB_STOCK");
+		this->dgv_stats->DataSource = this->oDs;
+		this->dgv_stats->DataMember = "TB_STOCK";
+	}
+	private: System::Void btn_rq7_stats_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->oSvc = gcnew NS_Comp_Svc::CLservices();
+		this->dgv_stats->Refresh();
+		this->oDs = this->oSvc->afficherRequete7("TB_STOCK");
+		this->dgv_stats->DataSource = this->oDs;
+		this->dgv_stats->DataMember = "TB_STOCK";
+	}
 
-	this->oSvc = gcnew NS_Comp_Svc::CLservices();
-	this->dgv_stats->Refresh();
-	this->oDs = this->oSvc->afficherRequete4(id_cl_stats, "TB_STOCK");
-	this->dgv_stats->DataSource = this->oDs;
-	this->dgv_stats->DataMember = "TB_STOCK";
+private: System::Void dgv_aff_adr_cl_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+	int rowIndex = e->RowIndex;
+	DataGridViewRow^ rowv = dgv_aff_adr_cl->Rows[rowIndex];
+
+	this->txt_adr_facturation_cl->Text = rowv->Cells["adr_livraison"]->Value->ToString();
+	this->txt_adr_livraison_cl->Text = rowv->Cells["adr_facturation"]->Value->ToString();
 }
-private: System::Void btn_rq5_stats_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->oSvc = gcnew NS_Comp_Svc::CLservices();
-	this->dgv_stats->Refresh();
-	this->oDs = this->oSvc->afficherRequete5("TB_STOCK");
-	this->dgv_stats->DataSource = this->oDs;
-	this->dgv_stats->DataMember = "TB_STOCK";
-}
+
 };
 }

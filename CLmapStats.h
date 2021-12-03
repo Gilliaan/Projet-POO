@@ -13,6 +13,8 @@ namespace NS_Comp_Mappage
 		System::String^ AffichageRequete3(void);
 		System::String^ AffichageRequete4(void);
 		System::String^ AffichageRequete5(void);
+		System::String^ AffichageRequete6(void);
+		System::String^ AffichageRequete7(void);
 		void setIdClStats(int);
 		void setMoisStats(System::String^);
 		int getIdClStats(void);

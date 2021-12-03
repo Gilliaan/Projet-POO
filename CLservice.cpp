@@ -234,11 +234,10 @@ System::Data::DataSet^ NS_Comp_Svc::CLservices::afficherArticleComm(int id, Syst
 	return this->oCad->getRows(sql, dataTableName);
 }
 
-System::Data::DataSet^ NS_Comp_Svc::CLservices::afficherRequete1(System::String^ mois, System::String^ dataTableName)
+System::Data::DataSet^ NS_Comp_Svc::CLservices::afficherRequete1(System::String^ dataTableName)
 {
 	System::String^ sql;
 
-	this->oMappStats->setMoisStats(mois);
 	sql = this->oMappStats->AffichageRequete1();
 	return this->oCad->getRows(sql, dataTableName);
 	
@@ -259,11 +258,10 @@ System::Data::DataSet^ NS_Comp_Svc::CLservices::afficherRequete3(System::String^
 	return this->oCad->getRows(sql, dataTableName);
 
 }
-System::Data::DataSet^ NS_Comp_Svc::CLservices::afficherRequete4(int id, System::String^ dataTableName)
+System::Data::DataSet^ NS_Comp_Svc::CLservices::afficherRequete4(System::String^ dataTableName)
 {
 	System::String^ sql;
 
-	this->oMappStats->setIdClStats(id);
 	sql = this->oMappStats->AffichageRequete4();
 	return this->oCad->getRows(sql, dataTableName);
 
@@ -273,6 +271,22 @@ System::Data::DataSet^ NS_Comp_Svc::CLservices::afficherRequete5(System::String^
 	System::String^ sql;
 
 	sql = this->oMappStats->AffichageRequete5();
+	return this->oCad->getRows(sql, dataTableName);
+
+}
+System::Data::DataSet^ NS_Comp_Svc::CLservices::afficherRequete6(System::String^ dataTableName)
+{
+	System::String^ sql;
+
+	sql = this->oMappStats->AffichageRequete6();
+	return this->oCad->getRows(sql, dataTableName);
+
+}
+System::Data::DataSet^ NS_Comp_Svc::CLservices::afficherRequete7(System::String^ dataTableName)
+{
+	System::String^ sql;
+
+	sql = this->oMappStats->AffichageRequete7();
 	return this->oCad->getRows(sql, dataTableName);
 
 }
